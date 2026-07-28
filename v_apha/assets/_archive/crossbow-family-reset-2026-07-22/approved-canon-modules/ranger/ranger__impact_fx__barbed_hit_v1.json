@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "module": "ranger__impact_fx__barbed_hit",
+  "object": "ranger",
+  "family": "fortress_ranged",
+  "slot": "impact_fx",
+  "sourceImage": "ranger__impact_fx__barbed_hit_v1_source_chroma.png",
+  "projection": "true_top_down_orthographic_90deg",
+  "attachment": {
+    "parentModule": "ranger__projectile__barbed_bolt",
+    "anchor": "impact_tip",
+    "scaleToProjectileLength": 0.72,
+    "inheritRotation": false
+  },
+  "drawOrder": 55,
+  "frames": [
+    {
+      "id": "frame_01",
+      "image": "ranger__impact_fx__barbed_hit__frame_01_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "contentRect": {
+        "x": 202,
+        "y": 183,
+        "w": 233,
+        "h": 247
+      },
+      "pivotPx": [
+        313,
+        313
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 55,
+      "magentaSpillPixels": 0
+    },
+    {
+      "id": "frame_02",
+      "image": "ranger__impact_fx__barbed_hit__frame_02_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "contentRect": {
+        "x": 83,
+        "y": 140,
+        "w": 392,
+        "h": 351
+      },
+      "pivotPx": [
+        313,
+        313
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 70,
+      "magentaSpillPixels": 0
+    },
+    {
+      "id": "frame_03",
+      "image": "ranger__impact_fx__barbed_hit__frame_03_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "contentRect": {
+        "x": 103,
+        "y": 9,
+        "w": 447,
+        "h": 458
+      },
+      "pivotPx": [
+        313,
+        313
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 90,
+      "magentaSpillPixels": 0
+    },
+    {
+      "id": "frame_04",
+      "image": "ranger__impact_fx__barbed_hit__frame_04_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "contentRect": {
+        "x": 123,
+        "y": 81,
+        "w": 338,
+        "h": 338
+      },
+      "pivotPx": [
+        313,
+        313
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 120,
+      "magentaSpillPixels": 0
+    }
+  ],
+  "animations": {
+    "impact": {
+      "frames": [
+        "frame_01",
+        "frame_02",
+        "frame_03",
+        "frame_04"
+      ],
+      "durationsMs": [
+        55,
+        70,
+        90,
+        120
+      ],
+      "loop": false,
+      "holdLast": false,
+      "totalDurationMs": 335
+    }
+  },
+  "qa": {
+    "sharedCanvas": [
+      627,
+      627
+    ],
+    "sharedPivot": [
+      313,
+      313
+    ],
+    "runtimeLabels": false,
+    "magentaSpillPerFrame": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "status": "canon"
+  }
+}

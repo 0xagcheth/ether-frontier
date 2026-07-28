@@ -1,0 +1,99 @@
+{
+  "character": "goblin-spearman",
+  "format": "RGBA PNG",
+  "frameSize": [
+    64,
+    64
+  ],
+  "origin": "center",
+  "idleDirections": {
+    "file": "idle-directions-64-alpha.png",
+    "columns": 4,
+    "rows": 1,
+    "frameWidth": 64,
+    "frameHeight": 64,
+    "columnOrder": [
+      "UP",
+      "DOWN",
+      "LEFT",
+      "RIGHT"
+    ],
+    "frameFiles": "frames/idle/idle-<direction>.png"
+  },
+  "animations": {
+    "walk": {
+      "file": "walk-64-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 90,
+      "loop": true,
+      "frameFiles": "frames/walk/<direction>/walk-<direction>-01..08.png"
+    },
+    "attack": {
+      "file": "attack-64-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 80,
+      "loop": false,
+      "frameFiles": "frames/attack/<direction>/attack-<direction>-01..08.png"
+    },
+    "death": {
+      "file": "death-64-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 110,
+      "loop": false,
+      "frameFiles": "frames/death/<direction>/death-<direction>-01..08.png"
+    },
+    "spawn": {
+      "file": "spawn-64-alpha.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "directionRows": [
+        "UP"
+      ],
+      "frameDurationMs": 100,
+      "loop": false,
+      "frameFiles": "frames/spawn/<direction>/spawn-<direction>-01..08.png"
+    },
+    "breach": {
+      "file": "breach-64-alpha.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "directionRows": [
+        "UP"
+      ],
+      "frameDurationMs": 90,
+      "loop": false,
+      "frameFiles": "frames/breach/<direction>/breach-<direction>-01..08.png"
+    }
+  }
+}

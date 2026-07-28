@@ -1,0 +1,34 @@
+{
+  "object": "ranger",
+  "module": "ranger__active_primary__rapid_crossbow",
+  "status": "rejected_superseded",
+  "rejectionReason": "Generated before the description-driven v4 body identity was re-applied; the weapon-first approach repeated the rejected platform-plus-crossbow v2 pattern.",
+  "sourceChroma": "../../source/ranger/layered-v2/core/ranger_rg03_rapid_crossbow_chroma.png",
+  "sourceAlpha": "../../source/ranger/layered-v2/core/ranger_rg03_rapid_crossbow_alpha.png",
+  "projection": "true_top_down_orthographic",
+  "weaponLogic": {
+    "type": "rapid_crossbow",
+    "physicalString": true,
+    "boltGuide": true,
+    "rapidReloadMechanism": true,
+    "firearmMuzzleFlashAllowed": false,
+    "firearmSmokeAllowed": false,
+    "projectile": "physical_barbed_bolt"
+  },
+  "layering": {
+    "weaponIndependent": true,
+    "opticBakedIn": false,
+    "magazineBakedIn": false,
+    "projectileBakedIn": false,
+    "rotationDirection": "points_right_at_zero_degrees"
+  },
+  "qa": {
+    "fullyVisible": true,
+    "noClipping": true,
+    "noLabels": true,
+    "chromaRemoved": true,
+    "alphaEdgeNeedsFinalPackingCleanup": true,
+    "needsCompositeClearanceCheck": true,
+    "needsUserConfirmation": false
+  }
+}

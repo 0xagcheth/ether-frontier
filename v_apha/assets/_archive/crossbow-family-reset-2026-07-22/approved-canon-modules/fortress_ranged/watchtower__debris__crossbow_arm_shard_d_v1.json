@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "module": "watchtower__debris__crossbow_arm_shard_d",
+  "object": "watchtower",
+  "family": "fortress_ranged",
+  "slot": "debris",
+  "ownerModule": "watchtower__active_addon__light_single_crossbow",
+  "image": "watchtower__debris__crossbow_arm_shard_d_v1_alpha.png",
+  "sourceImage": "watchtower__debris__crossbow_arm_shard_d_v1_chroma.png",
+  "sizePx": [
+    845,
+    314
+  ],
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 845,
+    "h": 314
+  },
+  "pivotPx": [
+    424,
+    167
+  ],
+  "pivot": [
+    0.501775,
+    0.531847
+  ],
+  "pivotMethod": "alpha_weighted_center_of_mass",
+  "projection": "true_top_down_orthographic_90deg",
+  "forwardAxis": "+X",
+  "runtimeScale": {
+    "scaleToWeaponLength": 0.36
+  },
+  "destroyPhysics": {
+    "massClass": "light_wood",
+    "inheritOwnerRotation": true,
+    "radialVelocityPxPerSec": [
+      155,
+      255
+    ],
+    "angularVelocityDegPerSec": [
+      -420,
+      420
+    ],
+    "linearDrag": 0.885,
+    "lifetimeMs": [
+      500,
+      900
+    ]
+  },
+  "drawOrder": 64,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "singleConnectedPiece": true,
+    "magentaSpillPixels": 0,
+    "status": "canon"
+  }
+}

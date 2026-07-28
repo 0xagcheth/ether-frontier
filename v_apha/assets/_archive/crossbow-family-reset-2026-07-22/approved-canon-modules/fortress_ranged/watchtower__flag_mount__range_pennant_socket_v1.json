@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "module": "watchtower__flag_mount__range_pennant_socket",
+  "object": "watchtower",
+  "family": "fortress_ranged",
+  "slot": "flag_mount",
+  "image": "watchtower__flag_mount__range_pennant_socket_v1_alpha.png",
+  "sourceImage": "watchtower__flag_mount__range_pennant_socket_v1_chroma.png",
+  "sizePx": [
+    1059,
+    616
+  ],
+  "pivotPx": [
+    308,
+    308
+  ],
+  "pivot": [
+    0.29084,
+    0.5
+  ],
+  "projection": "true_top_down_orthographic_90deg",
+  "forwardAxis": "+X",
+  "attachments": {
+    "parent": {
+      "module": "fortress_ranged__base_token__round_light",
+      "positionNormalized": [
+        0.24,
+        0.27
+      ],
+      "scaleToBaseFootprint": 0.18,
+      "rotationDeg": 0
+    },
+    "cloth_anchor": {
+      "positionPx": [
+        963,
+        314
+      ],
+      "positionNormalized": [
+        0.909348,
+        0.50974
+      ],
+      "forwardAxis": "+X"
+    }
+  },
+  "drawOrder": 15,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "clothSlotTransparent": true,
+    "magentaSpillPixels": 0,
+    "status": "canon"
+  }
+}

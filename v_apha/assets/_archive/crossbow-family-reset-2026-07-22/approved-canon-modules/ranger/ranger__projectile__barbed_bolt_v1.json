@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "module": "ranger__projectile__barbed_bolt",
+  "object": "ranger",
+  "family": "fortress_ranged",
+  "slot": "projectile",
+  "image": "ranger__projectile__barbed_bolt_v1_alpha.png",
+  "sourceImage": "ranger__projectile__barbed_bolt_v1_chroma.png",
+  "sizePx": [
+    1075,
+    223
+  ],
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1075,
+    "h": 223
+  },
+  "pivotPx": [
+    537,
+    111
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "projection": "true_top_down_orthographic_90deg",
+  "forwardAxis": "+X",
+  "anchors": {
+    "spawn_tail": {
+      "positionPx": [
+        0,
+        111
+      ],
+      "positionNormalized": [
+        0,
+        0.497758
+      ]
+    },
+    "impact_tip": {
+      "positionPx": [
+        1074,
+        111
+      ],
+      "positionNormalized": [
+        1,
+        0.497758
+      ]
+    }
+  },
+  "attachments": {
+    "spawnFrom": {
+      "module": "ranger__active_primary__rapid_crossbow",
+      "anchor": "muzzle_anchor",
+      "attachChildAnchor": "spawn_tail",
+      "inheritRotation": true
+    }
+  },
+  "runtimeScale": {
+    "lengthToParentWeapon": 0.23
+  },
+  "runtimeTransform": {
+    "translation": "projectilePosition",
+    "rotation": "trajectoryAngle"
+  },
+  "drawOrder": 40,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "straightAxis": true,
+    "magentaSpillPixels": 0,
+    "alphaBytes": 347862,
+    "under5MB": true,
+    "status": "canon"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "module": "watchtower__muzzle_fx__compact_golden_flash",
+  "object": "watchtower",
+  "owner": "watchtower__active_addon__light_single_crossbow",
+  "slot": "muzzle_fx",
+  "sourceImage": "watchtower__muzzle_fx__compact_golden_flash_loop_v1_chroma.png",
+  "projection": "true_top_down_orthographic_90deg",
+  "forwardAxis": "+X",
+  "attachment": {
+    "parentAnchor": "watchtower__active_addon__light_single_crossbow.muzzle_anchor",
+    "pivotPx": [
+      8,
+      192
+    ],
+    "scaleToWeaponLength": 0.2,
+    "inheritRotation": true
+  },
+  "drawOrder": 50,
+  "frames": [
+    {
+      "id": "frame_01",
+      "image": "watchtower__muzzle_fx__compact_golden_flash__frame_01_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 521,
+        "h": 384
+      },
+      "contentRect": {
+        "x": 8,
+        "y": 129,
+        "w": 241,
+        "h": 126
+      },
+      "pivotPx": [
+        8,
+        192
+      ],
+      "pivot": [
+        0.015355,
+        0.5
+      ],
+      "durationMs": 90
+    },
+    {
+      "id": "frame_02",
+      "image": "watchtower__muzzle_fx__compact_golden_flash__frame_02_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 521,
+        "h": 384
+      },
+      "contentRect": {
+        "x": 8,
+        "y": 57,
+        "w": 481,
+        "h": 270
+      },
+      "pivotPx": [
+        8,
+        192
+      ],
+      "pivot": [
+        0.015355,
+        0.5
+      ],
+      "durationMs": 90
+    },
+    {
+      "id": "frame_03",
+      "image": "watchtower__muzzle_fx__compact_golden_flash__frame_03_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 521,
+        "h": 384
+      },
+      "contentRect": {
+        "x": 8,
+        "y": 8,
+        "w": 505,
+        "h": 368
+      },
+      "pivotPx": [
+        8,
+        192
+      ],
+      "pivot": [
+        0.015355,
+        0.5
+      ],
+      "durationMs": 90
+    },
+    {
+      "id": "frame_04",
+      "image": "watchtower__muzzle_fx__compact_golden_flash__frame_04_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 521,
+        "h": 384
+      },
+      "contentRect": {
+        "x": 8,
+        "y": 128,
+        "w": 243,
+        "h": 128
+      },
+      "pivotPx": [
+        8,
+        192
+      ],
+      "pivot": [
+        0.015355,
+        0.5
+      ],
+      "durationMs": 90
+    }
+  ],
+  "animations": {
+    "attack_flash": {
+      "frames": [
+        "frame_01",
+        "frame_02",
+        "frame_03",
+        "frame_04"
+      ],
+      "loop": false,
+      "holdLast": false,
+      "totalDurationMs": 360
+    }
+  },
+  "qa": {
+    "segmentation": "connected_components",
+    "sharedCanvas": [
+      521,
+      384
+    ],
+    "sharedPivot": [
+      8,
+      192
+    ],
+    "runtimeLabels": false,
+    "status": "canon"
+  }
+}

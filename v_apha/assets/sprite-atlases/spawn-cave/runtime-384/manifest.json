@@ -1,0 +1,49 @@
+{
+  "object": "spawn-cave",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "normalization": "locked 255px intact building extent; centered 384px safety cell",
+  "actions": {
+    "idle": {
+      "file": "spawn-cave-idle-384-alpha.png",
+      "frames": 5,
+      "durationMs": 720,
+      "loop": true
+    },
+    "spawn": {
+      "file": "spawn-cave-spawn-384-alpha.png",
+      "frames": 5,
+      "durationMs": 180,
+      "loop": false
+    }
+  },
+  "qa": {
+    "idle": {
+      "extents": [
+        255,
+        254,
+        254,
+        254,
+        254
+      ],
+      "clippedFrames": []
+    },
+    "spawn": {
+      "extents": [
+        255,
+        255,
+        255,
+        255,
+        255
+      ],
+      "clippedFrames": []
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "schema": "ether-frontier.layer-fragment.v1",
+  "object": "watchtower",
+  "group": "bearing_group",
+  "projectionMaster": "watchtower_projection_master_v4",
+  "normalization": {
+    "source": "watchtower_bearing_group_v1_alpha.png",
+    "targetDiameter": 500,
+    "center": {
+      "x": 627,
+      "y": 627
+    }
+  },
+  "layers": [
+    {
+      "id": "bearing_lower_washer",
+      "file": "bearing_lower_washer.png",
+      "sourceRect": {
+        "x": 391,
+        "y": 377,
+        "w": 472,
+        "h": 500
+      },
+      "pivot": {
+        "x": 236,
+        "y": 250
+      },
+      "attachment": "object_center",
+      "drawOrder": 90,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "bearing_upper_washer",
+      "file": "bearing_upper_washer.png",
+      "sourceRect": {
+        "x": 515,
+        "y": 515,
+        "w": 225,
+        "h": 225
+      },
+      "pivot": {
+        "x": 112,
+        "y": 112
+      },
+      "attachment": "object_center",
+      "drawOrder": 100,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "bearing_socket",
+      "file": "bearing_socket.png",
+      "sourceRect": {
+        "x": 579,
+        "y": 579,
+        "w": 97,
+        "h": 97
+      },
+      "pivot": {
+        "x": 48,
+        "y": 48
+      },
+      "attachment": "object_center",
+      "drawOrder": 110,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "bearing_copper_route_01",
+      "file": "bearing_copper_route_01.png",
+      "sourceRect": {
+        "x": 542,
+        "y": 794,
+        "w": 155,
+        "h": 33
+      },
+      "pivot": {
+        "x": 85,
+        "y": -167
+      },
+      "attachment": "object_center",
+      "drawOrder": 95,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "bearing_copper_route_02",
+      "file": "bearing_copper_route_02.png",
+      "sourceRect": {
+        "x": 423,
+        "y": 537,
+        "w": 30,
+        "h": 147
+      },
+      "pivot": {
+        "x": 204,
+        "y": 90
+      },
+      "attachment": "object_center",
+      "drawOrder": 96,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "bearing_copper_route_03",
+      "file": "bearing_copper_route_03.png",
+      "sourceRect": {
+        "x": 792,
+        "y": 616,
+        "w": 42,
+        "h": 114
+      },
+      "pivot": {
+        "x": -165,
+        "y": 11
+      },
+      "attachment": "object_center",
+      "drawOrder": 97,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "bearing_copper_route_04",
+      "file": "bearing_copper_route_04.png",
+      "sourceRect": {
+        "x": 625,
+        "y": 411,
+        "w": 96,
+        "h": 37
+      },
+      "pivot": {
+        "x": 2,
+        "y": 216
+      },
+      "attachment": "object_center",
+      "drawOrder": 98,
+      "runtimeCandidate": true
+    }
+  ]
+}

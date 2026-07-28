@@ -1,0 +1,1234 @@
+{
+  "object": "watchtower",
+  "pipeline": "layered-object-v2-packed-grid",
+  "status": "packed_grid_for_user_validation",
+  "generator": "built-in imagegen source, deterministic code repack",
+  "image": "watchtower_layered_imagegen_v1_packed_512.png",
+  "reviewImage": "watchtower_layered_imagegen_v1_packed_512_review.png",
+  "sourceImage": "../watchtower_layered_imagegen_v1_atlas.png",
+  "sourceManifest": "../watchtower_layered_imagegen_v1_manifest.json",
+  "atlasSize": [
+    2048,
+    4096
+  ],
+  "cellSize": [
+    512,
+    512
+  ],
+  "grid": {
+    "cols": 4,
+    "rows": 8
+  },
+  "format": "RGBA PNG",
+  "fileSizeBytes": 1351297,
+  "maxFileSizeBytes": 5000000,
+  "under5MB": true,
+  "drawOrder": [
+    "base_stone_token",
+    "central_socket",
+    "flag_pole",
+    "flag_cloth_wind",
+    "lantern_body",
+    "lantern_flame",
+    "crossbow_rotatable",
+    "muzzle_flash"
+  ],
+  "sprites": {
+    "base_stone_token": {
+      "cell": {
+        "col": 0,
+        "row": 0,
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 33,
+        "y": 33,
+        "w": 445,
+        "h": 446
+      },
+      "contentRectInCell": {
+        "x": 33,
+        "y": 33,
+        "w": 445,
+        "h": 446
+      },
+      "pivot": [
+        0.499,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 23,
+          "y": 42,
+          "w": 445,
+          "h": 446
+        }
+      }
+    },
+    "central_socket": {
+      "cell": {
+        "col": 1,
+        "row": 0,
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 668,
+        "y": 153,
+        "w": 200,
+        "h": 205
+      },
+      "contentRectInCell": {
+        "x": 156,
+        "y": 153,
+        "w": 200,
+        "h": 205
+      },
+      "pivot": [
+        0.5,
+        0.499
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 506,
+          "y": 166,
+          "w": 200,
+          "h": 205
+        }
+      }
+    },
+    "crossbow_rotatable": {
+      "cell": {
+        "col": 2,
+        "row": 0,
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1101,
+        "y": 74,
+        "w": 358,
+        "h": 363
+      },
+      "contentRectInCell": {
+        "x": 77,
+        "y": 74,
+        "w": 358,
+        "h": 363
+      },
+      "pivot": [
+        0.5,
+        0.499
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 747,
+          "y": 91,
+          "w": 358,
+          "h": 363
+        }
+      }
+    },
+    "flag_pole": {
+      "cell": {
+        "col": 3,
+        "row": 0,
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1736,
+        "y": 76,
+        "w": 112,
+        "h": 360
+      },
+      "contentRectInCell": {
+        "x": 200,
+        "y": 76,
+        "w": 112,
+        "h": 360
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 1124,
+          "y": 96,
+          "w": 112,
+          "h": 360
+        }
+      }
+    },
+    "flag_cloth_wind_01": {
+      "cell": {
+        "col": 0,
+        "row": 1,
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 126,
+        "y": 698,
+        "w": 260,
+        "h": 139
+      },
+      "contentRectInCell": {
+        "x": 126,
+        "y": 186,
+        "w": 260,
+        "h": 139
+      },
+      "pivot": [
+        0.2562,
+        0.499
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 1258,
+          "y": 57,
+          "w": 260,
+          "h": 139
+        }
+      }
+    },
+    "flag_cloth_wind_02": {
+      "cell": {
+        "col": 1,
+        "row": 1,
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 643,
+        "y": 704,
+        "w": 249,
+        "h": 127
+      },
+      "contentRectInCell": {
+        "x": 131,
+        "y": 192,
+        "w": 249,
+        "h": 127
+      },
+      "pivot": [
+        0.2656,
+        0.499
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 1264,
+          "y": 198,
+          "w": 249,
+          "h": 127
+        }
+      }
+    },
+    "flag_cloth_wind_03": {
+      "cell": {
+        "col": 2,
+        "row": 1,
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1170,
+        "y": 703,
+        "w": 220,
+        "h": 129
+      },
+      "contentRectInCell": {
+        "x": 146,
+        "y": 191,
+        "w": 220,
+        "h": 129
+      },
+      "pivot": [
+        0.2938,
+        0.499
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 1267,
+          "y": 321,
+          "w": 220,
+          "h": 129
+        }
+      }
+    },
+    "flag_cloth_wind_04": {
+      "cell": {
+        "col": 3,
+        "row": 1,
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1681,
+        "y": 710,
+        "w": 222,
+        "h": 116
+      },
+      "contentRectInCell": {
+        "x": 145,
+        "y": 198,
+        "w": 222,
+        "h": 116
+      },
+      "pivot": [
+        0.2919,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 1268,
+          "y": 439,
+          "w": 222,
+          "h": 116
+        }
+      }
+    },
+    "lantern_body": {
+      "cell": {
+        "col": 0,
+        "row": 2,
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 198,
+        "y": 1166,
+        "w": 116,
+        "h": 228
+      },
+      "contentRectInCell": {
+        "x": 198,
+        "y": 142,
+        "w": 116,
+        "h": 228
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 59,
+          "y": 504,
+          "w": 116,
+          "h": 228
+        }
+      }
+    },
+    "lantern_flame_01": {
+      "cell": {
+        "col": 1,
+        "row": 2,
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 718,
+        "y": 1211,
+        "w": 100,
+        "h": 138
+      },
+      "contentRectInCell": {
+        "x": 206,
+        "y": 187,
+        "w": 100,
+        "h": 138
+      },
+      "pivot": [
+        0.5,
+        0.5593
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 214,
+          "y": 588,
+          "w": 100,
+          "h": 138
+        }
+      }
+    },
+    "lantern_flame_02": {
+      "cell": {
+        "col": 2,
+        "row": 2,
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1236,
+        "y": 1213,
+        "w": 87,
+        "h": 134
+      },
+      "contentRectInCell": {
+        "x": 212,
+        "y": 189,
+        "w": 87,
+        "h": 134
+      },
+      "pivot": [
+        0.499,
+        0.5576
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 330,
+          "y": 590,
+          "w": 87,
+          "h": 134
+        }
+      }
+    },
+    "lantern_flame_03": {
+      "cell": {
+        "col": 3,
+        "row": 2,
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1749,
+        "y": 1215,
+        "w": 86,
+        "h": 130
+      },
+      "contentRectInCell": {
+        "x": 213,
+        "y": 191,
+        "w": 86,
+        "h": 130
+      },
+      "pivot": [
+        0.5,
+        0.5559
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 438,
+          "y": 597,
+          "w": 86,
+          "h": 130
+        }
+      }
+    },
+    "lantern_flame_04": {
+      "cell": {
+        "col": 0,
+        "row": 3,
+        "x": 0,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 216,
+        "y": 1737,
+        "w": 79,
+        "h": 110
+      },
+      "contentRectInCell": {
+        "x": 216,
+        "y": 201,
+        "w": 79,
+        "h": 110
+      },
+      "pivot": [
+        0.499,
+        0.5473
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 527,
+          "y": 616,
+          "w": 79,
+          "h": 110
+        }
+      }
+    },
+    "muzzle_flash_01": {
+      "cell": {
+        "col": 1,
+        "row": 3,
+        "x": 512,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 714,
+        "y": 1718,
+        "w": 108,
+        "h": 147
+      },
+      "contentRectInCell": {
+        "x": 202,
+        "y": 182,
+        "w": 108,
+        "h": 147
+      },
+      "pivot": [
+        0.5886,
+        0.499
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 699,
+          "y": 569,
+          "w": 108,
+          "h": 147
+        }
+      }
+    },
+    "muzzle_flash_02": {
+      "cell": {
+        "col": 2,
+        "row": 3,
+        "x": 1024,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1219,
+        "y": 1721,
+        "w": 122,
+        "h": 141
+      },
+      "contentRectInCell": {
+        "x": 195,
+        "y": 185,
+        "w": 122,
+        "h": 141
+      },
+      "pivot": [
+        0.6001,
+        0.499
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 845,
+          "y": 574,
+          "w": 122,
+          "h": 141
+        }
+      }
+    },
+    "muzzle_flash_03": {
+      "cell": {
+        "col": 3,
+        "row": 3,
+        "x": 1536,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1711,
+        "y": 1714,
+        "w": 162,
+        "h": 156
+      },
+      "contentRectInCell": {
+        "x": 175,
+        "y": 178,
+        "w": 162,
+        "h": 156
+      },
+      "pivot": [
+        0.6329,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 997,
+          "y": 565,
+          "w": 162,
+          "h": 156
+        }
+      }
+    },
+    "projectile_bolt": {
+      "cell": {
+        "col": 0,
+        "row": 4,
+        "x": 0,
+        "y": 2048,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 139,
+        "y": 2284,
+        "w": 233,
+        "h": 39
+      },
+      "contentRectInCell": {
+        "x": 139,
+        "y": 236,
+        "w": 233,
+        "h": 39
+      },
+      "pivot": [
+        0.499,
+        0.499
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 1240,
+          "y": 630,
+          "w": 233,
+          "h": 39
+        }
+      }
+    },
+    "destroy_debris_01": {
+      "cell": {
+        "col": 1,
+        "row": 4,
+        "x": 512,
+        "y": 2048,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 686,
+        "y": 2219,
+        "w": 163,
+        "h": 170
+      },
+      "contentRectInCell": {
+        "x": 174,
+        "y": 171,
+        "w": 163,
+        "h": 170
+      },
+      "pivot": [
+        0.499,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_02": {
+      "cell": {
+        "col": 2,
+        "row": 4,
+        "x": 1024,
+        "y": 2048,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1223,
+        "y": 2223,
+        "w": 114,
+        "h": 162
+      },
+      "contentRectInCell": {
+        "x": 199,
+        "y": 175,
+        "w": 114,
+        "h": 162
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_03": {
+      "cell": {
+        "col": 3,
+        "row": 4,
+        "x": 1536,
+        "y": 2048,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1735,
+        "y": 2249,
+        "w": 113,
+        "h": 110
+      },
+      "contentRectInCell": {
+        "x": 199,
+        "y": 201,
+        "w": 113,
+        "h": 110
+      },
+      "pivot": [
+        0.499,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_04": {
+      "cell": {
+        "col": 0,
+        "row": 5,
+        "x": 0,
+        "y": 2560,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 213,
+        "y": 2758,
+        "w": 86,
+        "h": 115
+      },
+      "contentRectInCell": {
+        "x": 213,
+        "y": 198,
+        "w": 86,
+        "h": 115
+      },
+      "pivot": [
+        0.5,
+        0.499
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_05": {
+      "cell": {
+        "col": 1,
+        "row": 5,
+        "x": 512,
+        "y": 2560,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 722,
+        "y": 2753,
+        "w": 91,
+        "h": 125
+      },
+      "contentRectInCell": {
+        "x": 210,
+        "y": 193,
+        "w": 91,
+        "h": 125
+      },
+      "pivot": [
+        0.499,
+        0.499
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_06": {
+      "cell": {
+        "col": 2,
+        "row": 5,
+        "x": 1024,
+        "y": 2560,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1237,
+        "y": 2776,
+        "w": 85,
+        "h": 79
+      },
+      "contentRectInCell": {
+        "x": 213,
+        "y": 216,
+        "w": 85,
+        "h": 79
+      },
+      "pivot": [
+        0.499,
+        0.499
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_07": {
+      "cell": {
+        "col": 3,
+        "row": 5,
+        "x": 1536,
+        "y": 2560,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1752,
+        "y": 2775,
+        "w": 79,
+        "h": 81
+      },
+      "contentRectInCell": {
+        "x": 216,
+        "y": 215,
+        "w": 79,
+        "h": 81
+      },
+      "pivot": [
+        0.499,
+        0.499
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_08": {
+      "cell": {
+        "col": 0,
+        "row": 6,
+        "x": 0,
+        "y": 3072,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 226,
+        "y": 3293,
+        "w": 59,
+        "h": 70
+      },
+      "contentRectInCell": {
+        "x": 226,
+        "y": 221,
+        "w": 59,
+        "h": 70
+      },
+      "pivot": [
+        0.499,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_09": {
+      "cell": {
+        "col": 1,
+        "row": 6,
+        "x": 512,
+        "y": 3072,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 721,
+        "y": 3303,
+        "w": 94,
+        "h": 50
+      },
+      "contentRectInCell": {
+        "x": 209,
+        "y": 231,
+        "w": 94,
+        "h": 50
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_10": {
+      "cell": {
+        "col": 2,
+        "row": 6,
+        "x": 1024,
+        "y": 3072,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1251,
+        "y": 3301,
+        "w": 57,
+        "h": 54
+      },
+      "contentRectInCell": {
+        "x": 227,
+        "y": 229,
+        "w": 57,
+        "h": 54
+      },
+      "pivot": [
+        0.499,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_11": {
+      "cell": {
+        "col": 3,
+        "row": 6,
+        "x": 1536,
+        "y": 3072,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1762,
+        "y": 3301,
+        "w": 60,
+        "h": 54
+      },
+      "contentRectInCell": {
+        "x": 226,
+        "y": 229,
+        "w": 60,
+        "h": 54
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_12": {
+      "cell": {
+        "col": 0,
+        "row": 7,
+        "x": 0,
+        "y": 3584,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 230,
+        "y": 3813,
+        "w": 52,
+        "h": 54
+      },
+      "contentRectInCell": {
+        "x": 230,
+        "y": 229,
+        "w": 52,
+        "h": 54
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_13": {
+      "cell": {
+        "col": 1,
+        "row": 7,
+        "x": 512,
+        "y": 3584,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 741,
+        "y": 3812,
+        "w": 53,
+        "h": 56
+      },
+      "contentRectInCell": {
+        "x": 229,
+        "y": 228,
+        "w": 53,
+        "h": 56
+      },
+      "pivot": [
+        0.499,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    },
+    "destroy_debris_14": {
+      "cell": {
+        "col": 2,
+        "row": 7,
+        "x": 1024,
+        "y": 3584,
+        "w": 512,
+        "h": 512
+      },
+      "contentRect": {
+        "x": 1257,
+        "y": 3818,
+        "w": 45,
+        "h": 44
+      },
+      "contentRectInCell": {
+        "x": 233,
+        "y": 234,
+        "w": 45,
+        "h": 44
+      },
+      "pivot": [
+        0.499,
+        0.5
+      ],
+      "source": {
+        "image": "../watchtower_layered_imagegen_v1_atlas.png",
+        "rect": {
+          "x": 39,
+          "y": 784,
+          "w": 1070,
+          "h": 170
+        }
+      }
+    }
+  },
+  "attachments": {
+    "object_center": {
+      "sprite": "base_stone_token",
+      "pivot": [
+        0.499,
+        0.5
+      ]
+    },
+    "weapon_pivot": {
+      "sprite": "crossbow_rotatable",
+      "pivot": [
+        0.5,
+        0.499
+      ],
+      "runtimeTransform": "rotate_to_target"
+    },
+    "flag_anchor": {
+      "sprite": "flag_cloth_wind_*",
+      "pivot": "left_center",
+      "runtimeTransform": "wind_direction_or_wind_phase"
+    },
+    "lantern_anchor": {
+      "sprite": "lantern_flame_*",
+      "pivot": "lower_center",
+      "runtimeTransform": "flame_loop"
+    },
+    "muzzle_anchor": {
+      "sprite": "muzzle_flash_*",
+      "pivot": "right_center",
+      "runtimeTransform": "attack_once"
+    },
+    "projectile_spawn": {
+      "sprite": "projectile_bolt",
+      "pivot": [
+        0.499,
+        0.499
+      ],
+      "runtimeTransform": "rotate_along_trajectory"
+    }
+  },
+  "animations": {
+    "idle": {
+      "static": [
+        "base_stone_token",
+        "central_socket",
+        "flag_pole",
+        "lantern_body",
+        "crossbow_rotatable"
+      ],
+      "loops": {
+        "flag_cloth_wind": [
+          "flag_cloth_wind_01",
+          "flag_cloth_wind_02",
+          "flag_cloth_wind_03",
+          "flag_cloth_wind_04"
+        ],
+        "lantern_flame": [
+          "lantern_flame_01",
+          "lantern_flame_02",
+          "lantern_flame_03",
+          "lantern_flame_04"
+        ]
+      },
+      "durationMs": 140,
+      "loop": true
+    },
+    "attack": {
+      "runtimeRotation": "crossbow_rotatable follows target angle around weapon_pivot",
+      "once": [
+        "muzzle_flash_01",
+        "muzzle_flash_02",
+        "muzzle_flash_03"
+      ],
+      "durationMs": 80,
+      "loop": false
+    },
+    "projectile": {
+      "sprite": "projectile_bolt",
+      "runtimeRotation": "rotate_along_trajectory"
+    },
+    "destroy": {
+      "pieces": [
+        "destroy_debris_01",
+        "destroy_debris_02",
+        "destroy_debris_03",
+        "destroy_debris_04",
+        "destroy_debris_05",
+        "destroy_debris_06",
+        "destroy_debris_07",
+        "destroy_debris_08",
+        "destroy_debris_09",
+        "destroy_debris_10",
+        "destroy_debris_11",
+        "destroy_debris_12",
+        "destroy_debris_13",
+        "destroy_debris_14"
+      ],
+      "loop": false,
+      "holdLast": true
+    }
+  },
+  "qa": {
+    "oneSpritePerCell": true,
+    "fixedCellGrid": true,
+    "transparentRuntimeBackground": true,
+    "noReviewPreviewInsideRuntimeAtlas": true,
+    "debrisSplitIntoIndividualCells": true,
+    "knownIssues": [
+      "ImageGen source still has three strong muzzle flash frames; production generation should request a fourth distinct frame."
+    ]
+  }
+}

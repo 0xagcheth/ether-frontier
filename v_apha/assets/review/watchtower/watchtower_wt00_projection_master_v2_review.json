@@ -1,0 +1,31 @@
+{
+  "job": "WT-00",
+  "object": "watchtower",
+  "candidate": "v2_childmade_crayon_cardboard",
+  "status": "awaiting_user_visual_approval",
+  "generationMode": "built-in-imagegen-edit",
+  "editTarget": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v1_chroma.png",
+  "sourceChroma": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v2_chroma.png",
+  "sourceAlpha": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v2_alpha.png",
+  "prompt": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_prompt_v2.txt",
+  "canvasPx": [1254, 1254],
+  "alphaQa": {
+    "transparentCorners": true,
+    "partiallyTransparentPixels": 59846,
+    "transparentPixels": 472063,
+    "note": "Soft inter-layer and perimeter shadows intentionally create partial alpha. Perimeter shadow must not be inherited by isolated runtime modules."
+  },
+  "visualChecks": {
+    "trueTopDownCircularBase": "pass",
+    "topViewCrossbow": "pass",
+    "radialFlatPennant": "pass",
+    "topViewLantern": "pass",
+    "largerSimplifiedElements": "pass",
+    "corrugatedCardboardTexture": "pass",
+    "waxCrayonColoring": "pass",
+    "individualLayerContactShadows": "pass",
+    "watchtowerIdentity": "needs_user_confirmation"
+  },
+  "runtimeCaution": "Generate each approved module separately. Preserve only the shadow cast onto its direct parent layer; exclude any world-space shadow outside the assembled object.",
+  "nextAuthorizedJobAfterApproval": "WT-01"
+}

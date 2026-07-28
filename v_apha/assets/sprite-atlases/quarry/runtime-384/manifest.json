@@ -1,0 +1,50 @@
+{
+  "object": "quarry",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "normalization": "locked 255px intact building extent; centered 384px safety cell",
+  "actions": {
+    "idle": {
+      "file": "quarry-idle-384-alpha.png",
+      "frames": 5,
+      "durationMs": 180,
+      "loop": true
+    },
+    "destroy": {
+      "file": "quarry-destroy-384-alpha.png",
+      "frames": 5,
+      "durationMs": 130,
+      "loop": false,
+      "holdLast": true
+    }
+  },
+  "qa": {
+    "idle": {
+      "extents": [
+        255,
+        250,
+        253,
+        251,
+        254
+      ],
+      "clippedFrames": []
+    },
+    "destroy": {
+      "extents": [
+        255,
+        253,
+        254,
+        246,
+        233
+      ],
+      "clippedFrames": []
+    }
+  }
+}

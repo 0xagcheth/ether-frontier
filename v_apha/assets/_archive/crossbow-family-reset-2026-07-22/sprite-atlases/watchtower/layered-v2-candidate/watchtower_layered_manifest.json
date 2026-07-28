@@ -1,0 +1,717 @@
+{
+  "schemaVersion": 2,
+  "object": "watchtower",
+  "family": "watchtower",
+  "pipeline": "layered-object-v2",
+  "status": "approved-candidate",
+  "image": "watchtower_layered_runtime.png",
+  "sourceImage": "watchtower_layered_source_chroma.png",
+  "alphaSourceImage": "watchtower_layered_source_alpha.png",
+  "reviewImage": "watchtower_layered_review_grid.png",
+  "compositePreview": "watchtower_layered_composite_preview.png",
+  "atlasSize": [
+    1536,
+    1017
+  ],
+  "format": "RGBA PNG",
+  "camera": "true top-down orthographic 90deg",
+  "style": "matte cardboard tabletop board-game token",
+  "maxFileSizeBytes": 5000000,
+  "fileSizeBytes": 1922480,
+  "drawOrder": [
+    "base_stone_token",
+    "central_socket",
+    "flag_pole",
+    "flag_cloth_wind",
+    "lantern_body",
+    "lantern_flame",
+    "crossbow_rotatable",
+    "muzzle_flash"
+  ],
+  "sprites": {
+    "base_stone_token": {
+      "layer": "base",
+      "rect": {
+        "x": 8,
+        "y": 8,
+        "w": 600,
+        "h": 602
+      },
+      "pivotPx": [
+        300,
+        301
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        600,
+        602
+      ]
+    },
+    "central_socket": {
+      "layer": "central",
+      "rect": {
+        "x": 1101,
+        "y": 8,
+        "w": 281,
+        "h": 264
+      },
+      "pivotPx": [
+        140,
+        132
+      ],
+      "pivot": [
+        0.49822,
+        0.5
+      ],
+      "sourceSize": [
+        281,
+        264
+      ]
+    },
+    "crossbow_rotatable": {
+      "layer": "crossbow",
+      "rect": {
+        "x": 680,
+        "y": 8,
+        "w": 413,
+        "h": 338
+      },
+      "pivotPx": [
+        206,
+        169
+      ],
+      "pivot": [
+        0.49879,
+        0.5
+      ],
+      "sourceSize": [
+        413,
+        338
+      ]
+    },
+    "flag_pole": {
+      "layer": "flag",
+      "rect": {
+        "x": 616,
+        "y": 8,
+        "w": 56,
+        "h": 471
+      },
+      "pivotPx": [
+        28,
+        235
+      ],
+      "pivot": [
+        0.5,
+        0.49894
+      ],
+      "sourceSize": [
+        56,
+        471
+      ]
+    },
+    "flag_cloth_wind_01": {
+      "layer": "flag",
+      "rect": {
+        "x": 8,
+        "y": 618,
+        "w": 299,
+        "h": 157
+      },
+      "pivotPx": [
+        4,
+        78
+      ],
+      "pivot": [
+        0.01338,
+        0.49682
+      ],
+      "sourceSize": [
+        299,
+        157
+      ]
+    },
+    "flag_cloth_wind_02": {
+      "layer": "flag",
+      "rect": {
+        "x": 612,
+        "y": 618,
+        "w": 277,
+        "h": 154
+      },
+      "pivotPx": [
+        4,
+        77
+      ],
+      "pivot": [
+        0.01444,
+        0.5
+      ],
+      "sourceSize": [
+        277,
+        154
+      ]
+    },
+    "flag_cloth_wind_03": {
+      "layer": "flag",
+      "rect": {
+        "x": 315,
+        "y": 618,
+        "w": 289,
+        "h": 154
+      },
+      "pivotPx": [
+        4,
+        77
+      ],
+      "pivot": [
+        0.01384,
+        0.5
+      ],
+      "sourceSize": [
+        289,
+        154
+      ]
+    },
+    "flag_cloth_wind_04": {
+      "layer": "flag",
+      "rect": {
+        "x": 251,
+        "y": 783,
+        "w": 266,
+        "h": 122
+      },
+      "pivotPx": [
+        4,
+        61
+      ],
+      "pivot": [
+        0.01504,
+        0.5
+      ],
+      "sourceSize": [
+        266,
+        122
+      ]
+    },
+    "lantern_body": {
+      "layer": "lantern",
+      "rect": {
+        "x": 897,
+        "y": 618,
+        "w": 189,
+        "h": 149
+      },
+      "pivotPx": [
+        94,
+        74
+      ],
+      "pivot": [
+        0.49735,
+        0.49664
+      ],
+      "sourceSize": [
+        189,
+        149
+      ]
+    },
+    "lantern_flame_01": {
+      "layer": "lantern",
+      "rect": {
+        "x": 1436,
+        "y": 618,
+        "w": 86,
+        "h": 137
+      },
+      "pivotPx": [
+        43,
+        99
+      ],
+      "pivot": [
+        0.5,
+        0.72263
+      ],
+      "sourceSize": [
+        86,
+        137
+      ]
+    },
+    "lantern_flame_02": {
+      "layer": "lantern",
+      "rect": {
+        "x": 1340,
+        "y": 618,
+        "w": 88,
+        "h": 137
+      },
+      "pivotPx": [
+        44,
+        99
+      ],
+      "pivot": [
+        0.5,
+        0.72263
+      ],
+      "sourceSize": [
+        88,
+        137
+      ]
+    },
+    "lantern_flame_03": {
+      "layer": "lantern",
+      "rect": {
+        "x": 1242,
+        "y": 618,
+        "w": 90,
+        "h": 138
+      },
+      "pivotPx": [
+        45,
+        99
+      ],
+      "pivot": [
+        0.5,
+        0.71739
+      ],
+      "sourceSize": [
+        90,
+        138
+      ]
+    },
+    "lantern_flame_04": {
+      "layer": "lantern",
+      "rect": {
+        "x": 156,
+        "y": 783,
+        "w": 87,
+        "h": 128
+      },
+      "pivotPx": [
+        43,
+        92
+      ],
+      "pivot": [
+        0.49425,
+        0.71875
+      ],
+      "sourceSize": [
+        87,
+        128
+      ]
+    },
+    "muzzle_flash_01": {
+      "layer": "muzzle",
+      "rect": {
+        "x": 643,
+        "y": 783,
+        "w": 116,
+        "h": 112
+      },
+      "pivotPx": [
+        4,
+        56
+      ],
+      "pivot": [
+        0.03448,
+        0.5
+      ],
+      "sourceSize": [
+        116,
+        112
+      ]
+    },
+    "muzzle_flash_02": {
+      "layer": "muzzle",
+      "rect": {
+        "x": 767,
+        "y": 783,
+        "w": 119,
+        "h": 110
+      },
+      "pivotPx": [
+        4,
+        55
+      ],
+      "pivot": [
+        0.03361,
+        0.5
+      ],
+      "sourceSize": [
+        119,
+        110
+      ]
+    },
+    "muzzle_flash_03": {
+      "layer": "muzzle",
+      "rect": {
+        "x": 1160,
+        "y": 783,
+        "w": 118,
+        "h": 105
+      },
+      "pivotPx": [
+        4,
+        52
+      ],
+      "pivot": [
+        0.0339,
+        0.49524
+      ],
+      "sourceSize": [
+        118,
+        105
+      ]
+    },
+    "muzzle_flash_04": {
+      "layer": "muzzle",
+      "rect": {
+        "x": 1286,
+        "y": 783,
+        "w": 118,
+        "h": 105
+      },
+      "pivotPx": [
+        4,
+        52
+      ],
+      "pivot": [
+        0.0339,
+        0.49524
+      ],
+      "sourceSize": [
+        118,
+        105
+      ]
+    },
+    "projectile_bolt": {
+      "layer": "projectile",
+      "rect": {
+        "x": 206,
+        "y": 925,
+        "w": 178,
+        "h": 70
+      },
+      "pivotPx": [
+        89,
+        35
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        178,
+        70
+      ]
+    },
+    "destroy_debris_01": {
+      "layer": "destroy",
+      "rect": {
+        "x": 1412,
+        "y": 783,
+        "w": 109,
+        "h": 98
+      },
+      "pivotPx": [
+        54,
+        49
+      ],
+      "pivot": [
+        0.49541,
+        0.5
+      ],
+      "sourceSize": [
+        109,
+        98
+      ]
+    },
+    "destroy_debris_02": {
+      "layer": "destroy",
+      "rect": {
+        "x": 8,
+        "y": 783,
+        "w": 140,
+        "h": 134
+      },
+      "pivotPx": [
+        70,
+        67
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        140,
+        134
+      ]
+    },
+    "destroy_debris_03": {
+      "layer": "destroy",
+      "rect": {
+        "x": 1028,
+        "y": 783,
+        "w": 124,
+        "h": 106
+      },
+      "pivotPx": [
+        62,
+        53
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        124,
+        106
+      ]
+    },
+    "destroy_debris_04": {
+      "layer": "destroy",
+      "rect": {
+        "x": 894,
+        "y": 783,
+        "w": 126,
+        "h": 109
+      },
+      "pivotPx": [
+        63,
+        54
+      ],
+      "pivot": [
+        0.5,
+        0.49541
+      ],
+      "sourceSize": [
+        126,
+        109
+      ]
+    },
+    "destroy_debris_05": {
+      "layer": "destroy",
+      "rect": {
+        "x": 8,
+        "y": 925,
+        "w": 87,
+        "h": 84
+      },
+      "pivotPx": [
+        43,
+        42
+      ],
+      "pivot": [
+        0.49425,
+        0.5
+      ],
+      "sourceSize": [
+        87,
+        84
+      ]
+    },
+    "destroy_debris_06": {
+      "layer": "destroy",
+      "rect": {
+        "x": 103,
+        "y": 925,
+        "w": 95,
+        "h": 75
+      },
+      "pivotPx": [
+        47,
+        37
+      ],
+      "pivot": [
+        0.49474,
+        0.49333
+      ],
+      "sourceSize": [
+        95,
+        75
+      ]
+    },
+    "destroy_debris_07": {
+      "layer": "destroy",
+      "rect": {
+        "x": 392,
+        "y": 925,
+        "w": 62,
+        "h": 57
+      },
+      "pivotPx": [
+        31,
+        28
+      ],
+      "pivot": [
+        0.5,
+        0.49123
+      ],
+      "sourceSize": [
+        62,
+        57
+      ]
+    },
+    "destroy_debris_08": {
+      "layer": "destroy",
+      "rect": {
+        "x": 525,
+        "y": 783,
+        "w": 110,
+        "h": 118
+      },
+      "pivotPx": [
+        55,
+        59
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        110,
+        118
+      ]
+    },
+    "destroy_debris_09": {
+      "layer": "destroy",
+      "rect": {
+        "x": 1094,
+        "y": 618,
+        "w": 140,
+        "h": 144
+      },
+      "pivotPx": [
+        70,
+        72
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        140,
+        144
+      ]
+    }
+  },
+  "attachments": {
+    "objectCenter": {
+      "parent": "base_stone_token",
+      "pointPx": [
+        300,
+        301
+      ]
+    },
+    "weaponSocket": {
+      "parent": "central_socket",
+      "child": "crossbow_rotatable",
+      "childPivotPx": [
+        206,
+        169
+      ]
+    },
+    "flagCloth": {
+      "parent": "flag_pole",
+      "childPattern": "flag_cloth_wind_*",
+      "childPivot": "left-center"
+    },
+    "lanternFlame": {
+      "parent": "lantern_body",
+      "childPattern": "lantern_flame_*",
+      "childPivot": "lower-center"
+    },
+    "muzzle": {
+      "parent": "crossbow_rotatable",
+      "childPattern": "muzzle_flash_*",
+      "childPivot": "left-center"
+    },
+    "projectileSpawn": {
+      "parent": "crossbow_rotatable",
+      "child": "projectile_bolt"
+    }
+  },
+  "runtimeTransforms": {
+    "crossbow_rotatable": {
+      "rotate": "toward-target",
+      "origin": "weaponSocket"
+    },
+    "projectile_bolt": {
+      "rotate": "along-trajectory"
+    },
+    "flag_cloth_wind_*": {
+      "position": "flagCloth",
+      "preserveBaseFootprint": true
+    },
+    "lantern_flame_*": {
+      "position": "lanternFlame",
+      "preserveBaseFootprint": true
+    },
+    "muzzle_flash_*": {
+      "position": "muzzle",
+      "inheritParentRotation": true
+    }
+  },
+  "animations": {
+    "flagWind": {
+      "frames": [
+        "flag_cloth_wind_01",
+        "flag_cloth_wind_02",
+        "flag_cloth_wind_03",
+        "flag_cloth_wind_04"
+      ],
+      "frameDurationMs": 140,
+      "loop": true
+    },
+    "lanternFlame": {
+      "frames": [
+        "lantern_flame_01",
+        "lantern_flame_02",
+        "lantern_flame_03",
+        "lantern_flame_04"
+      ],
+      "frameDurationMs": 110,
+      "loop": true
+    },
+    "attackFlash": {
+      "frames": [
+        "muzzle_flash_01",
+        "muzzle_flash_02",
+        "muzzle_flash_03",
+        "muzzle_flash_04"
+      ],
+      "frameDurationMs": 65,
+      "loop": false,
+      "holdLast": false
+    },
+    "destroy": {
+      "pieces": [
+        "destroy_debris_01",
+        "destroy_debris_02",
+        "destroy_debris_03",
+        "destroy_debris_04",
+        "destroy_debris_05",
+        "destroy_debris_06",
+        "destroy_debris_07",
+        "destroy_debris_08",
+        "destroy_debris_09"
+      ],
+      "loop": false,
+      "holdLast": true
+    }
+  },
+  "qa": {
+    "runtimeCompactPacking": true,
+    "transparentBackground": true,
+    "oneObjectFamily": true,
+    "runtimeContainsReviewMarkup": false,
+    "under5MB": true,
+    "noClipping": true,
+    "derivedFrames": {
+      "muzzle_flash_04": "fade hold derived from ImageGen muzzle_flash_03"
+    },
+    "knownIssues": []
+  }
+}

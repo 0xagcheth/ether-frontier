@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "module": "tracker__targeting_fx__rune_loop",
+  "object": "tracker",
+  "family": "fortress_ranged",
+  "slot": "targeting_fx",
+  "sourceImage": "tracker__targeting_fx__rune_loop_v1_source_chroma.png",
+  "projection": "true_top_down_orthographic_90deg",
+  "sharedSourceSize": [
+    627,
+    627
+  ],
+  "sharedPivotInSourcePx": [
+    313,
+    313
+  ],
+  "runtimeScale": {
+    "scaleToBaseFootprint": 0.34
+  },
+  "attachments": {
+    "parent": {
+      "module": "tracker__active_primary__long_range_crossbow",
+      "anchor": "scan_ring_socket",
+      "inheritRotation": true
+    }
+  },
+  "animation": {
+    "id": "targeting_scan",
+    "frames": [
+      "targeting_rune_01",
+      "targeting_rune_02",
+      "targeting_rune_03",
+      "targeting_rune_04"
+    ],
+    "durationsMs": [
+      180,
+      180,
+      240,
+      220
+    ],
+    "loop": true,
+    "totalDurationMs": 820
+  },
+  "drawOrder": 31,
+  "frames": [
+    {
+      "id": "targeting_rune_01",
+      "image": "tracker__targeting_fx__rune_loop_v1__frame_01.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 420,
+        "h": 416
+      },
+      "sizePx": [
+        420,
+        416
+      ],
+      "sourceSize": [
+        627,
+        627
+      ],
+      "trimOffset": [
+        99,
+        92
+      ],
+      "pivotPx": [
+        214,
+        221
+      ],
+      "durationMs": 180
+    },
+    {
+      "id": "targeting_rune_02",
+      "image": "tracker__targeting_fx__rune_loop_v1__frame_02.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 421,
+        "h": 416
+      },
+      "sizePx": [
+        421,
+        416
+      ],
+      "sourceSize": [
+        627,
+        627
+      ],
+      "trimOffset": [
+        98,
+        92
+      ],
+      "pivotPx": [
+        215,
+        221
+      ],
+      "durationMs": 180
+    },
+    {
+      "id": "targeting_rune_03",
+      "image": "tracker__targeting_fx__rune_loop_v1__frame_03.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 421,
+        "h": 484
+      },
+      "sizePx": [
+        421,
+        484
+      ],
+      "sourceSize": [
+        627,
+        627
+      ],
+      "trimOffset": [
+        98,
+        66
+      ],
+      "pivotPx": [
+        215,
+        247
+      ],
+      "durationMs": 240
+    },
+    {
+      "id": "targeting_rune_04",
+      "image": "tracker__targeting_fx__rune_loop_v1__frame_04.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 420,
+        "h": 415
+      },
+      "sizePx": [
+        420,
+        415
+      ],
+      "sourceSize": [
+        627,
+        627
+      ],
+      "trimOffset": [
+        99,
+        66
+      ],
+      "pivotPx": [
+        214,
+        247
+      ],
+      "durationMs": 220
+    }
+  ],
+  "qa": {
+    "transparent": true,
+    "tightRects": true,
+    "stableSourceFootprint": true,
+    "openCenter": true,
+    "magentaSpillPixelsByFrame": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "magentaSpillPixels": 0,
+    "under5MB": true,
+    "status": "canon"
+  }
+}

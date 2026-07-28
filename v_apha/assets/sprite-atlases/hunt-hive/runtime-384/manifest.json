@@ -1,0 +1,85 @@
+{
+  "object": "hunt-hive",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "normalization": "locked 255px intact building extent; centered 384px safety cell",
+  "actions": {
+    "idle": {
+      "file": "hunt-hive-idle-384-alpha.png",
+      "frames": 5,
+      "durationMs": 180,
+      "loop": true
+    },
+    "destroy": {
+      "file": "hunt-hive-destroy-384-alpha.png",
+      "frames": 5,
+      "durationMs": 130,
+      "loop": false,
+      "holdLast": true
+    },
+    "attack": {
+      "file": "hunt-hive-attack-384-alpha.png",
+      "frames": 4,
+      "durationMs": 90,
+      "loop": false
+    },
+    "projectile": {
+      "file": "hunt-hive-projectile-384-alpha.png",
+      "extent": 108
+    },
+    "impact": {
+      "file": "hunt-hive-impact-384-alpha.png",
+      "extent": 148
+    }
+  },
+  "qa": {
+    "idle": {
+      "extents": [
+        255,
+        255,
+        255,
+        255,
+        255
+      ],
+      "clippedFrames": []
+    },
+    "destroy": {
+      "extents": [
+        255,
+        241,
+        207,
+        194,
+        193
+      ],
+      "clippedFrames": []
+    },
+    "attack": {
+      "extents": [
+        259,
+        259,
+        274,
+        259
+      ],
+      "clippedFrames": []
+    },
+    "projectile": {
+      "extents": [
+        108
+      ],
+      "clippedFrames": []
+    },
+    "impact": {
+      "extents": [
+        148
+      ],
+      "clippedFrames": []
+    }
+  }
+}

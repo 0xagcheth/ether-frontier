@@ -1,0 +1,99 @@
+{
+  "character": "goblin-spearman",
+  "format": "RGBA PNG",
+  "frameSize": [
+    256,
+    256
+  ],
+  "origin": "center",
+  "idleDirections": {
+    "file": "idle-directions-256-alpha.png",
+    "columns": 4,
+    "rows": 1,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "columnOrder": [
+      "UP",
+      "DOWN",
+      "LEFT",
+      "RIGHT"
+    ],
+    "normalization": "shared 88px head width; centered fixed pivot"
+  },
+  "animations": {
+    "walk": {
+      "file": "walk-256-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 90,
+      "loop": true,
+      "normalization": "shared 88px head width; centered fixed pivot"
+    },
+    "attack": {
+      "file": "attack-256-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 80,
+      "loop": false,
+      "normalization": "shared 88px head width; centered fixed pivot"
+    },
+    "death": {
+      "file": "death-256-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 110,
+      "loop": false,
+      "normalization": "shared 88px head width; centered fixed pivot"
+    },
+    "spawn": {
+      "file": "spawn-256-alpha.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "directionRows": [
+        "UP"
+      ],
+      "frameDurationMs": 100,
+      "loop": false,
+      "normalization": "shared 88px head width; centered fixed pivot"
+    },
+    "breach": {
+      "file": "breach-256-alpha.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "directionRows": [
+        "UP"
+      ],
+      "frameDurationMs": 90,
+      "loop": false,
+      "normalization": "shared 88px head width; centered fixed pivot"
+    }
+  }
+}

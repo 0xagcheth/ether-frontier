@@ -1,0 +1,21 @@
+{
+  "object": "watchtower",
+  "action": "projectile",
+  "loop": false,
+  "frames": [
+    {
+      "durationMs": 0,
+      "layers": [
+        {
+          "sprite": "projectile_bolt",
+          "anchor": "object_center",
+          "sizePx": [
+            82,
+            50
+          ],
+          "rotation": "trajectoryAngle"
+        }
+      ]
+    }
+  ]
+}

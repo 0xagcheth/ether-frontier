@@ -1,0 +1,371 @@
+{
+  "object": "watchtower",
+  "action": "attack",
+  "loop": false,
+  "frames": [
+    {
+      "durationMs": 90,
+      "layers": [
+        {
+          "sprite": "base_stone_token",
+          "anchor": "object_center",
+          "sizePx": [
+            255,
+            256
+          ]
+        },
+        {
+          "sprite": "central_socket",
+          "anchor": "object_center",
+          "sizePx": [
+            116,
+            109
+          ]
+        },
+        {
+          "sprite": "flag_mount_socket",
+          "anchor": "flag_mount",
+          "sizePx": [
+            20,
+            20
+          ]
+        },
+        {
+          "sprite": "flag_pennant_topdown_01",
+          "anchor": "flag_mount",
+          "offsetPx": [
+            11,
+            0
+          ],
+          "sizePx": [
+            70,
+            38
+          ],
+          "pivot": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "sprite": "lantern_housing_topdown",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            38,
+            38
+          ]
+        },
+        {
+          "sprite": "lantern_glow_topdown_01",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            28,
+            28
+          ]
+        },
+        {
+          "sprite": "crossbow_rotatable",
+          "anchor": "weapon_socket",
+          "offsetPx": [
+            0,
+            0
+          ],
+          "sizePx": [
+            176,
+            144
+          ],
+          "rotation": "aimAngle"
+        },
+        {
+          "sprite": "muzzle_flash_01",
+          "anchor": "muzzle",
+          "offsetPx": [
+            0,
+            0
+          ],
+          "sizePx": [
+            42,
+            42
+          ],
+          "pivot": [
+            0,
+            0.5
+          ],
+          "rotation": "aimAngle"
+        }
+      ]
+    },
+    {
+      "durationMs": 90,
+      "layers": [
+        {
+          "sprite": "base_stone_token",
+          "anchor": "object_center",
+          "sizePx": [
+            255,
+            256
+          ]
+        },
+        {
+          "sprite": "central_socket",
+          "anchor": "object_center",
+          "sizePx": [
+            116,
+            109
+          ]
+        },
+        {
+          "sprite": "flag_mount_socket",
+          "anchor": "flag_mount",
+          "sizePx": [
+            20,
+            20
+          ]
+        },
+        {
+          "sprite": "flag_pennant_topdown_02",
+          "anchor": "flag_mount",
+          "offsetPx": [
+            11,
+            0
+          ],
+          "sizePx": [
+            70,
+            38
+          ],
+          "pivot": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "sprite": "lantern_housing_topdown",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            38,
+            38
+          ]
+        },
+        {
+          "sprite": "lantern_glow_topdown_02",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            28,
+            28
+          ]
+        },
+        {
+          "sprite": "crossbow_rotatable",
+          "anchor": "weapon_socket",
+          "offsetPx": [
+            -5,
+            0
+          ],
+          "sizePx": [
+            176,
+            144
+          ],
+          "rotation": "aimAngle"
+        },
+        {
+          "sprite": "muzzle_flash_02",
+          "anchor": "muzzle",
+          "offsetPx": [
+            -5,
+            0
+          ],
+          "sizePx": [
+            42,
+            42
+          ],
+          "pivot": [
+            0,
+            0.5
+          ],
+          "rotation": "aimAngle"
+        }
+      ]
+    },
+    {
+      "durationMs": 90,
+      "layers": [
+        {
+          "sprite": "base_stone_token",
+          "anchor": "object_center",
+          "sizePx": [
+            255,
+            256
+          ]
+        },
+        {
+          "sprite": "central_socket",
+          "anchor": "object_center",
+          "sizePx": [
+            116,
+            109
+          ]
+        },
+        {
+          "sprite": "flag_mount_socket",
+          "anchor": "flag_mount",
+          "sizePx": [
+            20,
+            20
+          ]
+        },
+        {
+          "sprite": "flag_pennant_topdown_03",
+          "anchor": "flag_mount",
+          "offsetPx": [
+            11,
+            0
+          ],
+          "sizePx": [
+            70,
+            38
+          ],
+          "pivot": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "sprite": "lantern_housing_topdown",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            38,
+            38
+          ]
+        },
+        {
+          "sprite": "lantern_glow_topdown_03",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            28,
+            28
+          ]
+        },
+        {
+          "sprite": "crossbow_rotatable",
+          "anchor": "weapon_socket",
+          "offsetPx": [
+            -9,
+            0
+          ],
+          "sizePx": [
+            176,
+            144
+          ],
+          "rotation": "aimAngle"
+        },
+        {
+          "sprite": "muzzle_flash_03",
+          "anchor": "muzzle",
+          "offsetPx": [
+            -9,
+            0
+          ],
+          "sizePx": [
+            42,
+            42
+          ],
+          "pivot": [
+            0,
+            0.5
+          ],
+          "rotation": "aimAngle"
+        }
+      ]
+    },
+    {
+      "durationMs": 90,
+      "layers": [
+        {
+          "sprite": "base_stone_token",
+          "anchor": "object_center",
+          "sizePx": [
+            255,
+            256
+          ]
+        },
+        {
+          "sprite": "central_socket",
+          "anchor": "object_center",
+          "sizePx": [
+            116,
+            109
+          ]
+        },
+        {
+          "sprite": "flag_mount_socket",
+          "anchor": "flag_mount",
+          "sizePx": [
+            20,
+            20
+          ]
+        },
+        {
+          "sprite": "flag_pennant_topdown_04",
+          "anchor": "flag_mount",
+          "offsetPx": [
+            11,
+            0
+          ],
+          "sizePx": [
+            70,
+            38
+          ],
+          "pivot": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "sprite": "lantern_housing_topdown",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            38,
+            38
+          ]
+        },
+        {
+          "sprite": "lantern_glow_topdown_04",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            28,
+            28
+          ]
+        },
+        {
+          "sprite": "crossbow_rotatable",
+          "anchor": "weapon_socket",
+          "offsetPx": [
+            -3,
+            0
+          ],
+          "sizePx": [
+            176,
+            144
+          ],
+          "rotation": "aimAngle"
+        },
+        {
+          "sprite": "muzzle_flash_04",
+          "anchor": "muzzle",
+          "offsetPx": [
+            -3,
+            0
+          ],
+          "sizePx": [
+            42,
+            42
+          ],
+          "pivot": [
+            0,
+            0.5
+          ],
+          "rotation": "aimAngle"
+        }
+      ]
+    }
+  ]
+}

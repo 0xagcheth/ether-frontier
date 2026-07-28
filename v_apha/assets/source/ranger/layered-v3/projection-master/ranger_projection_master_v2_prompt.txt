@@ -1,0 +1,46 @@
+Use case: stylized-concept
+Asset type: revised assembled projection master for Ether Frontier Garrison Ranger tower
+
+Create one compact fortified Garrison Ranger TOWER.
+
+Structure:
+- dense squat octagonal fortified tower footprint;
+- raised central cardboard tower core seen directly from above;
+- narrow hunter-green parapet ring with minimal empty deck;
+- two small opposite recessed firing positions, each with one top-down hooded
+  ranger token;
+- compact fan-shaped rack of long green-fletched bolts attached to left-rear rim;
+- small reserve bolt magazine attached to right rim;
+- small rapid-volley crossbow on front sector of central core, occupying less
+  than one fifth of the full silhouette;
+- small green-amber hunting optic.
+
+The central core must dominate. It must unmistakably read as an upgraded
+defensive tower, not a broad platform, courtyard, arena, camp, bunker interior,
+or giant game token.
+
+Projection:
+strict true top-down orthographic 90-degree camera. Only top surfaces and thin
+cardboard cut edges. Compact centered composition, fully visible with padding.
+
+Style:
+handmade cartoon cardboard tabletop object; convincing corrugated tan cut edges,
+matte grey stone-paper, warm brown wood, hunter-green fittings, restrained
+crayon, thick uneven hand-painted ink outlines, child-cut imperfections, dirt,
+glue marks, rubbed corners, and small local contact shadows between every glued
+layer. Playful but materially believable.
+
+Weapon logic:
+mechanical rapid crossbow with physical string and long fletched bolts. No gun,
+cannon, firearm barrel, shells, muzzle flame, gun smoke, explosion, energy beam,
+or giant ballista.
+
+Backdrop:
+perfectly flat uniform solid #ff00ff chroma-key background with no shadow,
+gradient, texture, floor, reflection, or vignette. Do not use #ff00ff inside the
+tower.
+
+Avoid:
+broad platform, open arena, large empty deck, copied Watchtower body, dominant
+giant crossbow, facade, doorway, staircase, side/rear view, isometric perspective,
+terrain, labels, text, watermark, glossy 3D, or plastic.

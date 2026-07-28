@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "module": "watchtower__destroy_fx__stone_dust_burst",
+  "object": "watchtower",
+  "family": "fortress_ranged",
+  "slot": "destroy_fx",
+  "sourceImage": "watchtower__destroy_fx__stone_dust_burst_v1_source_chroma.png",
+  "projection": "true_top_down_orthographic_90deg",
+  "attachment": {
+    "parentModule": "fortress_ranged__base_token__round_light",
+    "anchor": "objectCenter",
+    "scaleToBaseFootprint": 0.76,
+    "inheritRotation": false
+  },
+  "drawOrder": 70,
+  "frames": [
+    {
+      "id": "frame_01",
+      "image": "watchtower__destroy_fx__stone_dust_burst__frame_01_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "contentRect": {
+        "x": 203,
+        "y": 172,
+        "w": 238,
+        "h": 247
+      },
+      "pivotPx": [
+        313,
+        313
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 85,
+      "magentaSpillPixels": 0
+    },
+    {
+      "id": "frame_02",
+      "image": "watchtower__destroy_fx__stone_dust_burst__frame_02_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "contentRect": {
+        "x": 120,
+        "y": 131,
+        "w": 341,
+        "h": 323
+      },
+      "pivotPx": [
+        313,
+        313
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 105,
+      "magentaSpillPixels": 0
+    },
+    {
+      "id": "frame_03",
+      "image": "watchtower__destroy_fx__stone_dust_burst__frame_03_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "contentRect": {
+        "x": 118,
+        "y": 69,
+        "w": 407,
+        "h": 411
+      },
+      "pivotPx": [
+        313,
+        313
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 125,
+      "magentaSpillPixels": 0
+    },
+    {
+      "id": "frame_04",
+      "image": "watchtower__destroy_fx__stone_dust_burst__frame_04_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "contentRect": {
+        "x": 123,
+        "y": 108,
+        "w": 344,
+        "h": 337
+      },
+      "pivotPx": [
+        313,
+        313
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 175,
+      "magentaSpillPixels": 0
+    }
+  ],
+  "animations": {
+    "destroy_dust": {
+      "frames": [
+        "frame_01",
+        "frame_02",
+        "frame_03",
+        "frame_04"
+      ],
+      "loop": false,
+      "holdLast": false,
+      "totalDurationMs": 490
+    }
+  },
+  "qa": {
+    "sharedCanvas": [
+      627,
+      627
+    ],
+    "sharedPivot": [
+      313,
+      313
+    ],
+    "runtimeLabels": false,
+    "magentaSpillPixels": 0,
+    "status": "canon"
+  }
+}

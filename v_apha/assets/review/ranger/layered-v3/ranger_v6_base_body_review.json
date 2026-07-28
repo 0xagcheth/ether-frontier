@@ -1,0 +1,41 @@
+{
+  "object": "ranger",
+  "masterVersion": 6,
+  "module": "ranger__base_body__compact_garrison_tower",
+  "status": "visual_candidate",
+  "sourceMaster": "../../../source/ranger/layered-v3/projection-master/ranger_projection_master_v6_chroma.png",
+  "sourceChroma": "../../../source/ranger/layered-v3/layers-v6/ranger_v6_base_body_chroma.png",
+  "semantic": "base_body",
+  "footprint": {
+    "masterRect": [96, 74, 830, 848],
+    "moduleRect": [96, 75, 829, 847],
+    "centerDeltaPx": [-0.5, 0.5],
+    "maxEdgeDeltaPx": 1,
+    "stable": true
+  },
+  "contents": {
+    "outerParapet": true,
+    "radialDeck": true,
+    "centralReinforcedCore": true,
+    "centralPivotSocket": true,
+    "flatCassetteMounts": true,
+    "weaponPresent": false,
+    "opticPresent": false,
+    "cassettePresent": false,
+    "boltPresent": false,
+    "raisedFeedRailPresent": false,
+    "humanoidPresent": false
+  },
+  "qa": {
+    "trueTopDown": true,
+    "noClipping": true,
+    "footprintLocked": true,
+    "readyForVisualApproval": true,
+    "alphaCleanupPassed": false,
+    "readyForRuntimePacking": false
+  },
+  "notes": [
+    "The chroma background is mildly non-uniform and needs a dedicated matte.",
+    "Do not use an alpha candidate until matte QA passes."
+  ]
+}

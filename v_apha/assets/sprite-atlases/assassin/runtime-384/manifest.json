@@ -1,0 +1,65 @@
+{
+  "object": "assassin",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "normalization": "locked 255px intact building extent; centered 384px safety cell",
+  "actions": {
+    "idle": {
+      "file": "assassin-idle-384-alpha.png",
+      "frames": 5,
+      "durationMs": 180,
+      "loop": true
+    },
+    "attack": {
+      "file": "assassin-attack-384-alpha.png",
+      "frames": 4,
+      "durationMs": 90,
+      "loop": false
+    },
+    "destroy": {
+      "file": "assassin-destroy-384-alpha.png",
+      "frames": 5,
+      "durationMs": 130,
+      "loop": false,
+      "holdLast": true
+    }
+  },
+  "qa": {
+    "idle": {
+      "extents": [
+        255,
+        255,
+        255,
+        255,
+        255
+      ],
+      "clippedFrames": []
+    },
+    "attack": {
+      "extents": [
+        257,
+        256,
+        256,
+        257
+      ],
+      "clippedFrames": []
+    },
+    "destroy": {
+      "extents": [
+        255,
+        266,
+        234,
+        208,
+        201
+      ],
+      "clippedFrames": []
+    }
+  }
+}

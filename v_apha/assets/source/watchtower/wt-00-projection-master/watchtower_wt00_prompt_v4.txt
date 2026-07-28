@@ -1,0 +1,15 @@
+Edit Image 1 only. Keep the exact Watchtower geometry, large proportions, strict 90-degree overhead view, circular base, centered plan-view crossbow, flat radial pennant, top-view lantern, layered cardboard construction, local contact shadows, and solid #ff00ff background.
+
+Shift the art direction from realistic cardboard craft toward a clean charming cartoon illustration of a cardboard craft:
+- simplify noisy fibers, scratches, cracks and corrugation by about 50%;
+- use cleaner, broader color shapes and warmer, slightly more saturated grey, brown, red and amber;
+- keep visible cardboard grain and tan cut edges, but make them stylized and illustrated rather than photographic;
+- keep wax-crayon coloring as a light hand-drawn texture: a few controlled broad strokes and soft scribbles, not dense all-over crayon noise;
+- use smooth slightly wobbly hand-drawn outlines in dark local colors;
+- keep the child-cut uneven silhouettes, paper patch, simple nails and plank seams, but reduce tiny damage and realistic surface wear;
+- make the crossbow, stones, flag and lantern look friendly, bold and game-readable, like a colorful animated board-game prop;
+- retain short soft shadows under each glued cardboard layer so the collage depth remains clear.
+
+The result should be 60% clean cartoon illustration, 25% cardboard texture, 15% crayon drawing. It must not look photorealistic, gritty, dirty, hyper-detailed, glossy 3D, or like a photographed real craft.
+
+Do not change or add mechanisms. No side view, facade, isometric angle, upright pole, hanging flag, side lantern, text, grid, projectile, debris, animation frames, floor or scene.

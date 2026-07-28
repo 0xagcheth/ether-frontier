@@ -1,0 +1,303 @@
+{
+  "object": "watchtower",
+  "action": "idle",
+  "loop": true,
+  "frames": [
+    {
+      "durationMs": 180,
+      "layers": [
+        {
+          "sprite": "base_stone_token",
+          "anchor": "object_center",
+          "sizePx": [
+            255,
+            256
+          ]
+        },
+        {
+          "sprite": "central_socket",
+          "anchor": "object_center",
+          "sizePx": [
+            116,
+            109
+          ]
+        },
+        {
+          "sprite": "flag_mount_socket",
+          "anchor": "flag_mount",
+          "sizePx": [
+            20,
+            20
+          ]
+        },
+        {
+          "sprite": "flag_pennant_topdown_01",
+          "anchor": "flag_mount",
+          "offsetPx": [
+            11,
+            0
+          ],
+          "sizePx": [
+            70,
+            38
+          ],
+          "pivot": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "sprite": "lantern_housing_topdown",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            38,
+            38
+          ]
+        },
+        {
+          "sprite": "lantern_glow_topdown_01",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            28,
+            28
+          ]
+        },
+        {
+          "sprite": "crossbow_rotatable",
+          "anchor": "weapon_socket",
+          "offsetPx": [
+            0,
+            0
+          ],
+          "sizePx": [
+            176,
+            144
+          ],
+          "rotation": "aimAngle"
+        }
+      ]
+    },
+    {
+      "durationMs": 180,
+      "layers": [
+        {
+          "sprite": "base_stone_token",
+          "anchor": "object_center",
+          "sizePx": [
+            255,
+            256
+          ]
+        },
+        {
+          "sprite": "central_socket",
+          "anchor": "object_center",
+          "sizePx": [
+            116,
+            109
+          ]
+        },
+        {
+          "sprite": "flag_mount_socket",
+          "anchor": "flag_mount",
+          "sizePx": [
+            20,
+            20
+          ]
+        },
+        {
+          "sprite": "flag_pennant_topdown_02",
+          "anchor": "flag_mount",
+          "offsetPx": [
+            11,
+            0
+          ],
+          "sizePx": [
+            70,
+            38
+          ],
+          "pivot": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "sprite": "lantern_housing_topdown",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            38,
+            38
+          ]
+        },
+        {
+          "sprite": "lantern_glow_topdown_02",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            28,
+            28
+          ]
+        },
+        {
+          "sprite": "crossbow_rotatable",
+          "anchor": "weapon_socket",
+          "offsetPx": [
+            0,
+            0
+          ],
+          "sizePx": [
+            176,
+            144
+          ],
+          "rotation": "aimAngle"
+        }
+      ]
+    },
+    {
+      "durationMs": 180,
+      "layers": [
+        {
+          "sprite": "base_stone_token",
+          "anchor": "object_center",
+          "sizePx": [
+            255,
+            256
+          ]
+        },
+        {
+          "sprite": "central_socket",
+          "anchor": "object_center",
+          "sizePx": [
+            116,
+            109
+          ]
+        },
+        {
+          "sprite": "flag_mount_socket",
+          "anchor": "flag_mount",
+          "sizePx": [
+            20,
+            20
+          ]
+        },
+        {
+          "sprite": "flag_pennant_topdown_03",
+          "anchor": "flag_mount",
+          "offsetPx": [
+            11,
+            0
+          ],
+          "sizePx": [
+            70,
+            38
+          ],
+          "pivot": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "sprite": "lantern_housing_topdown",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            38,
+            38
+          ]
+        },
+        {
+          "sprite": "lantern_glow_topdown_03",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            28,
+            28
+          ]
+        },
+        {
+          "sprite": "crossbow_rotatable",
+          "anchor": "weapon_socket",
+          "offsetPx": [
+            0,
+            0
+          ],
+          "sizePx": [
+            176,
+            144
+          ],
+          "rotation": "aimAngle"
+        }
+      ]
+    },
+    {
+      "durationMs": 180,
+      "layers": [
+        {
+          "sprite": "base_stone_token",
+          "anchor": "object_center",
+          "sizePx": [
+            255,
+            256
+          ]
+        },
+        {
+          "sprite": "central_socket",
+          "anchor": "object_center",
+          "sizePx": [
+            116,
+            109
+          ]
+        },
+        {
+          "sprite": "flag_mount_socket",
+          "anchor": "flag_mount",
+          "sizePx": [
+            20,
+            20
+          ]
+        },
+        {
+          "sprite": "flag_pennant_topdown_04",
+          "anchor": "flag_mount",
+          "offsetPx": [
+            11,
+            0
+          ],
+          "sizePx": [
+            70,
+            38
+          ],
+          "pivot": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "sprite": "lantern_housing_topdown",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            38,
+            38
+          ]
+        },
+        {
+          "sprite": "lantern_glow_topdown_04",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            28,
+            28
+          ]
+        },
+        {
+          "sprite": "crossbow_rotatable",
+          "anchor": "weapon_socket",
+          "offsetPx": [
+            0,
+            0
+          ],
+          "sizePx": [
+            176,
+            144
+          ],
+          "rotation": "aimAngle"
+        }
+      ]
+    }
+  ]
+}

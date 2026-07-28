@@ -1,0 +1,606 @@
+{
+  "schemaVersion": 2,
+  "object": "watchtower",
+  "pipeline": "layered-object-v2-restart",
+  "image": "watchtower_layered_runtime.png",
+  "atlasSize": [
+    1536,
+    851
+  ],
+  "sourceImage": "../../source/watchtower/watchtower_layered_source_v1_chroma.png",
+  "sprites": {
+    "base_stone_wood_platform": {
+      "file": "layers/base_stone_wood_platform.png",
+      "rect": {
+        "x": 8,
+        "y": 8,
+        "w": 550,
+        "h": 542
+      },
+      "pivotPx": [
+        275,
+        271
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "central_rotation_socket": {
+      "file": "layers/central_rotation_socket.png",
+      "rect": {
+        "x": 1142,
+        "y": 8,
+        "w": 209,
+        "h": 208
+      },
+      "pivotPx": [
+        104,
+        104
+      ],
+      "pivot": [
+        0.49761,
+        0.5
+      ]
+    },
+    "crossbow_rotatable": {
+      "file": "layers/crossbow_rotatable.png",
+      "rect": {
+        "x": 566,
+        "y": 8,
+        "w": 568,
+        "h": 518
+      },
+      "pivotPx": [
+        284,
+        259
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "pennant_mount": {
+      "file": "layers/pennant_mount.png",
+      "rect": {
+        "x": 1137,
+        "y": 558,
+        "w": 113,
+        "h": 111
+      },
+      "pivotPx": [
+        56,
+        55
+      ],
+      "pivot": [
+        0.49558,
+        0.4955
+      ]
+    },
+    "flag_pennant_01": {
+      "file": "layers/flag_pennant_01.png",
+      "rect": {
+        "x": 8,
+        "y": 558,
+        "w": 246,
+        "h": 120
+      },
+      "pivotPx": [
+        0,
+        60
+      ],
+      "pivot": [
+        0.0,
+        0.5
+      ]
+    },
+    "flag_pennant_02": {
+      "file": "layers/flag_pennant_02.png",
+      "rect": {
+        "x": 497,
+        "y": 558,
+        "w": 259,
+        "h": 119
+      },
+      "pivotPx": [
+        0,
+        59
+      ],
+      "pivot": [
+        0.0,
+        0.4958
+      ]
+    },
+    "flag_pennant_03": {
+      "file": "layers/flag_pennant_03.png",
+      "rect": {
+        "x": 764,
+        "y": 558,
+        "w": 246,
+        "h": 119
+      },
+      "pivotPx": [
+        0,
+        59
+      ],
+      "pivot": [
+        0.0,
+        0.4958
+      ]
+    },
+    "flag_pennant_04": {
+      "file": "layers/flag_pennant_04.png",
+      "rect": {
+        "x": 262,
+        "y": 558,
+        "w": 227,
+        "h": 120
+      },
+      "pivotPx": [
+        0,
+        60
+      ],
+      "pivot": [
+        0.0,
+        0.5
+      ]
+    },
+    "lantern_housing_topdown": {
+      "file": "layers/lantern_housing_topdown.png",
+      "rect": {
+        "x": 1359,
+        "y": 8,
+        "w": 156,
+        "h": 144
+      },
+      "pivotPx": [
+        78,
+        72
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "lantern_glow_01": {
+      "file": "layers/lantern_glow_01.png",
+      "rect": {
+        "x": 1258,
+        "y": 558,
+        "w": 110,
+        "h": 110
+      },
+      "pivotPx": [
+        55,
+        55
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "lantern_glow_02": {
+      "file": "layers/lantern_glow_02.png",
+      "rect": {
+        "x": 1376,
+        "y": 558,
+        "w": 108,
+        "h": 110
+      },
+      "pivotPx": [
+        54,
+        55
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "lantern_glow_03": {
+      "file": "layers/lantern_glow_03.png",
+      "rect": {
+        "x": 8,
+        "y": 686,
+        "w": 108,
+        "h": 110
+      },
+      "pivotPx": [
+        54,
+        55
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "lantern_glow_04": {
+      "file": "layers/lantern_glow_04.png",
+      "rect": {
+        "x": 1018,
+        "y": 558,
+        "w": 111,
+        "h": 112
+      },
+      "pivotPx": [
+        55,
+        56
+      ],
+      "pivot": [
+        0.4955,
+        0.5
+      ]
+    },
+    "muzzle_flash_01": {
+      "file": "layers/muzzle_flash_01.png",
+      "rect": {
+        "x": 122,
+        "y": 804,
+        "w": 68,
+        "h": 31
+      },
+      "pivotPx": [
+        0,
+        15
+      ],
+      "pivot": [
+        0.0,
+        0.48387
+      ]
+    },
+    "muzzle_flash_02": {
+      "file": "layers/muzzle_flash_02.png",
+      "rect": {
+        "x": 1408,
+        "y": 686,
+        "w": 88,
+        "h": 40
+      },
+      "pivotPx": [
+        0,
+        20
+      ],
+      "pivot": [
+        0.0,
+        0.5
+      ]
+    },
+    "muzzle_flash_03": {
+      "file": "layers/muzzle_flash_03.png",
+      "rect": {
+        "x": 664,
+        "y": 686,
+        "w": 117,
+        "h": 52
+      },
+      "pivotPx": [
+        0,
+        26
+      ],
+      "pivot": [
+        0.0,
+        0.5
+      ]
+    },
+    "muzzle_flash_04": {
+      "file": "layers/muzzle_flash_04.png",
+      "rect": {
+        "x": 217,
+        "y": 686,
+        "w": 158,
+        "h": 78
+      },
+      "pivotPx": [
+        0,
+        39
+      ],
+      "pivot": [
+        0.0,
+        0.5
+      ]
+    },
+    "projectile_bolt": {
+      "file": "layers/projectile_bolt.png",
+      "rect": {
+        "x": 933,
+        "y": 686,
+        "w": 334,
+        "h": 46
+      },
+      "pivotPx": [
+        167,
+        23
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "destroy_debris_01": {
+      "file": "layers/destroy_debris_01.png",
+      "rect": {
+        "x": 124,
+        "y": 686,
+        "w": 85,
+        "h": 91
+      },
+      "pivotPx": [
+        42,
+        45
+      ],
+      "pivot": [
+        0.49412,
+        0.49451
+      ]
+    },
+    "destroy_debris_02": {
+      "file": "layers/destroy_debris_02.png",
+      "rect": {
+        "x": 383,
+        "y": 686,
+        "w": 77,
+        "h": 72
+      },
+      "pivotPx": [
+        38,
+        36
+      ],
+      "pivot": [
+        0.49351,
+        0.5
+      ]
+    },
+    "destroy_debris_03": {
+      "file": "layers/destroy_debris_03.png",
+      "rect": {
+        "x": 849,
+        "y": 686,
+        "w": 76,
+        "h": 47
+      },
+      "pivotPx": [
+        38,
+        23
+      ],
+      "pivot": [
+        0.5,
+        0.48936
+      ]
+    },
+    "destroy_debris_04": {
+      "file": "layers/destroy_debris_04.png",
+      "rect": {
+        "x": 1275,
+        "y": 686,
+        "w": 125,
+        "h": 44
+      },
+      "pivotPx": [
+        62,
+        22
+      ],
+      "pivot": [
+        0.496,
+        0.5
+      ]
+    },
+    "destroy_debris_05": {
+      "file": "layers/destroy_debris_05.png",
+      "rect": {
+        "x": 66,
+        "y": 804,
+        "w": 48,
+        "h": 34
+      },
+      "pivotPx": [
+        24,
+        17
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "destroy_debris_06": {
+      "file": "layers/destroy_debris_06.png",
+      "rect": {
+        "x": 789,
+        "y": 686,
+        "w": 52,
+        "h": 52
+      },
+      "pivotPx": [
+        26,
+        26
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "destroy_debris_07": {
+      "file": "layers/destroy_debris_07.png",
+      "rect": {
+        "x": 512,
+        "y": 686,
+        "w": 63,
+        "h": 58
+      },
+      "pivotPx": [
+        31,
+        29
+      ],
+      "pivot": [
+        0.49206,
+        0.5
+      ]
+    },
+    "destroy_debris_08": {
+      "file": "layers/destroy_debris_08.png",
+      "rect": {
+        "x": 583,
+        "y": 686,
+        "w": 73,
+        "h": 54
+      },
+      "pivotPx": [
+        36,
+        27
+      ],
+      "pivot": [
+        0.49315,
+        0.5
+      ]
+    },
+    "destroy_debris_09": {
+      "file": "layers/destroy_debris_09.png",
+      "rect": {
+        "x": 468,
+        "y": 686,
+        "w": 36,
+        "h": 66
+      },
+      "pivotPx": [
+        18,
+        33
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "destroy_debris_10": {
+      "file": "layers/destroy_debris_10.png",
+      "rect": {
+        "x": 8,
+        "y": 804,
+        "w": 50,
+        "h": 39
+      },
+      "pivotPx": [
+        25,
+        19
+      ],
+      "pivot": [
+        0.5,
+        0.48718
+      ]
+    }
+  },
+  "anchors": {
+    "objectCenter": {
+      "parent": "base_stone_wood_platform",
+      "normalized": [
+        0.5,
+        0.5
+      ]
+    },
+    "weaponSocket": {
+      "parent": "central_rotation_socket",
+      "normalized": [
+        0.5,
+        0.5
+      ]
+    },
+    "flagMount": {
+      "parent": "pennant_mount",
+      "normalized": [
+        0.5,
+        0.5
+      ]
+    },
+    "lanternCore": {
+      "parent": "lantern_housing_topdown",
+      "normalized": [
+        0.5,
+        0.5
+      ]
+    },
+    "muzzle": {
+      "parent": "crossbow_rotatable",
+      "normalized": [
+        1,
+        0.5
+      ]
+    }
+  },
+  "drawOrder": [
+    "base_stone_wood_platform",
+    "central_rotation_socket",
+    "pennant_mount",
+    "flag_pennant_*",
+    "lantern_housing_topdown",
+    "lantern_glow_*",
+    "crossbow_rotatable",
+    "muzzle_flash_*"
+  ],
+  "animations": {
+    "idle": {
+      "flagFrames": [
+        "flag_pennant_01",
+        "flag_pennant_02",
+        "flag_pennant_03",
+        "flag_pennant_04"
+      ],
+      "glowFrames": [
+        "lantern_glow_01",
+        "lantern_glow_02",
+        "lantern_glow_03",
+        "lantern_glow_04"
+      ],
+      "frameDurationMs": 160,
+      "loop": true
+    },
+    "attack": {
+      "flashFrames": [
+        "muzzle_flash_01",
+        "muzzle_flash_02",
+        "muzzle_flash_03",
+        "muzzle_flash_04"
+      ],
+      "frameDurationMs": 80,
+      "loop": false
+    },
+    "destroy": {
+      "pieces": [
+        "destroy_debris_01",
+        "destroy_debris_02",
+        "destroy_debris_03",
+        "destroy_debris_04",
+        "destroy_debris_05",
+        "destroy_debris_06",
+        "destroy_debris_07",
+        "destroy_debris_08",
+        "destroy_debris_09",
+        "destroy_debris_10"
+      ],
+      "loop": false
+    },
+    "projectile": {
+      "sprite": "projectile_bolt",
+      "rotation": "alongTrajectory"
+    }
+  },
+  "runtimeTransforms": {
+    "crossbow_rotatable": {
+      "rotation": "towardTarget",
+      "anchor": "weaponSocket"
+    },
+    "flag_pennant_*": {
+      "anchor": "flagMount"
+    },
+    "lantern_glow_*": {
+      "anchor": "lanternCore"
+    },
+    "muzzle_flash_*": {
+      "anchor": "muzzle",
+      "inheritRotation": true
+    }
+  },
+  "qa": {
+    "oneObjectFamily": true,
+    "transparentRuntime": true,
+    "bakedCompositeFrames": false,
+    "fileSizeBytes": 1334104,
+    "under5MB": true
+  }
+}

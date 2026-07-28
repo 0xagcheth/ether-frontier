@@ -1,0 +1,1673 @@
+{
+  "schemaVersion": 3,
+  "object": "watchtower",
+  "pipeline": "layered-object-v3-runtime-composition",
+  "image": "watchtower_layered_runtime_v3.png",
+  "atlasSize": [
+    1536,
+    950
+  ],
+  "sprites": {
+    "base_stone_token": {
+      "rect": {
+        "x": 8,
+        "y": 8,
+        "w": 600,
+        "h": 602
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/base_stone_token.png"
+    },
+    "central_socket": {
+      "rect": {
+        "x": 1037,
+        "y": 8,
+        "w": 281,
+        "h": 264
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/central_socket.png"
+    },
+    "crossbow_rotatable": {
+      "rect": {
+        "x": 616,
+        "y": 8,
+        "w": 413,
+        "h": 338
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/crossbow_rotatable.png"
+    },
+    "projectile_bolt": {
+      "rect": {
+        "x": 8,
+        "y": 872,
+        "w": 178,
+        "h": 70
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/projectile_bolt.png"
+    },
+    "muzzle_flash_01": {
+      "rect": {
+        "x": 274,
+        "y": 618,
+        "w": 116,
+        "h": 112
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/muzzle_flash_01.png"
+    },
+    "muzzle_flash_02": {
+      "rect": {
+        "x": 518,
+        "y": 618,
+        "w": 119,
+        "h": 110
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/muzzle_flash_02.png"
+    },
+    "muzzle_flash_03": {
+      "rect": {
+        "x": 911,
+        "y": 618,
+        "w": 118,
+        "h": 105
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/muzzle_flash_03.png"
+    },
+    "muzzle_flash_04": {
+      "rect": {
+        "x": 1037,
+        "y": 618,
+        "w": 118,
+        "h": 105
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/muzzle_flash_04.png"
+    },
+    "destroy_debris_01": {
+      "rect": {
+        "x": 1034,
+        "y": 760,
+        "w": 109,
+        "h": 98
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/destroy_debris_01.png"
+    },
+    "destroy_debris_02": {
+      "rect": {
+        "x": 8,
+        "y": 618,
+        "w": 140,
+        "h": 134
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/destroy_debris_02.png"
+    },
+    "destroy_debris_03": {
+      "rect": {
+        "x": 779,
+        "y": 618,
+        "w": 124,
+        "h": 106
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/destroy_debris_03.png"
+    },
+    "destroy_debris_04": {
+      "rect": {
+        "x": 645,
+        "y": 618,
+        "w": 126,
+        "h": 109
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/destroy_debris_04.png"
+    },
+    "destroy_debris_05": {
+      "rect": {
+        "x": 1151,
+        "y": 760,
+        "w": 87,
+        "h": 84
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/destroy_debris_05.png"
+    },
+    "destroy_debris_06": {
+      "rect": {
+        "x": 1334,
+        "y": 760,
+        "w": 95,
+        "h": 75
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/destroy_debris_06.png"
+    },
+    "destroy_debris_07": {
+      "rect": {
+        "x": 194,
+        "y": 872,
+        "w": 62,
+        "h": 57
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/destroy_debris_07.png"
+    },
+    "destroy_debris_08": {
+      "rect": {
+        "x": 156,
+        "y": 618,
+        "w": 110,
+        "h": 118
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/destroy_debris_08.png"
+    },
+    "destroy_debris_09": {
+      "rect": {
+        "x": 1326,
+        "y": 8,
+        "w": 140,
+        "h": 144
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/destroy_debris_09.png"
+    },
+    "flag_mount_socket": {
+      "rect": {
+        "x": 1246,
+        "y": 760,
+        "w": 80,
+        "h": 80
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/flag_mount_socket.png"
+    },
+    "lantern_housing_topdown": {
+      "rect": {
+        "x": 398,
+        "y": 618,
+        "w": 112,
+        "h": 112
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/lantern_housing_topdown.png"
+    },
+    "flag_pennant_topdown_01": {
+      "rect": {
+        "x": 1163,
+        "y": 618,
+        "w": 190,
+        "h": 104
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/flag_pennant_topdown_01.png"
+    },
+    "lantern_glow_topdown_01": {
+      "rect": {
+        "x": 602,
+        "y": 760,
+        "w": 100,
+        "h": 100
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/lantern_glow_topdown_01.png"
+    },
+    "flag_pennant_topdown_02": {
+      "rect": {
+        "x": 8,
+        "y": 760,
+        "w": 190,
+        "h": 104
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/flag_pennant_topdown_02.png"
+    },
+    "lantern_glow_topdown_02": {
+      "rect": {
+        "x": 710,
+        "y": 760,
+        "w": 100,
+        "h": 100
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/lantern_glow_topdown_02.png"
+    },
+    "flag_pennant_topdown_03": {
+      "rect": {
+        "x": 206,
+        "y": 760,
+        "w": 190,
+        "h": 104
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/flag_pennant_topdown_03.png"
+    },
+    "lantern_glow_topdown_03": {
+      "rect": {
+        "x": 818,
+        "y": 760,
+        "w": 100,
+        "h": 100
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/lantern_glow_topdown_03.png"
+    },
+    "flag_pennant_topdown_04": {
+      "rect": {
+        "x": 404,
+        "y": 760,
+        "w": 190,
+        "h": 104
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/flag_pennant_topdown_04.png"
+    },
+    "lantern_glow_topdown_04": {
+      "rect": {
+        "x": 926,
+        "y": 760,
+        "w": 100,
+        "h": 100
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "file": "layers/lantern_glow_topdown_04.png"
+    }
+  },
+  "coordinateSystem": "local 384x384; origin top-left; +x right; +y down; exact 90-degree top-down",
+  "anchors": {
+    "object_center": [
+      192,
+      192
+    ],
+    "weapon_socket": [
+      192,
+      192
+    ],
+    "flag_mount": [
+      132,
+      122
+    ],
+    "lantern_mount": [
+      132,
+      258
+    ],
+    "muzzle": [
+      286,
+      192
+    ]
+  },
+  "drawOrder": [
+    "base",
+    "socket",
+    "flag_mount",
+    "flag_pennant",
+    "lantern_housing",
+    "lantern_glow",
+    "weapon",
+    "muzzle_fx"
+  ],
+  "actionFiles": {
+    "idle": "actions/idle.json",
+    "attack": "actions/attack.json",
+    "destroy": "actions/destroy.json",
+    "projectile": "actions/projectile.json"
+  },
+  "actions": {
+    "idle": {
+      "loop": true,
+      "frames": [
+        {
+          "durationMs": 180,
+          "layers": [
+            {
+              "sprite": "base_stone_token",
+              "anchor": "object_center",
+              "sizePx": [
+                255,
+                256
+              ]
+            },
+            {
+              "sprite": "central_socket",
+              "anchor": "object_center",
+              "sizePx": [
+                116,
+                109
+              ]
+            },
+            {
+              "sprite": "flag_mount_socket",
+              "anchor": "flag_mount",
+              "sizePx": [
+                20,
+                20
+              ]
+            },
+            {
+              "sprite": "flag_pennant_topdown_01",
+              "anchor": "flag_mount",
+              "offsetPx": [
+                11,
+                0
+              ],
+              "sizePx": [
+                70,
+                38
+              ],
+              "pivot": [
+                0,
+                0.5
+              ]
+            },
+            {
+              "sprite": "lantern_housing_topdown",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                38,
+                38
+              ]
+            },
+            {
+              "sprite": "lantern_glow_topdown_01",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                28,
+                28
+              ]
+            },
+            {
+              "sprite": "crossbow_rotatable",
+              "anchor": "weapon_socket",
+              "offsetPx": [
+                0,
+                0
+              ],
+              "sizePx": [
+                176,
+                144
+              ],
+              "rotation": "aimAngle"
+            }
+          ]
+        },
+        {
+          "durationMs": 180,
+          "layers": [
+            {
+              "sprite": "base_stone_token",
+              "anchor": "object_center",
+              "sizePx": [
+                255,
+                256
+              ]
+            },
+            {
+              "sprite": "central_socket",
+              "anchor": "object_center",
+              "sizePx": [
+                116,
+                109
+              ]
+            },
+            {
+              "sprite": "flag_mount_socket",
+              "anchor": "flag_mount",
+              "sizePx": [
+                20,
+                20
+              ]
+            },
+            {
+              "sprite": "flag_pennant_topdown_02",
+              "anchor": "flag_mount",
+              "offsetPx": [
+                11,
+                0
+              ],
+              "sizePx": [
+                70,
+                38
+              ],
+              "pivot": [
+                0,
+                0.5
+              ]
+            },
+            {
+              "sprite": "lantern_housing_topdown",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                38,
+                38
+              ]
+            },
+            {
+              "sprite": "lantern_glow_topdown_02",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                28,
+                28
+              ]
+            },
+            {
+              "sprite": "crossbow_rotatable",
+              "anchor": "weapon_socket",
+              "offsetPx": [
+                0,
+                0
+              ],
+              "sizePx": [
+                176,
+                144
+              ],
+              "rotation": "aimAngle"
+            }
+          ]
+        },
+        {
+          "durationMs": 180,
+          "layers": [
+            {
+              "sprite": "base_stone_token",
+              "anchor": "object_center",
+              "sizePx": [
+                255,
+                256
+              ]
+            },
+            {
+              "sprite": "central_socket",
+              "anchor": "object_center",
+              "sizePx": [
+                116,
+                109
+              ]
+            },
+            {
+              "sprite": "flag_mount_socket",
+              "anchor": "flag_mount",
+              "sizePx": [
+                20,
+                20
+              ]
+            },
+            {
+              "sprite": "flag_pennant_topdown_03",
+              "anchor": "flag_mount",
+              "offsetPx": [
+                11,
+                0
+              ],
+              "sizePx": [
+                70,
+                38
+              ],
+              "pivot": [
+                0,
+                0.5
+              ]
+            },
+            {
+              "sprite": "lantern_housing_topdown",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                38,
+                38
+              ]
+            },
+            {
+              "sprite": "lantern_glow_topdown_03",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                28,
+                28
+              ]
+            },
+            {
+              "sprite": "crossbow_rotatable",
+              "anchor": "weapon_socket",
+              "offsetPx": [
+                0,
+                0
+              ],
+              "sizePx": [
+                176,
+                144
+              ],
+              "rotation": "aimAngle"
+            }
+          ]
+        },
+        {
+          "durationMs": 180,
+          "layers": [
+            {
+              "sprite": "base_stone_token",
+              "anchor": "object_center",
+              "sizePx": [
+                255,
+                256
+              ]
+            },
+            {
+              "sprite": "central_socket",
+              "anchor": "object_center",
+              "sizePx": [
+                116,
+                109
+              ]
+            },
+            {
+              "sprite": "flag_mount_socket",
+              "anchor": "flag_mount",
+              "sizePx": [
+                20,
+                20
+              ]
+            },
+            {
+              "sprite": "flag_pennant_topdown_04",
+              "anchor": "flag_mount",
+              "offsetPx": [
+                11,
+                0
+              ],
+              "sizePx": [
+                70,
+                38
+              ],
+              "pivot": [
+                0,
+                0.5
+              ]
+            },
+            {
+              "sprite": "lantern_housing_topdown",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                38,
+                38
+              ]
+            },
+            {
+              "sprite": "lantern_glow_topdown_04",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                28,
+                28
+              ]
+            },
+            {
+              "sprite": "crossbow_rotatable",
+              "anchor": "weapon_socket",
+              "offsetPx": [
+                0,
+                0
+              ],
+              "sizePx": [
+                176,
+                144
+              ],
+              "rotation": "aimAngle"
+            }
+          ]
+        }
+      ]
+    },
+    "attack": {
+      "loop": false,
+      "frames": [
+        {
+          "durationMs": 90,
+          "layers": [
+            {
+              "sprite": "base_stone_token",
+              "anchor": "object_center",
+              "sizePx": [
+                255,
+                256
+              ]
+            },
+            {
+              "sprite": "central_socket",
+              "anchor": "object_center",
+              "sizePx": [
+                116,
+                109
+              ]
+            },
+            {
+              "sprite": "flag_mount_socket",
+              "anchor": "flag_mount",
+              "sizePx": [
+                20,
+                20
+              ]
+            },
+            {
+              "sprite": "flag_pennant_topdown_01",
+              "anchor": "flag_mount",
+              "offsetPx": [
+                11,
+                0
+              ],
+              "sizePx": [
+                70,
+                38
+              ],
+              "pivot": [
+                0,
+                0.5
+              ]
+            },
+            {
+              "sprite": "lantern_housing_topdown",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                38,
+                38
+              ]
+            },
+            {
+              "sprite": "lantern_glow_topdown_01",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                28,
+                28
+              ]
+            },
+            {
+              "sprite": "crossbow_rotatable",
+              "anchor": "weapon_socket",
+              "offsetPx": [
+                0,
+                0
+              ],
+              "sizePx": [
+                176,
+                144
+              ],
+              "rotation": "aimAngle"
+            },
+            {
+              "sprite": "muzzle_flash_01",
+              "anchor": "muzzle",
+              "offsetPx": [
+                0,
+                0
+              ],
+              "sizePx": [
+                42,
+                42
+              ],
+              "pivot": [
+                0,
+                0.5
+              ],
+              "rotation": "aimAngle"
+            }
+          ]
+        },
+        {
+          "durationMs": 90,
+          "layers": [
+            {
+              "sprite": "base_stone_token",
+              "anchor": "object_center",
+              "sizePx": [
+                255,
+                256
+              ]
+            },
+            {
+              "sprite": "central_socket",
+              "anchor": "object_center",
+              "sizePx": [
+                116,
+                109
+              ]
+            },
+            {
+              "sprite": "flag_mount_socket",
+              "anchor": "flag_mount",
+              "sizePx": [
+                20,
+                20
+              ]
+            },
+            {
+              "sprite": "flag_pennant_topdown_02",
+              "anchor": "flag_mount",
+              "offsetPx": [
+                11,
+                0
+              ],
+              "sizePx": [
+                70,
+                38
+              ],
+              "pivot": [
+                0,
+                0.5
+              ]
+            },
+            {
+              "sprite": "lantern_housing_topdown",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                38,
+                38
+              ]
+            },
+            {
+              "sprite": "lantern_glow_topdown_02",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                28,
+                28
+              ]
+            },
+            {
+              "sprite": "crossbow_rotatable",
+              "anchor": "weapon_socket",
+              "offsetPx": [
+                -5,
+                0
+              ],
+              "sizePx": [
+                176,
+                144
+              ],
+              "rotation": "aimAngle"
+            },
+            {
+              "sprite": "muzzle_flash_02",
+              "anchor": "muzzle",
+              "offsetPx": [
+                -5,
+                0
+              ],
+              "sizePx": [
+                42,
+                42
+              ],
+              "pivot": [
+                0,
+                0.5
+              ],
+              "rotation": "aimAngle"
+            }
+          ]
+        },
+        {
+          "durationMs": 90,
+          "layers": [
+            {
+              "sprite": "base_stone_token",
+              "anchor": "object_center",
+              "sizePx": [
+                255,
+                256
+              ]
+            },
+            {
+              "sprite": "central_socket",
+              "anchor": "object_center",
+              "sizePx": [
+                116,
+                109
+              ]
+            },
+            {
+              "sprite": "flag_mount_socket",
+              "anchor": "flag_mount",
+              "sizePx": [
+                20,
+                20
+              ]
+            },
+            {
+              "sprite": "flag_pennant_topdown_03",
+              "anchor": "flag_mount",
+              "offsetPx": [
+                11,
+                0
+              ],
+              "sizePx": [
+                70,
+                38
+              ],
+              "pivot": [
+                0,
+                0.5
+              ]
+            },
+            {
+              "sprite": "lantern_housing_topdown",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                38,
+                38
+              ]
+            },
+            {
+              "sprite": "lantern_glow_topdown_03",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                28,
+                28
+              ]
+            },
+            {
+              "sprite": "crossbow_rotatable",
+              "anchor": "weapon_socket",
+              "offsetPx": [
+                -9,
+                0
+              ],
+              "sizePx": [
+                176,
+                144
+              ],
+              "rotation": "aimAngle"
+            },
+            {
+              "sprite": "muzzle_flash_03",
+              "anchor": "muzzle",
+              "offsetPx": [
+                -9,
+                0
+              ],
+              "sizePx": [
+                42,
+                42
+              ],
+              "pivot": [
+                0,
+                0.5
+              ],
+              "rotation": "aimAngle"
+            }
+          ]
+        },
+        {
+          "durationMs": 90,
+          "layers": [
+            {
+              "sprite": "base_stone_token",
+              "anchor": "object_center",
+              "sizePx": [
+                255,
+                256
+              ]
+            },
+            {
+              "sprite": "central_socket",
+              "anchor": "object_center",
+              "sizePx": [
+                116,
+                109
+              ]
+            },
+            {
+              "sprite": "flag_mount_socket",
+              "anchor": "flag_mount",
+              "sizePx": [
+                20,
+                20
+              ]
+            },
+            {
+              "sprite": "flag_pennant_topdown_04",
+              "anchor": "flag_mount",
+              "offsetPx": [
+                11,
+                0
+              ],
+              "sizePx": [
+                70,
+                38
+              ],
+              "pivot": [
+                0,
+                0.5
+              ]
+            },
+            {
+              "sprite": "lantern_housing_topdown",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                38,
+                38
+              ]
+            },
+            {
+              "sprite": "lantern_glow_topdown_04",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                28,
+                28
+              ]
+            },
+            {
+              "sprite": "crossbow_rotatable",
+              "anchor": "weapon_socket",
+              "offsetPx": [
+                -3,
+                0
+              ],
+              "sizePx": [
+                176,
+                144
+              ],
+              "rotation": "aimAngle"
+            },
+            {
+              "sprite": "muzzle_flash_04",
+              "anchor": "muzzle",
+              "offsetPx": [
+                -3,
+                0
+              ],
+              "sizePx": [
+                42,
+                42
+              ],
+              "pivot": [
+                0,
+                0.5
+              ],
+              "rotation": "aimAngle"
+            }
+          ]
+        }
+      ]
+    },
+    "destroy": {
+      "loop": false,
+      "holdLast": true,
+      "frames": [
+        {
+          "durationMs": 130,
+          "layers": [
+            {
+              "sprite": "base_stone_token",
+              "anchor": "object_center",
+              "sizePx": [
+                255,
+                256
+              ]
+            },
+            {
+              "sprite": "central_socket",
+              "anchor": "object_center",
+              "sizePx": [
+                116,
+                109
+              ]
+            },
+            {
+              "sprite": "flag_mount_socket",
+              "anchor": "flag_mount",
+              "sizePx": [
+                20,
+                20
+              ]
+            },
+            {
+              "sprite": "flag_pennant_topdown_01",
+              "anchor": "flag_mount",
+              "offsetPx": [
+                11,
+                0
+              ],
+              "sizePx": [
+                70,
+                38
+              ],
+              "pivot": [
+                0,
+                0.5
+              ]
+            },
+            {
+              "sprite": "lantern_housing_topdown",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                38,
+                38
+              ]
+            },
+            {
+              "sprite": "lantern_glow_topdown_01",
+              "anchor": "lantern_mount",
+              "sizePx": [
+                28,
+                28
+              ]
+            },
+            {
+              "sprite": "crossbow_rotatable",
+              "anchor": "weapon_socket",
+              "offsetPx": [
+                0,
+                0
+              ],
+              "sizePx": [
+                176,
+                144
+              ],
+              "rotation": "aimAngle"
+            }
+          ]
+        },
+        {
+          "durationMs": 130,
+          "layers": [
+            {
+              "sprite": "destroy_debris_01",
+              "anchor": "object_center",
+              "offsetPx": [
+                41,
+                13
+              ],
+              "sizePx": [
+                31,
+                31
+              ],
+              "rotationDeg": -13
+            },
+            {
+              "sprite": "destroy_debris_02",
+              "anchor": "object_center",
+              "offsetPx": [
+                23,
+                36
+              ],
+              "sizePx": [
+                31,
+                31
+              ],
+              "rotationDeg": 0
+            },
+            {
+              "sprite": "destroy_debris_03",
+              "anchor": "object_center",
+              "offsetPx": [
+                -6,
+                43
+              ],
+              "sizePx": [
+                31,
+                31
+              ],
+              "rotationDeg": 13
+            },
+            {
+              "sprite": "destroy_debris_04",
+              "anchor": "object_center",
+              "offsetPx": [
+                -32,
+                29
+              ],
+              "sizePx": [
+                31,
+                31
+              ],
+              "rotationDeg": -13
+            },
+            {
+              "sprite": "destroy_debris_05",
+              "anchor": "object_center",
+              "offsetPx": [
+                -43,
+                2
+              ],
+              "sizePx": [
+                31,
+                31
+              ],
+              "rotationDeg": 0
+            },
+            {
+              "sprite": "destroy_debris_06",
+              "anchor": "object_center",
+              "offsetPx": [
+                -34,
+                -26
+              ],
+              "sizePx": [
+                31,
+                31
+              ],
+              "rotationDeg": 13
+            },
+            {
+              "sprite": "destroy_debris_07",
+              "anchor": "object_center",
+              "offsetPx": [
+                -9,
+                -42
+              ],
+              "sizePx": [
+                31,
+                31
+              ],
+              "rotationDeg": -13
+            },
+            {
+              "sprite": "destroy_debris_08",
+              "anchor": "object_center",
+              "offsetPx": [
+                20,
+                -38
+              ],
+              "sizePx": [
+                31,
+                31
+              ],
+              "rotationDeg": 0
+            },
+            {
+              "sprite": "destroy_debris_09",
+              "anchor": "object_center",
+              "offsetPx": [
+                40,
+                -16
+              ],
+              "sizePx": [
+                31,
+                31
+              ],
+              "rotationDeg": 13
+            }
+          ]
+        },
+        {
+          "durationMs": 130,
+          "layers": [
+            {
+              "sprite": "destroy_debris_01",
+              "anchor": "object_center",
+              "offsetPx": [
+                65,
+                21
+              ],
+              "sizePx": [
+                28,
+                28
+              ],
+              "rotationDeg": -26
+            },
+            {
+              "sprite": "destroy_debris_02",
+              "anchor": "object_center",
+              "offsetPx": [
+                36,
+                58
+              ],
+              "sizePx": [
+                28,
+                28
+              ],
+              "rotationDeg": 0
+            },
+            {
+              "sprite": "destroy_debris_03",
+              "anchor": "object_center",
+              "offsetPx": [
+                -9,
+                67
+              ],
+              "sizePx": [
+                28,
+                28
+              ],
+              "rotationDeg": 26
+            },
+            {
+              "sprite": "destroy_debris_04",
+              "anchor": "object_center",
+              "offsetPx": [
+                -50,
+                46
+              ],
+              "sizePx": [
+                28,
+                28
+              ],
+              "rotationDeg": -26
+            },
+            {
+              "sprite": "destroy_debris_05",
+              "anchor": "object_center",
+              "offsetPx": [
+                -68,
+                3
+              ],
+              "sizePx": [
+                28,
+                28
+              ],
+              "rotationDeg": 0
+            },
+            {
+              "sprite": "destroy_debris_06",
+              "anchor": "object_center",
+              "offsetPx": [
+                -54,
+                -42
+              ],
+              "sizePx": [
+                28,
+                28
+              ],
+              "rotationDeg": 26
+            },
+            {
+              "sprite": "destroy_debris_07",
+              "anchor": "object_center",
+              "offsetPx": [
+                -14,
+                -66
+              ],
+              "sizePx": [
+                28,
+                28
+              ],
+              "rotationDeg": -26
+            },
+            {
+              "sprite": "destroy_debris_08",
+              "anchor": "object_center",
+              "offsetPx": [
+                32,
+                -60
+              ],
+              "sizePx": [
+                28,
+                28
+              ],
+              "rotationDeg": 0
+            },
+            {
+              "sprite": "destroy_debris_09",
+              "anchor": "object_center",
+              "offsetPx": [
+                63,
+                -26
+              ],
+              "sizePx": [
+                28,
+                28
+              ],
+              "rotationDeg": 26
+            }
+          ]
+        },
+        {
+          "durationMs": 130,
+          "layers": [
+            {
+              "sprite": "destroy_debris_01",
+              "anchor": "object_center",
+              "offsetPx": [
+                89,
+                28
+              ],
+              "sizePx": [
+                25,
+                25
+              ],
+              "rotationDeg": -39
+            },
+            {
+              "sprite": "destroy_debris_02",
+              "anchor": "object_center",
+              "offsetPx": [
+                50,
+                79
+              ],
+              "sizePx": [
+                25,
+                25
+              ],
+              "rotationDeg": 0
+            },
+            {
+              "sprite": "destroy_debris_03",
+              "anchor": "object_center",
+              "offsetPx": [
+                -13,
+                92
+              ],
+              "sizePx": [
+                25,
+                25
+              ],
+              "rotationDeg": 39
+            },
+            {
+              "sprite": "destroy_debris_04",
+              "anchor": "object_center",
+              "offsetPx": [
+                -69,
+                63
+              ],
+              "sizePx": [
+                25,
+                25
+              ],
+              "rotationDeg": -39
+            },
+            {
+              "sprite": "destroy_debris_05",
+              "anchor": "object_center",
+              "offsetPx": [
+                -93,
+                4
+              ],
+              "sizePx": [
+                25,
+                25
+              ],
+              "rotationDeg": 0
+            },
+            {
+              "sprite": "destroy_debris_06",
+              "anchor": "object_center",
+              "offsetPx": [
+                -74,
+                -57
+              ],
+              "sizePx": [
+                25,
+                25
+              ],
+              "rotationDeg": 39
+            },
+            {
+              "sprite": "destroy_debris_07",
+              "anchor": "object_center",
+              "offsetPx": [
+                -20,
+                -91
+              ],
+              "sizePx": [
+                25,
+                25
+              ],
+              "rotationDeg": -39
+            },
+            {
+              "sprite": "destroy_debris_08",
+              "anchor": "object_center",
+              "offsetPx": [
+                43,
+                -82
+              ],
+              "sizePx": [
+                25,
+                25
+              ],
+              "rotationDeg": 0
+            },
+            {
+              "sprite": "destroy_debris_09",
+              "anchor": "object_center",
+              "offsetPx": [
+                86,
+                -35
+              ],
+              "sizePx": [
+                25,
+                25
+              ],
+              "rotationDeg": 39
+            }
+          ]
+        },
+        {
+          "durationMs": 130,
+          "layers": [
+            {
+              "sprite": "destroy_debris_01",
+              "anchor": "object_center",
+              "offsetPx": [
+                112,
+                36
+              ],
+              "sizePx": [
+                22,
+                22
+              ],
+              "rotationDeg": -52
+            },
+            {
+              "sprite": "destroy_debris_02",
+              "anchor": "object_center",
+              "offsetPx": [
+                63,
+                100
+              ],
+              "sizePx": [
+                22,
+                22
+              ],
+              "rotationDeg": 0
+            },
+            {
+              "sprite": "destroy_debris_03",
+              "anchor": "object_center",
+              "offsetPx": [
+                -16,
+                117
+              ],
+              "sizePx": [
+                22,
+                22
+              ],
+              "rotationDeg": 52
+            },
+            {
+              "sprite": "destroy_debris_04",
+              "anchor": "object_center",
+              "offsetPx": [
+                -87,
+                79
+              ],
+              "sizePx": [
+                22,
+                22
+              ],
+              "rotationDeg": -52
+            },
+            {
+              "sprite": "destroy_debris_05",
+              "anchor": "object_center",
+              "offsetPx": [
+                -118,
+                5
+              ],
+              "sizePx": [
+                22,
+                22
+              ],
+              "rotationDeg": 0
+            },
+            {
+              "sprite": "destroy_debris_06",
+              "anchor": "object_center",
+              "offsetPx": [
+                -93,
+                -72
+              ],
+              "sizePx": [
+                22,
+                22
+              ],
+              "rotationDeg": 52
+            },
+            {
+              "sprite": "destroy_debris_07",
+              "anchor": "object_center",
+              "offsetPx": [
+                -25,
+                -115
+              ],
+              "sizePx": [
+                22,
+                22
+              ],
+              "rotationDeg": -52
+            },
+            {
+              "sprite": "destroy_debris_08",
+              "anchor": "object_center",
+              "offsetPx": [
+                55,
+                -104
+              ],
+              "sizePx": [
+                22,
+                22
+              ],
+              "rotationDeg": 0
+            },
+            {
+              "sprite": "destroy_debris_09",
+              "anchor": "object_center",
+              "offsetPx": [
+                109,
+                -45
+              ],
+              "sizePx": [
+                22,
+                22
+              ],
+              "rotationDeg": 52
+            }
+          ]
+        }
+      ]
+    },
+    "projectile": {
+      "loop": false,
+      "frames": [
+        {
+          "durationMs": 0,
+          "layers": [
+            {
+              "sprite": "projectile_bolt",
+              "anchor": "object_center",
+              "sizePx": [
+                82,
+                50
+              ],
+              "rotation": "trajectoryAngle"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "qa": {
+    "bakedCompositeFrames": false,
+    "allRuntimeSpritesNamed": true,
+    "singleProjection": "true-top-down-orthographic",
+    "discardedSourceLayers": [
+      "flag_pole",
+      "flag_cloth_wind_*",
+      "lantern_body",
+      "lantern_flame_*"
+    ],
+    "reason": "source layers were side/elevation view"
+  }
+}

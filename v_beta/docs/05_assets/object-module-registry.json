@@ -1,0 +1,78 @@
+{
+  "_superseded": "Use object-module-registry-v2.json for Seven Circles production.",
+  "status": "approved",
+  "schemaVersion": 1,
+  "projection": "true_top_down_orthographic_90deg",
+  "material": "physical_layered_die_cut_cardboard",
+  "families": {
+    "fortress_ranged": {
+      "objects": ["watchtower", "ranger", "tracker", "assassin"],
+      "coreModules": ["fortress_round_base_light", "fortress_light_rim_stone", "fortress_light_center_socket", "fortress_amber_lantern_housing", "fortress_amber_lantern_glow", "fortress_light_debris_kit"],
+      "variants": {
+        "watchtower": ["light_crossbow", "simple_bolt", "range_pennant", "compact_muzzle_flash"],
+        "ranger": ["rapid_crossbow", "bolt_magazine", "arrow_rack", "hunting_optics", "ranger_trim", "ranger_bolt"],
+        "tracker": ["long_range_crossbow", "scan_optics_ring", "crown_trim", "targeting_rune"],
+        "assassin": ["sniper_crossbow", "shrouded_rim_insert", "critical_charge_lens", "silent_shot_fx"]
+      }
+    },
+    "fortress_ballista": {
+      "objects": ["ballista", "scorpion", "hailstorm"],
+      "coreModules": ["fortress_round_base_heavy", "heavy_swivel_bearing", "heavy_tension_mount", "heavy_armor_quadrants", "heavy_ether_lens_housing", "heavy_debris_kit"],
+      "variants": {
+        "ballista": ["heavy_ballista", "amber_lens", "armored_heavy_bolt", "metallic_impact"],
+        "scorpion": ["harpoon_launcher", "segmented_tail_counterweight", "ether_harpoon_accents"],
+        "hailstorm": ["repeater_limbs", "fan_loaded_rack", "string_drum", "volley_projectile", "swarm_impact"]
+      }
+    },
+    "fortress_siege": {
+      "objects": ["cannon", "mortar", "grapeshot"],
+      "coreModules": ["fortress_artillery_base", "artillery_recoil_rails", "artillery_turntable", "artillery_ammo_mounts", "artillery_debris_kit"],
+      "variants": {
+        "cannon": ["long_cannon_barrel", "alchemical_breech", "heated_cannonball", "debris_ring_impact"],
+        "mortar": ["short_wide_mortar_tube", "top_view_elevation_cradle", "heavy_shell", "broad_ground_burst"],
+        "grapeshot": ["seven_barrel_fan", "synchronized_breech", "pellet_fan", "scatter_impact"]
+      }
+    },
+    "fortress_ritual": {
+      "objects": ["obelisk", "beacon", "pal_ward", "pal_censer", "pal_reliquary", "mage_frost", "mage_tesla", "mage_prism"],
+      "coreModules": ["ritual_round_dais", "ritual_center_receiver", "ritual_conductor_quadrants", "ritual_cardboard_edge", "ritual_debris_kit"],
+      "variants": {
+        "obelisk": ["captured_void_trim", "void_monolith_token", "rune_bands", "void_arc_set"],
+        "beacon": ["sun_seal_trim", "solar_lens", "halo_shutters", "sun_bolt_set"],
+        "pal_ward": ["paladin_trim", "holy_seal_plate", "ward_points", "pulse_rings"],
+        "pal_censer": ["paladin_trim", "four_censers", "ember_cores", "gold_burst_set"],
+        "pal_reliquary": ["paladin_trim", "relic_casing", "amber_relic_core", "shutter_armor", "relic_burst_set"],
+        "mage_frost": ["mage_trim", "frost_crystal_cluster", "cold_conductor_ring", "frost_shard_set"],
+        "mage_tesla": ["mage_trim", "copper_coil_rings", "conductor_nodes", "electrical_arc_set"],
+        "mage_prism": ["mage_trim", "rotating_prism_plate", "beam_splitters", "prism_shot_set"]
+      }
+    },
+    "living_wood": {
+      "objects": ["palisade", "hunt_snare", "hunt_roost", "hunt_hive"],
+      "coreModules": ["living_wood_ring_segments", "living_root_socket", "vine_tie_connectors", "thorn_splinter_debris", "leaf_sap_accents"],
+      "variants": {
+        "palisade": ["reinforced_stake_wall", "thorn_launch_arm", "stake_projectile", "splinter_vine_impact"],
+        "hunt_snare": ["bramble_loop", "trigger_plate", "net_vine_closure"],
+        "hunt_roost": ["roost_platform", "perch_feathers", "hawk_marker", "feather_impact"],
+        "hunt_hive": ["hive_chambers", "toxin_vents", "insect_toxin_projectile", "toxic_impact"]
+      }
+    },
+    "economy_worksite": {
+      "objects": ["sawmill", "quarry"],
+      "coreModules": ["worksite_base", "worksite_frame_beams", "worksite_pulley_socket", "worksite_storage_mounts", "worksite_debris_kit"],
+      "variants": {
+        "sawmill": ["log_bed", "saw_wheel", "belt_gears", "wood_stack", "sawdust_ambient"],
+        "quarry": ["stone_pit_insert", "pick_pulley_arm", "rock_basket", "rubble_pile", "dust_ambient"]
+      }
+    },
+    "strategic_unique": {
+      "objects": ["castle", "spawn_cave"],
+      "coreModules": [],
+      "variants": {
+        "castle": ["fortress_footprint", "wall_roof_sections", "gates", "seal_crystal", "banners", "breach_sections", "large_debris_families"],
+        "spawn_cave": ["cave_rim", "void_opening", "vortex_frames", "corruption_veins", "spawn_flare", "rock_void_debris"]
+      }
+    }
+  },
+  "productionOrder": ["cardboard_material_swatch", "fortress_ranged", "fortress_ballista", "fortress_siege", "fortress_ritual", "living_wood", "economy_worksite", "strategic_unique"]
+}

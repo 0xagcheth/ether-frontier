@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "module": "watchtower__active_addon__light_single_crossbow",
+  "object": "watchtower",
+  "family": "fortress_ranged",
+  "slot": "active_addon",
+  "image": "watchtower__active_addon__light_single_crossbow_v1_alpha.png",
+  "sourceImage": "watchtower__active_addon__light_single_crossbow_v1_chroma.png",
+  "sizePx": [
+    1316,
+    896
+  ],
+  "pivotPx": [
+    648,
+    447
+  ],
+  "pivot": [
+    0.492401,
+    0.498884
+  ],
+  "projection": "true_top_down_orthographic_90deg",
+  "forwardAxis": "+X",
+  "attachments": {
+    "parent": {
+      "module": "fortress_ranged__center_socket__light_bearing",
+      "anchor": "center",
+      "scaleToBaseFootprint": 0.72,
+      "rotation": "aimAngle"
+    },
+    "muzzle_anchor": {
+      "positionPx": [
+        1315,
+        447
+      ],
+      "positionNormalized": [
+        0.99924,
+        0.498884
+      ],
+      "forwardAxis": "+X",
+      "inheritRotation": true
+    }
+  },
+  "drawOrder": 30,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "pivotDerivedFromAxleAperture": true,
+    "rotationEnvelopeAtComposedScalePx": 396,
+    "rotationEnvelopeInsideBase": true,
+    "magentaSpillPixels": 0,
+    "status": "canon"
+  }
+}

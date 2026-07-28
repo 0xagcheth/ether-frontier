@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "module": "watchtower__destroy_fx__metal_spark_burst",
+  "object": "watchtower",
+  "family": "fortress_ranged",
+  "slot": "destroy_fx",
+  "sourceImage": "watchtower__destroy_fx__metal_spark_burst_v1_source_chroma.png",
+  "projection": "true_top_down_orthographic_90deg",
+  "attachment": {
+    "parentModule": "watchtower__active_addon__light_single_crossbow",
+    "anchor": "pivot",
+    "scaleToParentLength": 0.34,
+    "inheritRotation": true
+  },
+  "drawOrder": 71,
+  "frames": [
+    {
+      "id": "frame_01",
+      "image": "watchtower__destroy_fx__metal_spark_burst__frame_01_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "contentRect": {
+        "x": 230,
+        "y": 219,
+        "w": 213,
+        "h": 228
+      },
+      "pivotPx": [
+        313,
+        313
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 55,
+      "magentaSpillPixels": 0
+    },
+    {
+      "id": "frame_02",
+      "image": "watchtower__destroy_fx__metal_spark_burst__frame_02_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "contentRect": {
+        "x": 81,
+        "y": 94,
+        "w": 412,
+        "h": 460
+      },
+      "pivotPx": [
+        313,
+        313
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 65,
+      "magentaSpillPixels": 0
+    },
+    {
+      "id": "frame_03",
+      "image": "watchtower__destroy_fx__metal_spark_burst__frame_03_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "contentRect": {
+        "x": 127,
+        "y": 81,
+        "w": 416,
+        "h": 413
+      },
+      "pivotPx": [
+        313,
+        313
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 75,
+      "magentaSpillPixels": 0
+    },
+    {
+      "id": "frame_04",
+      "image": "watchtower__destroy_fx__metal_spark_burst__frame_04_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "contentRect": {
+        "x": 157,
+        "y": 158,
+        "w": 290,
+        "h": 286
+      },
+      "pivotPx": [
+        313,
+        313
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 95,
+      "magentaSpillPixels": 0
+    }
+  ],
+  "animations": {
+    "destroy_sparks": {
+      "frames": [
+        "frame_01",
+        "frame_02",
+        "frame_03",
+        "frame_04"
+      ],
+      "loop": false,
+      "holdLast": false,
+      "totalDurationMs": 290
+    }
+  },
+  "qa": {
+    "sharedCanvas": [
+      627,
+      627
+    ],
+    "sharedPivot": [
+      313,
+      313
+    ],
+    "runtimeLabels": false,
+    "magentaSpillPixels": 0,
+    "status": "canon"
+  }
+}

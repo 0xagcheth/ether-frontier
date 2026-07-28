@@ -1,0 +1,85 @@
+{
+  "object": "scorpion",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "normalization": "locked 255px intact building extent; centered 384px safety cell",
+  "actions": {
+    "idle": {
+      "file": "scorpion-idle-384-alpha.png",
+      "frames": 5,
+      "durationMs": 180,
+      "loop": true
+    },
+    "attack": {
+      "file": "scorpion-attack-384-alpha.png",
+      "frames": 4,
+      "durationMs": 90,
+      "loop": false
+    },
+    "destroy": {
+      "file": "scorpion-destroy-384-alpha.png",
+      "frames": 5,
+      "durationMs": 130,
+      "loop": false,
+      "holdLast": true
+    },
+    "projectile": {
+      "file": "scorpion-projectile-384-alpha.png",
+      "extent": 146
+    },
+    "impact": {
+      "file": "scorpion-impact-384-alpha.png",
+      "extent": 112
+    }
+  },
+  "qa": {
+    "idle": {
+      "extents": [
+        255,
+        255,
+        255,
+        255,
+        255
+      ],
+      "clippedFrames": []
+    },
+    "attack": {
+      "extents": [
+        259,
+        255,
+        289,
+        255
+      ],
+      "clippedFrames": []
+    },
+    "destroy": {
+      "extents": [
+        255,
+        249,
+        257,
+        249,
+        250
+      ],
+      "clippedFrames": []
+    },
+    "projectile": {
+      "extents": [
+        146
+      ],
+      "clippedFrames": []
+    },
+    "impact": {
+      "extents": [
+        112
+      ],
+      "clippedFrames": []
+    }
+  }
+}

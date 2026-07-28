@@ -1,0 +1,1125 @@
+{
+  "schemaVersion": 2,
+  "object": "watchtower",
+  "family": "fortress_ranged",
+  "pipeline": "layered_object_v2",
+  "image": "watchtower_layered_runtime_v2.png",
+  "atlasSize": [
+    1024,
+    1024
+  ],
+  "baseFootprintPx": 512,
+  "projection": "true_top_down_orthographic_90deg",
+  "sprites": {
+    "base_stone_token": {
+      "rect": {
+        "x": 4,
+        "y": 4,
+        "w": 503,
+        "h": 512
+      },
+      "pivotPx": [
+        252,
+        256
+      ],
+      "pivotInSourcePx": [
+        252,
+        256
+      ],
+      "sourceSize": [
+        503,
+        512
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 0,
+      "semantic": "base_token"
+    },
+    "central_socket": {
+      "rect": {
+        "x": 814,
+        "y": 520,
+        "w": 174,
+        "h": 179
+      },
+      "pivotPx": [
+        87,
+        89
+      ],
+      "pivotInSourcePx": [
+        87,
+        89
+      ],
+      "sourceSize": [
+        174,
+        179
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 10,
+      "semantic": "center_socket"
+    },
+    "lantern_body": {
+      "rect": {
+        "x": 247,
+        "y": 775,
+        "w": 92,
+        "h": 92
+      },
+      "pivotPx": [
+        46,
+        46
+      ],
+      "pivotInSourcePx": [
+        46,
+        46
+      ],
+      "sourceSize": [
+        92,
+        92
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 20,
+      "semantic": "ambient_child"
+    },
+    "lantern_flame_01": {
+      "rect": {
+        "x": 661,
+        "y": 934,
+        "w": 29,
+        "h": 29
+      },
+      "pivotPx": [
+        14,
+        14
+      ],
+      "pivotInSourcePx": [
+        14,
+        14
+      ],
+      "sourceSize": [
+        29,
+        29
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 21,
+      "semantic": "ambient_animation",
+      "durationMs": 180
+    },
+    "lantern_flame_02": {
+      "rect": {
+        "x": 694,
+        "y": 934,
+        "w": 29,
+        "h": 29
+      },
+      "pivotPx": [
+        14,
+        14
+      ],
+      "pivotInSourcePx": [
+        14,
+        14
+      ],
+      "sourceSize": [
+        29,
+        29
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 21,
+      "semantic": "ambient_animation",
+      "durationMs": 180
+    },
+    "lantern_flame_03": {
+      "rect": {
+        "x": 727,
+        "y": 934,
+        "w": 29,
+        "h": 29
+      },
+      "pivotPx": [
+        14,
+        14
+      ],
+      "pivotInSourcePx": [
+        14,
+        14
+      ],
+      "sourceSize": [
+        29,
+        29
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 21,
+      "semantic": "ambient_animation",
+      "durationMs": 180
+    },
+    "lantern_flame_04": {
+      "rect": {
+        "x": 760,
+        "y": 934,
+        "w": 29,
+        "h": 29
+      },
+      "pivotPx": [
+        14,
+        14
+      ],
+      "pivotInSourcePx": [
+        14,
+        14
+      ],
+      "sourceSize": [
+        29,
+        29
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 21,
+      "semantic": "ambient_animation",
+      "durationMs": 180
+    },
+    "crossbow_rotatable": {
+      "rect": {
+        "x": 4,
+        "y": 520,
+        "w": 369,
+        "h": 251
+      },
+      "pivotPx": [
+        182,
+        125
+      ],
+      "pivotInSourcePx": [
+        182,
+        125
+      ],
+      "sourceSize": [
+        369,
+        251
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 30,
+      "semantic": "active_addon"
+    },
+    "projectile_bolt": {
+      "rect": {
+        "x": 871,
+        "y": 934,
+        "w": 96,
+        "h": 16
+      },
+      "pivotPx": [
+        48,
+        8
+      ],
+      "pivotInSourcePx": [
+        48,
+        8
+      ],
+      "sourceSize": [
+        96,
+        16
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 40,
+      "semantic": "projectile"
+    },
+    "muzzle_flash_01": {
+      "rect": {
+        "x": 793,
+        "y": 934,
+        "w": 35,
+        "h": 19
+      },
+      "pivotPx": [
+        0,
+        10
+      ],
+      "pivotInSourcePx": [
+        1,
+        28
+      ],
+      "sourceSize": [
+        74,
+        55
+      ],
+      "trimOffset": [
+        1,
+        18
+      ],
+      "drawOrder": 50,
+      "semantic": "attack_fx",
+      "durationMs": 90
+    },
+    "muzzle_flash_02": {
+      "rect": {
+        "x": 588,
+        "y": 934,
+        "w": 69,
+        "h": 39
+      },
+      "pivotPx": [
+        0,
+        20
+      ],
+      "pivotInSourcePx": [
+        1,
+        28
+      ],
+      "sourceSize": [
+        74,
+        55
+      ],
+      "trimOffset": [
+        1,
+        8
+      ],
+      "drawOrder": 50,
+      "semantic": "attack_fx",
+      "durationMs": 90
+    },
+    "muzzle_flash_03": {
+      "rect": {
+        "x": 762,
+        "y": 775,
+        "w": 72,
+        "h": 53
+      },
+      "pivotPx": [
+        0,
+        27
+      ],
+      "pivotInSourcePx": [
+        1,
+        28
+      ],
+      "sourceSize": [
+        74,
+        55
+      ],
+      "trimOffset": [
+        1,
+        1
+      ],
+      "drawOrder": 50,
+      "semantic": "attack_fx",
+      "durationMs": 90
+    },
+    "muzzle_flash_04": {
+      "rect": {
+        "x": 832,
+        "y": 934,
+        "w": 35,
+        "h": 19
+      },
+      "pivotPx": [
+        0,
+        10
+      ],
+      "pivotInSourcePx": [
+        1,
+        28
+      ],
+      "sourceSize": [
+        74,
+        55
+      ],
+      "trimOffset": [
+        1,
+        18
+      ],
+      "drawOrder": 50,
+      "semantic": "attack_fx",
+      "durationMs": 90
+    },
+    "flag_pole": {
+      "rect": {
+        "x": 666,
+        "y": 775,
+        "w": 92,
+        "h": 54
+      },
+      "pivotPx": [
+        27,
+        27
+      ],
+      "pivotInSourcePx": [
+        27,
+        27
+      ],
+      "sourceSize": [
+        92,
+        54
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 15,
+      "semantic": "flag_mount"
+    },
+    "flag_cloth_wind_01": {
+      "rect": {
+        "x": 168,
+        "y": 934,
+        "w": 110,
+        "h": 45
+      },
+      "pivotPx": [
+        1,
+        22
+      ],
+      "pivotInSourcePx": [
+        2,
+        24
+      ],
+      "sourceSize": [
+        113,
+        49
+      ],
+      "trimOffset": [
+        1,
+        2
+      ],
+      "drawOrder": 16,
+      "semantic": "ambient_animation",
+      "durationMs": 180
+    },
+    "flag_cloth_wind_02": {
+      "rect": {
+        "x": 282,
+        "y": 934,
+        "w": 111,
+        "h": 42
+      },
+      "pivotPx": [
+        1,
+        21
+      ],
+      "pivotInSourcePx": [
+        2,
+        24
+      ],
+      "sourceSize": [
+        113,
+        49
+      ],
+      "trimOffset": [
+        1,
+        3
+      ],
+      "drawOrder": 16,
+      "semantic": "ambient_animation",
+      "durationMs": 180
+    },
+    "flag_cloth_wind_03": {
+      "rect": {
+        "x": 4,
+        "y": 934,
+        "w": 112,
+        "h": 47
+      },
+      "pivotPx": [
+        1,
+        23
+      ],
+      "pivotInSourcePx": [
+        2,
+        24
+      ],
+      "sourceSize": [
+        113,
+        49
+      ],
+      "trimOffset": [
+        1,
+        1
+      ],
+      "drawOrder": 16,
+      "semantic": "ambient_animation",
+      "durationMs": 180
+    },
+    "flag_cloth_wind_04": {
+      "rect": {
+        "x": 397,
+        "y": 934,
+        "w": 111,
+        "h": 42
+      },
+      "pivotPx": [
+        1,
+        20
+      ],
+      "pivotInSourcePx": [
+        2,
+        24
+      ],
+      "sourceSize": [
+        113,
+        49
+      ],
+      "trimOffset": [
+        1,
+        4
+      ],
+      "drawOrder": 16,
+      "semantic": "ambient_animation",
+      "durationMs": 180
+    },
+    "destroy_debris_stone_a": {
+      "rect": {
+        "x": 512,
+        "y": 934,
+        "w": 72,
+        "h": 39
+      },
+      "pivotPx": [
+        36,
+        18
+      ],
+      "pivotInSourcePx": [
+        36,
+        18
+      ],
+      "sourceSize": [
+        72,
+        39
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 60,
+      "semantic": "destroy_debris"
+    },
+    "destroy_debris_stone_b": {
+      "rect": {
+        "x": 431,
+        "y": 775,
+        "w": 59,
+        "h": 67
+      },
+      "pivotPx": [
+        29,
+        30
+      ],
+      "pivotInSourcePx": [
+        29,
+        30
+      ],
+      "sourceSize": [
+        59,
+        67
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 61,
+      "semantic": "destroy_debris"
+    },
+    "destroy_debris_stone_c": {
+      "rect": {
+        "x": 613,
+        "y": 775,
+        "w": 49,
+        "h": 57
+      },
+      "pivotPx": [
+        24,
+        29
+      ],
+      "pivotInSourcePx": [
+        24,
+        29
+      ],
+      "sourceSize": [
+        49,
+        57
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 62,
+      "semantic": "destroy_debris"
+    },
+    "destroy_debris_wood_d": {
+      "rect": {
+        "x": 838,
+        "y": 775,
+        "w": 133,
+        "h": 49
+      },
+      "pivotPx": [
+        67,
+        26
+      ],
+      "pivotInSourcePx": [
+        67,
+        26
+      ],
+      "sourceSize": [
+        133,
+        49
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 64,
+      "semantic": "destroy_debris"
+    },
+    "destroy_debris_metal_e": {
+      "rect": {
+        "x": 494,
+        "y": 775,
+        "w": 52,
+        "h": 64
+      },
+      "pivotPx": [
+        24,
+        32
+      ],
+      "pivotInSourcePx": [
+        24,
+        32
+      ],
+      "sourceSize": [
+        52,
+        64
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "drawOrder": 65,
+      "semantic": "destroy_debris"
+    },
+    "destroy_dust_01": {
+      "rect": {
+        "x": 4,
+        "y": 775,
+        "w": 152,
+        "h": 155
+      },
+      "pivotPx": [
+        70,
+        89
+      ],
+      "pivotInSourcePx": [
+        194,
+        194
+      ],
+      "sourceSize": [
+        389,
+        389
+      ],
+      "trimOffset": [
+        124,
+        105
+      ],
+      "drawOrder": 70,
+      "semantic": "destroy_fx",
+      "durationMs": 85
+    },
+    "destroy_dust_02": {
+      "rect": {
+        "x": 595,
+        "y": 520,
+        "w": 215,
+        "h": 204
+      },
+      "pivotPx": [
+        121,
+        114
+      ],
+      "pivotInSourcePx": [
+        194,
+        194
+      ],
+      "sourceSize": [
+        389,
+        389
+      ],
+      "trimOffset": [
+        73,
+        80
+      ],
+      "drawOrder": 70,
+      "semantic": "destroy_fx",
+      "durationMs": 105
+    },
+    "destroy_dust_03": {
+      "rect": {
+        "x": 511,
+        "y": 4,
+        "w": 254,
+        "h": 258
+      },
+      "pivotPx": [
+        121,
+        153
+      ],
+      "pivotInSourcePx": [
+        194,
+        194
+      ],
+      "sourceSize": [
+        389,
+        389
+      ],
+      "trimOffset": [
+        73,
+        41
+      ],
+      "drawOrder": 70,
+      "semantic": "destroy_fx",
+      "durationMs": 125
+    },
+    "destroy_dust_04": {
+      "rect": {
+        "x": 377,
+        "y": 520,
+        "w": 214,
+        "h": 211
+      },
+      "pivotPx": [
+        118,
+        128
+      ],
+      "pivotInSourcePx": [
+        194,
+        194
+      ],
+      "sourceSize": [
+        389,
+        389
+      ],
+      "trimOffset": [
+        76,
+        66
+      ],
+      "drawOrder": 70,
+      "semantic": "destroy_fx",
+      "durationMs": 175
+    },
+    "destroy_sparks_01": {
+      "rect": {
+        "x": 120,
+        "y": 934,
+        "w": 44,
+        "h": 47
+      },
+      "pivotPx": [
+        17,
+        19
+      ],
+      "pivotInSourcePx": [
+        62,
+        62
+      ],
+      "sourceSize": [
+        125,
+        125
+      ],
+      "trimOffset": [
+        45,
+        43
+      ],
+      "drawOrder": 71,
+      "semantic": "destroy_fx",
+      "durationMs": 55
+    },
+    "destroy_sparks_02": {
+      "rect": {
+        "x": 160,
+        "y": 775,
+        "w": 83,
+        "h": 93
+      },
+      "pivotPx": [
+        46,
+        44
+      ],
+      "pivotInSourcePx": [
+        62,
+        62
+      ],
+      "sourceSize": [
+        125,
+        125
+      ],
+      "trimOffset": [
+        16,
+        18
+      ],
+      "drawOrder": 71,
+      "semantic": "destroy_fx",
+      "durationMs": 65
+    },
+    "destroy_sparks_03": {
+      "rect": {
+        "x": 343,
+        "y": 775,
+        "w": 84,
+        "h": 83
+      },
+      "pivotPx": [
+        37,
+        46
+      ],
+      "pivotInSourcePx": [
+        62,
+        62
+      ],
+      "sourceSize": [
+        125,
+        125
+      ],
+      "trimOffset": [
+        25,
+        16
+      ],
+      "drawOrder": 71,
+      "semantic": "destroy_fx",
+      "durationMs": 75
+    },
+    "destroy_sparks_04": {
+      "rect": {
+        "x": 550,
+        "y": 775,
+        "w": 59,
+        "h": 58
+      },
+      "pivotPx": [
+        31,
+        31
+      ],
+      "pivotInSourcePx": [
+        62,
+        62
+      ],
+      "sourceSize": [
+        125,
+        125
+      ],
+      "trimOffset": [
+        31,
+        31
+      ],
+      "drawOrder": 71,
+      "semantic": "destroy_fx",
+      "durationMs": 95
+    }
+  },
+  "attachments": {
+    "objectCenter": {
+      "parent": "base_stone_token",
+      "positionNormalized": [
+        0.5,
+        0.5
+      ]
+    },
+    "weaponSocket": {
+      "parent": "central_socket",
+      "positionNormalized": [
+        0.5,
+        0.5
+      ]
+    },
+    "muzzle": {
+      "parent": "crossbow_rotatable",
+      "positionNormalized": [
+        0.99924,
+        0.498884
+      ],
+      "forwardAxis": "+X"
+    },
+    "flagMount": {
+      "parent": "base_stone_token",
+      "positionNormalized": [
+        0.24,
+        0.27
+      ]
+    },
+    "flagCloth": {
+      "parent": "flag_pole",
+      "positionNormalized": [
+        0.909348,
+        0.50974
+      ],
+      "forwardAxis": "+X"
+    },
+    "lantern": {
+      "parent": "base_stone_token",
+      "positionNormalized": [
+        0.29,
+        0.72
+      ]
+    },
+    "lanternGlow": {
+      "parent": "lantern_body",
+      "positionNormalized": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "drawOrder": [
+    "base_stone_token",
+    "central_socket",
+    "flag_pole",
+    "flag_cloth_wind_*",
+    "lantern_body",
+    "lantern_flame_*",
+    "crossbow_rotatable",
+    "projectile_bolt",
+    "muzzle_flash_*",
+    "destroy_debris_*",
+    "destroy_dust_*",
+    "destroy_sparks_*"
+  ],
+  "animations": {
+    "idle_flag": {
+      "frames": [
+        "flag_cloth_wind_01",
+        "flag_cloth_wind_02",
+        "flag_cloth_wind_03",
+        "flag_cloth_wind_04"
+      ],
+      "durationsMs": [
+        180,
+        180,
+        180,
+        180
+      ],
+      "loop": true,
+      "holdLast": false
+    },
+    "idle_lantern": {
+      "frames": [
+        "lantern_flame_01",
+        "lantern_flame_02",
+        "lantern_flame_03",
+        "lantern_flame_04"
+      ],
+      "durationsMs": [
+        180,
+        180,
+        180,
+        180
+      ],
+      "loop": true,
+      "holdLast": false
+    },
+    "attack": {
+      "frames": [
+        "muzzle_flash_01",
+        "muzzle_flash_02",
+        "muzzle_flash_03",
+        "muzzle_flash_04"
+      ],
+      "durationsMs": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "loop": false,
+      "holdLast": false
+    },
+    "destroy_dust": {
+      "frames": [
+        "destroy_dust_01",
+        "destroy_dust_02",
+        "destroy_dust_03",
+        "destroy_dust_04"
+      ],
+      "durationsMs": [
+        85,
+        105,
+        125,
+        175
+      ],
+      "loop": false,
+      "holdLast": false
+    },
+    "destroy_sparks": {
+      "frames": [
+        "destroy_sparks_01",
+        "destroy_sparks_02",
+        "destroy_sparks_03",
+        "destroy_sparks_04"
+      ],
+      "durationsMs": [
+        55,
+        65,
+        75,
+        95
+      ],
+      "loop": false,
+      "holdLast": false
+    }
+  },
+  "runtimeTransforms": {
+    "crossbow_rotatable": {
+      "rotation": "aimAngle",
+      "anchor": "weaponSocket"
+    },
+    "projectile_bolt": {
+      "position": "projectilePosition",
+      "rotation": "trajectoryAngle"
+    },
+    "flag_cloth_wind_*": {
+      "anchor": "flagCloth"
+    },
+    "lantern_flame_*": {
+      "anchor": "lanternGlow"
+    },
+    "muzzle_flash_*": {
+      "anchor": "muzzle",
+      "inheritRotation": true
+    },
+    "destroy_debris": {
+      "destroy_debris_stone_a": {
+        "massClass": "medium",
+        "radialVelocityPxPerSec": [
+          90,
+          170
+        ],
+        "angularVelocityDegPerSec": [
+          -220,
+          220
+        ],
+        "linearDrag": 0.92,
+        "lifetimeMs": [
+          700,
+          1100
+        ]
+      },
+      "destroy_debris_stone_b": {
+        "massClass": "medium_small",
+        "radialVelocityPxPerSec": [
+          110,
+          195
+        ],
+        "angularVelocityDegPerSec": [
+          -280,
+          280
+        ],
+        "linearDrag": 0.915,
+        "lifetimeMs": [
+          650,
+          1050
+        ]
+      },
+      "destroy_debris_stone_c": {
+        "massClass": "small",
+        "radialVelocityPxPerSec": [
+          135,
+          225
+        ],
+        "angularVelocityDegPerSec": [
+          -340,
+          340
+        ],
+        "linearDrag": 0.9,
+        "lifetimeMs": [
+          550,
+          950
+        ]
+      },
+      "destroy_debris_wood_d": {
+        "massClass": "light_wood",
+        "inheritOwnerRotation": true,
+        "radialVelocityPxPerSec": [
+          155,
+          255
+        ],
+        "angularVelocityDegPerSec": [
+          -420,
+          420
+        ],
+        "linearDrag": 0.885,
+        "lifetimeMs": [
+          500,
+          900
+        ]
+      },
+      "destroy_debris_metal_e": {
+        "massClass": "light_metal",
+        "inheritOwnerRotation": true,
+        "radialVelocityPxPerSec": [
+          175,
+          285
+        ],
+        "angularVelocityDegPerSec": [
+          -560,
+          560
+        ],
+        "linearDrag": 0.875,
+        "lifetimeMs": [
+          450,
+          850
+        ]
+      }
+    }
+  },
+  "sourceManifests": [
+    "fortress_ranged__ambient_child__amber_lantern_glow_loop_v1.json",
+    "fortress_ranged__ambient_child__amber_lantern_housing_v1.json",
+    "fortress_ranged__base_token__round_light_v1.json",
+    "fortress_ranged__center_socket__light_bearing_v1.json",
+    "fortress_ranged__debris__stone_core_chunk_c_v1.json",
+    "fortress_ranged__debris__stone_rim_chunk_a_v1.json",
+    "fortress_ranged__debris__stone_rim_chunk_b_v1.json",
+    "watchtower__active_addon__light_single_crossbow_v1.json",
+    "watchtower__ambient_child__range_pennant_wind_loop_v1.json",
+    "watchtower__debris__crossbow_arm_shard_d_v1.json",
+    "watchtower__debris__crossbow_axle_bracket_e_v1.json",
+    "watchtower__destroy_fx__metal_spark_burst_v1.json",
+    "watchtower__destroy_fx__stone_dust_burst_v1.json",
+    "watchtower__flag_mount__range_pennant_socket_v1.json",
+    "watchtower__muzzle_fx__compact_golden_flash_loop_v1.json",
+    "watchtower__projectile__simple_bolt_v1.json"
+  ],
+  "qa": {
+    "oneObjectFamily": true,
+    "spriteCount": 31,
+    "tightRects": true,
+    "transparentRuntime": true,
+    "runtimeLabels": false,
+    "runtimeGrid": false,
+    "rectsInBounds": true,
+    "rectsNonOverlapping": true,
+    "fileSizeBytes": 979759,
+    "under5MB": true,
+    "status": "approved_candidate"
+  }
+}

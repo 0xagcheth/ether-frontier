@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ether Frontier — Layered Object Atlas Lab</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./object-switch.css">
+</head>
+<body>
+  <main>
+    <header>
+      <a class="brand" href="#">ETHER FRONTIER <span id="objectNumber">/ OBJECT 01</span></a>
+      <div class="build"><i></i> LAYERED PIPELINE V2</div>
+    </header>
+
+    <section class="workspace">
+      <div class="intro">
+        <p class="eyebrow">ATLAS-DRIVEN OBJECT LAB</p>
+        <div class="object-switch" id="objectSwitch" aria-label="Object family"></div>
+        <h1 id="objectTitle">WATCH<br>TOWER</h1>
+        <p id="objectDescription">Один atlas. Тридцать один независимый слой. Все движения собираются в runtime из rects, pivots и attachments.</p>
+        <div class="readout">
+          <span>STATE <b id="stateReadout">IDLE</b></span>
+          <span>TIME <b id="timeReadout">0.00 S</b></span>
+        </div>
+      </div>
+
+      <div class="stage-wrap">
+        <canvas id="canvas" width="720" height="720" aria-label="Layered object animation canvas"></canvas>
+        <div class="reticle" aria-hidden="true"></div>
+      </div>
+
+      <aside>
+        <p>RUNTIME SOURCE</p>
+        <strong>1024 × 1024</strong>
+        <dl>
+          <dt>SPRITES</dt><dd id="spriteCount">31</dd>
+          <dt>FOOTPRINT</dt><dd id="footprintReadout">512 PX</dd>
+          <dt>ATLAS</dt><dd id="atlasReadout">RGBA</dd>
+          <dt>PROJECTION</dt><dd>90° TOP-DOWN</dd>
+        </dl>
+        <button id="resetButton">RESET OBJECT</button>
+      </aside>
+    </section>
+
+    <section class="controls">
+      <div class="control-head"><span>ANIMATION</span><b id="clipReadout">IDLE · LOOP</b></div>
+      <nav id="actions" aria-label="Object animations"></nav>
+      <div class="timeline"><i id="playhead"></i><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></div>
+    </section>
+
+    <footer>
+      <span>POINTER — AIM</span><span>SPACE — PLAY / PAUSE</span><span>R — RESET</span><span>F — FULLSCREEN</span>
+    </footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

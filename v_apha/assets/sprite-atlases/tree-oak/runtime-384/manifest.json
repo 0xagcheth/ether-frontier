@@ -1,0 +1,39 @@
+{
+  "object": "tree-oak",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "idle": {
+    "file": "tree-oak-idle-384-alpha.png",
+    "frame": 8
+  },
+  "grow": {
+    "file": "tree-oak-grow-384-alpha.png",
+    "columns": 8,
+    "rows": 1,
+    "frameDurationMs": 120,
+    "loop": false,
+    "holdLast": true
+  },
+  "normalization": "final frame extent 255px in a 384px safety cell; centered content",
+  "qa": {
+    "extents": [
+      66,
+      84,
+      105,
+      166,
+      179,
+      197,
+      233,
+      259
+    ],
+    "monotonic": true,
+    "clippedFrames": []
+  }
+}

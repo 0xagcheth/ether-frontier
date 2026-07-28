@@ -1,0 +1,570 @@
+{
+  "object": "watchtower",
+  "action": "destroy",
+  "loop": false,
+  "holdLast": true,
+  "frames": [
+    {
+      "durationMs": 130,
+      "layers": [
+        {
+          "sprite": "base_stone_token",
+          "anchor": "object_center",
+          "sizePx": [
+            255,
+            256
+          ]
+        },
+        {
+          "sprite": "central_socket",
+          "anchor": "object_center",
+          "sizePx": [
+            116,
+            109
+          ]
+        },
+        {
+          "sprite": "flag_mount_socket",
+          "anchor": "flag_mount",
+          "sizePx": [
+            20,
+            20
+          ]
+        },
+        {
+          "sprite": "flag_pennant_topdown_01",
+          "anchor": "flag_mount",
+          "offsetPx": [
+            11,
+            0
+          ],
+          "sizePx": [
+            70,
+            38
+          ],
+          "pivot": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "sprite": "lantern_housing_topdown",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            38,
+            38
+          ]
+        },
+        {
+          "sprite": "lantern_glow_topdown_01",
+          "anchor": "lantern_mount",
+          "sizePx": [
+            28,
+            28
+          ]
+        },
+        {
+          "sprite": "crossbow_rotatable",
+          "anchor": "weapon_socket",
+          "offsetPx": [
+            0,
+            0
+          ],
+          "sizePx": [
+            176,
+            144
+          ],
+          "rotation": "aimAngle"
+        }
+      ]
+    },
+    {
+      "durationMs": 130,
+      "layers": [
+        {
+          "sprite": "destroy_debris_01",
+          "anchor": "object_center",
+          "offsetPx": [
+            41,
+            13
+          ],
+          "sizePx": [
+            31,
+            31
+          ],
+          "rotationDeg": -13
+        },
+        {
+          "sprite": "destroy_debris_02",
+          "anchor": "object_center",
+          "offsetPx": [
+            23,
+            36
+          ],
+          "sizePx": [
+            31,
+            31
+          ],
+          "rotationDeg": 0
+        },
+        {
+          "sprite": "destroy_debris_03",
+          "anchor": "object_center",
+          "offsetPx": [
+            -6,
+            43
+          ],
+          "sizePx": [
+            31,
+            31
+          ],
+          "rotationDeg": 13
+        },
+        {
+          "sprite": "destroy_debris_04",
+          "anchor": "object_center",
+          "offsetPx": [
+            -32,
+            29
+          ],
+          "sizePx": [
+            31,
+            31
+          ],
+          "rotationDeg": -13
+        },
+        {
+          "sprite": "destroy_debris_05",
+          "anchor": "object_center",
+          "offsetPx": [
+            -43,
+            2
+          ],
+          "sizePx": [
+            31,
+            31
+          ],
+          "rotationDeg": 0
+        },
+        {
+          "sprite": "destroy_debris_06",
+          "anchor": "object_center",
+          "offsetPx": [
+            -34,
+            -26
+          ],
+          "sizePx": [
+            31,
+            31
+          ],
+          "rotationDeg": 13
+        },
+        {
+          "sprite": "destroy_debris_07",
+          "anchor": "object_center",
+          "offsetPx": [
+            -9,
+            -42
+          ],
+          "sizePx": [
+            31,
+            31
+          ],
+          "rotationDeg": -13
+        },
+        {
+          "sprite": "destroy_debris_08",
+          "anchor": "object_center",
+          "offsetPx": [
+            20,
+            -38
+          ],
+          "sizePx": [
+            31,
+            31
+          ],
+          "rotationDeg": 0
+        },
+        {
+          "sprite": "destroy_debris_09",
+          "anchor": "object_center",
+          "offsetPx": [
+            40,
+            -16
+          ],
+          "sizePx": [
+            31,
+            31
+          ],
+          "rotationDeg": 13
+        }
+      ]
+    },
+    {
+      "durationMs": 130,
+      "layers": [
+        {
+          "sprite": "destroy_debris_01",
+          "anchor": "object_center",
+          "offsetPx": [
+            65,
+            21
+          ],
+          "sizePx": [
+            28,
+            28
+          ],
+          "rotationDeg": -26
+        },
+        {
+          "sprite": "destroy_debris_02",
+          "anchor": "object_center",
+          "offsetPx": [
+            36,
+            58
+          ],
+          "sizePx": [
+            28,
+            28
+          ],
+          "rotationDeg": 0
+        },
+        {
+          "sprite": "destroy_debris_03",
+          "anchor": "object_center",
+          "offsetPx": [
+            -9,
+            67
+          ],
+          "sizePx": [
+            28,
+            28
+          ],
+          "rotationDeg": 26
+        },
+        {
+          "sprite": "destroy_debris_04",
+          "anchor": "object_center",
+          "offsetPx": [
+            -50,
+            46
+          ],
+          "sizePx": [
+            28,
+            28
+          ],
+          "rotationDeg": -26
+        },
+        {
+          "sprite": "destroy_debris_05",
+          "anchor": "object_center",
+          "offsetPx": [
+            -68,
+            3
+          ],
+          "sizePx": [
+            28,
+            28
+          ],
+          "rotationDeg": 0
+        },
+        {
+          "sprite": "destroy_debris_06",
+          "anchor": "object_center",
+          "offsetPx": [
+            -54,
+            -42
+          ],
+          "sizePx": [
+            28,
+            28
+          ],
+          "rotationDeg": 26
+        },
+        {
+          "sprite": "destroy_debris_07",
+          "anchor": "object_center",
+          "offsetPx": [
+            -14,
+            -66
+          ],
+          "sizePx": [
+            28,
+            28
+          ],
+          "rotationDeg": -26
+        },
+        {
+          "sprite": "destroy_debris_08",
+          "anchor": "object_center",
+          "offsetPx": [
+            32,
+            -60
+          ],
+          "sizePx": [
+            28,
+            28
+          ],
+          "rotationDeg": 0
+        },
+        {
+          "sprite": "destroy_debris_09",
+          "anchor": "object_center",
+          "offsetPx": [
+            63,
+            -26
+          ],
+          "sizePx": [
+            28,
+            28
+          ],
+          "rotationDeg": 26
+        }
+      ]
+    },
+    {
+      "durationMs": 130,
+      "layers": [
+        {
+          "sprite": "destroy_debris_01",
+          "anchor": "object_center",
+          "offsetPx": [
+            89,
+            28
+          ],
+          "sizePx": [
+            25,
+            25
+          ],
+          "rotationDeg": -39
+        },
+        {
+          "sprite": "destroy_debris_02",
+          "anchor": "object_center",
+          "offsetPx": [
+            50,
+            79
+          ],
+          "sizePx": [
+            25,
+            25
+          ],
+          "rotationDeg": 0
+        },
+        {
+          "sprite": "destroy_debris_03",
+          "anchor": "object_center",
+          "offsetPx": [
+            -13,
+            92
+          ],
+          "sizePx": [
+            25,
+            25
+          ],
+          "rotationDeg": 39
+        },
+        {
+          "sprite": "destroy_debris_04",
+          "anchor": "object_center",
+          "offsetPx": [
+            -69,
+            63
+          ],
+          "sizePx": [
+            25,
+            25
+          ],
+          "rotationDeg": -39
+        },
+        {
+          "sprite": "destroy_debris_05",
+          "anchor": "object_center",
+          "offsetPx": [
+            -93,
+            4
+          ],
+          "sizePx": [
+            25,
+            25
+          ],
+          "rotationDeg": 0
+        },
+        {
+          "sprite": "destroy_debris_06",
+          "anchor": "object_center",
+          "offsetPx": [
+            -74,
+            -57
+          ],
+          "sizePx": [
+            25,
+            25
+          ],
+          "rotationDeg": 39
+        },
+        {
+          "sprite": "destroy_debris_07",
+          "anchor": "object_center",
+          "offsetPx": [
+            -20,
+            -91
+          ],
+          "sizePx": [
+            25,
+            25
+          ],
+          "rotationDeg": -39
+        },
+        {
+          "sprite": "destroy_debris_08",
+          "anchor": "object_center",
+          "offsetPx": [
+            43,
+            -82
+          ],
+          "sizePx": [
+            25,
+            25
+          ],
+          "rotationDeg": 0
+        },
+        {
+          "sprite": "destroy_debris_09",
+          "anchor": "object_center",
+          "offsetPx": [
+            86,
+            -35
+          ],
+          "sizePx": [
+            25,
+            25
+          ],
+          "rotationDeg": 39
+        }
+      ]
+    },
+    {
+      "durationMs": 130,
+      "layers": [
+        {
+          "sprite": "destroy_debris_01",
+          "anchor": "object_center",
+          "offsetPx": [
+            112,
+            36
+          ],
+          "sizePx": [
+            22,
+            22
+          ],
+          "rotationDeg": -52
+        },
+        {
+          "sprite": "destroy_debris_02",
+          "anchor": "object_center",
+          "offsetPx": [
+            63,
+            100
+          ],
+          "sizePx": [
+            22,
+            22
+          ],
+          "rotationDeg": 0
+        },
+        {
+          "sprite": "destroy_debris_03",
+          "anchor": "object_center",
+          "offsetPx": [
+            -16,
+            117
+          ],
+          "sizePx": [
+            22,
+            22
+          ],
+          "rotationDeg": 52
+        },
+        {
+          "sprite": "destroy_debris_04",
+          "anchor": "object_center",
+          "offsetPx": [
+            -87,
+            79
+          ],
+          "sizePx": [
+            22,
+            22
+          ],
+          "rotationDeg": -52
+        },
+        {
+          "sprite": "destroy_debris_05",
+          "anchor": "object_center",
+          "offsetPx": [
+            -118,
+            5
+          ],
+          "sizePx": [
+            22,
+            22
+          ],
+          "rotationDeg": 0
+        },
+        {
+          "sprite": "destroy_debris_06",
+          "anchor": "object_center",
+          "offsetPx": [
+            -93,
+            -72
+          ],
+          "sizePx": [
+            22,
+            22
+          ],
+          "rotationDeg": 52
+        },
+        {
+          "sprite": "destroy_debris_07",
+          "anchor": "object_center",
+          "offsetPx": [
+            -25,
+            -115
+          ],
+          "sizePx": [
+            22,
+            22
+          ],
+          "rotationDeg": -52
+        },
+        {
+          "sprite": "destroy_debris_08",
+          "anchor": "object_center",
+          "offsetPx": [
+            55,
+            -104
+          ],
+          "sizePx": [
+            22,
+            22
+          ],
+          "rotationDeg": 0
+        },
+        {
+          "sprite": "destroy_debris_09",
+          "anchor": "object_center",
+          "offsetPx": [
+            109,
+            -45
+          ],
+          "sizePx": [
+            22,
+            22
+          ],
+          "rotationDeg": 52
+        }
+      ]
+    }
+  ]
+}

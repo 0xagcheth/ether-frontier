@@ -1,0 +1,13 @@
+Edit Image 1 only. Preserve its exact composition, geometry, clean cartoon illustration, strict 90-degree top-down view, circular base, centered crossbow, flat pennant, top-view lantern, restrained wax-crayon coloring, light dirt, and solid #ff00ff background.
+
+Make only the physical cardboard material moderately more realistic while leaving all printed/color artwork cartoon-like:
+- improve the exposed tan edges with believable layered paper fibers, compressed thickness and occasional visible corrugated channels;
+- add subtle natural kraft-paper grain and tiny fiber flecks in areas where brown cardboard shows through;
+- vary cardboard thickness slightly between glued pieces, with plausible shallow edge compression, bent corners and tiny delamination at a few cut points;
+- make the short contact shadows between stacked pieces physically consistent and slightly softer;
+- keep the painted faces stylized, clean and colored with light wax-crayon strokes, not photorealistic;
+- retain the current sparse stylized dirt and imperfections.
+
+Target balance: 50% clean cartoon illustration, 30% believable cardboard material, 15% crayon drawing, 5% stylized dirt. The object must still look like game art, not a photograph of a real craft.
+
+Do not increase realistic stone, wood, metal, lighting or dirt. Do not add detail noise or change shapes. No glossy 3D, photographic scene, side view, facade, isometric angle, upright pole, side lantern, text, grid, projectile, debris, animation frames, floor or extra objects.

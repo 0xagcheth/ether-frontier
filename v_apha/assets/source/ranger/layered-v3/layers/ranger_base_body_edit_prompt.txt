@@ -1,0 +1,33 @@
+Use case: precise-object-edit
+Asset type: production layered game sprite module
+
+Edit the input approved Garrison Ranger projection master into its empty stable
+base-body layer.
+
+Preserve exactly:
+- square canvas, object scale and position;
+- strict true top-down orthographic projection;
+- asymmetrical broken-shield outer silhouette;
+- all permanent outer barricades and hunter-green edge panels;
+- grey cardboard-stone deck layout;
+- cardboard texture, outlines, dirt, glue marks and permanent local shadows.
+
+Remove only these detachable child modules:
+- both hooded ranger tokens and their raised hexagonal pedestals;
+- the complete upper-left fletched-bolt rack and every bolt;
+- the complete right reserve-bolt box and every bolt;
+- the amber circular hunting optic;
+- the complete bottom-center rapid-volley crossbow assembly.
+
+Reconstruct every revealed area as matching flat deck material. Retain only small
+flat attachment markings or low sockets at the original child positions: two
+staff positions, upper-left rack rail, right magazine rail, optic socket, and
+front weapon-bearing socket.
+
+Output one connected empty garrison platform on the same perfectly flat uniform
+#ff00ff chroma-key background.
+
+Do not resize, rotate, mirror, crop, redesign, simplify, add objects, or change
+the outer silhouette. No people, helmets, weapons, crossbows, arrows, bolts,
+racks, magazines, optics, effects, labels, text, terrain, facade, side view,
+isometric perspective, glossy 3D or plastic.

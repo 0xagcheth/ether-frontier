@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "module": "watchtower__debris__crossbow_axle_bracket_e",
+  "object": "watchtower",
+  "family": "fortress_ranged",
+  "slot": "debris",
+  "ownerModule": "watchtower__active_addon__light_single_crossbow",
+  "image": "watchtower__debris__crossbow_axle_bracket_e_v1_alpha.png",
+  "sourceImage": "watchtower__debris__crossbow_axle_bracket_e_v1_chroma.png",
+  "sizePx": [
+    495,
+    606
+  ],
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 495,
+    "h": 606
+  },
+  "pivotPx": [
+    231,
+    302
+  ],
+  "pivot": [
+    0.466667,
+    0.49835
+  ],
+  "pivotMethod": "alpha_weighted_center_of_mass_excluding_cutout",
+  "projection": "true_top_down_orthographic_90deg",
+  "runtimeScale": {
+    "scaleToWeaponLength": 0.14
+  },
+  "destroyPhysics": {
+    "massClass": "light_metal",
+    "inheritOwnerRotation": true,
+    "radialVelocityPxPerSec": [
+      175,
+      285
+    ],
+    "angularVelocityDegPerSec": [
+      -560,
+      560
+    ],
+    "linearDrag": 0.875,
+    "lifetimeMs": [
+      450,
+      850
+    ]
+  },
+  "drawOrder": 65,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "singleConnectedPiece": true,
+    "centerCutoutTransparent": true,
+    "centerAlpha": 0,
+    "magentaSpillPixels": 0,
+    "status": "canon"
+  }
+}

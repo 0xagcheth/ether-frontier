@@ -1,0 +1,54 @@
+{
+  "object": "watchtower",
+  "pipeline": "layered-object-v2",
+  "status": "awaiting_final_user_approval",
+  "rangerProductionBlocked": true,
+  "independentLayerCount": 42,
+  "proofFiles": {
+    "assembly": "watchtower_layered_assembly_proof_v8.png",
+    "animation": "watchtower_layered_runtime_animation_proof_v8.gif",
+    "allLayers": "watchtower_layered_review_grid_v8.png",
+    "runtimeAtlas": "../../runtime/atlases/buildings/watchtower/watchtower_layered_runtime_v8.png",
+    "manifest": "../../runtime/atlases/buildings/watchtower/watchtower_layered_manifest_v8.json"
+  },
+  "validatedModes": {
+    "idle": {
+      "basePixelStatic": true,
+      "animatedLayers": [
+        "range_pennant",
+        "lantern_core"
+      ]
+    },
+    "aim": {
+      "basePixelStatic": true,
+      "rotatedLayers": [
+        "simple_crossbow"
+      ],
+      "pivot": "active_primary_pivot"
+    },
+    "attack": {
+      "basePixelStatic": true,
+      "animatedLayers": [
+        "simple_crossbow_local_recoil",
+        "muzzle_flash"
+      ],
+      "muzzleAttachmentInheritedRotation": true
+    },
+    "destroy": {
+      "intactChildrenHidden": true,
+      "ruinStateCentered": true,
+      "independentDebrisBodies": 15,
+      "dustFrames": 4
+    }
+  },
+  "technical": {
+    "atlasSize": [1024, 487],
+    "atlasBytes": 572660,
+    "under5MB": true,
+    "rectsInBounds": true,
+    "rectsNonOverlapping": true,
+    "runtimeContainsLabels": false,
+    "runtimeContainsGrid": false,
+    "runtimeContainsCompositePreview": false
+  }
+}

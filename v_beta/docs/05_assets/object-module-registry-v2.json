@@ -1,0 +1,82 @@
+{
+  "status": "canonical_seven_circles",
+  "schemaVersion": 2,
+  "projection": "true_top_down_orthographic_90deg",
+  "material": "smooth_solid_layered_die_cut_punchboard",
+  "reusePolicy": {
+    "global": ["edge_treatment", "contact_shadow_logic", "manifest_schema", "qa_conventions"],
+    "familyOnly": ["footprint_grammar", "bearing_type", "attachment_vocabulary"],
+    "ownerOnly": ["primary_mechanism", "ammunition", "projectile", "impact", "unique_debris", "circle_animation"]
+  },
+  "families": {
+    "wind_ranged": {
+      "objects": ["watchtower", "ranger", "tracker", "assassin"],
+      "core": ["wind_low_lookout_footprint", "wind_radial_deck_grammar", "wind_card_anchor", "wind_compact_bearing"],
+      "variants": {
+        "watchtower": ["simple_light_crossbow", "loaded_bolt", "four_bolt_rack", "signal_cloth", "amber_lantern"],
+        "ranger": ["compact_repeat_launcher", "sliding_bolt_feed", "small_magazine", "feathered_vane"],
+        "tracker": ["long_bow_stave", "open_sighting_cards", "bird_marker", "route_ribbon"],
+        "assassin": ["concealed_torsion_rails", "covered_dart_bed", "tension_tabs", "shadow_cloth_shutters"]
+      }
+    },
+    "heavy_tension": {
+      "objects": ["ballista", "scorpion", "hailstorm"],
+      "core": ["heavy_low_base", "reinforced_swivel", "tension_mounts", "armor_quadrants"],
+      "variants": {
+        "ballista": ["massive_ballista_arms", "central_stock", "winch", "heavy_bolt", "recoil_slide"],
+        "scorpion": ["single_harpoon_rail", "segmented_counterweight", "rope_cards", "hooked_projectile"],
+        "hailstorm": ["fan_launch_channels", "rotating_feed_drum", "loaded_darts", "spread_impact"]
+      }
+    },
+    "thunder_artillery": {
+      "objects": ["cannon", "mortar", "grapeshot"],
+      "core": ["artillery_footing", "turntable", "recoil_or_elevation_mounts", "ammo_anchors"],
+      "variants": {
+        "cannon": ["long_barrel", "breech", "recoil_rails", "round_charge", "muzzle_flash", "smoke"],
+        "mortar": ["wide_bowl", "elevation_cradle", "short_tube", "heavy_shell", "ground_burst"],
+        "grapeshot": ["seven_guide_channels", "shared_trigger", "seven_charge_tabs", "pellet_fan"]
+      }
+    },
+    "circle_constructs": {
+      "objects": ["obelisk", "beacon", "pal_ward", "pal_censer", "pal_reliquary", "mage_frost", "mage_tesla", "mage_prism"],
+      "core": ["low_circle_dais", "center_socket"],
+      "variants": {
+        "obelisk": ["memory_slabs", "absent_center", "name_cards", "copper_bridges"],
+        "beacon": ["amber_lens", "radial_reflector", "ochre_shutters", "beam_cards"],
+        "pal_ward": ["open_ring", "four_contract_contacts", "shield_cards", "discharge_arcs"],
+        "pal_censer": ["craft_brazier", "bellows", "coals", "flame", "smoke"],
+        "pal_reliquary": ["layered_chest", "lid", "name_cards", "ribbons", "pulse"],
+        "mage_frost": ["reflection_cards", "cold_focus", "ripple", "frost_shards"],
+        "mage_tesla": ["coil_stack", "contacts", "insulators", "orb", "paper_arcs"],
+        "mage_prism": ["prism_cards", "beam_splitters", "independent_rays"]
+      }
+    },
+    "living_root": {
+      "objects": ["palisade", "hunt_snare", "hunt_roost", "hunt_hive"],
+      "core": ["living_wood_connectors", "root_sockets", "vine_ties", "leaf_splinter_debris"],
+      "variants": {
+        "palisade": ["individual_stakes", "living_roots", "closure_vines", "breach_states"],
+        "hunt_snare": ["trigger_card", "independent_loop", "spring_branch", "closure_states"],
+        "hunt_roost": ["low_platform", "perch", "bird_marker", "optic", "feather_effects"],
+        "hunt_hive": ["bark_chambers", "comb_cards", "reservoir", "insects", "liquid_overlays"]
+      }
+    },
+    "worksites": {
+      "objects": ["sawmill", "quarry"],
+      "core": ["low_worksite_footprint", "beam_frame_grammar", "pulley_storage_anchors"],
+      "variants": {
+        "sawmill": ["radial_bench", "saw_wheel", "belt_gears", "log_bed", "wood_stack", "shavings"],
+        "quarry": ["cut_stone_pit", "low_derrick", "pulley_arm", "basket", "rubble", "dust"]
+      }
+    },
+    "strategic_unique": {
+      "objects": ["castle", "spawn_cave"],
+      "core": [],
+      "variants": {
+        "castle": ["seven_material_sections", "name_hearth", "seven_road_sockets", "breach_states"],
+        "spawn_cave": ["soil_tear", "root_tear", "stone_tear", "nav_trace", "deep_clay", "opening_frames", "spawn_flare"]
+      }
+    }
+  },
+  "productionOrder": ["watchtower", "wind_ranged_remaining", "heavy_tension", "thunder_artillery", "circle_constructs", "living_root", "worksites", "strategic_unique"]
+}

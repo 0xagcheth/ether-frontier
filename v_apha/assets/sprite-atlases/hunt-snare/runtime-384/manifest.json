@@ -1,0 +1,75 @@
+{
+  "object": "hunt-snare",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "normalization": "locked 255px intact building extent; centered 384px safety cell",
+  "actions": {
+    "idle": {
+      "file": "hunt-snare-idle-384-alpha.png",
+      "frames": 5,
+      "durationMs": 180,
+      "loop": true
+    },
+    "destroy": {
+      "file": "hunt-snare-destroy-384-alpha.png",
+      "frames": 5,
+      "durationMs": 130,
+      "loop": false,
+      "holdLast": true
+    },
+    "attack": {
+      "file": "hunt-snare-attack-384-alpha.png",
+      "frames": 4,
+      "durationMs": 90,
+      "loop": false
+    },
+    "impact": {
+      "file": "hunt-snare-impact-384-alpha.png",
+      "extent": 144
+    }
+  },
+  "qa": {
+    "idle": {
+      "extents": [
+        255,
+        256,
+        256,
+        254,
+        255
+      ],
+      "clippedFrames": []
+    },
+    "destroy": {
+      "extents": [
+        255,
+        255,
+        250,
+        223,
+        203
+      ],
+      "clippedFrames": []
+    },
+    "attack": {
+      "extents": [
+        263,
+        258,
+        263,
+        263
+      ],
+      "clippedFrames": []
+    },
+    "impact": {
+      "extents": [
+        144
+      ],
+      "clippedFrames": []
+    }
+  }
+}

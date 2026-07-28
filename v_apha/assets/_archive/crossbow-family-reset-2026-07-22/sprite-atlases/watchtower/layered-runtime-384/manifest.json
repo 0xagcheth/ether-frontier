@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 2,
+  "object": "watchtower",
+  "pipeline": "layered-object-v2-composite-animation",
+  "image": "watchtower-animation-atlas-384.png",
+  "atlasSize": [
+    1920,
+    1536
+  ],
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "normalization": "locked 255px base footprint in centered 384px safety cell",
+  "actions": {
+    "idle": {
+      "strip": "watchtower-idle-384-alpha.png",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 384,
+          "h": 384
+        },
+        {
+          "x": 384,
+          "y": 0,
+          "w": 384,
+          "h": 384
+        },
+        {
+          "x": 768,
+          "y": 0,
+          "w": 384,
+          "h": 384
+        },
+        {
+          "x": 1152,
+          "y": 0,
+          "w": 384,
+          "h": 384
+        },
+        {
+          "x": 1536,
+          "y": 0,
+          "w": 384,
+          "h": 384
+        }
+      ],
+      "frameDurationMs": 180,
+      "loop": true,
+      "holdLast": false
+    },
+    "attack": {
+      "strip": "watchtower-attack-384-alpha.png",
+      "frames": [
+        {
+          "x": 0,
+          "y": 384,
+          "w": 384,
+          "h": 384
+        },
+        {
+          "x": 384,
+          "y": 384,
+          "w": 384,
+          "h": 384
+        },
+        {
+          "x": 768,
+          "y": 384,
+          "w": 384,
+          "h": 384
+        },
+        {
+          "x": 1152,
+          "y": 384,
+          "w": 384,
+          "h": 384
+        }
+      ],
+      "frameDurationMs": 90,
+      "loop": false,
+      "holdLast": false
+    },
+    "destroy": {
+      "strip": "watchtower-destroy-384-alpha.png",
+      "frames": [
+        {
+          "x": 0,
+          "y": 768,
+          "w": 384,
+          "h": 384
+        },
+        {
+          "x": 384,
+          "y": 768,
+          "w": 384,
+          "h": 384
+        },
+        {
+          "x": 768,
+          "y": 768,
+          "w": 384,
+          "h": 384
+        },
+        {
+          "x": 1152,
+          "y": 768,
+          "w": 384,
+          "h": 384
+        },
+        {
+          "x": 1536,
+          "y": 768,
+          "w": 384,
+          "h": 384
+        }
+      ],
+      "frameDurationMs": 130,
+      "loop": false,
+      "holdLast": true
+    },
+    "projectile": {
+      "strip": "watchtower-projectile-384-alpha.png",
+      "frames": [
+        {
+          "x": 0,
+          "y": 1152,
+          "w": 384,
+          "h": 384
+        }
+      ],
+      "frameDurationMs": 0,
+      "loop": false,
+      "holdLast": false
+    }
+  },
+  "source": "../layered-v2-candidate/watchtower_layered_manifest.json",
+  "qa": {
+    "baseFootprintPx": 255,
+    "clippedFrames": [],
+    "transparentBackground": true
+  }
+}

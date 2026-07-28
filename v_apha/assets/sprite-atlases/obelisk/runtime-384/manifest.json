@@ -1,0 +1,85 @@
+{
+  "object": "obelisk",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "normalization": "locked 255px intact building extent; centered 384px safety cell",
+  "actions": {
+    "idle": {
+      "file": "obelisk-idle-384-alpha.png",
+      "frames": 5,
+      "durationMs": 180,
+      "loop": true
+    },
+    "attack": {
+      "file": "obelisk-attack-384-alpha.png",
+      "frames": 4,
+      "durationMs": 90,
+      "loop": false
+    },
+    "destroy": {
+      "file": "obelisk-destroy-384-alpha.png",
+      "frames": 5,
+      "durationMs": 130,
+      "loop": false,
+      "holdLast": true
+    },
+    "projectile": {
+      "file": "obelisk-projectile-384-alpha.png",
+      "extent": 112
+    },
+    "impact": {
+      "file": "obelisk-impact-384-alpha.png",
+      "extent": 136
+    }
+  },
+  "qa": {
+    "idle": {
+      "extents": [
+        255,
+        255,
+        255,
+        255,
+        255
+      ],
+      "clippedFrames": []
+    },
+    "attack": {
+      "extents": [
+        265,
+        270,
+        255,
+        266
+      ],
+      "clippedFrames": []
+    },
+    "destroy": {
+      "extents": [
+        255,
+        256,
+        279,
+        231,
+        225
+      ],
+      "clippedFrames": []
+    },
+    "projectile": {
+      "extents": [
+        112
+      ],
+      "clippedFrames": []
+    },
+    "impact": {
+      "extents": [
+        136
+      ],
+      "clippedFrames": []
+    }
+  }
+}

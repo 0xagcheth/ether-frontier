@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "module": "fortress_ranged__center_socket__light_bearing",
+  "family": "fortress_ranged",
+  "slot": "center_socket",
+  "image": "fortress_ranged__center_socket__light_bearing_v1_alpha.png",
+  "sourceImage": "fortress_ranged__center_socket__light_bearing_v1_chroma.png",
+  "sizePx": [
+    1023,
+    1051
+  ],
+  "pivotPx": [
+    511,
+    525
+  ],
+  "pivot": [
+    0.499511,
+    0.499524
+  ],
+  "projection": "true_top_down_orthographic_90deg",
+  "sharedBy": [
+    "watchtower",
+    "ranger",
+    "tracker",
+    "assassin"
+  ],
+  "attachment": {
+    "parentSlot": "base_token.center",
+    "positionNormalized": [
+      0.5,
+      0.5
+    ],
+    "scaleToParentFootprint": 0.34,
+    "rotationDeg": 0
+  },
+  "drawOrder": 10,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "magentaSpillPixels": 0,
+    "status": "canon"
+  }
+}

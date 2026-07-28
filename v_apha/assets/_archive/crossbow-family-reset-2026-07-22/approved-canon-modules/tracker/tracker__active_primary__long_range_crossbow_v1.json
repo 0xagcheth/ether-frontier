@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "module": "tracker__active_primary__long_range_crossbow",
+  "object": "tracker",
+  "family": "fortress_ranged",
+  "slot": "active_primary",
+  "image": "tracker__active_primary__long_range_crossbow_v1_alpha.png",
+  "sourceImage": "tracker__active_primary__long_range_crossbow_v1_chroma.png",
+  "sizePx": [
+    1064,
+    709
+  ],
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1064,
+    "h": 709
+  },
+  "pivotPx": [
+    352,
+    358
+  ],
+  "pivot": [
+    0.330827,
+    0.504937
+  ],
+  "pivotMethod": "authored_center_axle",
+  "projection": "true_top_down_orthographic_90deg",
+  "forwardAxis": "+X",
+  "runtimeScale": {
+    "scaleToBaseFootprint": 0.74
+  },
+  "attachments": {
+    "parent": {
+      "module": "fortress_ranged__center_socket__light_bearing",
+      "anchor": "center",
+      "rotation": "aimAngle"
+    },
+    "magazine_socket": {
+      "positionPx": [
+        617,
+        358
+      ],
+      "positionNormalized": [
+        0.58,
+        0.504937
+      ],
+      "inheritRotation": true
+    },
+    "scan_ring_socket": {
+      "positionPx": [
+        352,
+        358
+      ],
+      "positionNormalized": [
+        0.330827,
+        0.504937
+      ],
+      "inheritRotation": true
+    },
+    "muzzle_anchor": {
+      "positionPx": [
+        1063,
+        358
+      ],
+      "positionNormalized": [
+        0.99906,
+        0.504937
+      ],
+      "forwardAxis": "+X",
+      "inheritRotation": true
+    }
+  },
+  "drawOrder": 30,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "pivotOnAuthoredAxle": true,
+    "rotationEnvelopeAtComposedScalePx": 536,
+    "rotationEnvelopeInsideBase": true,
+    "magentaSpillPixels": 0,
+    "alphaBytes": 814006,
+    "under5MB": true,
+    "status": "canon"
+  }
+}

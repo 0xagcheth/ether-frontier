@@ -1,0 +1,22 @@
+{
+  "object": "rock-c",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "idle": {
+    "file": "rock-c-idle-384-alpha.png"
+  },
+  "bounds": [
+    64,
+    102,
+    319,
+    281
+  ],
+  "normalization": "object extent 255px in a 384px safety cell; centered content"
+}

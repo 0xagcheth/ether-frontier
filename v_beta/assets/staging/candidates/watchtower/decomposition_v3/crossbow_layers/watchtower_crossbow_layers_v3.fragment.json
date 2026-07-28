@@ -1,0 +1,89 @@
+{
+  "schema": "ether-frontier.layer-fragment.v1",
+  "object": "watchtower",
+  "group": "crossbow_group",
+  "projectionMaster": "watchtower_projection_master_v4",
+  "activePrimaryPivot": {
+    "x": 627,
+    "y": 627
+  },
+  "layers": [
+    {
+      "id": "crossbow_left_arm_stack",
+      "file": "crossbow_left_arm_stack.png",
+      "sourceRect": {
+        "x": 407,
+        "y": 355,
+        "w": 429,
+        "h": 191
+      },
+      "pivot": {
+        "x": 220,
+        "y": 272
+      },
+      "attachment": "active_primary_pivot",
+      "parent": "crossbow_group",
+      "drawOrder": 120
+    },
+    {
+      "id": "crossbow_right_arm_stack",
+      "file": "crossbow_right_arm_stack.png",
+      "sourceRect": {
+        "x": 604,
+        "y": 393,
+        "w": 201,
+        "h": 370
+      },
+      "pivot": {
+        "x": 23,
+        "y": 234
+      },
+      "attachment": "active_primary_pivot",
+      "parent": "crossbow_group",
+      "drawOrder": 121
+    },
+    {
+      "id": "crossbow_body_stack",
+      "file": "crossbow_body_stack.png",
+      "sourceRect": {
+        "x": 342,
+        "y": 347,
+        "w": 570,
+        "h": 560
+      },
+      "pivot": {
+        "x": 285,
+        "y": 280
+      },
+      "attachment": "active_primary_pivot",
+      "parent": "crossbow_group",
+      "drawOrder": 130
+    },
+    {
+      "id": "loaded_bolt",
+      "file": "loaded_bolt.png",
+      "sourceRect": {
+        "x": 530,
+        "y": 305,
+        "w": 409,
+        "h": 430
+      },
+      "pivot": {
+        "x": 97,
+        "y": 322
+      },
+      "attachment": "active_primary_pivot",
+      "parent": "crossbow_group",
+      "drawOrder": 170
+    }
+  ],
+  "pending": [
+    "crossbow_body_lower",
+    "crossbow_body_upper",
+    "crossbow_trigger_block",
+    "crossbow_fastener_01..04",
+    "crossbow_string_tense",
+    "crossbow_string_release_01..02",
+    "crossbow_recoil_overlay_01..03"
+  ]
+}

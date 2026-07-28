@@ -1,0 +1,50 @@
+{
+  "character": "goblin-spearman",
+  "background": "#FF00FF",
+  "frameOrder": [1, 2, 3, 4, 5, 6, 7, 8],
+  "directionRows": ["UP", "DOWN", "LEFT", "RIGHT"],
+  "directionRotationDegrees": {
+    "UP": 0,
+    "DOWN": 180,
+    "LEFT": 270,
+    "RIGHT": 90
+  },
+  "atlases": {
+    "walk": {
+      "file": "walk-all-directions-v1.png",
+      "columns": 8,
+      "rows": 4,
+      "cellWidth": 438,
+      "cellHeight": 438,
+      "divider": 2
+    },
+    "attack": {
+      "file": "attack-all-directions-v1.png",
+      "columns": 8,
+      "rows": 4,
+      "cellWidth": 438,
+      "cellHeight": 438,
+      "divider": 2
+    },
+    "death": {
+      "file": "death-all-directions-v1.png",
+      "columns": 8,
+      "rows": 4,
+      "cellWidth": 506,
+      "cellHeight": 506,
+      "divider": 2
+    },
+    "spawn": {
+      "file": "spawn-v1.png",
+      "columns": 4,
+      "rows": 2,
+      "frameOrder": "left-to-right, top-to-bottom"
+    },
+    "breach": {
+      "file": "breach-v1.png",
+      "columns": 4,
+      "rows": 2,
+      "frameOrder": "left-to-right, top-to-bottom"
+    }
+  }
+}

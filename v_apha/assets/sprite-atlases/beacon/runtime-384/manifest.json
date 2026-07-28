@@ -1,0 +1,85 @@
+{
+  "object": "beacon",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "normalization": "locked 255px intact building extent; centered 384px safety cell",
+  "actions": {
+    "idle": {
+      "file": "beacon-idle-384-alpha.png",
+      "frames": 5,
+      "durationMs": 180,
+      "loop": true
+    },
+    "destroy": {
+      "file": "beacon-destroy-384-alpha.png",
+      "frames": 5,
+      "durationMs": 130,
+      "loop": false,
+      "holdLast": true
+    },
+    "attack": {
+      "file": "beacon-attack-384-alpha.png",
+      "frames": 4,
+      "durationMs": 90,
+      "loop": false
+    },
+    "projectile": {
+      "file": "beacon-projectile-384-alpha.png",
+      "extent": 92
+    },
+    "impact": {
+      "file": "beacon-impact-384-alpha.png",
+      "extent": 132
+    }
+  },
+  "qa": {
+    "idle": {
+      "extents": [
+        255,
+        255,
+        255,
+        255,
+        255
+      ],
+      "clippedFrames": []
+    },
+    "destroy": {
+      "extents": [
+        255,
+        256,
+        254,
+        252,
+        254
+      ],
+      "clippedFrames": []
+    },
+    "attack": {
+      "extents": [
+        255,
+        257,
+        266,
+        256
+      ],
+      "clippedFrames": []
+    },
+    "projectile": {
+      "extents": [
+        92
+      ],
+      "clippedFrames": []
+    },
+    "impact": {
+      "extents": [
+        132
+      ],
+      "clippedFrames": []
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "object": "backgroud",
+  "format": "opaque RGB PNG",
+  "size": [1672, 941],
+  "aspectRatio": "16:9",
+  "file": "backgroud.png",
+  "camera": "near-orthographic top-down",
+  "layout": {
+    "entrance": "upper-left ruined gate",
+    "path": "broad pale S-curve",
+    "objective": "upper-right gold seal platform",
+    "buildSlots": 8
+  },
+  "qa": {
+    "hasAlpha": false,
+    "pathDistinctFromBuildGround": true,
+    "buildSlotsFullyVisible": true,
+    "unitsOrTowersBakedIn": false
+  }
+}

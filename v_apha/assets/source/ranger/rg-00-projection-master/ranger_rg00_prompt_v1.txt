@@ -1,0 +1,32 @@
+Use case: stylized-concept.
+Asset type: Ether Frontier RG-00 Ranger / Garrison Ranger assembled projection master for later Layered Object Pipeline v2 decomposition.
+
+Create one completely new centered Ranger game object from scratch.
+
+Backdrop: perfectly flat uniform solid #ff00ff magenta chroma-key background. No texture, gradient, floor, horizon, reflection, cast shadow on the background, labels, text, grid, UI, watermark, or other objects. Generous padding around the entire silhouette.
+
+Projection: TRUE 90-DEGREE ORTHOGRAPHIC TOP-DOWN view. Every component lies parallel to the tabletop. No facade, side wall, rear view, upright figure, isometric angle, tall perspective, foreshortened ellipse, horizon, or cinematic camera.
+
+Object identity: a compact Garrison Ranger firing platform, visibly staffed and refitted for rapid hunting volleys. It belongs to the same broad Warden material culture as a stone-and-timber lookout, but it must have its OWN body silhouette and must not look like a Watchtower with accessories pasted onto it.
+
+Base/body: an irregular reinforced low firing platform with a broad octagonal-to-rounded footprint rather than a clean circular broken stone ring. Warm brown cardboard plank center, asymmetrical grey-blue low parapet clusters protecting three sides, two hunter-green reinforced firing bays, leather-brown straps, and several flat equipment panels. Keep the footprint compact and stable.
+
+Staffed-position read: represent two crew positions only through small flat top-view cardboard seat/boot/equipment-marker shapes integrated into the deck. No visible upright people, heads, bodies, faces, side-view soldiers, or miniature figurines.
+
+Primary weapon: one distinct rapid-volley crossbow centered on a layered rotation bearing, pointing RIGHT (+X) in plan view. Broad shallow recurved limbs, taut string, short stock, TWIN launch rails, compact mechanical limb-snap fittings. It must be a separate removable cardboard layer and clearly different from the Watchtower lightweight single crossbow. No cannon, ballista, firearm, barrel, or magic weapon.
+
+Ammo systems: one separate compact bolt magazine attached to the rotating weapon group; one tall-looking but top-view flat fletched-bolt rack attached near the upper platform rim. The rack is a crescent/rectangular cardboard holder with several clearly visible long fletched bolts in individual slots. All pieces remain board-parallel.
+
+Hunting optics: one separate green-amber hunting lens module beside the rapid crossbow, seen directly from above as concentric flat paper/cardboard rings with a small amber center and hunter-green outer plate. No realistic glass, glow haze, telescope side view, or tall scope.
+
+Color and identity accents: hunter-green painted cardboard plates, muted amber optics, warm kraft-brown wood, dusty grey-blue stone, restrained charcoal fittings, tan exposed cardboard edges. Do not use red Watchtower pennants, royal blue Tracker banners, crown trim, violet Assassin shrouds, or ritual runes.
+
+Style: charming slightly cartoonish handmade tabletop craft matching the approved Ether Frontier Watchtower baseline. Every stone, plank, weapon part, rack, bolt, magazine, optics ring, seat marker, strap, brace, and fitting is a separately cut and glued piece of cardboard or heavy paper. Slightly uneven child-cut contours, visible corrugated edges and warm fibers, wax-crayon and pencil coloring, small dents, scratches, dirt and uneven staining. Moderately realistic cardboard material but not photorealistic architecture.
+
+Layer depth: every glued component has its own tight local contact shadow so the platform reads as a complex stacked cardboard construction. No deep external shadow on the chroma background.
+
+Composition constraints: one assembled Ranger only; fully visible; no clipping; chunky readable modules; compact stable footprint; weapon centered; rack and optics clearly readable but secondary.
+
+Exclude: Watchtower body clone, red flag, Watchtower lamp, separated source sheet, animation variants, loose projectile, muzzle flash, impact, debris, ruin state, labels, grid, pivot cross, exploded view, inset preview, text or watermark.
+
+Avoid: glossy 3D, plastic miniature, realistic metal shine, photorealistic medieval diorama, side projection, facade, isometric view, dramatic perspective, upright personnel, excessive tiny clutter, excessive crayon scribbling.

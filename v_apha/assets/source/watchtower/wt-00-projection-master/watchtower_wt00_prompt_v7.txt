@@ -1,0 +1,19 @@
+Edit Image 1 as the same WT-00 Watchtower, preserving exactly its v5 art style: clean friendly cartoon, layered corrugated cardboard, restrained wax-crayon drawing, light stylized dirt, slightly uneven child-cut edges, local contact shadows, strict 90-degree top-down orthographic view, and uniform #ff00ff background.
+
+Change the object design and components to match the Warden's Post contract more clearly:
+
+1. Base/body: make it a compact low circular stone lookout post, not a generic wooden disc. Use a clearly broken-ring parapet of large cold-grey stone-cardboard blocks, with two deliberate narrow access gaps and an irregular defensive rhythm. Reduce the exposed timber center to a smaller inset lookout deck bounded by the parapet. Add four small radial timber support braces under the inner edge so it reads as an improvised fortified post.
+
+2. Center socket: make a clearly separate small round wood-and-dark-bronze rotating bearing at the exact object center. It must visibly sit above the deck as its own glued cardboard module, smaller than the current large circular target-like mechanism.
+
+3. Weapon: redesign the active mechanism as one unmistakable light simple crossbow seen exactly from above. It needs a short wooden stock, two broad curved bow limbs, a clearly visible taut string, a central axle pin, a narrow arrow channel, and one small simple bolt resting in the channel. Keep it modest, handmade and compact; no large circular bow wheel, no heavy ballista frame, no optics, magazine or artillery hardware.
+
+4. Range pennant station: replace the large arrow-shaped red marker with a small circular mounting puck plus a short radial arm and a compact dark-red torn triangular cloth cutout lying flat in the board plane. It is only a secondary identity accent and must not extend far beyond the base.
+
+5. Lantern station: make the lantern smaller and simpler: a shallow octagonal dark-bronze cardboard housing with a concentric two-layer amber/yellow paper core, seen exactly from above. It is a compact edge station, not a large shield or target.
+
+6. Visual hierarchy: the stone parapet and simple crossbow are primary; pennant and lantern are small asymmetric edge accents. Keep enough clean timber deck visible beneath the weapon for future runtime rotation.
+
+Preserve v5 materials and treatment: cartoon cardboard, light crayon texture, 5% dirt/wear, slightly uneven cuts, visible tan corrugated edges and shallow shadows between glued layers.
+
+Avoid: generic round turret platform, large target/bow wheel, huge pennant, huge lantern, heavy ballista, Ranger rack, Tracker optics, Assassin shroud, cannon parts, ritual symbols, new props, side view, facade, isometric angle, upright flagpole, side lantern, realistic materials, glossy 3D, text, grid, projectile outside the crossbow, debris, animation frames, floor or scene.

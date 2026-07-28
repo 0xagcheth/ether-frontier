@@ -1,0 +1,179 @@
+{
+  "object": "ranger",
+  "displayName": "Garrison Ranger",
+  "status": "projection_master_approved_decomposition_pending",
+  "projectionMaster": "projection-master/ranger_projection_master_v1_alpha.png",
+  "projection": "true_top_down_orthographic_90",
+  "stableFootprintOwner": "ranger__base_body__staffed_garrison_platform",
+  "layers": [
+    {
+      "id": "ranger__base_body__staffed_garrison_platform",
+      "semantic": "base_body",
+      "parent": null,
+      "drawOrder": 0,
+      "moving": false,
+      "footprintLocked": true,
+      "contains": [
+        "asymmetric_broken_shield_deck",
+        "outer_barricades",
+        "hunter_green_edge_fittings",
+        "flat_attachment_pads"
+      ],
+      "mustExclude": [
+        "rangers",
+        "weapon",
+        "bolts",
+        "rack",
+        "magazine",
+        "optic",
+        "effects"
+      ]
+    },
+    {
+      "id": "ranger__staff_child__left_hooded_ranger",
+      "semantic": "staffed_position",
+      "parent": "ranger__base_body__staffed_garrison_platform",
+      "attachment": "staff_left",
+      "drawOrder": 20,
+      "moving": true
+    },
+    {
+      "id": "ranger__staff_child__right_hooded_ranger",
+      "semantic": "staffed_position",
+      "parent": "ranger__base_body__staffed_garrison_platform",
+      "attachment": "staff_right",
+      "drawOrder": 21,
+      "moving": true
+    },
+    {
+      "id": "ranger__ammo_mount__fletched_bolt_rack",
+      "semantic": "ammo_rack",
+      "parent": "ranger__base_body__staffed_garrison_platform",
+      "attachment": "rack_upper_left",
+      "drawOrder": 30,
+      "moving": true,
+      "animation": "rack_vibration"
+    },
+    {
+      "id": "ranger__ammo_child__reserve_bolt_magazine",
+      "semantic": "ammo_magazine",
+      "parent": "ranger__base_body__staffed_garrison_platform",
+      "attachment": "magazine_right",
+      "drawOrder": 31,
+      "moving": true,
+      "animation": "magazine_snap"
+    },
+    {
+      "id": "ranger__weapon_mount__compact_volley_bearing",
+      "semantic": "weapon_bearing",
+      "parent": "ranger__base_body__staffed_garrison_platform",
+      "attachment": "weapon_front",
+      "drawOrder": 40,
+      "moving": false
+    },
+    {
+      "id": "ranger__active_primary__compact_rapid_volley_crossbow",
+      "semantic": "weapon",
+      "parent": "ranger__weapon_mount__compact_volley_bearing",
+      "attachment": "weapon_pivot",
+      "drawOrder": 50,
+      "moving": true,
+      "rotationMode": "aimAtTarget",
+      "mustRemainSecondaryToBodySilhouette": true
+    },
+    {
+      "id": "ranger__aim_child__green_amber_hunting_optic",
+      "semantic": "aim_optic",
+      "parent": "ranger__active_primary__compact_rapid_volley_crossbow",
+      "attachment": "optic_socket",
+      "drawOrder": 60,
+      "moving": true,
+      "animations": [
+        "optic_glint",
+        "optic_track"
+      ]
+    },
+    {
+      "id": "ranger__projectile__long_fletched_bolt",
+      "semantic": "projectile",
+      "parent": null,
+      "attachment": "muzzle_spawn",
+      "drawOrder": 80,
+      "moving": true,
+      "rotationMode": "velocityDirection"
+    },
+    {
+      "id": "ranger__impact__sharp_hunting_hit__frame_01..04",
+      "semantic": "impact",
+      "parent": null,
+      "drawOrder": 90,
+      "moving": true
+    },
+    {
+      "id": "ranger__destroy_piece__platform_01..08",
+      "semantic": "destroy_debris",
+      "parent": null,
+      "drawOrder": 100,
+      "moving": true
+    },
+    {
+      "id": "ranger__destroy_piece__spilled_bolt_01..06",
+      "semantic": "destroy_debris_ammo",
+      "parent": null,
+      "drawOrder": 101,
+      "moving": true
+    },
+    {
+      "id": "ranger__destroy_piece__rack_01..03",
+      "semantic": "destroy_debris_rack",
+      "parent": null,
+      "drawOrder": 102,
+      "moving": true
+    },
+    {
+      "id": "ranger__destroy_piece__optic_01..03",
+      "semantic": "destroy_debris_optic",
+      "parent": null,
+      "drawOrder": 103,
+      "moving": true
+    },
+    {
+      "id": "ranger__destroy_fx__cardboard_dust__frame_01..04",
+      "semantic": "destroy_fx",
+      "parent": null,
+      "drawOrder": 110,
+      "moving": true
+    }
+  ],
+  "attackLogic": {
+    "weapon": "compact_rapid_volley_crossbow",
+    "ammunition": "long_fletched_physical_bolts",
+    "release": "mechanical_limb_and_magazine_snap",
+    "allowedFx": [
+      "restrained_green_amber_release_glint",
+      "optic_glint",
+      "sharp_hunting_impact"
+    ],
+    "forbiddenFx": [
+      "firearm_muzzle_flame",
+      "gun_smoke",
+      "shell_casing",
+      "cannon_blast",
+      "energy_beam"
+    ]
+  },
+  "destroyLogic": {
+    "sequence": [
+      "impact_shake",
+      "staff_tokens_detach",
+      "rack_spills_bolts",
+      "magazine_and_optic_break_away",
+      "weapon_detaches",
+      "base_sections_collapse",
+      "dust_settles",
+      "all_layers_disappear"
+    ],
+    "wholeBodyAlphaFadeAsPrimaryDestruction": false,
+    "alternateSilhouetteSwap": false
+  }
+}

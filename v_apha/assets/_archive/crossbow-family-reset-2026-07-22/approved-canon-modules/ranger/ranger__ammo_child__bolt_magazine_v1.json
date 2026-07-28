@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "module": "ranger__ammo_child__bolt_magazine",
+  "object": "ranger",
+  "family": "fortress_ranged",
+  "slot": "ammo_child",
+  "image": "ranger__ammo_child__bolt_magazine_v1_alpha.png",
+  "sourceImage": "ranger__ammo_child__bolt_magazine_v1_chroma.png",
+  "sizePx": [
+    1059,
+    466
+  ],
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1059,
+    "h": 466
+  },
+  "pivotPx": [
+    529,
+    233
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "pivotMethod": "central_axle_lock",
+  "projection": "true_top_down_orthographic_90deg",
+  "forwardAxis": "+X",
+  "runtimeScale": {
+    "widthToParentWeapon": 0.18
+  },
+  "attachments": {
+    "parent": {
+      "module": "ranger__active_primary__rapid_crossbow",
+      "anchor": "magazine_socket",
+      "inheritRotation": true,
+      "localRotationDeg": 90
+    }
+  },
+  "drawOrder": 31,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "centerOpeningPreserved": true,
+    "magentaSpillPixels": 0,
+    "alphaBytes": 1082119,
+    "under5MB": true,
+    "status": "canon"
+  }
+}

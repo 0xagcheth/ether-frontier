@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "status": "pending_human_review",
+  "objectId": "watchtower",
+  "displayName": "Ветровой дозор",
+  "candidate": {
+    "revision": null,
+    "alphaMasterPath": null,
+    "alphaMasterSha256": null,
+    "intakeReportPath": null
+  },
+  "canonSourcesChecked": {
+    "projectVision": null,
+    "gameLoreBibleV5": null,
+    "visualCulturalSourceMapV4": null,
+    "masterVisualStyle": null,
+    "technicalAssetContract": null,
+    "objectFamilySpecV5": null,
+    "assetPromptBibleV5": null,
+    "watchtowerLayerContractV4": null
+  },
+  "visualCriteria": {
+    "trueTopDownOrthographic90": null,
+    "lowCircularFootprintNoFacade": null,
+    "premiumSmoothPunchboard": null,
+    "cuteCartoonPrintNotRealism": null,
+    "separateCompleteCardboardCutouts": null,
+    "visibleEdgesGapsAndContactShadows": null,
+    "twentyParapetStones": null,
+    "twoOppositeAccessNotches": null,
+    "eightRadialDeckSectors": null,
+    "balancedLightweightCrossbow": null,
+    "crossbowClearlyLighterThanBallista": null,
+    "fourCopperBearingArcs": null,
+    "burgundySignalCloth": null,
+    "smallAmberLantern": null,
+    "fourReserveBoltsAndOneEmptySlot": null,
+    "threeBendSkyBlueWindCard": null,
+    "sparseDecoration": null,
+    "noLegacyArchiveOrKitezhMarks": null,
+    "noSacredSymbolsPseudorunesOrLogos": null,
+    "noClippingAndSafeMargin": null,
+    "mainMechanismReadableAtGameplayScale": null
+  },
+  "technicalCriteria": {
+    "intakeReportPass": null,
+    "sourceAndAlphaCanvasMatch": null,
+    "transparentBackground": null,
+    "sourcePreserved": null,
+    "checksumMatch": null
+  },
+  "decision": {
+    "result": null,
+    "userConfirmed": false,
+    "confirmedAt": null,
+    "notes": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "job": "WT-00",
+  "object": "watchtower",
+  "candidate": "v4_cartoon_cardboard_crayon_balance",
+  "status": "awaiting_user_visual_approval",
+  "generationMode": "built-in-imagegen-edit",
+  "editTarget": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v3_chroma.png",
+  "sourceChroma": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v4_chroma.png",
+  "sourceAlpha": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v4_alpha.png",
+  "prompt": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_prompt_v4.txt",
+  "canvasPx": [1254, 1254],
+  "alphaQa": {
+    "transparentCorners": true,
+    "transparentPixels": 493598,
+    "partiallyTransparentPixels": 2595,
+    "opaquePixels": 1076323,
+    "method": "local magenta-dominance matte preserving source RGB"
+  },
+  "artDirectionMix": {
+    "cleanCartoonIllustration": 0.60,
+    "cardboardTexture": 0.25,
+    "waxCrayonDrawing": 0.15
+  },
+  "visualChecks": {
+    "trueTopDownCircularBase": "pass",
+    "largeReadableShapes": "pass",
+    "cleanCartoonTreatment": "pass",
+    "stylizedCardboardTexture": "pass",
+    "restrainedCrayonDrawing": "pass",
+    "layerContactShadows": "pass",
+    "noPhotorealisticCraftLook": "pass",
+    "watchtowerIdentity": "needs_user_confirmation"
+  },
+  "nextAuthorizedJobAfterApproval": "WT-01"
+}

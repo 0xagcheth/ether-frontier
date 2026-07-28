@@ -1,0 +1,62 @@
+{
+  "status": "technical_intake_pass",
+  "objectId": "watchtower",
+  "displayName": "Ветровой дозор",
+  "revision": 6,
+  "source": {
+    "path": "assets/source/watchtower/watchtower_projection_master_v6_imagegen2_source.png",
+    "sha256": "4d7bf98af24c9c937bee2a5c4e193b4d615ef25614e4ea7c52c09eca9a25f2e4"
+  },
+  "alphaMaster": {
+    "path": "assets/staging/candidates/watchtower/watchtower_projection_master_v6_alpha.png",
+    "sha256": "9a7a6d281bbaeaed7733c9d5e10f54d02092797c9fce0a349fe00e4be2f802a7",
+    "width": 1254,
+    "height": 1254,
+    "alphaBBox": [
+      60,
+      63,
+      1194,
+      1180
+    ],
+    "marginsPx": {
+      "left": 60,
+      "top": 63,
+      "right": 60,
+      "bottom": 74
+    },
+    "transparentPixels": 601586,
+    "partialPixels": 31066,
+    "opaquePixels": 939864,
+    "transparentRatio": 0.382563,
+    "partialRatio": 0.019756,
+    "minimumMarginPx": 60
+  },
+  "technicalChecks": {
+    "sourcePreserved": true,
+    "alphaExists": true,
+    "hasTransparentBackground": true,
+    "hasVisibleContent": true,
+    "noClippingByMargin": true,
+    "sourceAndAlphaCanvasMatch": true
+  },
+  "manualVisualGate": {
+    "approved": false,
+    "required": [
+      "true top-down orthographic 90 degrees",
+      "premium separate solid-cardboard pieces",
+      "exactly 20 parapet stones",
+      "exactly 2 opposite access notches",
+      "8 radial deck sectors",
+      "balanced lightweight crossbow, not Ballista",
+      "4 copper bearing arcs",
+      "4 reserve bolts plus 1 empty slot",
+      "no legacy symbols or clipping"
+    ]
+  },
+  "chromaToolOutput": [
+    "Wrote /Users/agch/Documents/projects/game/Remix/Ether Frontier/v_beta/assets/staging/candidates/watchtower/watchtower_projection_master_v6_alpha.png",
+    "Key color: #03f905",
+    "Transparent pixels: 601586/1572516",
+    "Partially transparent pixels: 31066/1572516"
+  ]
+}

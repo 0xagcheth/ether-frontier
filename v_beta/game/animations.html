@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ether Frontier — Animation Workshop</title>
+    <link rel="stylesheet" href="./animations.css" />
+  </head>
+  <body>
+    <main class="workshop">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">ETHER FRONTIER / ASSET LAB</span>
+          <h1>Ящер-ратник</h1>
+        </div>
+        <div class="status"><i></i><span>Atlas v4</span><b>8 × 7</b></div>
+      </header>
+
+      <section class="workspace" aria-label="Просмотр анимации">
+        <div class="stage-wrap">
+          <div class="stage" id="stage">
+            <div class="path"></div>
+            <div class="seal"></div>
+            <div id="sprite" class="sprite" role="img" aria-label="Анимация гоблина"></div>
+            <span class="stage-label" id="stageLabel">Ходьба вверх</span>
+          </div>
+          <div class="transport">
+            <button id="prevFrame" type="button" aria-label="Предыдущий кадр">←</button>
+            <button id="playPause" class="play" type="button">Пауза</button>
+            <button id="nextFrame" type="button" aria-label="Следующий кадр">→</button>
+            <span class="frame-readout">Кадр <b id="frameNumber">1</b> / 8</span>
+            <label class="speed-control">
+              <span>Скорость</span>
+              <input id="speed" type="range" min="60" max="400" step="10" value="100" />
+              <output id="speedValue">100 мс</output>
+            </label>
+          </div>
+        </div>
+
+        <aside class="inspector">
+          <div class="inspector-head">
+            <span class="eyebrow">ANIMATIONS</span>
+            <strong id="activeName">Ходьба вверх</strong>
+          </div>
+          <nav id="animationList" class="animation-list" aria-label="Список анимаций"></nav>
+          <div class="details">
+            <div><span>Кадров</span><b>8</b></div>
+            <div><span>Ячейка</span><b>256 × 256</b></div>
+            <div><span>Камера</span><b>90° сверху</b></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="strip-section">
+        <div>
+          <span class="eyebrow">CURRENT SEQUENCE</span>
+          <h2>Покадровая сетка</h2>
+        </div>
+        <div id="frameStrip" class="frame-strip" aria-label="Кадры выбранной анимации"></div>
+      </section>
+    </main>
+    <script src="./animations.js"></script>
+  </body>
+</html>

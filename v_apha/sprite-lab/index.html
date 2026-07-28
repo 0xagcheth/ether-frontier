@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101a1d" />
+    <title>Ether Frontier — Goblin Motion Lab</title>
+    <link rel="stylesheet" href="./styles.css?v=16" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="masthead">
+        <a class="brand" href="#stage" aria-label="Ether Frontier Motion Lab">
+          <span class="brand-mark">EF</span>
+          <span><b>ETHER FRONTIER</b><small>Motion lab / unit 01</small></span>
+        </a>
+        <div class="status"><i></i><span>ATLAS ONLINE</span></div>
+      </header>
+
+      <section id="stage" class="stage" aria-label="Просмотр анимации">
+        <div class="stage-copy">
+          <p class="eyebrow">GOBLIN SPEARMAN</p>
+          <h1>CARDBOARD<br />IN MOTION</h1>
+          <p>Production preview of the top-down unit atlas.</p>
+        </div>
+
+        <div class="arena" aria-hidden="true">
+          <div class="arena-ring arena-ring--outer"></div>
+          <div class="arena-ring arena-ring--inner"></div>
+          <div class="direction-rune">↑</div>
+          <div id="sprite" class="sprite"></div>
+          <div class="contact-shadow"></div>
+        </div>
+
+        <aside class="readout" aria-live="polite">
+          <span>STATE</span><strong id="stateReadout">WALK</strong>
+          <span>VECTOR</span><strong id="directionReadout">UP / 000°</strong>
+          <span>FRAME</span><strong id="frameReadout">01 / 08</strong>
+        </aside>
+      </section>
+
+      <section class="controls" aria-label="Управление анимацией">
+        <div class="control-group control-group--wide">
+          <span class="control-label">SEQUENCE</span>
+          <div id="animationControls" class="segmented">
+            <button data-animation="idle" type="button">IDLE</button>
+            <button class="active" data-animation="walk" type="button">WALK</button>
+            <button data-animation="attack" type="button">ATTACK</button>
+            <button data-animation="spawn" type="button">SPAWN</button>
+            <button data-animation="breach" type="button">BREACH</button>
+            <button data-animation="death" type="button">DEATH</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <span class="control-label">DIRECTION</span>
+          <div id="directionControls" class="d-pad">
+            <button data-direction="up" type="button" aria-label="Вверх">↑</button>
+            <button data-direction="left" type="button" aria-label="Влево">←</button>
+            <button data-direction="down" type="button" aria-label="Вниз">↓</button>
+            <button data-direction="right" type="button" aria-label="Вправо">→</button>
+          </div>
+        </div>
+
+        <div class="control-group transport">
+          <span class="control-label">PLAYBACK</span>
+          <button id="previousFrame" type="button" aria-label="Предыдущий кадр">−</button>
+          <button id="playPause" class="play" type="button">PAUSE</button>
+          <button id="nextFrame" type="button" aria-label="Следующий кадр">+</button>
+          <label class="speed-control">SPEED
+            <input id="speed" type="range" min="0.35" max="2" step="0.05" value="1" />
+            <output id="speedValue">1.00×</output>
+          </label>
+        </div>
+      </section>
+
+      <section class="timeline" aria-label="Кадры анимации">
+        <div class="timeline-heading"><span>FRAME STRIP</span><b id="timelineName">WALK · UP</b></div>
+        <div id="frames" class="frames"></div>
+      </section>
+
+      <section class="environment" aria-labelledby="environmentTitle">
+        <div class="environment-heading">
+          <div>
+            <p class="eyebrow">BATCH 01 / ENVIRONMENT</p>
+            <h2 id="environmentTitle">FIELD ASSET<br />LIBRARY</h2>
+          </div>
+          <p>Единый масштаб, центральный pivot и безопасные поля. Нажмите на объект, чтобы переключить анимацию роста.</p>
+        </div>
+        <div class="battlefield" id="battlefield">
+          <img src="../assets/sprite-atlases/battlefield-background/runtime/backgroud.png" alt="Поле боя Ether Frontier" />
+          <div id="environmentAssets" class="environment-assets" aria-label="Объекты окружения"></div>
+        </div>
+        <div class="asset-inspector" aria-live="polite">
+          <span>SELECTED</span><strong id="assetName">TREE OAK</strong>
+          <span>TYPE</span><strong id="assetType">GROW · 08F</strong>
+          <span>QA</span><strong id="assetQa">SAFE / 255PX</strong>
+        </div>
+      </section>
+
+      <section class="building-lab" aria-labelledby="buildingTitle">
+        <div class="building-copy">
+          <p class="eyebrow">BATCH 02 / BUILDING 01</p>
+          <h2 id="buildingTitle"><span id="buildingName">WARDEN'S<br />POST</span></h2>
+          <p id="buildingDescription">Locked structure scale across every action. Only the crossbow, flame and destruction state move.</p>
+          <div id="buildingSelector" class="building-selector" aria-label="Выбор башни">
+            <button class="active" data-building="watchtower" type="button">01 / WATCHTOWER</button>
+            <button data-building="ranger" type="button">02 / RANGER</button>
+            <button data-building="tracker" type="button">03 / TRACKER</button>
+            <button data-building="assassin" type="button">04 / ASSASSIN</button>
+            <button data-building="ballista" type="button">05 / BALLISTA</button>
+            <button data-building="scorpion" type="button">06 / SCORPION</button>
+            <button data-building="hailstorm" type="button">07 / HAILSTORM</button>
+            <button data-building="cannon" type="button">08 / CANNON</button>
+            <button data-building="mortar" type="button">09 / MORTAR</button>
+            <button data-building="grapeshot" type="button">10 / GRAPESHOT</button>
+            <button data-building="palisade" type="button">11 / PALISADE</button>
+            <button data-building="obelisk" type="button">12 / OBELISK</button>
+            <button data-building="beacon" type="button">13 / BEACON</button>
+            <button data-building="sawmill" type="button">14 / SAWMILL</button>
+            <button data-building="quarry" type="button">15 / QUARRY</button>
+            <button data-building="castle" type="button">16 / CASTLE</button>
+            <button data-building="spawn-cave" type="button">17 / SPAWN CAVE</button>
+            <button data-building="pal-ward" type="button">18 / PAL WARD</button>
+            <button data-building="pal-censer" type="button">19 / PAL CENSER</button>
+            <button data-building="pal-reliquary" type="button">20 / PAL RELIQUARY</button>
+            <button data-building="mage-frost" type="button">21 / MAGE FROST</button>
+            <button data-building="mage-tesla" type="button">22 / MAGE TESLA</button>
+            <button data-building="hunt-snare" type="button">23 / HUNT SNARE</button>
+          </div>
+          <div id="buildingControls" class="segmented building-controls">
+            <button data-building-action="idle" type="button">IDLE</button>
+            <button data-building-action="attack" type="button">ATTACK</button>
+            <button data-building-action="destroy" type="button">DESTROY</button>
+            <button data-building-action="spawn" type="button">SPAWN</button>
+            <button data-building-action="pulse" type="button">PULSE</button>
+          </div>
+        </div>
+        <div class="building-stage">
+          <div id="buildingSprite" class="building-sprite" aria-label="Watchtower animation"></div>
+          <div class="building-grid" aria-hidden="true"></div>
+        </div>
+        <div class="building-readout" aria-live="polite">
+          <span>ACTION</span><strong id="buildingAction">IDLE</strong>
+          <span>FRAME</span><strong id="buildingFrame">01 / 05</strong>
+          <span>EXTENT</span><strong>255PX LOCK</strong>
+          <span>CLIPPING</span><strong>NONE</strong>
+        </div>
+      </section>
+
+      <footer>
+        <span>384×384 RGBA SOURCE · 320PX HD PREVIEW · 8 FRAME SEQUENCES</span>
+        <span>ETHER FRONTIER / ASSET REVIEW</span>
+      </footer>
+    </main>
+    <script src="./app.js?v=27"></script>
+  </body>
+</html>

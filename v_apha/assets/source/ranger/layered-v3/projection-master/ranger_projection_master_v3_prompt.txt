@@ -1,0 +1,43 @@
+Create one compact Garrison Ranger tower sprite.
+
+CAMERA LOCK:
+Exact true top-down orthographic 90-degree view, camera directly above. The
+viewer sees ONLY horizontal top surfaces plus very thin tan cardboard cut edges
+no thicker than a few pixels. Absolutely no visible vertical wall faces, no
+facade, no front wall, no doorway, no windows, no side thickness, no height
+perspective, no isometric angle and no three-quarter view.
+
+TOWER READ:
+The tower must read as a compact defensive tower through nested concentric
+top-plane shapes: a dense octagonal outer parapet token, a smaller raised
+octagonal central-core token, and a compact weapon socket on top. Minimal empty
+floor. Do not make an arena, courtyard, platform interior, camp, or open room.
+
+RANGER IDENTITY:
+- two small separate top-down hooded ranger markers seated in shallow opposite
+  rim recesses;
+- a compact fan-shaped rack of long hunter-green-fletched bolts attached to the
+  upper-left outer rim;
+- a small reserve bolt magazine attached to the right rim;
+- a tiny green-amber hunting optic on the central core;
+- one compact rapid-volley crossbow attached to the lower/front sector, using a
+  physical string and bolts and occupying less than one fifth of the silhouette.
+
+STYLE:
+Handmade cartoon cardboard tabletop board-game token. Believable corrugated tan
+cut edges, matte grey stone-paper, warm brown wood-paper, hunter-green fittings,
+restrained crayon, thick uneven hand-painted outlines, child-cut imperfections,
+dirt, glue marks and small contact shadows only between overlapping flat
+cardboard layers. No realistic masonry architecture.
+
+COMPOSITION:
+Centered compact object, roughly octagonal footprint, fully visible with
+generous padding on a perfectly flat uniform solid #ff00ff chroma-key background.
+No background shadow, texture, floor, gradient, reflection or vignette. Do not
+use #ff00ff in the object.
+
+FORBIDDEN:
+visible wall sides, facade, entrance, staircase, battlements shown from the side,
+isometric perspective, realistic 3D tower, broad platform, empty arena, dominant
+giant crossbow, gun, cannon, smoke, flame, shells, energy beam, terrain, labels,
+text, UI, watermark, glossy render, plastic.

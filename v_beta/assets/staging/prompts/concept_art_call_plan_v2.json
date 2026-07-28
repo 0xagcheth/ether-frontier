@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "status": "material_and_composition_only_object_identity_superseded",
+  "model": "built-in ImageGen 2",
+  "canon": {
+    "lore": "docs/02_creative/game-lore-bible-v6.md",
+    "mechanics": "docs/01_design/game-system-and-lore-integration-v1.md",
+    "entities": "docs/02_creative/entity-mechanics-codex-v5.md",
+    "visualPrompts": "docs/03_art/world-concept-art-prompt-bible-v2.md",
+    "assetPrompts": "docs/05_assets/asset-prompt-bible-v6.md"
+  },
+  "globalNegative": [
+    "glossy 3D",
+    "plastic miniatures",
+    "photorealism",
+    "facade buildings",
+    "side view",
+    "isometric camera",
+    "copied sacred symbols",
+    "fake runes",
+    "racial caricature",
+    "universal crossbow",
+    "fused cardboard parts",
+    "cinematic splash art"
+  ],
+  "calls": [
+    {"id":"C01","name":"core_gameplay_compatibility","promptSection":"C01 — Core gameplay compatibility","gate":"route_and_tower_readability"},
+    {"id":"C02","name":"economy_and_regrowth","promptSection":"C02 — Economy and regrowth","gate":"economy_is_visible_and_nonextractive"},
+    {"id":"C03","name":"enemy_material_grammars","promptSection":"C03 — Three enemy grammars","gate":"allegiance_without_ethnic_coding"},
+    {"id":"C04","name":"grey_capture","promptSection":"C04 — Grey capture","gate":"capture_reads_as_layer_subtraction"},
+    {"id":"C05","name":"hero_manifestation","promptSection":"C05 — Hero manifestation","gate":"hero_supports_td_composition"},
+    {"id":"C06","name":"boss_scale","promptSection":"C06 — Boss scale","gate":"boss_spectacle_preserves_gameplay_readability"},
+    {"id":"C07","name":"ui_material_hypothesis","promptSection":"C07 — UI material hypothesis","gate":"clear_information_without_lore_noise"}
+  ],
+  "stopCondition": "Do not begin sprite atlas generation until C01-C07 are reviewed and one coherent visual direction is explicitly approved."
+}

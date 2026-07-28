@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "module": "fortress_ranged__base_token__round_light",
+  "family": "fortress_ranged",
+  "slot": "base_token",
+  "image": "fortress_ranged__base_token__round_light_v1_alpha.png",
+  "sourceImage": "fortress_ranged__base_token__round_light_v1_chroma.png",
+  "sizePx": [
+    1064,
+    1082
+  ],
+  "pivotPx": [
+    532,
+    541
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "footprintPx": 1082,
+  "projection": "true_top_down_orthographic_90deg",
+  "sharedBy": [
+    "watchtower",
+    "ranger",
+    "tracker",
+    "assassin"
+  ],
+  "qa": {
+    "transparent": true,
+    "magentaSpillPixels": 0,
+    "status": "canon"
+  }
+}

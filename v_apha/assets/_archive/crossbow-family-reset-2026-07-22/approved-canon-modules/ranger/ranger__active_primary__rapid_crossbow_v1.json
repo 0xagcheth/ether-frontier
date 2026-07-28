@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "module": "ranger__active_primary__rapid_crossbow",
+  "object": "ranger",
+  "family": "fortress_ranged",
+  "slot": "active_primary",
+  "image": "ranger__active_primary__rapid_crossbow_v1_alpha.png",
+  "sourceImage": "ranger__active_primary__rapid_crossbow_v1_chroma.png",
+  "sizePx": [
+    931,
+    844
+  ],
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 931,
+    "h": 844
+  },
+  "pivotPx": [
+    462,
+    431
+  ],
+  "pivot": [
+    0.496241,
+    0.510664
+  ],
+  "pivotMethod": "authored_center_axle",
+  "projection": "true_top_down_orthographic_90deg",
+  "forwardAxis": "+X",
+  "runtimeScale": {
+    "scaleToBaseFootprint": 0.66
+  },
+  "attachments": {
+    "parent": {
+      "module": "fortress_ranged__center_socket__light_bearing",
+      "anchor": "center",
+      "rotation": "aimAngle"
+    },
+    "magazine_socket": {
+      "positionPx": [
+        614,
+        431
+      ],
+      "positionNormalized": [
+        0.66,
+        0.510664
+      ],
+      "inheritRotation": true
+    },
+    "optics_socket": {
+      "positionPx": [
+        624,
+        330
+      ],
+      "inheritRotation": true
+    },
+    "muzzle_anchor": {
+      "positionPx": [
+        930,
+        431
+      ],
+      "positionNormalized": [
+        0.998926,
+        0.510664
+      ],
+      "forwardAxis": "+X",
+      "inheritRotation": true
+    }
+  },
+  "drawOrder": 30,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "pivotOnAuthoredAxle": true,
+    "rotationEnvelopeAtComposedScalePx": 362,
+    "rotationEnvelopeInsideBase": true,
+    "magentaSpillPixels": 0,
+    "alphaBytes": 1102178,
+    "under5MB": true,
+    "status": "canon"
+  }
+}

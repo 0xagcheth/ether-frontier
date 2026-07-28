@@ -1,0 +1,174 @@
+{
+  "object": "watchtower",
+  "pipeline": "layered-object-v2",
+  "status": "imagegen_demo_for_user_validation",
+  "generator": "built-in imagegen",
+  "sourceReference": "attached Watchtower cardboard top-down concept",
+  "image": "watchtower_layered_imagegen_v1_atlas.png",
+  "chromaSource": "watchtower_layered_imagegen_v1_chroma.png",
+  "atlasSize": [1536, 1024],
+  "format": "RGBA PNG",
+  "fileSizeBytes": 1438355,
+  "maxFileSizeBytes": 5000000,
+  "camera": "true top-down orthographic 90deg",
+  "style": "cardboard tabletop board-game token, matte paper, exposed tan cardboard edge",
+  "drawOrder": [
+    "base_stone_token",
+    "central_socket",
+    "flag_pole",
+    "flag_cloth_wind",
+    "lantern_body",
+    "lantern_flame",
+    "crossbow_rotatable",
+    "muzzle_flash"
+  ],
+  "attachments": {
+    "object_center": {
+      "layer": "base_stone_token",
+      "pivot": [0.5, 0.5],
+      "px": [245, 265]
+    },
+    "crossbow_center": {
+      "layer": "crossbow_rotatable",
+      "pivot": [0.5, 0.5],
+      "px": [926, 272],
+      "rotation": "runtime_angle_to_target"
+    },
+    "flag_anchor": {
+      "layer": "flag_pole",
+      "px": [1180, 120],
+      "animation": "wind_direction_selects_flag_cloth_frame"
+    },
+    "lantern_anchor": {
+      "layer": "lantern_body",
+      "px": [118, 618],
+      "animation": "lantern_flame_loop"
+    },
+    "muzzle_anchor": {
+      "layer": "crossbow_rotatable",
+      "px": [1090, 273],
+      "animation": "muzzle_flash_once"
+    },
+    "projectile_spawn": {
+      "layer": "projectile_bolt",
+      "px": [1240, 649]
+    }
+  },
+  "sprites": {
+    "base_stone_token": {
+      "rect": { "x": 23, "y": 42, "w": 445, "h": 446 },
+      "pivot": [0.5, 0.5]
+    },
+    "central_socket": {
+      "rect": { "x": 506, "y": 166, "w": 200, "h": 205 },
+      "pivot": [0.5, 0.5]
+    },
+    "crossbow_rotatable": {
+      "rect": { "x": 747, "y": 91, "w": 358, "h": 363 },
+      "pivot": [0.5, 0.5],
+      "runtimeTransform": "rotate_to_target"
+    },
+    "flag_pole": {
+      "rect": { "x": 1124, "y": 96, "w": 112, "h": 360 },
+      "pivot": [0.5, 0.5]
+    },
+    "flag_cloth_wind_01": {
+      "rect": { "x": 1258, "y": 57, "w": 260, "h": 139 },
+      "pivot": [0.0, 0.5]
+    },
+    "flag_cloth_wind_02": {
+      "rect": { "x": 1264, "y": 198, "w": 249, "h": 127 },
+      "pivot": [0.0, 0.5]
+    },
+    "flag_cloth_wind_03": {
+      "rect": { "x": 1267, "y": 321, "w": 220, "h": 129 },
+      "pivot": [0.0, 0.5]
+    },
+    "flag_cloth_wind_04": {
+      "rect": { "x": 1268, "y": 439, "w": 222, "h": 116 },
+      "pivot": [0.0, 0.5]
+    },
+    "lantern_body": {
+      "rect": { "x": 59, "y": 504, "w": 116, "h": 228 },
+      "pivot": [0.5, 0.5]
+    },
+    "lantern_flame_01": {
+      "rect": { "x": 214, "y": 588, "w": 100, "h": 138 },
+      "pivot": [0.5, 0.65]
+    },
+    "lantern_flame_02": {
+      "rect": { "x": 330, "y": 590, "w": 87, "h": 134 },
+      "pivot": [0.5, 0.65]
+    },
+    "lantern_flame_03": {
+      "rect": { "x": 438, "y": 597, "w": 86, "h": 130 },
+      "pivot": [0.5, 0.65]
+    },
+    "lantern_flame_04": {
+      "rect": { "x": 527, "y": 616, "w": 79, "h": 110 },
+      "pivot": [0.5, 0.65]
+    },
+    "muzzle_flash_01": {
+      "rect": { "x": 699, "y": 569, "w": 108, "h": 147 },
+      "pivot": [0.5, 0.5]
+    },
+    "muzzle_flash_02": {
+      "rect": { "x": 845, "y": 574, "w": 122, "h": 141 },
+      "pivot": [0.5, 0.5]
+    },
+    "muzzle_flash_03": {
+      "rect": { "x": 997, "y": 565, "w": 162, "h": 156 },
+      "pivot": [0.5, 0.5]
+    },
+    "projectile_bolt": {
+      "rect": { "x": 1240, "y": 630, "w": 233, "h": 39 },
+      "pivot": [0.5, 0.5]
+    },
+    "destroy_debris_group": {
+      "rect": { "x": 39, "y": 784, "w": 1070, "h": 170 },
+      "pivot": [0.5, 0.5]
+    },
+    "assembled_preview": {
+      "rect": { "x": 1231, "y": 700, "w": 264, "h": 281 },
+      "pivot": [0.5, 0.5],
+      "usage": "review_only"
+    }
+  },
+  "animations": {
+    "idle": {
+      "base": ["base_stone_token", "central_socket", "flag_pole", "lantern_body", "crossbow_rotatable"],
+      "loops": {
+        "flag_cloth_wind": ["flag_cloth_wind_01", "flag_cloth_wind_02", "flag_cloth_wind_03", "flag_cloth_wind_04"],
+        "lantern_flame": ["lantern_flame_01", "lantern_flame_02", "lantern_flame_03", "lantern_flame_04"]
+      },
+      "durationMs": 140,
+      "loop": true
+    },
+    "attack": {
+      "runtimeRotation": "crossbow_rotatable follows target angle around crossbow_center",
+      "once": ["muzzle_flash_01", "muzzle_flash_02", "muzzle_flash_03"],
+      "durationMs": 80,
+      "loop": false
+    },
+    "projectile": {
+      "sprite": "projectile_bolt",
+      "runtimeRotation": "rotate_along_trajectory"
+    },
+    "destroy": {
+      "overlay": "destroy_debris_group",
+      "loop": false,
+      "holdLast": true
+    }
+  },
+  "qa": {
+    "under5MB": true,
+    "alphaRemovedFromChroma": true,
+    "oneObjectFamilyOnly": true,
+    "allMajorLayersPresent": true,
+    "knownIssues": [
+      "ImageGen produced three strong muzzle flash frames instead of the requested four.",
+      "Atlas is visually arranged, not yet snapped to an exact fixed-cell packing grid.",
+      "Rectangles are component bounding boxes extracted from the generated sheet and should be tightened/normalized in the production packing pass."
+    ]
+  }
+}

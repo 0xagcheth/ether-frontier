@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "module": "watchtower__projectile__simple_bolt",
+  "object": "watchtower",
+  "owner": "watchtower__active_addon__light_single_crossbow",
+  "slot": "projectile",
+  "image": "watchtower__projectile__simple_bolt_v1_alpha.png",
+  "sourceImage": "watchtower__projectile__simple_bolt_v1_chroma.png",
+  "sizePx": [
+    1553,
+    263
+  ],
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1553,
+    "h": 263
+  },
+  "pivotPx": [
+    776,
+    131
+  ],
+  "pivot": [
+    0.499678,
+    0.498099
+  ],
+  "projection": "true_top_down_orthographic_90deg",
+  "forwardAxis": "+X",
+  "attachments": {
+    "spawn_anchor": {
+      "positionPx": [
+        0,
+        131
+      ],
+      "positionNormalized": [
+        0.0,
+        0.498099
+      ],
+      "attachTo": "watchtower__active_addon__light_single_crossbow.muzzle_anchor"
+    },
+    "impact_anchor": {
+      "positionPx": [
+        1552,
+        131
+      ],
+      "positionNormalized": [
+        0.999356,
+        0.498099
+      ]
+    }
+  },
+  "runtimeTransform": {
+    "position": "projectilePosition",
+    "rotation": "trajectoryAngle",
+    "rotationPivot": "pivotPx",
+    "scaleToWeaponLength": 0.26
+  },
+  "drawOrder": 40,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "trajectoryPivotCentered": true,
+    "magentaSpillPixels": 0,
+    "status": "canon"
+  }
+}

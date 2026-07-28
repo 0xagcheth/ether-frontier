@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1320" viewBox="0 0 1440 1320">
+  <rect width="1440" height="1320" fill="#f3f0e8"/>
+  <style>
+    .title { font: 700 28px system-ui, sans-serif; fill:#171717 }
+    .label { font: 600 18px system-ui, sans-serif; fill:#252525 }
+    .variant { font: 500 15px system-ui, sans-serif; fill:#555 }
+    .guide { fill:none; stroke:#c9c4b8; stroke-width:1 }
+    .mark { fill:none; stroke:#171717; stroke-width:10; stroke-linecap:round; stroke-linejoin:round }
+    .fill { fill:#171717; stroke:none }
+    .thin { fill:none; stroke:#171717; stroke-width:6; stroke-linecap:round; stroke-linejoin:round }
+    .damage { fill:none; stroke:#777; stroke-width:6; stroke-linecap:round; stroke-dasharray:12 9 }
+  </style>
+  <text class="title" x="48" y="48">Ether Frontier — monochrome symbol candidates v1</text>
+  <text class="variant" x="730" y="48">Concept sheet only · not approved for runtime or branding</text>
+
+  <defs>
+    <g id="zastava-a" class="mark">
+      <path d="M-36 43 A58 58 0 1 1 41 38"/>
+      <path d="M-46 -18 l-15 -4 M4 -58 l2 -12 M50 8 l12 5"/>
+    </g>
+    <g id="zastava-b" class="mark">
+      <path d="M-38 42 A55 55 0 1 1 38 39"/>
+      <path d="M-48 -15 l-11 -3 M7 -55 l1 -9 M48 10 l9 4"/>
+    </g>
+    <g id="zastava-c">
+      <use href="#zastava-a"/>
+      <path class="damage" d="M-18 54 l18 -5 M27 -49 l15 10"/>
+    </g>
+
+    <g id="daaria-a" class="mark">
+      <path d="M-52 -10 A58 58 0 0 1 -15 -52"/>
+      <path d="M6 -58 A63 63 0 0 1 54 -20"/>
+      <path d="M58 2 A55 55 0 0 1 17 52"/>
+      <path d="M-6 57 A61 61 0 0 1 -50 22"/>
+    </g>
+    <g id="daaria-b" class="mark">
+      <path d="M-46 -10 A50 50 0 0 1 -14 -45"/>
+      <path d="M7 -49 A54 54 0 0 1 47 -18"/>
+      <path d="M49 4 A48 48 0 0 1 14 45"/>
+      <path d="M-8 49 A52 52 0 0 1 -44 20"/>
+    </g>
+    <g id="daaria-c">
+      <use href="#daaria-a"/>
+      <path class="damage" d="M-34 -40 l13 9 M39 27 l10 13"/>
+    </g>
+
+    <g id="lelya-a">
+      <path class="mark" d="M-47 32 A61 61 0 1 1 43 38"/>
+      <rect class="fill" x="-24" y="-34" width="18" height="31" rx="3" transform="rotate(-17)"/>
+      <rect class="fill" x="10" y="-22" width="25" height="16" rx="3" transform="rotate(12)"/>
+      <rect class="fill" x="5" y="14" width="16" height="27" rx="3" transform="rotate(31)"/>
+      <rect class="fill" x="-38" y="9" width="21" height="15" rx="3" transform="rotate(-6)"/>
+    </g>
+    <g id="lelya-b">
+      <path class="mark" d="M-42 30 A55 55 0 1 1 38 34"/>
+      <rect class="fill" x="-20" y="-29" width="15" height="26" rx="2" transform="rotate(-17)"/>
+      <rect class="fill" x="8" y="-18" width="21" height="14" rx="2" transform="rotate(12)"/>
+      <rect class="fill" x="4" y="12" width="13" height="23" rx="2" transform="rotate(31)"/>
+      <rect class="fill" x="-32" y="8" width="18" height="13" rx="2" transform="rotate(-6)"/>
+    </g>
+    <g id="lelya-c">
+      <use href="#lelya-a"/>
+      <path class="damage" d="M37 -37 l12 -11 M-38 39 l-10 11"/>
+    </g>
+
+    <g id="fatta-a" class="mark">
+      <path d="M-48 40 A63 63 0 0 1 -54 -30 M-35 -49 A63 63 0 0 1 52 -28 M58 -7 A63 63 0 0 1 33 51 M10 61 A63 63 0 0 1 -29 55"/>
+      <path d="M-30 27 A42 42 0 0 1 -37 -14 M-22 -34 A42 42 0 0 1 32 -26 M40 -8 A42 42 0 0 1 20 36 M0 42 A42 42 0 0 1 -23 34"/>
+      <path d="M-43 -34 l17 13 M48 -18 l-17 8 M26 48 l-11 -16"/>
+    </g>
+    <g id="fatta-b" class="thin">
+      <path d="M-43 35 A56 56 0 0 1 -47 -26 M-30 -43 A56 56 0 0 1 45 -24 M50 -6 A56 56 0 0 1 28 45 M8 53 A56 56 0 0 1 -25 48"/>
+      <path d="M-27 24 A37 37 0 0 1 -32 -12 M-19 -30 A37 37 0 0 1 28 -23 M35 -7 A37 37 0 0 1 18 32 M0 37 A37 37 0 0 1 -20 30"/>
+      <path d="M-38 -30 l15 11 M43 -16 l-15 7 M23 43 l-10 -14"/>
+    </g>
+    <g id="fatta-c">
+      <use href="#fatta-a"/>
+      <path class="damage" d="M-8 -58 l14 15 M-52 13 l17 4 M43 26 l10 9"/>
+    </g>
+
+    <g id="month-a" class="mark">
+      <path d="M14 -51 A56 56 0 1 0 15 51 A43 43 0 0 1 14 -51"/>
+      <path class="thin" d="M20 32 L49 49"/>
+      <circle class="fill" cx="55" cy="54" r="7"/>
+    </g>
+    <g id="month-b" class="mark">
+      <path d="M12 -45 A50 50 0 1 0 13 45 A38 38 0 0 1 12 -45"/>
+      <path class="thin" d="M18 29 L43 43"/>
+      <circle class="fill" cx="49" cy="48" r="6"/>
+    </g>
+    <g id="month-c">
+      <use href="#month-a"/>
+      <path class="damage" d="M-34 27 l11 -4"/>
+    </g>
+
+    <g id="antlan-a" class="mark">
+      <path d="M-50 36 A63 63 0 1 1 45 42"/>
+      <path d="M-31 25 A42 42 0 1 1 27 31"/>
+      <path d="M-47 40 L-20 17 M44 45 L24 27"/>
+      <path d="M-54 -8 l-14 -4 M9 -61 l4 -14 M55 8 l14 2"/>
+    </g>
+    <g id="antlan-b" class="thin">
+      <path d="M-44 32 A55 55 0 1 1 39 37"/>
+      <path d="M-27 22 A36 36 0 1 1 23 27"/>
+      <path d="M-41 36 L-18 15 M38 40 L21 24"/>
+      <path d="M-48 -7 l-11 -3 M8 -53 l3 -11 M49 7 l11 2"/>
+    </g>
+    <g id="antlan-c">
+      <use href="#antlan-a"/>
+      <path class="damage" d="M-21 -55 l11 13 M34 -41 l9 13"/>
+    </g>
+
+    <g id="league-a" class="mark">
+      <path d="M-34 -45 H19 L38 -20 L31 48 H-37 L-44 -18 Z"/>
+      <path d="M-9 -45 v-17 h20 v17"/>
+      <rect x="-17" y="-9" width="29" height="23" rx="2"/>
+      <path d="M31 -14 l17 -7 M32 7 l18 6"/>
+    </g>
+    <g id="league-b" class="thin">
+      <path d="M-30 -40 H17 L33 -18 L27 42 H-33 L-39 -16 Z"/>
+      <path d="M-8 -40 v-15 h18 v15"/>
+      <rect x="-15" y="-8" width="26" height="20" rx="2"/>
+      <path d="M27 -12 l15 -6 M28 6 l16 5"/>
+    </g>
+    <g id="league-c">
+      <use href="#league-a"/>
+      <path class="damage" d="M-35 25 l13 -5 M22 45 l8 -12"/>
+    </g>
+
+    <g id="lower-a" class="mark">
+      <path d="M45 35 C8 61 -45 36 -47 -9 C-49 -48 1 -67 31 -39 C56 -16 34 22 5 19 C-17 17 -24 -6 -9 -19"/>
+      <path d="M45 35 l18 7 -10 -17"/>
+    </g>
+    <g id="lower-b" class="thin">
+      <path d="M40 31 C7 54 -40 32 -42 -8 C-44 -42 1 -58 27 -34 C49 -14 30 19 4 17 C-15 15 -21 -5 -8 -17"/>
+      <path d="M40 31 l16 6 -9 -15"/>
+    </g>
+    <g id="lower-c">
+      <use href="#lower-a"/>
+      <path class="damage" d="M-43 15 l16 0 M19 -48 l10 9"/>
+    </g>
+
+    <g id="grey-a">
+      <path class="mark" d="M-54 4 C-26 -38 20 -51 55 -9 C30 35 -19 49 -54 4 Z"/>
+      <path class="mark" d="M9 -36 L2 28"/>
+      <path fill="#f3f0e8" d="M-55 -2 L-37 -10 L-44 11 Z"/>
+    </g>
+    <g id="grey-b">
+      <path class="thin" d="M-48 4 C-23 -33 18 -44 49 -8 C27 31 -17 43 -48 4 Z"/>
+      <path class="thin" d="M8 -31 L2 25"/>
+      <path fill="#f3f0e8" d="M-49 -1 L-33 -9 L-39 10 Z"/>
+    </g>
+    <g id="grey-c">
+      <use href="#grey-a"/>
+      <path class="damage" d="M24 -31 l13 7 M-24 37 l14 -5"/>
+    </g>
+
+    <g id="nav-a" class="mark">
+      <path d="M-47 29 C-66 -8 -42 -50 -4 -55 M19 -51 C57 -34 67 9 45 39 M24 53 C8 61 -11 59 -27 50"/>
+      <path d="M-28 19 C-39 -6 -21 -29 0 -32 M15 -27 C34 -15 37 8 24 23"/>
+    </g>
+    <g id="nav-b" class="thin">
+      <path d="M-42 26 C-58 -7 -37 -44 -4 -48 M17 -45 C50 -30 58 8 40 34 M21 47 C7 53 -10 52 -24 44"/>
+      <path d="M-25 17 C-34 -5 -19 -25 0 -28 M13 -24 C30 -13 33 7 21 20"/>
+    </g>
+    <g id="nav-c">
+      <use href="#nav-a"/>
+      <path class="damage" d="M-51 -18 l15 6 M38 31 l10 11"/>
+    </g>
+
+    <g id="kitezh-a" class="mark">
+      <path d="M-53 -44 H43 V47 H-53 Z"/>
+      <path d="M43 -19 H60 V22 H43"/>
+      <circle cx="24" cy="-21" r="17"/>
+      <path d="M10 -21 h9 M29 -21 h9 M24 -35 v9 M24 -16 v9"/>
+      <path fill="#f3f0e8" stroke="none" d="M19 -26 h10 v10 H19z"/>
+    </g>
+    <g id="kitezh-b" class="thin">
+      <path d="M-47 -39 H38 V42 H-47 Z"/>
+      <path d="M38 -17 H53 V20 H38"/>
+      <circle cx="21" cy="-19" r="15"/>
+      <path d="M9 -19 h8 M25 -19 h8 M21 -31 v8 M21 -15 v8"/>
+      <path fill="#f3f0e8" stroke="none" d="M17 -23 h8 v8 H17z"/>
+    </g>
+    <g id="kitezh-c">
+      <use href="#kitezh-a"/>
+      <path class="damage" d="M-50 14 l16 -6 M8 45 l11 -12"/>
+    </g>
+  </defs>
+
+  <g transform="translate(0,78)">
+    <g>
+      <text class="label" x="48" y="62">Застава</text><text class="variant" x="270" y="62">A</text><text class="variant" x="630" y="62">B</text><text class="variant" x="990" y="62">C</text>
+      <rect class="guide" x="210" y="10" width="240" height="90"/><rect class="guide" x="570" y="10" width="240" height="90"/><rect class="guide" x="930" y="10" width="240" height="90"/>
+      <g transform="translate(330,55) scale(.62)"><use href="#zastava-a"/></g><g transform="translate(690,55) scale(.62)"><use href="#zastava-b"/></g><g transform="translate(1050,55) scale(.62)"><use href="#zastava-c"/></g>
+    </g>
+    <g transform="translate(0,110)">
+      <text class="label" x="48" y="62">Даария</text><g transform="translate(330,55) scale(.62)"><use href="#daaria-a"/></g><g transform="translate(690,55) scale(.62)"><use href="#daaria-b"/></g><g transform="translate(1050,55) scale(.62)"><use href="#daaria-c"/></g>
+    </g>
+    <g transform="translate(0,220)">
+      <text class="label" x="48" y="62">Леля</text><g transform="translate(330,55) scale(.62)"><use href="#lelya-a"/></g><g transform="translate(690,55) scale(.62)"><use href="#lelya-b"/></g><g transform="translate(1050,55) scale(.62)"><use href="#lelya-c"/></g>
+    </g>
+    <g transform="translate(0,330)">
+      <text class="label" x="48" y="62">Фатта</text><g transform="translate(330,55) scale(.62)"><use href="#fatta-a"/></g><g transform="translate(690,55) scale(.62)"><use href="#fatta-b"/></g><g transform="translate(1050,55) scale(.62)"><use href="#fatta-c"/></g>
+    </g>
+    <g transform="translate(0,440)">
+      <text class="label" x="48" y="62">Месяц</text><g transform="translate(330,55) scale(.62)"><use href="#month-a"/></g><g transform="translate(690,55) scale(.62)"><use href="#month-b"/></g><g transform="translate(1050,55) scale(.62)"><use href="#month-c"/></g>
+    </g>
+    <g transform="translate(0,550)">
+      <text class="label" x="48" y="62">Антлань</text><g transform="translate(330,55) scale(.62)"><use href="#antlan-a"/></g><g transform="translate(690,55) scale(.62)"><use href="#antlan-b"/></g><g transform="translate(1050,55) scale(.62)"><use href="#antlan-c"/></g>
+    </g>
+    <g transform="translate(0,660)">
+      <text class="label" x="48" y="62">Лига</text><g transform="translate(330,55) scale(.62)"><use href="#league-a"/></g><g transform="translate(690,55) scale(.62)"><use href="#league-b"/></g><g transform="translate(1050,55) scale(.62)"><use href="#league-c"/></g>
+    </g>
+    <g transform="translate(0,770)">
+      <text class="label" x="48" y="62">Нижний город</text><g transform="translate(330,55) scale(.62)"><use href="#lower-a"/></g><g transform="translate(690,55) scale(.62)"><use href="#lower-b"/></g><g transform="translate(1050,55) scale(.62)"><use href="#lower-c"/></g>
+    </g>
+    <g transform="translate(0,880)">
+      <text class="label" x="48" y="62">Серые</text><g transform="translate(330,55) scale(.62)"><use href="#grey-a"/></g><g transform="translate(690,55) scale(.62)"><use href="#grey-b"/></g><g transform="translate(1050,55) scale(.62)"><use href="#grey-c"/></g>
+    </g>
+    <g transform="translate(0,990)">
+      <text class="label" x="48" y="62">Навь</text><g transform="translate(330,55) scale(.62)"><use href="#nav-a"/></g><g transform="translate(690,55) scale(.62)"><use href="#nav-b"/></g><g transform="translate(1050,55) scale(.62)"><use href="#nav-c"/></g>
+    </g>
+    <g transform="translate(0,1100)">
+      <text class="label" x="48" y="62">Китеж-17</text><g transform="translate(330,55) scale(.62)"><use href="#kitezh-a"/></g><g transform="translate(690,55) scale(.62)"><use href="#kitezh-b"/></g><g transform="translate(1050,55) scale(.62)"><use href="#kitezh-c"/></g>
+    </g>
+  </g>
+</svg>

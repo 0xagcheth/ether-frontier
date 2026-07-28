@@ -1,0 +1,33 @@
+{
+  "job": "WT-00",
+  "object": "watchtower",
+  "candidate": "v7_v5_style_description_aligned_components",
+  "status": "awaiting_user_visual_approval",
+  "generationMode": "built-in-imagegen-edit",
+  "styleReference": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v5_chroma.png",
+  "sourceChroma": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v7_chroma.png",
+  "sourceAlpha": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v7_alpha.png",
+  "prompt": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_prompt_v7.txt",
+  "canvasPx": [1254, 1254],
+  "contentBboxPx": [76, 115, 1169, 1137],
+  "alphaQa": {
+    "transparentCorners": true,
+    "transparentPixels": 709123,
+    "partiallyTransparentPixels": 2306,
+    "opaquePixels": 861087
+  },
+  "visualChecks": {
+    "v5ArtStylePreserved": "pass",
+    "trueTopDownCircularPost": "pass",
+    "brokenRingStoneParapet": "pass",
+    "accessGapsAndRadialBraces": "pass",
+    "smallerInsetTimberDeck": "pass",
+    "separateCompactCenterSocket": "pass",
+    "lightSimpleCrossbow": "pass",
+    "compactPennantStation": "pass",
+    "compactTopViewLantern": "pass",
+    "relatedTowerHardwareAbsent": "pass",
+    "watchtowerIdentity": "needs_user_confirmation"
+  },
+  "nextAuthorizedJobAfterApproval": "WT-01"
+}

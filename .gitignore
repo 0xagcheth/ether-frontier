@@ -1,0 +1,34 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Installed dependencies and virtual environments
+node_modules/
+.venv/
+venv/
+
+# Generated caches and build output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+.next/
+.wrangler/
+coverage/
+output/
+*.log
+*.pid
+
+# Editor and operating-system state
+.idea/
+.vscode/
+*.swp
+*~
+
+# Nested local QA repositories are generated/testing workspaces
+v_beta/sites/qa/watchtower-lab/
+v_apha/sites/watchtower-qa/

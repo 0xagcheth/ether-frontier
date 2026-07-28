@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "status": "superseded_do_not_generate",
+  "supersededBy": "docs/01_design/seven-circles-object-redesign-v1.md and docs/05_assets/asset-prompt-bible-v7.md",
+  "objectId": "watchtower",
+  "displayName": "Ветровой дозор",
+  "familyId": "wind_ranged",
+  "projection": "true_top_down_orthographic_90deg",
+  "generationModel": "built-in ImageGen 2",
+  "background": "uniform vivid green chroma-key",
+  "globalPrompt": "Production game sprite source for Ether Frontier: Seven Circles of Iriy, Seven Roads of the Last Knot. Exact straight-down true top-down orthographic 90-degree camera. Premium handmade tabletop object built from many separate smooth solid punchboard and printed-paper cutouts, complete die-cut contours, visible tan cardboard edges, small physical gaps, compact child contact shadows, fine paper fibers, slightly off-register appealing cartoon printing and warm earthy palette. Every physical child has its own perimeter. Identity comes from material obligation, construction and function, not symbols. No facade, side view, isometric perspective, glossy 3D, plastic, realism, corrugated cardboard, labels, grid, pivot marks, text, pseudorunes, sacred signs, copied cultural emblems, archive, laboratory, Kitezh, universal crossbow language or clipping. One source unit only, centered with generous margin on uniform vivid green chroma-key.",
+  "masterIdentity": "Wind Watch / Ветровой дозор: a temporary named witness of trajectory, compact low circular lookout with exactly twenty separate irregular cold-grey Memory-Stone parapet cards, exactly two opposite access notches, eight dark radial Living-Timber deck sectors, central layered bearing with exactly four copper structural contacts, one balanced lightweight crossbow of normal proportions used only by this baseline object, separate muted burgundy signal cloth, tiny amber lantern, rack with exactly four bolts and one empty fifth slot, and a small faded sky-blue Road card with a broken path of three unequal bends.",
+  "gates": {
+    "projectionMasterApprovalRequiredBeforeCall": 2,
+    "coherentGeometryRequired": true,
+    "oneUnitPerCall": true,
+    "atlasSheetForbidden": true,
+    "manualRasterSubstitutionForbidden": true
+  },
+  "calls": [
+    {
+      "id": "WT-C01",
+      "unit": "assembled_projection_master",
+      "dependsOn": [],
+      "referencePolicy": "independent generation",
+      "expectedOutput": "watchtower_projection_master_vNEXT_imagegen2_source.png",
+      "promptSuffix": "Generate one fully assembled Wind Watch. The crossbow is the strongest functional accent but remains balanced and clearly lighter than Ballista. All height steps and functional children visibly read as separate physical cardboard cutouts. No animation variants and no decomposition layout."
+    },
+    {
+      "id": "WT-C02",
+      "unit": "structural_base_master",
+      "dependsOn": ["WT-C01", "human_projection_approval"],
+      "referencePolicy": "edit approved master without recentering, resizing, rotating or translating",
+      "expectedOutput": "watchtower_structural_base_master_vNEXT_source.png",
+      "promptSuffix": "Preserve the approved master canvas and structural geometry exactly. Remove crossbow, bearing upper children, signal cloth, lantern, bolt rack, ammunition and effects. Reveal complete plausible cardboard surfaces beneath them. Keep foundation, eight deck sectors, support ring, twenty stones, two notch lips, two repair staples and wind repair card. No empty green holes inside retained structure."
+    },
+    {
+      "id": "WT-C03",
+      "unit": "bearing_coherent_master",
+      "dependsOn": ["WT-C01", "human_projection_approval"],
+      "referencePolicy": "edit/crop from approved geometry on unchanged master canvas",
+      "expectedOutput": "watchtower_bearing_master_vNEXT_source.png",
+      "promptSuffix": "Retain only the coherent central bearing group in its exact approved position and scale: lower washer, exactly four copper structural fastening arcs, upper washer, socket and compact contact shadow. Remove crossbow and all unrelated parts. Green elsewhere."
+    },
+    {
+      "id": "WT-C04",
+      "unit": "crossbow_coherent_loaded_master",
+      "dependsOn": ["WT-C01", "human_projection_approval"],
+      "referencePolicy": "edit/crop from approved geometry on unchanged master canvas",
+      "expectedOutput": "watchtower_crossbow_loaded_master_vNEXT_source.png",
+      "promptSuffix": "Retain only the complete coherent loaded lightweight crossbow in exact approved position and scale: lower and upper body cards, rear cap, trigger block, paired lower/upper arm stacks, four small fasteners, tense string and loaded bolt. Remove bearing and unrelated parts. Preserve one compatible mechanism geometry."
+    },
+    {
+      "id": "WT-C05",
+      "unit": "crossbow_matching_unstrung_master",
+      "dependsOn": ["WT-C04"],
+      "referencePolicy": "edit WT-C04; geometry lock",
+      "expectedOutput": "watchtower_crossbow_unstrung_master_vNEXT_source.png",
+      "promptSuffix": "Using exactly the same crossbow geometry, canvas, position and scale as the referenced loaded master, remove only the tense string and loaded bolt. Do not redesign limbs, body, fasteners or proportions. Reveal cardboard beneath removed children."
+    },
+    {
+      "id": "WT-C06",
+      "unit": "string_and_recoil_states",
+      "dependsOn": ["WT-C04", "WT-C05"],
+      "referencePolicy": "matching edits of coherent crossbow geometry",
+      "expectedOutput": "watchtower_crossbow_attack_states_vNEXT_source.png",
+      "promptSuffix": "Generate only matching transparent-source states for the approved crossbow: one tense string, two release deformations and three short recoil overlays. Every state shares identical anchors and scale. Show separate isolated states with safe spacing; no labels or grid. Do not redraw the weapon body."
+    },
+    {
+      "id": "WT-C07",
+      "unit": "signal_cloth_family",
+      "dependsOn": ["WT-C01"],
+      "referencePolicy": "match approved attachment edge and scale",
+      "expectedOutput": "watchtower_signal_cloth_4frame_vNEXT_source.png",
+      "promptSuffix": "Generate only four isolated matching deformation states of the same muted burgundy radial signal-cloth cardboard cutout plus its lower mount and cap. Constant hinge edge, size and print. States look like flexing layered cardboard, not realistic fabric. Safe spacing, no labels or grid."
+    },
+    {
+      "id": "WT-C08",
+      "unit": "lantern_static_stack",
+      "dependsOn": ["WT-C01"],
+      "referencePolicy": "match approved lantern scale and top-down silhouette",
+      "expectedOutput": "watchtower_lantern_stack_vNEXT_source.png",
+      "promptSuffix": "Generate only the separate top-down lantern construction pieces: mount pad, dark lower body, copper frame and amber paper window. Tiny low tabletop scale. No flame, glow, blue enamel, side-view lantern or hanging handle."
+    },
+    {
+      "id": "WT-C09",
+      "unit": "lantern_flame_glow_family",
+      "dependsOn": ["WT-C08"],
+      "referencePolicy": "match lantern window anchor",
+      "expectedOutput": "watchtower_lantern_flame_glow_4frame_vNEXT_source.png",
+      "promptSuffix": "Generate only four matching paper-flame states and four separate translucent amber glow states for the approved tiny lantern window. Same anchor and scale; isolated with safe spacing. Cute printed paper effects, not realistic fire, smoke or bloom baked into casing."
+    },
+    {
+      "id": "WT-C10",
+      "unit": "bolt_and_reserve_family",
+      "dependsOn": ["WT-C01", "WT-C04"],
+      "referencePolicy": "match approved bolt geometry",
+      "expectedOutput": "watchtower_bolt_family_vNEXT_source.png",
+      "promptSuffix": "Generate only one owner-specific flying wooden bolt, four identical reserve bolts, a low rack lower/upper stack and one empty fifth slot. Match the loaded bolt geometry. Each piece is a separate cardboard cutout. No arrows, magazine, inventory ticks or labels."
+    },
+    {
+      "id": "WT-C11",
+      "unit": "impact_family",
+      "dependsOn": ["WT-C10"],
+      "referencePolicy": "owner-specific scale",
+      "expectedOutput": "watchtower_impact_4frame_vNEXT_source.png",
+      "promptSuffix": "Generate only four sequential isolated frames of a compact owner-specific paper-chip impact where the light bolt strikes wood or stone card. Tiny gameplay scale, separate chips, no explosion, fireball, target or terrain."
+    },
+    {
+      "id": "WT-C12",
+      "unit": "stone_debris_family",
+      "dependsOn": ["WT-C02"],
+      "referencePolicy": "match approved parapet stone material and scale",
+      "expectedOutput": "watchtower_stone_debris_vNEXT_source.png",
+      "promptSuffix": "Generate only five larger detached cold-grey parapet-card pieces and six small stone-card chips, matching the approved stone print, thickness and tan edges. Every piece isolated with safe padding. No wood, metal, dust, labels or assembled ruin."
+    },
+    {
+      "id": "WT-C13",
+      "unit": "wood_mechanism_attachment_debris",
+      "dependsOn": ["WT-C02", "WT-C04", "WT-C07", "WT-C08", "WT-C10"],
+      "referencePolicy": "match approved owner materials and geometry",
+      "expectedOutput": "watchtower_mixed_owner_debris_vNEXT_source.png",
+      "promptSuffix": "Generate only owner-specific detached pieces: four deck wedges, broken crossbow body, left arm, right arm, trigger card, signal cloth, three lantern-stack pieces, four scattered reserve bolts and six small wood-card splinters. Preserve recognizable approved materials. Isolated parts with safe spacing; no stone and no generic rubble."
+    },
+    {
+      "id": "WT-C14",
+      "unit": "destruction_dust_family",
+      "dependsOn": ["WT-C12", "WT-C13"],
+      "referencePolicy": "owner-scale effect",
+      "expectedOutput": "watchtower_destroy_dust_5frame_vNEXT_source.png",
+      "promptSuffix": "Generate only five sequential isolated settling states of compact cardboard fiber and paper dust for this low tower. Warm grey-brown printed particulate shapes, no realistic smoke, fire, explosion, debris chunks, labels or grid."
+    }
+  ],
+  "postGeneration": [
+    "preserve every raw source under assets/source/watchtower",
+    "remove chroma with canonical ImageGen helper",
+    "validate unchanged master canvas for coherent edits",
+    "extract tight layers only after 1:1 composite proof",
+    "never place QA labels or assembled previews in runtime atlas"
+  ]
+}

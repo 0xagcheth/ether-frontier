@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "module": "fortress_ranged__debris__stone_rim_chunk_a",
+  "family": "fortress_ranged",
+  "slot": "debris",
+  "image": "fortress_ranged__debris__stone_rim_chunk_a_v1_alpha.png",
+  "sourceImage": "fortress_ranged__debris__stone_rim_chunk_a_v1_chroma.png",
+  "sizePx": [
+    1195,
+    640
+  ],
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1195,
+    "h": 640
+  },
+  "pivotPx": [
+    602,
+    299
+  ],
+  "pivot": [
+    0.503766,
+    0.467187
+  ],
+  "pivotMethod": "alpha_weighted_center_of_mass",
+  "projection": "true_top_down_orthographic_90deg",
+  "sharedBy": [
+    "watchtower",
+    "ranger",
+    "tracker",
+    "assassin"
+  ],
+  "runtimeScale": {
+    "scaleToBaseFootprint": 0.14
+  },
+  "destroyPhysics": {
+    "massClass": "medium",
+    "radialVelocityPxPerSec": [
+      90,
+      170
+    ],
+    "angularVelocityDegPerSec": [
+      -220,
+      220
+    ],
+    "linearDrag": 0.92,
+    "lifetimeMs": [
+      700,
+      1100
+    ]
+  },
+  "drawOrder": 60,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "singleConnectedPiece": true,
+    "magentaSpillPixels": 0,
+    "status": "canon"
+  }
+}

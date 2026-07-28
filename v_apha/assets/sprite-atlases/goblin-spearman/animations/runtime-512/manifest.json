@@ -1,0 +1,99 @@
+{
+  "character": "goblin-spearman",
+  "format": "RGBA PNG",
+  "frameSize": [
+    512,
+    512
+  ],
+  "origin": "center",
+  "idleDirections": {
+    "file": "idle-directions-512-alpha.png",
+    "columns": 4,
+    "rows": 1,
+    "frameWidth": 512,
+    "frameHeight": 512,
+    "columnOrder": [
+      "UP",
+      "DOWN",
+      "LEFT",
+      "RIGHT"
+    ],
+    "normalization": "shared 340px neutral silhouette extent in a 512px safety cell; centered fixed pivot"
+  },
+  "animations": {
+    "walk": {
+      "file": "walk-512-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 90,
+      "loop": true,
+      "normalization": "shared 340px neutral silhouette extent in a 512px safety cell; centered fixed pivot"
+    },
+    "attack": {
+      "file": "attack-512-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 80,
+      "loop": false,
+      "normalization": "shared 340px neutral silhouette extent in a 512px safety cell; centered fixed pivot"
+    },
+    "death": {
+      "file": "death-512-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 110,
+      "loop": false,
+      "normalization": "shared 340px neutral silhouette extent in a 512px safety cell; centered fixed pivot"
+    },
+    "spawn": {
+      "file": "spawn-512-alpha.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "directionRows": [
+        "UP"
+      ],
+      "frameDurationMs": 100,
+      "loop": false,
+      "normalization": "shared 340px neutral silhouette extent in a 512px safety cell; centered fixed pivot"
+    },
+    "breach": {
+      "file": "breach-512-alpha.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "directionRows": [
+        "UP"
+      ],
+      "frameDurationMs": 90,
+      "loop": false,
+      "normalization": "shared 340px neutral silhouette extent in a 512px safety cell; centered fixed pivot"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "assetId": "watchtower_wt00_projection_master_v8",
+  "stage": "WT-00 projection master",
+  "generator": {
+    "mode": "OpenAI Image API CLI",
+    "model": "gpt-image-2",
+    "size": "1024x1024",
+    "quality": "medium",
+    "generationType": "from-scratch"
+  },
+  "files": {
+    "prompt": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_prompt_v8.txt",
+    "chromaSource": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v8_chroma.png",
+    "alphaPreview": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v8_alpha.png"
+  },
+  "technicalValidation": {
+    "dimensions": [1024, 1024],
+    "alphaMode": "RGBA",
+    "transparentCorners": true,
+    "alphaBounds": [46, 86, 945, 946],
+    "alphaFileBytes": 1467429,
+    "underFiveMegabytes": true,
+    "clipping": false
+  },
+  "visualValidation": {
+    "trueTopDown": true,
+    "compactCircularFootprint": true,
+    "layeredCardboardConstruction": true,
+    "separateCrossbowReadable": true,
+    "splitTailFlagReadable": true,
+    "roundedSquareLampReadable": true,
+    "lampCrossShutterReadable": true,
+    "noLabelsOrGrid": true,
+    "notes": [
+      "Generated from scratch rather than edited from v7.",
+      "Flag is intentionally larger and more prominent than in v7.",
+      "Awaiting human approval before WT-01 layer separation."
+    ]
+  },
+  "status": "awaiting_user_approval"
+}

@@ -1,0 +1,597 @@
+{
+  "schema": "ether-frontier.layer-fragment.v1",
+  "object": "watchtower",
+  "projectionMaster": "watchtower_projection_master_v4",
+  "coordinateSystem": {
+    "canvas": {
+      "width": 1254,
+      "height": 1254
+    },
+    "objectCenter": {
+      "x": 627.0,
+      "y": 627.0
+    }
+  },
+  "layers": [
+    {
+      "id": "deck_full_reference",
+      "file": "deck_full_reference.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 153,
+        "y": 154,
+        "w": 949,
+        "h": 947
+      },
+      "pivot": {
+        "x": 474.0,
+        "y": 473.0
+      },
+      "drawOrder": 20,
+      "runtimeCandidate": false
+    },
+    {
+      "id": "deck_sector_01",
+      "file": "deck_sector_01.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 627,
+        "y": 183,
+        "w": 311,
+        "h": 445
+      },
+      "pivot": {
+        "x": 0.0,
+        "y": 444.0
+      },
+      "drawOrder": 30,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "deck_sector_02",
+      "file": "deck_sector_02.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 627,
+        "y": 316,
+        "w": 444,
+        "h": 312
+      },
+      "pivot": {
+        "x": 0.0,
+        "y": 311.0
+      },
+      "drawOrder": 31,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "deck_sector_03",
+      "file": "deck_sector_03.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 627,
+        "y": 627,
+        "w": 444,
+        "h": 311
+      },
+      "pivot": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "drawOrder": 32,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "deck_sector_04",
+      "file": "deck_sector_04.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 627,
+        "y": 627,
+        "w": 311,
+        "h": 444
+      },
+      "pivot": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "drawOrder": 33,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "deck_sector_05",
+      "file": "deck_sector_05.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 316,
+        "y": 627,
+        "w": 312,
+        "h": 444
+      },
+      "pivot": {
+        "x": 311.0,
+        "y": 0.0
+      },
+      "drawOrder": 34,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "deck_sector_06",
+      "file": "deck_sector_06.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 183,
+        "y": 627,
+        "w": 445,
+        "h": 311
+      },
+      "pivot": {
+        "x": 444.0,
+        "y": 0.0
+      },
+      "drawOrder": 35,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "deck_sector_07",
+      "file": "deck_sector_07.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 183,
+        "y": 316,
+        "w": 445,
+        "h": 312
+      },
+      "pivot": {
+        "x": 444.0,
+        "y": 311.0
+      },
+      "drawOrder": 36,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "deck_sector_08",
+      "file": "deck_sector_08.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 316,
+        "y": 183,
+        "w": 312,
+        "h": 445
+      },
+      "pivot": {
+        "x": 311.0,
+        "y": 444.0
+      },
+      "drawOrder": 37,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_01",
+      "file": "parapet_stone_01.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 1048,
+        "y": 637,
+        "w": 154,
+        "h": 156
+      },
+      "pivot": {
+        "x": -421.0,
+        "y": -10.0
+      },
+      "drawOrder": 60,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_02",
+      "file": "parapet_stone_02.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 995,
+        "y": 757,
+        "w": 183,
+        "h": 188
+      },
+      "pivot": {
+        "x": -368.0,
+        "y": -130.0
+      },
+      "drawOrder": 61,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_03",
+      "file": "parapet_stone_03.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 915,
+        "y": 870,
+        "w": 198,
+        "h": 204
+      },
+      "pivot": {
+        "x": -288.0,
+        "y": -243.0
+      },
+      "drawOrder": 62,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_04",
+      "file": "parapet_stone_04.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 820,
+        "y": 961,
+        "w": 191,
+        "h": 199
+      },
+      "pivot": {
+        "x": -193.0,
+        "y": -334.0
+      },
+      "drawOrder": 63,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_05",
+      "file": "parapet_stone_05.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 624,
+        "y": 1023,
+        "w": 258,
+        "h": 191
+      },
+      "pivot": {
+        "x": 3.0,
+        "y": -396.0
+      },
+      "drawOrder": 64,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_06",
+      "file": "parapet_stone_06.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 359,
+        "y": 1019,
+        "w": 262,
+        "h": 193
+      },
+      "pivot": {
+        "x": 268.0,
+        "y": -392.0
+      },
+      "drawOrder": 65,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_07",
+      "file": "parapet_stone_07.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 229,
+        "y": 954,
+        "w": 197,
+        "h": 203
+      },
+      "pivot": {
+        "x": 398.0,
+        "y": -327.0
+      },
+      "drawOrder": 66,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_08",
+      "file": "parapet_stone_08.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 127,
+        "y": 859,
+        "w": 204,
+        "h": 207
+      },
+      "pivot": {
+        "x": 500.0,
+        "y": -232.0
+      },
+      "drawOrder": 67,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_09",
+      "file": "parapet_stone_09.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 65,
+        "y": 744,
+        "w": 187,
+        "h": 190
+      },
+      "pivot": {
+        "x": 562.0,
+        "y": -117.0
+      },
+      "drawOrder": 68,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_10",
+      "file": "parapet_stone_10.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 47,
+        "y": 626,
+        "w": 155,
+        "h": 152
+      },
+      "pivot": {
+        "x": 580.0,
+        "y": 1.0
+      },
+      "drawOrder": 69,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_11",
+      "file": "parapet_stone_11.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 47,
+        "y": 476,
+        "w": 155,
+        "h": 147
+      },
+      "pivot": {
+        "x": 580.0,
+        "y": 151.0
+      },
+      "drawOrder": 70,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_12",
+      "file": "parapet_stone_12.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 61,
+        "y": 334,
+        "w": 187,
+        "h": 177
+      },
+      "pivot": {
+        "x": 566.0,
+        "y": 293.0
+      },
+      "drawOrder": 71,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_13",
+      "file": "parapet_stone_13.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 129,
+        "y": 206,
+        "w": 194,
+        "h": 196
+      },
+      "pivot": {
+        "x": 498.0,
+        "y": 421.0
+      },
+      "drawOrder": 72,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_14",
+      "file": "parapet_stone_14.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 229,
+        "y": 107,
+        "w": 189,
+        "h": 200
+      },
+      "pivot": {
+        "x": 398.0,
+        "y": 520.0
+      },
+      "drawOrder": 73,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_15",
+      "file": "parapet_stone_15.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 349,
+        "y": 50,
+        "w": 273,
+        "h": 189
+      },
+      "pivot": {
+        "x": 278.0,
+        "y": 577.0
+      },
+      "drawOrder": 74,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_16",
+      "file": "parapet_stone_16.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 625,
+        "y": 50,
+        "w": 273,
+        "h": 187
+      },
+      "pivot": {
+        "x": 2.0,
+        "y": 577.0
+      },
+      "drawOrder": 75,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_17",
+      "file": "parapet_stone_17.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 832,
+        "y": 106,
+        "w": 192,
+        "h": 201
+      },
+      "pivot": {
+        "x": -205.0,
+        "y": 521.0
+      },
+      "drawOrder": 76,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_18",
+      "file": "parapet_stone_18.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 931,
+        "y": 207,
+        "w": 196,
+        "h": 198
+      },
+      "pivot": {
+        "x": -304.0,
+        "y": 420.0
+      },
+      "drawOrder": 77,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_19",
+      "file": "parapet_stone_19.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 1008,
+        "y": 338,
+        "w": 182,
+        "h": 179
+      },
+      "pivot": {
+        "x": -381.0,
+        "y": 289.0
+      },
+      "drawOrder": 78,
+      "runtimeCandidate": true
+    },
+    {
+      "id": "parapet_stone_20",
+      "file": "parapet_stone_20.png",
+      "sourceCanvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sourceRect": {
+        "x": 1053,
+        "y": 486,
+        "w": 149,
+        "h": 150
+      },
+      "pivot": {
+        "x": -426.0,
+        "y": 141.0
+      },
+      "drawOrder": 79,
+      "runtimeCandidate": true
+    }
+  ]
+}

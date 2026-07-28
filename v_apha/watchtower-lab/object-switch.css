@@ -1,0 +1,23 @@
+.object-switch {
+  display: flex;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.object-switch button {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  padding: 7px 10px;
+  font: inherit;
+  font-size: 7px;
+  letter-spacing: .14em;
+  cursor: pointer;
+}
+
+.object-switch button.active,
+.object-switch button:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(213,155,78,.08);
+}

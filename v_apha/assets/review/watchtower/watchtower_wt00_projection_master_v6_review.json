@@ -1,0 +1,34 @@
+{
+  "job": "WT-00",
+  "object": "watchtower",
+  "candidate": "v6_cartoon_with_believable_cardboard",
+  "status": "awaiting_user_visual_approval",
+  "generationMode": "built-in-imagegen-edit",
+  "editTarget": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v5_chroma.png",
+  "sourceChroma": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v6_chroma.png",
+  "sourceAlpha": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v6_alpha.png",
+  "prompt": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_prompt_v6.txt",
+  "canvasPx": [1254, 1254],
+  "alphaQa": {
+    "transparentCorners": true,
+    "transparentPixels": 492051,
+    "partiallyTransparentPixels": 7889,
+    "opaquePixels": 1072576
+  },
+  "artDirectionMix": {
+    "cleanCartoonIllustration": 0.50,
+    "believableCardboardMaterial": 0.30,
+    "waxCrayonDrawing": 0.15,
+    "stylizedDirtAndWear": 0.05
+  },
+  "visualChecks": {
+    "trueTopDownCircularBase": "pass",
+    "cartoonArtworkPreserved": "pass",
+    "believableLayeredFibers": "pass",
+    "corrugatedChannels": "pass",
+    "variedCardboardThickness": "pass",
+    "restrainedCrayonAndDirt": "pass",
+    "watchtowerIdentity": "needs_user_confirmation"
+  },
+  "nextAuthorizedJobAfterApproval": "WT-01"
+}

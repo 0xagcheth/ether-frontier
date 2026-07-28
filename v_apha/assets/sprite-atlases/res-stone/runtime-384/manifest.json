@@ -1,0 +1,22 @@
+{
+  "object": "res-stone",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "idle": {
+    "file": "res-stone-idle-384-alpha.png"
+  },
+  "bounds": [
+    64,
+    71,
+    319,
+    312
+  ],
+  "normalization": "object extent 255px in a 384px safety cell; centered content"
+}

@@ -1,0 +1,99 @@
+{
+  "character": "goblin-spearman",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "origin": "center",
+  "idleDirections": {
+    "file": "idle-directions-384-alpha.png",
+    "columns": 4,
+    "rows": 1,
+    "frameWidth": 384,
+    "frameHeight": 384,
+    "columnOrder": [
+      "UP",
+      "DOWN",
+      "LEFT",
+      "RIGHT"
+    ],
+    "normalization": "shared 255px neutral silhouette extent in a 384px safety cell; centered content with safe margins"
+  },
+  "animations": {
+    "walk": {
+      "file": "walk-384-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 384,
+      "frameHeight": 384,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 90,
+      "loop": true,
+      "normalization": "shared 255px neutral silhouette extent in a 384px safety cell; centered content with safe margins"
+    },
+    "attack": {
+      "file": "attack-384-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 384,
+      "frameHeight": 384,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 80,
+      "loop": false,
+      "normalization": "shared 255px neutral silhouette extent in a 384px safety cell; centered content with safe margins"
+    },
+    "death": {
+      "file": "death-384-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 384,
+      "frameHeight": 384,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 110,
+      "loop": false,
+      "normalization": "shared 255px neutral silhouette extent in a 384px safety cell; centered content with safe margins"
+    },
+    "spawn": {
+      "file": "spawn-384-alpha.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 384,
+      "frameHeight": 384,
+      "directionRows": [
+        "UP"
+      ],
+      "frameDurationMs": 100,
+      "loop": false,
+      "normalization": "shared 255px neutral silhouette extent in a 384px safety cell; centered content with safe margins"
+    },
+    "breach": {
+      "file": "breach-384-alpha.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 384,
+      "frameHeight": 384,
+      "directionRows": [
+        "UP"
+      ],
+      "frameDurationMs": 90,
+      "loop": false,
+      "normalization": "shared 255px neutral silhouette extent in a 384px safety cell; centered content with safe margins"
+    }
+  }
+}

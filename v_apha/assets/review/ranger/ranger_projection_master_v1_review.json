@@ -1,0 +1,39 @@
+{
+  "object": "ranger",
+  "version": 1,
+  "pipeline": "description_driven_layered_object_v3",
+  "authority": [
+    "docs/05_assets/object-family-and-variation-spec-v4.md",
+    "docs/05_assets/restart-description-driven-object-pipeline-v3.md",
+    "docs/05_assets/asset-prompt-bible.md"
+  ],
+  "sourceChroma": "../../source/ranger/layered-v3/projection-master/ranger_projection_master_v1_chroma.png",
+  "sourceAlpha": "../../source/ranger/layered-v3/projection-master/ranger_projection_master_v1_alpha.png",
+  "status": "visual_candidate",
+  "identity": {
+    "body": "staffed_refitted_garrison_platform",
+    "footprint": "asymmetric_broken_shield",
+    "primary": "compact_rapid_volley_crossbow",
+    "secondary": [
+      "two_staffed_position_tokens",
+      "large_fletched_bolt_rack",
+      "reserve_bolt_magazine",
+      "hunting_optics",
+      "hunter_green_fittings"
+    ],
+    "projectile": "long_fletched_physical_bolt"
+  },
+  "qa": {
+    "notWatchtowerBodyClone": true,
+    "weaponDoesNotDominateSilhouette": true,
+    "staffedPlatformReadable": true,
+    "boltStorageReadable": true,
+    "hunterGreenIdentityReadable": true,
+    "trueTopDownRead": true,
+    "noFacade": true,
+    "noClipping": true,
+    "chromaRemoved": true,
+    "readyForUserProjectionApproval": true,
+    "readyForDecomposition": false
+  }
+}

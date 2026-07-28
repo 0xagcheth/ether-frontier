@@ -1,0 +1,75 @@
+{
+  "object": "ranger",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "normalization": "locked 255px intact building extent; centered 384px safety cell",
+  "actions": {
+    "idle": {
+      "file": "ranger-idle-384-alpha.png",
+      "frames": 5,
+      "durationMs": 180,
+      "loop": true
+    },
+    "attack": {
+      "file": "ranger-attack-384-alpha.png",
+      "frames": 4,
+      "durationMs": 90,
+      "loop": false
+    },
+    "destroy": {
+      "file": "ranger-destroy-384-alpha.png",
+      "frames": 5,
+      "durationMs": 130,
+      "loop": false,
+      "holdLast": true
+    },
+    "projectile": {
+      "file": "ranger-projectile-384-alpha.png",
+      "extent": 130
+    }
+  },
+  "qa": {
+    "idle": {
+      "extents": [
+        255,
+        255,
+        255,
+        255,
+        255
+      ],
+      "clippedFrames": []
+    },
+    "attack": {
+      "extents": [
+        255,
+        255,
+        294,
+        255
+      ],
+      "clippedFrames": []
+    },
+    "destroy": {
+      "extents": [
+        255,
+        255,
+        244,
+        220,
+        197
+      ],
+      "clippedFrames": []
+    },
+    "projectile": {
+      "extents": [
+        130
+      ],
+      "clippedFrames": []
+    }
+  }
+}

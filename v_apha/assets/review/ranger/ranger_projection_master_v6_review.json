@@ -1,0 +1,36 @@
+{
+  "object": "ranger",
+  "version": 6,
+  "status": "visual_candidate",
+  "editTarget": "../../source/ranger/layered-v3/projection-master/ranger_projection_master_v5_chroma.png",
+  "styleReference": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v5_chroma.png",
+  "sourceChroma": "../../source/ranger/layered-v3/projection-master/ranger_projection_master_v6_chroma.png",
+  "sourceAlpha": "../../source/ranger/layered-v3/projection-master/ranger_projection_master_v6_alpha.png",
+  "mechanicalLogic": {
+    "weaponCentered": true,
+    "weaponPivotAtTowerCenter": true,
+    "ammunitionType": "short_physical_green_fletched_bolts",
+    "cassetteCount": 2,
+    "cassettesSymmetric": true,
+    "cassetteAmmunitionMatches": true,
+    "feedRailsVisible": true,
+    "feedRailsStopBeforePivot": true,
+    "opticMountedOnWeapon": true,
+    "humanoidElementsPresent": false
+  },
+  "qa": {
+    "weaponAndAmmoConsistent": true,
+    "feedCycleReadable": true,
+    "visualBalanceImproved": true,
+    "watchtowerV5UsedAsImageReference": true,
+    "noClipping": true,
+    "visualCandidateReady": true,
+    "alphaCleanupPassed": false,
+    "readyForDecomposition": false
+  },
+  "notes": [
+    "Use chroma source for visual approval.",
+    "ImageGen introduced mild non-uniformity into the magenta backdrop.",
+    "The alpha candidate needs a dedicated matte refinement before runtime use."
+  ]
+}

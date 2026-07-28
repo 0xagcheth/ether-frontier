@@ -1,0 +1,32 @@
+{
+  "object": "ranger",
+  "version": 5,
+  "status": "visual_candidate",
+  "editTarget": "../../source/ranger/layered-v3/projection-master/ranger_projection_master_v4_chroma.png",
+  "styleReference": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v5_chroma.png",
+  "sourceChroma": "../../source/ranger/layered-v3/projection-master/ranger_projection_master_v5_chroma.png",
+  "changes": [
+    "removed_both_side_firing_pods",
+    "removed_all_humanoid_visual_language",
+    "moved_complete_weapon_to_exact_tower_center",
+    "attached_small_optic_to_centered_weapon",
+    "reconstructed_continuous_tower_deck"
+  ],
+  "qa": {
+    "humanoidFiguresPresent": false,
+    "humanoidStationsPresent": false,
+    "weaponCentered": true,
+    "weaponPivotAtTowerCenter": true,
+    "watchtowerV5UsedAsImageReference": true,
+    "physicalBoltLogic": true,
+    "noClipping": true,
+    "visualCandidateReady": true,
+    "alphaCleanupPassed": false,
+    "readyForDecomposition": false
+  },
+  "notes": [
+    "ImageGen returned a non-uniform magenta background.",
+    "Standard chroma cleanup requires a refined matte before runtime use.",
+    "Use the chroma source for visual approval; do not use the current alpha attempts in runtime."
+  ]
+}

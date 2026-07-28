@@ -1,0 +1,1007 @@
+{
+  "schemaVersion": 2,
+  "object": "watchtower",
+  "family": "warden_ranged_lineage",
+  "pipeline": "layered-object-v2",
+  "status": "approved_candidate",
+  "image": "watchtower_layered_runtime_v8.png",
+  "atlasSize": {
+    "w": 1024,
+    "h": 487
+  },
+  "referenceCanvas": {
+    "w": 384,
+    "h": 384
+  },
+  "baseFootprintPx": 256,
+  "projection": "true_top_down_orthographic_90deg",
+  "sprites": {
+    "watchtower__base_body__wardens_post": {
+      "rect": {
+        "x": 245,
+        "y": 4,
+        "w": 256,
+        "h": 253
+      },
+      "pivotPx": [
+        128,
+        126
+      ],
+      "pivot": [
+        0.5,
+        0.498024
+      ],
+      "drawOrder": 0,
+      "semantic": "base_body",
+      "sourceJob": "watchtower_wt01_base_body_chroma.png"
+    },
+    "watchtower__mount_socket__light_crossbow_bearing": {
+      "rect": {
+        "x": 290,
+        "y": 264,
+        "w": 71,
+        "h": 72
+      },
+      "pivotPx": [
+        35,
+        36
+      ],
+      "pivot": [
+        0.492958,
+        0.5
+      ],
+      "drawOrder": 20,
+      "semantic": "mount_socket",
+      "sourceJob": "watchtower_wt02_mount_socket_chroma.png"
+    },
+    "watchtower__active_primary__simple_crossbow": {
+      "rect": {
+        "x": 154,
+        "y": 264,
+        "w": 132,
+        "h": 112
+      },
+      "pivotPx": [
+        66,
+        56
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 80,
+      "semantic": "active_primary",
+      "sourceJob": "watchtower_wt03_simple_crossbow_chroma.png"
+    },
+    "watchtower__ambient_mount__range_pennant_puck": {
+      "rect": {
+        "x": 92,
+        "y": 405,
+        "w": 65,
+        "h": 44
+      },
+      "pivotPx": [
+        32,
+        22
+      ],
+      "pivot": [
+        0.492308,
+        0.5
+      ],
+      "drawOrder": 30,
+      "semantic": "ambient_mount",
+      "sourceJob": "watchtower_wt04_pennant_mount_chroma.png"
+    },
+    "watchtower__ambient_mount__lantern_housing": {
+      "rect": {
+        "x": 365,
+        "y": 264,
+        "w": 68,
+        "h": 67
+      },
+      "pivotPx": [
+        34,
+        33
+      ],
+      "pivot": [
+        0.5,
+        0.492537
+      ],
+      "drawOrder": 40,
+      "semantic": "ambient_mount",
+      "sourceJob": "watchtower_wt06_lantern_housing_chroma.png"
+    },
+    "watchtower__projectile__simple_bolt": {
+      "rect": {
+        "x": 70,
+        "y": 463,
+        "w": 52,
+        "h": 14
+      },
+      "pivotPx": [
+        26,
+        7
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 100,
+      "semantic": "projectile",
+      "sourceJob": "watchtower_wt09_simple_bolt_chroma.png"
+    },
+    "watchtower__ruin_state__broken_post": {
+      "rect": {
+        "x": 4,
+        "y": 4,
+        "w": 237,
+        "h": 256
+      },
+      "pivotPx": [
+        118,
+        128
+      ],
+      "pivot": [
+        0.49789,
+        0.5
+      ],
+      "drawOrder": 10,
+      "semantic": "ruin_state",
+      "sourceJob": "watchtower_wt15_ruin_state_chroma.png"
+    },
+    "watchtower__ambient_child__range_pennant__frame_01": {
+      "rect": {
+        "x": 861,
+        "y": 264,
+        "w": 84,
+        "h": 54
+      },
+      "pivotPx": [
+        2,
+        27
+      ],
+      "pivot": [
+        0.02381,
+        0.5
+      ],
+      "drawOrder": 50,
+      "semantic": "ambient_child",
+      "sourceJob": "watchtower_wt05_pennant_frames_chroma.png"
+    },
+    "watchtower__ambient_child__range_pennant__frame_02": {
+      "rect": {
+        "x": 4,
+        "y": 405,
+        "w": 84,
+        "h": 54
+      },
+      "pivotPx": [
+        2,
+        27
+      ],
+      "pivot": [
+        0.02381,
+        0.5
+      ],
+      "drawOrder": 50,
+      "semantic": "ambient_child",
+      "sourceJob": "watchtower_wt05_pennant_frames_chroma.png"
+    },
+    "watchtower__ambient_child__range_pennant__frame_03": {
+      "rect": {
+        "x": 681,
+        "y": 264,
+        "w": 86,
+        "h": 54
+      },
+      "pivotPx": [
+        2,
+        27
+      ],
+      "pivot": [
+        0.023256,
+        0.5
+      ],
+      "drawOrder": 50,
+      "semantic": "ambient_child",
+      "sourceJob": "watchtower_wt05_pennant_frames_chroma.png"
+    },
+    "watchtower__ambient_child__range_pennant__frame_04": {
+      "rect": {
+        "x": 771,
+        "y": 264,
+        "w": 86,
+        "h": 54
+      },
+      "pivotPx": [
+        2,
+        27
+      ],
+      "pivot": [
+        0.023256,
+        0.5
+      ],
+      "drawOrder": 50,
+      "semantic": "ambient_child",
+      "sourceJob": "watchtower_wt05_pennant_frames_chroma.png"
+    },
+    "watchtower__ambient_child__lantern_core__frame_01": {
+      "rect": {
+        "x": 278,
+        "y": 405,
+        "w": 42,
+        "h": 42
+      },
+      "pivotPx": [
+        21,
+        21
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 60,
+      "semantic": "ambient_child",
+      "sourceJob": "watchtower_wt07_lantern_core_frames_chroma.png"
+    },
+    "watchtower__ambient_child__lantern_core__frame_02": {
+      "rect": {
+        "x": 324,
+        "y": 405,
+        "w": 42,
+        "h": 42
+      },
+      "pivotPx": [
+        21,
+        21
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 60,
+      "semantic": "ambient_child",
+      "sourceJob": "watchtower_wt07_lantern_core_frames_chroma.png"
+    },
+    "watchtower__ambient_child__lantern_core__frame_03": {
+      "rect": {
+        "x": 370,
+        "y": 405,
+        "w": 42,
+        "h": 42
+      },
+      "pivotPx": [
+        21,
+        21
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 60,
+      "semantic": "ambient_child",
+      "sourceJob": "watchtower_wt07_lantern_core_frames_chroma.png"
+    },
+    "watchtower__ambient_child__lantern_core__frame_04": {
+      "rect": {
+        "x": 416,
+        "y": 405,
+        "w": 42,
+        "h": 42
+      },
+      "pivotPx": [
+        21,
+        21
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 60,
+      "semantic": "ambient_child",
+      "sourceJob": "watchtower_wt07_lantern_core_frames_chroma.png"
+    },
+    "watchtower__attack_release__muzzle_flash__frame_01": {
+      "rect": {
+        "x": 221,
+        "y": 405,
+        "w": 53,
+        "h": 42
+      },
+      "pivotPx": [
+        2,
+        21
+      ],
+      "pivot": [
+        0.037736,
+        0.5
+      ],
+      "drawOrder": 90,
+      "semantic": "attack_release",
+      "sourceJob": "watchtower_wt08_muzzle_flash_frames_chroma.png"
+    },
+    "watchtower__attack_release__muzzle_flash__frame_02": {
+      "rect": {
+        "x": 161,
+        "y": 405,
+        "w": 56,
+        "h": 42
+      },
+      "pivotPx": [
+        2,
+        21
+      ],
+      "pivot": [
+        0.035714,
+        0.5
+      ],
+      "drawOrder": 90,
+      "semantic": "attack_release",
+      "sourceJob": "watchtower_wt08_muzzle_flash_frames_chroma.png"
+    },
+    "watchtower__attack_release__muzzle_flash__frame_03": {
+      "rect": {
+        "x": 919,
+        "y": 405,
+        "w": 62,
+        "h": 25
+      },
+      "pivotPx": [
+        2,
+        12
+      ],
+      "pivot": [
+        0.032258,
+        0.48
+      ],
+      "drawOrder": 90,
+      "semantic": "attack_release",
+      "sourceJob": "watchtower_wt08_muzzle_flash_frames_chroma.png"
+    },
+    "watchtower__attack_release__muzzle_flash__frame_04": {
+      "rect": {
+        "x": 4,
+        "y": 463,
+        "w": 62,
+        "h": 20
+      },
+      "pivotPx": [
+        2,
+        10
+      ],
+      "pivot": [
+        0.032258,
+        0.5
+      ],
+      "drawOrder": 90,
+      "semantic": "attack_release",
+      "sourceJob": "watchtower_wt08_muzzle_flash_frames_chroma.png"
+    },
+    "watchtower__impact__bolt_hit__frame_01": {
+      "rect": {
+        "x": 437,
+        "y": 264,
+        "w": 57,
+        "h": 58
+      },
+      "pivotPx": [
+        28,
+        29
+      ],
+      "pivot": [
+        0.491228,
+        0.5
+      ],
+      "drawOrder": 110,
+      "semantic": "impact",
+      "sourceJob": "watchtower_wt10_bolt_hit_frames_chroma.png"
+    },
+    "watchtower__impact__bolt_hit__frame_02": {
+      "rect": {
+        "x": 498,
+        "y": 264,
+        "w": 57,
+        "h": 58
+      },
+      "pivotPx": [
+        28,
+        29
+      ],
+      "pivot": [
+        0.491228,
+        0.5
+      ],
+      "drawOrder": 110,
+      "semantic": "impact",
+      "sourceJob": "watchtower_wt10_bolt_hit_frames_chroma.png"
+    },
+    "watchtower__impact__bolt_hit__frame_03": {
+      "rect": {
+        "x": 559,
+        "y": 264,
+        "w": 57,
+        "h": 58
+      },
+      "pivotPx": [
+        28,
+        29
+      ],
+      "pivot": [
+        0.491228,
+        0.5
+      ],
+      "drawOrder": 110,
+      "semantic": "impact",
+      "sourceJob": "watchtower_wt10_bolt_hit_frames_chroma.png"
+    },
+    "watchtower__impact__bolt_hit__frame_04": {
+      "rect": {
+        "x": 620,
+        "y": 264,
+        "w": 57,
+        "h": 58
+      },
+      "pivotPx": [
+        28,
+        29
+      ],
+      "pivot": [
+        0.491228,
+        0.5
+      ],
+      "drawOrder": 110,
+      "semantic": "impact",
+      "sourceJob": "watchtower_wt10_bolt_hit_frames_chroma.png"
+    },
+    "watchtower__destroy_piece__stone_01": {
+      "rect": {
+        "x": 583,
+        "y": 405,
+        "w": 35,
+        "h": 42
+      },
+      "pivotPx": [
+        17,
+        21
+      ],
+      "pivot": [
+        0.485714,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt11_stone_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__stone_02": {
+      "rect": {
+        "x": 622,
+        "y": 405,
+        "w": 32,
+        "h": 42
+      },
+      "pivotPx": [
+        16,
+        21
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt11_stone_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__stone_03": {
+      "rect": {
+        "x": 658,
+        "y": 405,
+        "w": 30,
+        "h": 42
+      },
+      "pivotPx": [
+        15,
+        21
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt11_stone_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__stone_04": {
+      "rect": {
+        "x": 503,
+        "y": 405,
+        "w": 36,
+        "h": 42
+      },
+      "pivotPx": [
+        18,
+        21
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt11_stone_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__stone_05": {
+      "rect": {
+        "x": 543,
+        "y": 405,
+        "w": 36,
+        "h": 42
+      },
+      "pivotPx": [
+        18,
+        21
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt11_stone_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__stone_06": {
+      "rect": {
+        "x": 462,
+        "y": 405,
+        "w": 37,
+        "h": 42
+      },
+      "pivotPx": [
+        18,
+        21
+      ],
+      "pivot": [
+        0.486486,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt11_stone_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__wood_01": {
+      "rect": {
+        "x": 749,
+        "y": 405,
+        "w": 20,
+        "h": 38
+      },
+      "pivotPx": [
+        10,
+        19
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt12_wood_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__wood_02": {
+      "rect": {
+        "x": 818,
+        "y": 405,
+        "w": 10,
+        "h": 38
+      },
+      "pivotPx": [
+        5,
+        19
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt12_wood_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__wood_03": {
+      "rect": {
+        "x": 796,
+        "y": 405,
+        "w": 18,
+        "h": 38
+      },
+      "pivotPx": [
+        9,
+        19
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt12_wood_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__wood_04": {
+      "rect": {
+        "x": 692,
+        "y": 405,
+        "w": 25,
+        "h": 38
+      },
+      "pivotPx": [
+        12,
+        19
+      ],
+      "pivot": [
+        0.48,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt12_wood_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__wood_05": {
+      "rect": {
+        "x": 773,
+        "y": 405,
+        "w": 19,
+        "h": 38
+      },
+      "pivotPx": [
+        9,
+        19
+      ],
+      "pivot": [
+        0.473684,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt12_wood_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__wood_06": {
+      "rect": {
+        "x": 721,
+        "y": 405,
+        "w": 24,
+        "h": 38
+      },
+      "pivotPx": [
+        12,
+        19
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt12_wood_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__metal_01": {
+      "rect": {
+        "x": 898,
+        "y": 405,
+        "w": 17,
+        "h": 34
+      },
+      "pivotPx": [
+        8,
+        17
+      ],
+      "pivot": [
+        0.470588,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt13_metal_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__metal_02": {
+      "rect": {
+        "x": 869,
+        "y": 405,
+        "w": 25,
+        "h": 34
+      },
+      "pivotPx": [
+        12,
+        17
+      ],
+      "pivot": [
+        0.48,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt13_metal_debris_chroma.png"
+    },
+    "watchtower__destroy_piece__metal_03": {
+      "rect": {
+        "x": 832,
+        "y": 405,
+        "w": 33,
+        "h": 34
+      },
+      "pivotPx": [
+        16,
+        17
+      ],
+      "pivot": [
+        0.484848,
+        0.5
+      ],
+      "drawOrder": 120,
+      "semantic": "destroy_piece",
+      "sourceJob": "watchtower_wt13_metal_debris_chroma.png"
+    },
+    "watchtower__destroy_fx__dust__frame_01": {
+      "rect": {
+        "x": 505,
+        "y": 4,
+        "w": 142,
+        "h": 146
+      },
+      "pivotPx": [
+        71,
+        73
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 130,
+      "semantic": "destroy_fx",
+      "sourceJob": "watchtower_wt14_dust_frames_chroma.png"
+    },
+    "watchtower__destroy_fx__dust__frame_02": {
+      "rect": {
+        "x": 801,
+        "y": 4,
+        "w": 146,
+        "h": 140
+      },
+      "pivotPx": [
+        73,
+        70
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 130,
+      "semantic": "destroy_fx",
+      "sourceJob": "watchtower_wt14_dust_frames_chroma.png"
+    },
+    "watchtower__destroy_fx__dust__frame_03": {
+      "rect": {
+        "x": 651,
+        "y": 4,
+        "w": 146,
+        "h": 144
+      },
+      "pivotPx": [
+        73,
+        72
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "drawOrder": 130,
+      "semantic": "destroy_fx",
+      "sourceJob": "watchtower_wt14_dust_frames_chroma.png"
+    },
+    "watchtower__destroy_fx__dust__frame_04": {
+      "rect": {
+        "x": 4,
+        "y": 264,
+        "w": 146,
+        "h": 137
+      },
+      "pivotPx": [
+        73,
+        68
+      ],
+      "pivot": [
+        0.5,
+        0.49635
+      ],
+      "drawOrder": 130,
+      "semantic": "destroy_fx",
+      "sourceJob": "watchtower_wt14_dust_frames_chroma.png"
+    }
+  },
+  "attachments": {
+    "object_center": {
+      "parent": "watchtower__base_body__wardens_post",
+      "positionPx": [
+        192,
+        192
+      ]
+    },
+    "active_primary_pivot": {
+      "parent": "watchtower__mount_socket__light_crossbow_bearing",
+      "positionNormalized": [
+        0.5,
+        0.5
+      ]
+    },
+    "pennant_mount_anchor": {
+      "parent": "watchtower__base_body__wardens_post",
+      "positionNormalized": [
+        0.285,
+        0.65
+      ],
+      "rotationDeg": 134
+    },
+    "pennant_cloth_anchor": {
+      "parent": "watchtower__ambient_mount__range_pennant_puck",
+      "positionNormalized": [
+        0.88,
+        0.5
+      ],
+      "inheritRotation": true
+    },
+    "lantern_mount_anchor": {
+      "parent": "watchtower__base_body__wardens_post",
+      "positionNormalized": [
+        0.715,
+        0.65
+      ]
+    },
+    "lantern_core_anchor": {
+      "parent": "watchtower__ambient_mount__lantern_housing",
+      "positionNormalized": [
+        0.5,
+        0.5
+      ]
+    },
+    "muzzle_anchor": {
+      "parent": "watchtower__active_primary__simple_crossbow",
+      "positionNormalized": [
+        0.98,
+        0.5
+      ],
+      "forwardAxis": "+X"
+    },
+    "projectile_spawn": {
+      "alias": "muzzle_anchor"
+    },
+    "debris_origin": {
+      "parent": "watchtower__base_body__wardens_post",
+      "positionNormalized": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "drawOrder": [
+    "watchtower__base_body__wardens_post",
+    "watchtower__ruin_state__broken_post",
+    "watchtower__mount_socket__light_crossbow_bearing",
+    "watchtower__ambient_mount__range_pennant_puck",
+    "watchtower__ambient_mount__lantern_housing",
+    "watchtower__ambient_child__range_pennant__frame_*",
+    "watchtower__ambient_child__lantern_core__frame_*",
+    "watchtower__active_primary__simple_crossbow",
+    "watchtower__attack_release__muzzle_flash__frame_*"
+  ],
+  "animations": {
+    "idle_pennant": {
+      "frames": [
+        "watchtower__ambient_child__range_pennant__frame_01",
+        "watchtower__ambient_child__range_pennant__frame_02",
+        "watchtower__ambient_child__range_pennant__frame_03",
+        "watchtower__ambient_child__range_pennant__frame_04"
+      ],
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "frameDurationMs": 140,
+      "loop": true
+    },
+    "idle_lantern": {
+      "frames": [
+        "watchtower__ambient_child__lantern_core__frame_01",
+        "watchtower__ambient_child__lantern_core__frame_02",
+        "watchtower__ambient_child__lantern_core__frame_03",
+        "watchtower__ambient_child__lantern_core__frame_04"
+      ],
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "frameDurationMs": 110,
+      "loop": true
+    },
+    "attack_release": {
+      "frames": [
+        "watchtower__attack_release__muzzle_flash__frame_01",
+        "watchtower__attack_release__muzzle_flash__frame_02",
+        "watchtower__attack_release__muzzle_flash__frame_03",
+        "watchtower__attack_release__muzzle_flash__frame_04"
+      ],
+      "frameDurationMs": 55,
+      "loop": false,
+      "holdLast": false
+    },
+    "impact": {
+      "frames": [
+        "watchtower__impact__bolt_hit__frame_01",
+        "watchtower__impact__bolt_hit__frame_02",
+        "watchtower__impact__bolt_hit__frame_03",
+        "watchtower__impact__bolt_hit__frame_04"
+      ],
+      "frameDurationMs": 60,
+      "loop": false,
+      "holdLast": false
+    },
+    "destroy_dust": {
+      "frames": [
+        "watchtower__destroy_fx__dust__frame_01",
+        "watchtower__destroy_fx__dust__frame_02",
+        "watchtower__destroy_fx__dust__frame_03",
+        "watchtower__destroy_fx__dust__frame_04"
+      ],
+      "frameDurationMs": 75,
+      "loop": false,
+      "holdLast": false
+    }
+  },
+  "runtimeTransforms": {
+    "watchtower__active_primary__simple_crossbow": {
+      "rotationMode": "aimAtTarget",
+      "anchor": "active_primary_pivot",
+      "maxRecoilPx": 4
+    },
+    "watchtower__projectile__simple_bolt": {
+      "rotationMode": "velocityDirection",
+      "spawnAnchor": "projectile_spawn"
+    },
+    "watchtower__ambient_mount__range_pennant_puck": {
+      "anchor": "pennant_mount_anchor",
+      "rotationDeg": 134
+    },
+    "watchtower__ambient_child__range_pennant__frame_*": {
+      "anchor": "pennant_cloth_anchor",
+      "inheritRotation": true
+    },
+    "watchtower__ambient_child__lantern_core__frame_*": {
+      "anchor": "lantern_core_anchor"
+    },
+    "watchtower__attack_release__muzzle_flash__frame_*": {
+      "anchor": "muzzle_anchor",
+      "inheritRotation": true
+    },
+    "watchtower__destroy_piece__*": {
+      "spawnAnchor": "debris_origin",
+      "independentBodies": true
+    }
+  },
+  "qa": {
+    "oneObjectFamilyOnly": true,
+    "spriteCount": 42,
+    "tightRects": true,
+    "transparentRuntime": true,
+    "runtimeContainsLabels": false,
+    "runtimeContainsGrid": false,
+    "runtimeContainsCompositePreview": false,
+    "rectsInBounds": true,
+    "rectsNonOverlapping": true,
+    "fileSizeBytes": 572660,
+    "under5MB": true
+  }
+}

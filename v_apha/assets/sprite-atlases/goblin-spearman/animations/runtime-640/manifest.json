@@ -1,0 +1,99 @@
+{
+  "character": "goblin-spearman",
+  "format": "RGBA PNG",
+  "frameSize": [
+    640,
+    640
+  ],
+  "origin": "center",
+  "idleDirections": {
+    "file": "idle-directions-640-alpha.png",
+    "columns": 4,
+    "rows": 1,
+    "frameWidth": 640,
+    "frameHeight": 640,
+    "columnOrder": [
+      "UP",
+      "DOWN",
+      "LEFT",
+      "RIGHT"
+    ],
+    "normalization": "shared 425px neutral silhouette extent in a 640px safety cell; centered content with safe margins"
+  },
+  "animations": {
+    "walk": {
+      "file": "walk-640-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 90,
+      "loop": true,
+      "normalization": "shared 425px neutral silhouette extent in a 640px safety cell; centered content with safe margins"
+    },
+    "attack": {
+      "file": "attack-640-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 80,
+      "loop": false,
+      "normalization": "shared 425px neutral silhouette extent in a 640px safety cell; centered content with safe margins"
+    },
+    "death": {
+      "file": "death-640-alpha.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "directionRows": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "frameDurationMs": 110,
+      "loop": false,
+      "normalization": "shared 425px neutral silhouette extent in a 640px safety cell; centered content with safe margins"
+    },
+    "spawn": {
+      "file": "spawn-640-alpha.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "directionRows": [
+        "UP"
+      ],
+      "frameDurationMs": 100,
+      "loop": false,
+      "normalization": "shared 425px neutral silhouette extent in a 640px safety cell; centered content with safe margins"
+    },
+    "breach": {
+      "file": "breach-640-alpha.png",
+      "columns": 8,
+      "rows": 1,
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "directionRows": [
+        "UP"
+      ],
+      "frameDurationMs": 90,
+      "loop": false,
+      "normalization": "shared 425px neutral silhouette extent in a 640px safety cell; centered content with safe margins"
+    }
+  }
+}

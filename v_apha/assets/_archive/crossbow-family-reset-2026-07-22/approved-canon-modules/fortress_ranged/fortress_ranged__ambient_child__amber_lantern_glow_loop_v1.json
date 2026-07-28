@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "module": "fortress_ranged__ambient_child__amber_lantern_glow",
+  "family": "fortress_ranged",
+  "slot": "ambient_child",
+  "sourceImage": "fortress_ranged__ambient_child__amber_lantern_glow_loop_v1_chroma.png",
+  "projection": "true_top_down_orthographic_90deg",
+  "sharedBy": [
+    "watchtower",
+    "ranger",
+    "tracker"
+  ],
+  "attachment": {
+    "parentModule": "fortress_ranged__ambient_child__amber_lantern_housing",
+    "anchor": "glow_anchor",
+    "scaleToParentFootprint": 0.31,
+    "inheritRotation": true
+  },
+  "drawOrder": 21,
+  "frames": [
+    {
+      "id": "frame_01",
+      "image": "fortress_ranged__ambient_child__amber_lantern_glow__frame_01_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 440,
+        "h": 440
+      },
+      "contentRect": {
+        "x": 6,
+        "y": 4,
+        "w": 427,
+        "h": 431
+      },
+      "pivotPx": [
+        220,
+        220
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 180
+    },
+    {
+      "id": "frame_02",
+      "image": "fortress_ranged__ambient_child__amber_lantern_glow__frame_02_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 440,
+        "h": 440
+      },
+      "contentRect": {
+        "x": 6,
+        "y": 4,
+        "w": 427,
+        "h": 431
+      },
+      "pivotPx": [
+        220,
+        220
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 180
+    },
+    {
+      "id": "frame_03",
+      "image": "fortress_ranged__ambient_child__amber_lantern_glow__frame_03_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 440,
+        "h": 440
+      },
+      "contentRect": {
+        "x": 6,
+        "y": 4,
+        "w": 427,
+        "h": 431
+      },
+      "pivotPx": [
+        220,
+        220
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 180
+    },
+    {
+      "id": "frame_04",
+      "image": "fortress_ranged__ambient_child__amber_lantern_glow__frame_04_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 440,
+        "h": 440
+      },
+      "contentRect": {
+        "x": 6,
+        "y": 4,
+        "w": 427,
+        "h": 431
+      },
+      "pivotPx": [
+        220,
+        220
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 180
+    }
+  ],
+  "animations": {
+    "idle_glow": {
+      "frames": [
+        "frame_01",
+        "frame_02",
+        "frame_03",
+        "frame_04"
+      ],
+      "loop": true,
+      "totalDurationMs": 720
+    }
+  },
+  "qa": {
+    "sharedCanvas": [
+      440,
+      440
+    ],
+    "sharedPivot": [
+      220,
+      220
+    ],
+    "sourceCenterDriftMaxPx": 1,
+    "runtimeLabels": false,
+    "status": "canon"
+  }
+}

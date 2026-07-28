@@ -1,0 +1,40 @@
+Input Image 1 is the EDIT TARGET: Garrison Ranger v3.
+Input Image 2 is the STYLE AND PROJECTION REFERENCE ONLY: approved Watchtower v5.
+
+Edit only Image 1.
+
+Required change:
+- completely remove both hooded human/ranger figures, including their heads,
+  hands, arms, bodies and handheld objects;
+- keep the two octagonal side firing recesses, but convert them into empty
+  functional cardboard firing stations;
+- inside each empty station add only a low flat hunter-green aiming pad, a small
+  cardboard weapon-rest bracket and two tiny bolt slots;
+- no characters, humanoid silhouettes, faces, helmets, clothing or body parts.
+
+Preserve from Image 1:
+- exact compact octagonal Ranger tower footprint;
+- exact scale, center position and true top-down orientation;
+- central raised octagonal core and green-amber optic;
+- upper-left fan rack of physical green-fletched bolts;
+- right reserve bolt magazine;
+- bottom compact rapid-volley crossbow;
+- hunter-green Ranger identity and all attachment locations.
+
+Use Image 2 only to match:
+- chunky child-cut cardboard shapes;
+- believable exposed corrugated tan edges;
+- restrained crayon and matte painted-paper texture;
+- warm cardboard colors, thick uneven ink outlines;
+- small contact shadows under every separately glued layer;
+- direct overhead board-game readability and comparable object scale.
+
+Do not copy Image 2's circular body, red flag, lantern, simple crossbow, colors or
+object-specific modules into Ranger.
+
+Keep the perfectly flat uniform #ff00ff chroma-key background. No background
+shadow, gradient, floor or texture.
+
+Do not redesign the tower, enlarge the weapon, introduce people, add labels,
+text, terrain, facade, side view, isometric perspective, glossy 3D, plastic,
+firearm parts, muzzle flame, smoke or shells.

@@ -1,0 +1,33 @@
+{
+  "job": "WT-00",
+  "object": "watchtower",
+  "candidate": "v3_detailed_childmade_crayon_cardboard",
+  "status": "awaiting_user_visual_approval",
+  "generationMode": "built-in-imagegen-edit",
+  "editTarget": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v2_chroma.png",
+  "sourceChroma": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v3_chroma.png",
+  "sourceAlpha": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v3_alpha.png",
+  "prompt": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_prompt_v3.txt",
+  "canvasPx": [1254, 1254],
+  "alphaQa": {
+    "transparentCorners": true,
+    "transparentPixels": 502565,
+    "partiallyTransparentPixels": 14238,
+    "opaquePixels": 1055713,
+    "method": "local magenta-dominance matte preserving original subject RGB"
+  },
+  "visualChecks": {
+    "trueTopDownCircularBase": "pass",
+    "largeReadableShapesPreserved": "pass",
+    "cardboardFiberAndCorrugation": "pass",
+    "waxCrayonDetail": "pass",
+    "stoneCracksAndChips": "pass",
+    "deckNailsSeamsAndScratches": "pass",
+    "crossbowLayerConstruction": "pass",
+    "lanternLayerConstruction": "pass",
+    "pennantPatchAndTornEdge": "pass",
+    "localContactShadows": "pass",
+    "watchtowerIdentity": "needs_user_confirmation"
+  },
+  "nextAuthorizedJobAfterApproval": "WT-01"
+}

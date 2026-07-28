@@ -1,0 +1,26 @@
+Use case: stylized-concept.
+Asset type: Ether Frontier WT-00 Watchtower projection master for a later layered sprite atlas.
+
+Create a completely new image from scratch.
+
+Scene/backdrop: one centered Watchtower object on a perfectly flat, uniform solid #ff00ff magenta chroma-key background. The background has no texture, gradient, floor, horizon, cast shadow, reflection, labels, grid, text, or other objects. Leave generous padding around the complete silhouette.
+
+View and composition: TRUE 90-DEGREE ORTHOGRAPHIC TOP-DOWN view, like cardboard tabletop game pieces photographed directly from overhead. Absolutely no facade, side wall, rear view, isometric angle, tall perspective, or visible horizon. The base footprint is a compact stable circle.
+
+Watchtower structure: a compact circular Warden observation-and-defense post. The outer rim is a broken low stone parapet represented as an irregular ring of individually cut grey-blue cardboard stone plates, with two clear entrance/firing gaps. Inside is a round brown cardboard platform made from several visible plank strips. Four short radial timber brace modules connect the parapet to the deck. At the exact center is a layered circular rotating socket.
+
+Weapon: one light, simple Watchtower crossbow mounted horizontally on the central rotating socket and viewed exactly from above. It has a straight chunky wooden stock, one visible cardboard bolt/arrow, a compact curved bow, string arms, and separate small metal-grey reinforcement pieces. It is a distinct removable child layer, not fused into the deck. Do not make a cannon, mortar, firearm, giant ballista, or fantasy crystal weapon.
+
+Flag module: one compact Warden signal pennant attached radially at the lower-left rim and viewed exactly from above. It is a short dark-red swallowtail with an obvious deep V-shaped split tail, lying flat in the tabletop plane, not an upright pole. Show separate glued layers: corrugated brown backing, smaller dark-red face, irregular muted-ochre crayon trim, short flat mounting tab, and round cardboard hinge. No text or emblem.
+
+Lamp module: one compact Warden signal lamp attached radially at the lower-right rim and viewed exactly from above. It has a distinctly rounded-square silhouette, a brown corrugated-cardboard outer housing, four separate bronze-brown corner clamps, nested amber and yellow paper light layers, and a simple dark cross-shaped shutter across the glowing center. No octagonal silhouette, handle, upright flame, side-view lantern, realistic glass, or glossy glow.
+
+Style and medium: charming slightly cartoonish handmade tabletop craft. Every structural component is a separately cut and glued piece of real cardboard or heavy paper. The cuts are slightly uneven and child-made, but the design remains readable and production-worthy. Surfaces are colored with wax crayons and a little pencil; strokes are visible but not excessively scribbled. Cardboard itself looks moderately realistic: warm fibers, compressed edges, occasional corrugation visible at exposed sides, slight dents, tiny scratches, mild grime, and uneven staining.
+
+Layering and lighting: each stone, plank, brace, weapon part, flag layer, hinge, lamp frame, corner clamp, shutter, and paper core has its own small consistent local contact shadow, creating a complex stacked paper construction. Shadows remain tight to the pieces and never contaminate the magenta background. Moderately detailed, chunky readable shapes, no tiny clutter.
+
+Color palette: warm kraft-brown deck and weapon, dusty grey-blue stone plates, dark muted red flag, ochre trim, bronze-brown fittings, amber/yellow lamp core. Do not use magenta anywhere in the object.
+
+Constraints: one assembled Watchtower only; fully contained with no clipping; compact circular footprint; stable base/body; modular readable moving parts; no labels, pivot crosses, review grid, separated parts sheet, exploded view, assembled-preview inset, watermark, or text.
+
+Avoid: photorealistic architectural model, realistic medieval miniature, 3D glossy render, plastic, metal shine, facade view, side projection, isometric view, dramatic perspective, deep external cast shadow, excessive realism, excessive crayon scribbling, identical generic tower weapon design.

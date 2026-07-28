@@ -1,0 +1,44 @@
+Input Image 1 is the EDIT TARGET: approved Garrison Ranger v6 master.
+Input Image 2 is the STYLE/PROJECTION REFERENCE ONLY: approved Watchtower v5.
+
+Create the stable Ranger BASE BODY layer from Image 1.
+
+Preserve exactly:
+- canvas, object scale, center position and true top-down orientation;
+- complete compact octagonal outer footprint;
+- outer grey cardboard-stone parapet ring;
+- permanent warm-brown radial deck;
+- central raised octagonal reinforced core;
+- hunter-green permanent body plates;
+- all cardboard texture, outlines, dirt and fixed layer shadows.
+
+Remove completely:
+- central rapid-volley crossbow, including limbs, string, stock, rail and bolt;
+- small green-amber optic attached to the weapon;
+- both upper bolt cassettes and every short bolt inside them;
+- both raised feed-rail assemblies running from cassettes toward the core;
+- all loose or loaded ammunition.
+
+Reconstruct removed areas as continuous matching deck/core material.
+
+Leave only flat attachment information:
+- one exact central circular pivot socket at the geometric center;
+- two small symmetrical flat cassette mounting plates;
+- two thin painted feed-path markings ending before the center pivot.
+
+These attachment markings belong to the base and must not look like raised
+cassettes, rails, weapons, optics or ammunition.
+
+Output one connected empty tower base-body sprite. Do not alter the outer
+silhouette, resize, rotate, mirror, crop or redesign.
+
+Use Image 2 only for cardboard material fidelity, child-cut shapes, restrained
+crayon texture, tan corrugated edges, outlines and local shadows. Do not copy its
+round body, flag, lantern or weapon.
+
+No humans, characters, weapons, crossbows, strings, arrows, bolts, cassettes,
+magazines, optics, effects, labels, text, terrain, facade, side view, isometric
+perspective, glossy 3D or plastic.
+
+Keep the background perfectly flat uniform #ff00ff with no gradient, shadow,
+floor or texture.

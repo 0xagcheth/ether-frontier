@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "module": "ranger__muzzle_fx__rapid_flash",
+  "object": "ranger",
+  "owner": "ranger__active_primary__rapid_crossbow",
+  "slot": "muzzle_fx",
+  "sourceImage": "ranger__muzzle_fx__rapid_flash_loop_v1_source_chroma.png",
+  "projection": "true_top_down_orthographic_90deg",
+  "forwardAxis": "+X",
+  "attachment": {
+    "parentAnchor": "ranger__active_primary__rapid_crossbow.muzzle_anchor",
+    "pivotPx": [
+      78,
+      136
+    ],
+    "scaleToWeaponLength": 0.17,
+    "inheritRotation": true
+  },
+  "drawOrder": 50,
+  "frames": [
+    {
+      "id": "frame_01",
+      "image": "ranger__muzzle_fx__rapid_flash__frame_01_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 477,
+        "h": 272
+      },
+      "contentRect": {
+        "x": 10,
+        "y": 57,
+        "w": 137,
+        "h": 158
+      },
+      "pivotPx": [
+        78,
+        136
+      ],
+      "pivot": [
+        0.163522,
+        0.5
+      ],
+      "durationMs": 45
+    },
+    {
+      "id": "frame_02",
+      "image": "ranger__muzzle_fx__rapid_flash__frame_02_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 477,
+        "h": 272
+      },
+      "contentRect": {
+        "x": 78,
+        "y": 10,
+        "w": 389,
+        "h": 252
+      },
+      "pivotPx": [
+        78,
+        136
+      ],
+      "pivot": [
+        0.163522,
+        0.5
+      ],
+      "durationMs": 55
+    },
+    {
+      "id": "frame_03",
+      "image": "ranger__muzzle_fx__rapid_flash__frame_03_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 477,
+        "h": 272
+      },
+      "contentRect": {
+        "x": 78,
+        "y": 10,
+        "w": 276,
+        "h": 252
+      },
+      "pivotPx": [
+        78,
+        136
+      ],
+      "pivot": [
+        0.163522,
+        0.5
+      ],
+      "durationMs": 65
+    },
+    {
+      "id": "frame_04",
+      "image": "ranger__muzzle_fx__rapid_flash__frame_04_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 477,
+        "h": 272
+      },
+      "contentRect": {
+        "x": 78,
+        "y": 47,
+        "w": 248,
+        "h": 179
+      },
+      "pivotPx": [
+        78,
+        136
+      ],
+      "pivot": [
+        0.163522,
+        0.5
+      ],
+      "durationMs": 85
+    }
+  ],
+  "animations": {
+    "attack_flash": {
+      "frames": [
+        "frame_01",
+        "frame_02",
+        "frame_03",
+        "frame_04"
+      ],
+      "durationsMs": [
+        45,
+        55,
+        65,
+        85
+      ],
+      "loop": false,
+      "holdLast": false,
+      "totalDurationMs": 250
+    }
+  },
+  "qa": {
+    "segmentation": "fixed_quadrants",
+    "sharedCanvas": [
+      477,
+      272
+    ],
+    "sharedPivot": [
+      78,
+      136
+    ],
+    "runtimeLabels": false,
+    "magentaSpillPerFrame": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "status": "canon"
+  }
+}

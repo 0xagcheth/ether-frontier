@@ -1,0 +1,14 @@
+Edit Image 1 only. Preserve the exact composition, large clean cartoon shapes, strict 90-degree overhead view, true circular base, centered plan-view crossbow, flat radial pennant, top-view lantern, visible cardboard edges, restrained crayon texture, layered contact shadows, and solid #ff00ff background.
+
+Add only a small amount of charming handmade imperfection and dirt:
+- make some cardboard cuts subtly uneven, slightly crooked or nicked, especially along stone and flag edges;
+- add a few small muted brown-grey smudges, dusty fingerprints, glue stains and scuffed spots, concentrated near seams, corners, nails and frequently handled mechanisms;
+- add gentle uneven crayon coverage and two or three tiny scratches per major material area;
+- slightly vary the stone blocks in grey tone and alignment;
+- add restrained grime in plank gaps and around the crossbow bearing, without darkening the whole object;
+- keep the lantern bright and the red pennant readable;
+- retain clean game readability and friendly cartoon character.
+
+Target balance: 55% clean cartoon, 25% cardboard texture, 15% crayon drawing, 5% dirt and wear. Dirt must be stylized, sparse and hand-drawn, not photorealistic, gritty or muddy.
+
+Do not change geometry or add parts. No heavy damage, dense scratches, realistic dirt, photoreal craft, glossy 3D, side view, facade, isometric angle, upright pole, side lantern, text, grid, projectile, debris, animation frames, floor or scene.

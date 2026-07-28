@@ -1,0 +1,39 @@
+Input Image 1 is the EDIT TARGET: Garrison Ranger v4.
+Input Image 2 is the STYLE/PROJECTION REFERENCE ONLY: approved Watchtower v5.
+
+Edit only Image 1.
+
+Mandatory layout corrections:
+
+1. Move the complete compact rapid-volley crossbow from the bottom rim to the
+   exact geometric center of the tower.
+2. The crossbow rotation pivot must coincide exactly with the center of the
+   central octagonal hub.
+3. Remove the large standalone green-amber lens currently occupying the center.
+4. Reattach a much smaller green-amber hunting optic directly on top of the
+   central crossbow as a child module, without shifting the weapon pivot.
+5. Completely remove both left and right octagonal firing pods/recesses,
+   including their walls, seats, brackets, dots and all human-position visual
+   language.
+6. Reconstruct the removed pod areas as continuous tower rim/deck matching the
+   surrounding wood, grey stone-paper and hunter-green cardboard plates.
+
+Absolute prohibition:
+No humans, rangers, characters, figures, heads, helmets, hoods, faces, hands,
+arms, bodies, seats, manned positions or humanoid silhouettes anywhere.
+
+Preserve:
+- exact overall compact octagonal tower footprint, scale, center and top-down
+  orientation;
+- upper-left fan rack of long green-fletched physical bolts;
+- right reserve bolt magazine, attached directly to the rim;
+- hunter-green Ranger identity;
+- true top-down cardboard construction.
+
+Use Image 2 to match cardboard thickness, crayon-painted texture, chunky
+child-cut shapes, local layer shadows and direct overhead readability. Do not
+copy Watchtower's circular body, flag, lantern or object-specific weapon.
+
+Keep uniform flat #ff00ff chroma-key background. No background shadow, floor,
+gradient or texture. No facade, side view, isometric perspective, terrain,
+labels, text, firearm parts, muzzle flame, smoke, shells, glossy 3D or plastic.

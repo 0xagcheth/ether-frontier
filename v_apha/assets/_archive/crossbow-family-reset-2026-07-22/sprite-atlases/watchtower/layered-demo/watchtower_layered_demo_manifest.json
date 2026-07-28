@@ -1,0 +1,430 @@
+{
+  "object": "watchtower",
+  "pipeline": "layered-object-demo-v2",
+  "status": "demo_for_user_validation",
+  "image": "watchtower_layered_demo_atlas.png",
+  "reviewImage": "watchtower_layered_demo_review_grid.png",
+  "compositePreview": "watchtower_layered_demo_composite_preview.png",
+  "atlasSize": [
+    1024,
+    1280
+  ],
+  "cellSize": [
+    256,
+    256
+  ],
+  "format": "RGBA PNG",
+  "maxFileSizeBytes": 5000000,
+  "camera": "true top-down orthographic 90deg",
+  "style": "cardboard tabletop board-game token, matte paper, exposed tan cardboard edge",
+  "drawOrder": [
+    "base_stone_token",
+    "central_socket",
+    "flag_pole",
+    "flag_cloth_wind",
+    "lantern_body",
+    "lantern_flame",
+    "crossbow_rotatable",
+    "muzzle_flash"
+  ],
+  "attachments": {
+    "object_center": {
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "px": [
+        128,
+        128
+      ]
+    },
+    "crossbow_center": {
+      "layer": "crossbow_rotatable",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "px": [
+        128,
+        128
+      ],
+      "rotation": "runtime_angle_to_target"
+    },
+    "flag_anchor": {
+      "layer": "flag_pole",
+      "px": [
+        128,
+        86
+      ],
+      "animation": "wind_direction_selects_flag_cloth_frame"
+    },
+    "lantern_anchor": {
+      "layer": "lantern_body",
+      "px": [
+        128,
+        128
+      ],
+      "animation": "lantern_flame_loop"
+    },
+    "muzzle_anchor": {
+      "layer": "crossbow_rotatable",
+      "px": [
+        28,
+        128
+      ],
+      "animation": "muzzle_flash_once"
+    }
+  },
+  "sprites": {
+    "base_stone_token": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "central_socket": {
+      "rect": {
+        "x": 256,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "crossbow_rotatable": {
+      "rect": {
+        "x": 512,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "flag_pole": {
+      "rect": {
+        "x": 768,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "flag_cloth_wind_01": {
+      "rect": {
+        "x": 0,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "flag_cloth_wind_02": {
+      "rect": {
+        "x": 256,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "flag_cloth_wind_03": {
+      "rect": {
+        "x": 512,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "flag_cloth_wind_04": {
+      "rect": {
+        "x": 768,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "lantern_body": {
+      "rect": {
+        "x": 0,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "lantern_flame_01": {
+      "rect": {
+        "x": 256,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "lantern_flame_02": {
+      "rect": {
+        "x": 512,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "lantern_flame_03": {
+      "rect": {
+        "x": 768,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "lantern_flame_04": {
+      "rect": {
+        "x": 0,
+        "y": 768,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "muzzle_flash_01": {
+      "rect": {
+        "x": 256,
+        "y": 768,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "muzzle_flash_02": {
+      "rect": {
+        "x": 512,
+        "y": 768,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "muzzle_flash_03": {
+      "rect": {
+        "x": 768,
+        "y": 768,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "muzzle_flash_04": {
+      "rect": {
+        "x": 0,
+        "y": 1024,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "projectile_bolt": {
+      "rect": {
+        "x": 256,
+        "y": 1024,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    },
+    "destroy_debris": {
+      "rect": {
+        "x": 512,
+        "y": 1024,
+        "w": 256,
+        "h": 256
+      },
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "cell": [
+        256,
+        256
+      ]
+    }
+  },
+  "animations": {
+    "idle": {
+      "base": [
+        "base_stone_token",
+        "central_socket",
+        "flag_pole",
+        "lantern_body",
+        "crossbow_rotatable"
+      ],
+      "loops": {
+        "flag_cloth_wind": [
+          "flag_cloth_wind_01",
+          "flag_cloth_wind_02",
+          "flag_cloth_wind_03",
+          "flag_cloth_wind_04"
+        ],
+        "lantern_flame": [
+          "lantern_flame_01",
+          "lantern_flame_02",
+          "lantern_flame_03",
+          "lantern_flame_04"
+        ]
+      },
+      "durationMs": 140,
+      "loop": true
+    },
+    "attack": {
+      "runtimeRotation": "crossbow_rotatable follows target angle around crossbow_center",
+      "once": [
+        "muzzle_flash_01",
+        "muzzle_flash_02",
+        "muzzle_flash_03",
+        "muzzle_flash_04"
+      ],
+      "durationMs": 80,
+      "loop": false
+    }
+  },
+  "validationRules": [
+    "production atlas png must be <= 5 MB",
+    "one object family per atlas",
+    "base/body footprint must remain locked",
+    "rotating layers must declare pivot and attachment",
+    "animated layers must not shift object anchor",
+    "no baked perspective, facade, side-view, or old tall-tower read"
+  ]
+}

@@ -1,0 +1,2205 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:wght@600;700&family=Bebas+Neue&family=Marcellus+SC&family=Inter:wght@400;500;700&display=swap');
+
+:root {
+  color-scheme: dark;
+  --ink: #fff0cf;
+  --muted: #d0bd95;
+  --panel: rgba(17, 16, 25, .7);
+  --line: rgba(255, 238, 196, .18);
+  --gold: #f3bc4f;
+  --text-shadow-gold: 0 0 8px rgba(255,190,70,.25);
+  --base-ether: #2f74ff;
+  --base-ether-core: #9de1ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(243, 188, 79, .15), transparent 30%),
+    radial-gradient(circle at 80% 22%, rgba(121, 198, 255, .13), transparent 34%),
+    linear-gradient(135deg, #151a25 0%, #15131d 48%, #21191b 100%);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-shadow: 0 1px 2px rgba(0,0,0,.8), 0 0 8px rgba(0,0,0,.6);
+}
+
+button {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+}
+
+.phone {
+  width: min(430px, 100%);
+  height: min(960px, calc(100vh - 10px));
+  min-height: 720px;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 32px;
+  background: linear-gradient(180deg, rgba(25, 24, 34, .98), rgba(12, 14, 22, .98));
+  box-shadow: 0 28px 70px rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .08);
+  overflow: hidden;
+}
+
+.battlefield {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #153728;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12);
+}
+
+.map-scene {
+  position: absolute;
+  inset: 0;
+  background: url(../assets/runtime/sprites/environment/backgroud.png) center / cover no-repeat;
+}
+
+.map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: saturate(1.08);
+}
+.map-bg-rect {
+  display: none;
+}
+
+.battlefield.building {
+  cursor: crosshair;
+  box-shadow:
+    inset 0 0 0 1px rgba(243, 188, 79, .28),
+    inset 0 -120px 100px rgba(243, 188, 79, .05);
+}
+
+.battlefield.building-fire { --build-rune: #ffb23f; }
+.battlefield.building-ice { --build-rune: #7bc46c; }
+.battlefield.building-storm { --build-rune: #aab2bd; }
+
+.grid-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: auto;
+}
+
+.battlefield.building .grid-layer {
+  pointer-events: auto;
+}
+
+.grid-cell {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.battlefield.building .grid-cell:not(.blocked):not(.occupied):not(.tree):not(.stone)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(22px, 62%);
+  height: min(22px, 62%);
+  border: 1px solid color-mix(in srgb, var(--build-rune, #ffd86e) 22%, white);
+  border-radius: 7px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .04), transparent),
+    color-mix(in srgb, var(--build-rune, #ffd86e) 5%, rgba(42, 97, 45, .24));
+  opacity: .54;
+  box-shadow: inset 0 0 0 1px rgba(7, 24, 14, .12);
+  transform: translate(-50%, -50%);
+}
+
+.battlefield.building .grid-cell:not(.blocked):not(.occupied):not(.tree):not(.stone):hover::after,
+.battlefield.building .grid-cell:not(.blocked):not(.occupied):not(.tree):not(.stone):focus-visible::after {
+  width: min(28px, 76%);
+  height: min(28px, 76%);
+  opacity: .86;
+  border-color: color-mix(in srgb, var(--build-rune, #ffd86e) 45%, white);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .09), transparent),
+    color-mix(in srgb, var(--build-rune, #ffd86e) 12%, rgba(57, 123, 55, .34));
+  box-shadow: 0 0 8px color-mix(in srgb, var(--build-rune, #ffd86e) 12%, transparent);
+}
+
+.grid-cell.blocked {
+  background: transparent;
+  cursor: not-allowed;
+}
+
+
+.grid-cell.occupied {
+  background: transparent;
+  cursor: pointer;
+}
+
+.grid-cell.tree {
+  background: linear-gradient(145deg, rgba(26, 88, 42, .3), rgba(12, 54, 29, .2));
+  cursor: pointer;
+  overflow: visible;
+}
+
+.grid-cell.stone {
+  background: linear-gradient(145deg, rgba(60, 70, 74, .3), rgba(34, 44, 50, .2));
+  cursor: pointer;
+}
+
+/* rock growth — 1 static frame per wave, driven by data-grow-frame */
+.grid-cell.stone.growing::before {
+  background-image: none;
+  background-size: auto;
+  width: 40px;
+  height: 40px;
+  animation: none !important;
+}
+.grid-cell.stone[data-grow-frame="0"]::before { background-position:   0px 0 !important; }
+.grid-cell.stone[data-grow-frame="1"]::before { background-position: -40px 0 !important; }
+.grid-cell.stone[data-grow-frame="2"]::before { background-position: -80px 0 !important; }
+.grid-cell.stone[data-grow-frame="3"]::before { background-position:-120px 0 !important; }
+.grid-cell.stone[data-grow-frame="4"]::before { background-position:-160px 0 !important; }
+
+/* tree growth — 1 static frame per wave */
+.grid-cell.tree.growing::after {
+  background-image: none;
+  background-size: auto;
+  width: 48px;
+  height: 64px;
+  animation: none !important;
+}
+.grid-cell.tree[data-tree="oak"].growing::after {
+  background-image: none;
+}
+.grid-cell.tree[data-grow-frame="0"]::after { background-position:    0px 0 !important; }
+.grid-cell.tree[data-grow-frame="1"]::after { background-position:  -48px 0 !important; }
+.grid-cell.tree[data-grow-frame="2"]::after { background-position:  -96px 0 !important; }
+.grid-cell.tree[data-grow-frame="3"]::after { background-position: -144px 0 !important; }
+.grid-cell.tree[data-grow-frame="4"]::after { background-position: -192px 0 !important; }
+
+/* tree sprite — pointer-events:none so clicks pass through to cells below */
+.grid-cell.tree::before { display: none; }
+.grid-cell.tree::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 48px;
+  height: 64px;
+  background: none;
+  transform: translateX(-50%);
+  border-radius: 0;
+  box-shadow: none;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.5));
+}
+.grid-cell.tree:hover::after,
+.grid-cell.tree:focus-visible::after {
+  filter: drop-shadow(0 3px 7px rgba(0,0,0,.65)) brightness(1.1);
+}
+
+.grid-cell.tree.placeable {
+  box-shadow: inset 0 0 0 2px rgba(123, 196, 108, 0.65);
+  border-radius: 3px;
+  animation: placeable-cell-tree 1.4s ease-in-out infinite;
+}
+.grid-cell.stone.placeable {
+  box-shadow: inset 0 0 0 2px rgba(170, 178, 189, 0.65);
+  border-radius: 3px;
+  animation: placeable-cell-stone 1.4s ease-in-out infinite;
+}
+.grid-cell.tree.placeable::after {
+  animation: placeable-pulse-tree 1.4s ease-in-out infinite;
+}
+.grid-cell.stone.placeable::before {
+  animation: placeable-pulse-stone 1.4s ease-in-out infinite;
+}
+@keyframes placeable-cell-tree {
+  0%, 100% { box-shadow: inset 0 0 0 2px rgba(123, 196, 108, 0.45); }
+  50%       { box-shadow: inset 0 0 0 2px rgba(123, 196, 108, 0.9), 0 0 6px rgba(123, 196, 108, 0.3); }
+}
+@keyframes placeable-cell-stone {
+  0%, 100% { box-shadow: inset 0 0 0 2px rgba(170, 178, 189, 0.45); }
+  50%       { box-shadow: inset 0 0 0 2px rgba(170, 178, 189, 0.9), 0 0 6px rgba(170, 178, 189, 0.3); }
+}
+@keyframes placeable-pulse-tree {
+  0%, 100% { filter: drop-shadow(0 4px 2px rgba(0,0,0,.5)); }
+  50%       { filter: drop-shadow(0 5px 3px rgba(123,196,108,.35)); }
+}
+@keyframes placeable-pulse-stone {
+  0%, 100% { filter: drop-shadow(0 4px 2px rgba(0,0,0,.5)); }
+  50%       { filter: drop-shadow(0 5px 3px rgba(170,178,189,.35)); }
+}
+
+/* rock sprites — pointer-events:none so clicks reach the button itself */
+.grid-cell.stone::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40px;
+  height: 34px;
+  background: none;
+  transform: translate(-50%, -50%);
+  border-radius: 0;
+  box-shadow: none;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
+}
+.grid-cell.stone[data-rock="b"]::before { background-image: none; }
+.grid-cell.stone[data-rock="c"]::before { background-image: none; }
+
+/* oak tree variant — upper map zone */
+.grid-cell.tree[data-tree="oak"]::after {
+  background-image: none;
+  width: 48px;
+  height: 64px;
+}
+.grid-cell.stone::after {
+  display: none;
+}
+
+.map-ui {
+  position: absolute;
+  z-index: 20;
+  border: 1px solid rgba(255, 238, 196, .08);
+  background: rgba(7, 8, 15, .12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
+}
+
+.hud-left {
+  left: 8px;
+  top: 8px;
+  padding: 0;
+  border-radius: 12px;
+}
+
+.hud-right {
+  right: 8px;
+  top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  border-radius: 12px;
+}
+.hud-right-top { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 8px; }
+.hud-wave-num  { color: var(--gold); font-size: 22px; font-weight: 900; font-variant-numeric: tabular-nums; line-height: 1; text-shadow: var(--text-shadow-gold); }
+
+.title-chip      { display: none; }
+.economy-chip    { flex: none; }
+.hero-chip       { display: flex; align-items: center; gap: 4px; padding: 2px 7px; flex: none; }
+.hero-chip-icon  { font-size: 24px; color: var(--gold); line-height: 1; text-shadow: var(--text-shadow-gold); }
+.wave-chip       { flex: none; }
+.speed-controls  { flex: none; }
+
+.wave-announce {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.wave-announce.visible { opacity: 1; }
+.wave-announce-label {
+  font-family: 'Cinzel', serif;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.wave-announce-name {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 24px rgba(243,188,79,.6), 0 2px 8px rgba(0,0,0,.8), var(--text-shadow-gold);
+}
+
+h1 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.3px;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.title-chip p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* economy chip: flex row — 175 gld. · 30 wod. · 30 stn. */
+.hud-chip {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  padding: 3px 7px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .07);
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hud-chip b {
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  min-width: 2.8ch;
+  display: inline-block;
+  text-align: right;
+}
+
+/* separator dots only in single-row chips */
+.hud-chip:not(.economy-chip) span + b::before { content: "·"; color: rgba(255,238,196,.25); margin-right: 4px; }
+
+/* economy chip: column stack */
+.hud-chip.economy-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 2px 0;
+  background: rgba(10, 8, 18, 0.10);
+  border: 1px solid rgba(255, 220, 120, 0.12);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,220,120,0.06);
+}
+.res-item {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+}
+.res-item:last-child { border-bottom: none; }
+.res-icon { width: 18px; height: 18px; flex-shrink: 0; display: inline-block; image-rendering: pixelated; }
+.res-item span { font-size: 16px; font-weight: 700; color: var(--muted); line-height: 1; }
+.hud-chip.economy-chip .res-item b { font-family: 'Exo 2', sans-serif; font-size: 13px; font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; line-height: 1; min-width: 6ch; text-align: left; }
+
+/* wave chip: single row */
+.wave-chip {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  padding: 4px 8px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .07);
+  white-space: nowrap;
+}
+
+.wave-chip span { color: var(--muted); font-size: 9px; font-weight: 700; }
+.wave-chip b    { font-size: 11px; font-weight: 800; color: var(--gold); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.speed-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-9px);
+}
+
+.round-button {
+  width: 56px;
+  height: 36px;
+  border: 0;
+  border-radius: 8px;
+  color: #160c00;
+  background: linear-gradient(180deg, #ffd86e 0%, #e09820 100%);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  margin-right: -18px;
+  box-shadow: 0 2px 8px rgba(220, 148, 20, .45), inset 0 1px 0 rgba(255, 255, 255, .28);
+}
+
+.round-button.reset-speed {
+  width: 54px;
+  height: 36px;
+  border: 1px solid rgba(255, 238, 196, .16);
+  border-radius: 8px;
+  color: var(--muted);
+  background: rgba(22, 20, 34, .92);
+  font-size: 11px;
+  font-weight: 800;
+  padding-left: 20px;
+  box-shadow: none;
+  position: relative;
+  z-index: 0;
+}
+
+.tower-layer,
+.enemy-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 7;
+}
+
+.base-hotspot {
+  position: absolute;
+  left: 50%;
+  top: 70.5%;
+  z-index: 16;
+  width: 116px;
+  height: 128px;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.base-hotspot::after {
+  content: "";
+  position: absolute;
+  inset: 16px 10px 10px;
+  border-radius: 14px;
+  opacity: 0;
+  box-shadow: 0 0 0 1px rgba(255, 216, 110, .45), 0 0 20px rgba(255, 216, 110, .18);
+  transition: opacity .16s ease;
+}
+
+.base-hotspot:hover::after,
+.base-hotspot:focus-visible::after {
+  opacity: 1;
+}
+
+.road-shadow {
+  opacity: 0.28;
+}
+
+.road-shadow rect {
+  fill: #0a160c;
+}
+
+.road-fill {
+  opacity: 0.35;
+}
+
+.road-fill rect {
+  fill: #4a3018;
+  stroke: #4a3018;
+  stroke-width: 3;
+}
+
+.road-stones path {
+  stroke: #c8a460;
+  stroke-dasharray: 2 20;
+  stroke-linecap: butt;
+}
+
+.road-img { display: none; visibility: hidden; opacity: 0; }
+.road-arrows, .road-stones { display: none !important; visibility: hidden !important; }
+
+/* ── Crystal animations ──────────────────────────────────────────── */
+@keyframes crystal-glow {
+  0%, 100% { filter: drop-shadow(0 0 5px rgba(80,60,210,.9))  drop-shadow(0 0 14px rgba(60,40,170,.5)); }
+  50%       { filter: drop-shadow(0 0 9px rgba(130,100,255,1)) drop-shadow(0 0 26px rgba(100,70,220,.7)); }
+}
+@keyframes crystal-float {
+  0%, 100% { transform: translate(-50%,-100%) translateY(-102px) scale(1); }
+  50%       { transform: translate(-50%,-100%) translateY(-108px) scale(1.04); }
+}
+@keyframes crystal-sparkle {
+  0%, 85%, 100% { opacity: .85; }
+  92%            { opacity: .2; }
+}
+@keyframes tower-crystal-glow {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(80,60,210,.85))  drop-shadow(0 0 10px rgba(60,40,170,.4)); }
+  50%       { filter: drop-shadow(0 0 7px rgba(130,100,255,.95)) drop-shadow(0 0 18px rgba(100,70,220,.65)); }
+}
+
+.castle-crystal {
+  animation: crystal-float 3.2s ease-in-out infinite;
+}
+.crystal-facets {
+  animation: none;
+}
+.crystal-sparkle {
+  animation: crystal-sparkle 3.2s ease-in-out infinite;
+}
+
+.base-ether-shell {
+  fill: var(--base-ether);
+  transition: fill .25s ease;
+}
+.base-ether-core {
+  fill: var(--base-ether-core);
+  transition: fill .25s ease;
+}
+
+/* Castle SVG crystal — react to base health variable */
+#castleCrystal g.crystal-facets path:first-child {
+  fill: var(--base-ether);
+  transition: fill .25s ease;
+}
+#castleCrystal g.crystal-facets path:last-child {
+  fill: var(--base-ether-core);
+  transition: fill .25s ease;
+}
+
+.battlefield.destroyed .map {
+  filter: saturate(.82) brightness(.86);
+}
+
+.battlefield.destroyed .base-ether-shell {
+  filter: drop-shadow(0 0 12px rgba(255, 64, 64, .72));
+}
+.battlefield.destroyed .castle-crystal {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Pause all looping animations between waves */
+.battlefield:not(.wave-on) .spawn-cave::before,
+.battlefield:not(.wave-on) .tower.ice::before,
+.battlefield:not(.wave-on) .tower.storm::before {
+  animation-play-state: paused;
+}
+
+.tower {
+  position: absolute;
+  width: 44px;
+  height: 62px;
+  /* translateZ lifts tower above ground plane in isometric 3D space */
+  transform: translate(-50%, -74%) scale(.96);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* ground platform / base shadow */
+.tower::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 0;
+  height: 10px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #23180e, #130d08);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .6);
+}
+
+/* floating crystal */
+.tower::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 5px;
+  width: 22px;
+  height: 22px;
+  transform: translateX(-50%) rotate(45deg);
+  border-radius: 6px;
+  background: currentColor;
+  box-shadow: 0 0 14px currentColor, 0 0 28px currentColor;
+}
+
+/* 3D building body — front face */
+.tower-body {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  width: 26px;
+  height: 42px;
+  transform: translateX(-50%);
+}
+
+.tower-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 4px 4px 2px 2px;
+  background: linear-gradient(170deg, #a08870 0%, #6b5040 50%, #3a2820 100%);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, .14),
+    inset -2px 0 0 rgba(0, 0, 0, .22);
+}
+
+/* right side wall face (shadow side) */
+.tower-body::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 100%;
+  width: 8px;
+  height: calc(100% - 3px);
+  background: linear-gradient(90deg, #251a10 0%, #150e08 100%);
+  border-radius: 0 2px 1px 0;
+  transform-origin: top left;
+  transform: skewY(-8deg);
+}
+
+.tower.fire { color: #ffb23f; }
+.tower.ice { color: #7bc46c; }
+.tower.storm { color: #aab2bd; }
+.tower.thorn { color: #79d26b; }
+.tower.void { color: #d58bff; }
+.tower.sun { color: #ffe06b; }
+
+/* ── Sawmill sprite animation (ice tower) ─────────────────────── */
+/* translateX is GPU-composited → zero main-thread cost */
+@keyframes sawmill-idle {
+  from { background-position: 0 0; }
+  to   { background-position: -480px 0; }
+}
+@keyframes sawmill-destroy {
+  from { background-position: 0 0; }
+  to   { background-position: -480px 0; }
+}
+@keyframes sawmill-fadeout {
+  0%   { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.tower.ice {
+  width: 96px;
+  height: 112px;
+  overflow: visible;
+  background: none;
+  animation: none;
+  transform: translate(-50%, -90%) scale(.86);
+  filter: drop-shadow(0 4px 5px rgba(0,0,0,.45));
+}
+
+/* sprite uses background-position so no overflow:hidden needed */
+.tower.ice::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: auto; right: auto;
+  width: 96px;
+  height: 112px;
+  border-radius: 0;
+  box-shadow: none;
+  background: url(../assets/runtime/sprites/buildings/sawmill_idle.png) 0 0 / 480px 112px no-repeat;
+  will-change: background-position;
+}
+.tower.ice::after          { display: none; }
+.tower.ice .tower-body     { display: none; }
+
+/* destroy: switch sprite sheet + fade container */
+.tower.ice.is-destroying {
+  animation: sawmill-fadeout 1.2s ease-in 1 forwards;
+}
+.tower.ice.is-destroying::before {
+  background: url(../assets/runtime/sprites/buildings/sawmill_destroy.png) 0 0 / 480px 112px no-repeat;
+  animation: sawmill-destroy 1.2s steps(5, end) 1 forwards;
+}
+
+/* ── Quarry sprite animation (storm tower) ────────────────────── */
+/* idle: 5 frames × 36px = 180px wide, 40px tall                  */
+/* destroy: 6 frames × 38px = 228px wide, 40px tall               */
+@keyframes quarry-idle {
+  from { background-position: 0 0; }
+  to   { background-position: -480px 0; }
+}
+@keyframes quarry-destroy {
+  from { background-position: 0 0; }
+  to   { background-position: -480px 0; }
+}
+
+.tower.storm {
+  width: 96px;
+  height: 112px;
+  overflow: visible;
+  background: none;
+  animation: none;
+  transform: translate(-50%, -90%) scale(.86);
+  filter: drop-shadow(0 4px 5px rgba(0,0,0,.45));
+}
+.tower.storm::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: auto; right: auto;
+  width: 96px;
+  height: 112px;
+  border-radius: 0;
+  box-shadow: none;
+  background: url(../assets/runtime/sprites/buildings/quarry_idle.png) 0 0 / 480px 112px no-repeat;
+  will-change: background-position;
+}
+.tower.storm::after        { display: none; }
+.tower.storm .tower-body   { display: none; }
+
+.tower.storm.is-destroying {
+  animation: sawmill-fadeout 1.2s ease-in 1 forwards;
+}
+.tower.storm.is-destroying::before {
+  background: url(../assets/runtime/sprites/buildings/quarry_destroy.png) 0 0 / 480px 112px no-repeat;
+  animation: quarry-destroy 1.2s steps(5, end) 1 forwards;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ATTACKING TOWER SPRITES  (fire / thorn / void / sun + specializations)
+   Frame size: 48×64px. Idle = static frame 0. Only attack+destroy animate.
+   ═══════════════════════════════════════════════════════════════════ */
+
+.tower.fire, .tower.thorn, .tower.void, .tower.sun {
+  width: 48px; height: 64px;
+  overflow: visible; background: none; animation: none;
+  filter: drop-shadow(0 4px 5px rgba(0,0,0,.45));
+}
+.tower.fire::after,  .tower.thorn::after,
+.tower.void::after,  .tower.sun::after  { display: none; }
+.tower.fire .tower-body, .tower.thorn .tower-body,
+.tower.void .tower-body, .tower.sun .tower-body { display: none; }
+
+.tower.fire::before, .tower.thorn::before,
+.tower.void::before, .tower.sun::before {
+  display: block; content: "";
+  position: absolute; left: 0; top: 0; bottom: auto; right: auto;
+  width: 48px; height: 64px; border-radius: 0;
+  background-position: 0 0; /* frame 0 — static idle */
+  will-change: background-position;
+  box-shadow: none;
+}
+
+/* ── keyframes (attack & destroy only) ───────────────────────────── */
+@keyframes sprite-attack-4  { from{background-position:0 0} to{background-position:-192px 0} }
+@keyframes sprite-attack-5  { from{background-position:0 0} to{background-position:-240px 0} }
+@keyframes sprite-attack-3  { from{background-position:0 0} to{background-position:-144px 0} }
+@keyframes sprite-idle-5    { from{background-position:0 0} to{background-position:-240px 0} }
+@keyframes sprite-idle-6    { from{background-position:0 0} to{background-position:-288px 0} }
+@keyframes sprite-destroy-5 { from{background-position:0 0} to{background-position:-240px 0} }
+
+/* ── WATCHTOWER ────────────────────────────────────────────────────── */
+.tower.fire:not([data-spec])::before {
+  background-image: url(../assets/runtime/sprites/buildings/watchtower_idle.png);
+  background-size: 240px 64px;
+  animation: sprite-idle-5 1.1s steps(5,end) infinite;
+}
+.tower.fire:not([data-spec]).is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/watchtower_attack.png);
+  background-size: 240px 64px;
+  animation: sprite-attack-5 .48s steps(5,end) 1 forwards;
+}
+.tower.fire:not([data-spec]).is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/watchtower_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* ── GARRISON RANGER ───────────────────────────────────────────────── */
+.tower.fire[data-spec="infantry"]:not([data-subtype])::before {
+  background-image: url(../assets/runtime/sprites/buildings/ranger_idle.png);
+  background-size: 240px 64px;
+  animation: sprite-idle-5 1.1s steps(5,end) infinite;
+}
+.tower.fire[data-spec="infantry"]:not([data-subtype]).is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/ranger_attack.png);
+  background-size: 240px 64px;
+  animation: sprite-attack-5 .44s steps(5,end) 1 forwards;
+}
+.tower.fire[data-spec="infantry"]:not([data-subtype]).is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/ranger_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* ── CROWN TRACKER ─────────────────────────────────────────────────── */
+.tower.fire[data-spec="infantry"][data-subtype="tracker"]::before {
+  background-image: url(../assets/runtime/sprites/buildings/tracker_idle.png);
+  background-size: 240px 64px;
+  animation: sprite-idle-5 1.2s steps(5,end) infinite;
+}
+.tower.fire[data-spec="infantry"][data-subtype="tracker"].is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/tracker_attack.png);
+  background-size: 240px 64px;
+  animation: sprite-attack-5 .48s steps(5,end) 1 forwards;
+}
+.tower.fire[data-spec="infantry"][data-subtype="tracker"].is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/tracker_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* ── SHADOW ARCHER ─────────────────────────────────────────────────── */
+.tower.fire[data-spec="infantry"][data-subtype="assassin"]::before {
+  background-image: url(../assets/runtime/sprites/buildings/assassin_idle.png);
+  background-size: 240px 64px;
+  animation: sprite-idle-5 1.0s steps(5,end) infinite;
+}
+.tower.fire[data-spec="infantry"][data-subtype="assassin"].is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/assassin_attack.png);
+  background-size: 240px 64px;
+  animation: sprite-attack-5 .40s steps(5,end) 1 forwards;
+}
+.tower.fire[data-spec="infantry"][data-subtype="assassin"].is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/assassin_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* ── FORTRESS BALLISTA ─────────────────────────────────────────────── */
+.tower.fire[data-spec="air"]:not([data-subtype])::before {
+  background-image: url(../assets/runtime/sprites/buildings/ballista_idle.png);
+  background-size: 288px 64px;
+  animation: sprite-idle-6 1.2s steps(6,end) infinite;
+}
+.tower.fire[data-spec="air"]:not([data-subtype]).is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/ballista_attack.png);
+  background-size: 192px 64px;
+  animation: sprite-attack-4 .56s steps(4,end) 1 forwards;
+}
+.tower.fire[data-spec="air"]:not([data-subtype]).is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/ballista_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* ── SKY SCORPION ──────────────────────────────────────────────────── */
+.tower.fire[data-spec="air"][data-subtype="scorpion"]::before {
+  background-image: url(../assets/runtime/sprites/buildings/scorpion_idle.png);
+  background-size: 288px 64px;
+  animation: sprite-idle-6 1.2s steps(6,end) infinite;
+}
+.tower.fire[data-spec="air"][data-subtype="scorpion"].is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/scorpion_attack.png);
+  background-size: 192px 64px;
+  animation: sprite-attack-4 .60s steps(4,end) 1 forwards;
+}
+.tower.fire[data-spec="air"][data-subtype="scorpion"].is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/scorpion_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* ── HAILSTORM BALLISTA ────────────────────────────────────────────── */
+.tower.fire[data-spec="air"][data-subtype="hail"]::before {
+  background-image: url(../assets/runtime/sprites/buildings/hailstorm_idle.png);
+  background-size: 240px 64px;
+  animation: sprite-idle-5 1.0s steps(5,end) infinite;
+}
+.tower.fire[data-spec="air"][data-subtype="hail"].is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/hailstorm_attack.png);
+  background-size: 192px 64px;
+  animation: sprite-attack-4 .44s steps(4,end) 1 forwards;
+}
+.tower.fire[data-spec="air"][data-subtype="hail"].is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/hailstorm_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* ── FIELD CANNON ──────────────────────────────────────────────────── */
+.tower.fire[data-spec="siege"]:not([data-subtype])::before {
+  background-image: url(../assets/runtime/sprites/buildings/cannon_idle.png);
+  background-size: 240px 64px;
+  animation: sprite-idle-5 1.2s steps(5,end) infinite;
+}
+.tower.fire[data-spec="siege"]:not([data-subtype]).is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/cannon_attack.png);
+  background-size: 192px 64px;
+  animation: sprite-attack-4 .45s steps(4,end) 1 forwards;
+}
+.tower.fire[data-spec="siege"]:not([data-subtype]).is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/cannon_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* ── SIEGE MORTAR ──────────────────────────────────────────────────── */
+.tower.fire[data-spec="siege"][data-subtype="mortar"]::before {
+  background-image: url(../assets/runtime/sprites/buildings/mortar_idle.png);
+  background-size: 240px 64px;
+  animation: sprite-idle-5 1.2s steps(5,end) infinite;
+}
+.tower.fire[data-spec="siege"][data-subtype="mortar"].is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/mortar_attack.png);
+  background-size: 192px 64px;
+  animation: sprite-attack-4 .60s steps(4,end) 1 forwards;
+}
+.tower.fire[data-spec="siege"][data-subtype="mortar"].is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/mortar_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* ── GRAPESHOT BATTERY ─────────────────────────────────────────────── */
+.tower.fire[data-spec="siege"][data-subtype="grapeshot"]::before {
+  background-image: url(../assets/runtime/sprites/buildings/grapeshot_idle.png);
+  background-size: 240px 64px;
+  animation: sprite-idle-5 1.1s steps(5,end) infinite;
+}
+.tower.fire[data-spec="siege"][data-subtype="grapeshot"].is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/grapeshot_attack.png);
+  background-size: 192px 64px;
+  animation: sprite-attack-4 .44s steps(4,end) 1 forwards;
+}
+.tower.fire[data-spec="siege"][data-subtype="grapeshot"].is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/grapeshot_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* ── PALISADE ──────────────────────────────────────────────────────── */
+.tower.thorn::before {
+  background-image: url(../assets/runtime/sprites/buildings/palisade_idle.png);
+  background-size: 240px 64px;
+  animation: sprite-idle-5 1.2s steps(5,end) infinite;
+}
+.tower.thorn.is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/palisade_attack.png);
+  background-size: 192px 64px;
+  animation: sprite-attack-4 .44s steps(4,end) 1 forwards;
+}
+.tower.thorn.is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/palisade_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* ── OBELISK ───────────────────────────────────────────────────────── */
+.tower.void::before {
+  background-image: url(../assets/runtime/sprites/buildings/obelisk_idle.png);
+  background-size: 240px 64px;
+  animation: sprite-idle-5 1.3s steps(5,end) infinite;
+}
+.tower.void.is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/obelisk_attack.png);
+  background-size: 192px 64px;
+  animation: sprite-attack-4 .52s steps(4,end) 1 forwards;
+}
+.tower.void.is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/obelisk_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* ── BEACON ────────────────────────────────────────────────────────── */
+.tower.sun::before {
+  background-image: url(../assets/runtime/sprites/buildings/beacon_idle.png);
+  background-size: 240px 64px;
+  animation: sprite-idle-5 1.2s steps(5,end) infinite;
+}
+.tower.sun.is-attacking::before {
+  background-image: url(../assets/runtime/sprites/buildings/beacon_attack.png);
+  background-size: 192px 64px;
+  animation: sprite-attack-4 .48s steps(4,end) 1 forwards;
+}
+.tower.sun.is-destroying::before {
+  background-image: url(../assets/runtime/sprites/buildings/beacon_destroy.png);
+  background-size: 240px 64px;
+  animation: sprite-destroy-5 1.2s steps(5,end) 1 forwards;
+}
+
+/* Destroy fade — shared */
+.tower.fire.is-destroying, .tower.thorn.is-destroying,
+.tower.void.is-destroying,  .tower.sun.is-destroying {
+  animation: sawmill-fadeout 1.2s ease-in 1 forwards;
+}
+
+/* ── Sprite projectiles ─────────────────────────────────────────── */
+.projectile.has-sprite {
+  border-radius: 0;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  width: 0; height: 0; /* overridden per type */
+}
+.projectile.ballista-proj   { width: 40px; height: 12px; background: url(../assets/runtime/sprites/buildings/ballista_projectile.png)   0 0 / 40px 12px no-repeat; }
+.projectile.cannon-proj     { width: 20px; height: 20px; background: url(../assets/runtime/sprites/buildings/cannon_projectile.png)     0 0 / 100px 20px no-repeat; }
+.projectile.palisade-proj   { width: 28px; height: 16px; background: url(../assets/runtime/sprites/buildings/palisade_projectile.png)   0 0 / 140px 16px no-repeat; }
+.projectile.obelisk-proj    { width: 32px; height: 20px; background: url(../assets/runtime/sprites/buildings/obelisk_projectile.png)    0 0 / 160px 20px no-repeat; }
+.projectile.beacon-proj     { width: 22px; height: 18px; background: url(../assets/runtime/sprites/buildings/beacon_projectile.png)     0 0 / 110px 18px no-repeat; }
+.projectile.watchtower-proj { width: 20px; height: 20px; background: url(../assets/runtime/sprites/buildings/watchtower_projectile.png) 0 0 / 100px 20px no-repeat; }
+.projectile.ranger-proj     { width: 36px; height: 36px; background: url(../assets/runtime/sprites/buildings/ranger_projectile.png)     0 0 / 180px 36px no-repeat; }
+.projectile.mortar-proj     { width: 24px; height: 24px; background: url(../assets/runtime/sprites/buildings/mortar_projectile.png)     0 0 / 120px 24px no-repeat; }
+.projectile.grapeshot-proj  { width: 36px; height: 24px; background: url(../assets/runtime/sprites/buildings/grapeshot_projectile.png)  0 0 / 180px 24px no-repeat; }
+
+/* ── Sprite impacts ─────────────────────────────────────────────── */
+.impact {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+  width: 48px; height: 48px;
+}
+@keyframes impact-4f { from { background-position: 0 0 } to { background-position: -192px 0 } }
+@keyframes impact-5f { from { background-position: 0 0 } to { background-position: -240px 0 } }
+@keyframes impact-4f-44 { from { background-position: 0 0 } to { background-position: -176px 0 } }
+@keyframes impact-4f-56 { from { background-position: 0 0 } to { background-position: -224px 0 } }
+
+.impact.ballista-impact { background: url(../assets/runtime/sprites/buildings/ballista_impact.png) 0 0 / 192px 48px no-repeat; animation: impact-4f .24s steps(4,end) 1 forwards; }
+.impact.cannon-impact   { background: url(../assets/runtime/sprites/buildings/cannon_impact.png)   0 0 / 192px 48px no-repeat; animation: impact-4f .30s steps(4,end) 1 forwards; }
+.impact.mortar-impact   { width: 56px; height: 56px; background: url(../assets/runtime/sprites/buildings/mortar_impact.png)   0 0 / 224px 56px no-repeat; animation: impact-4f-56 .34s steps(4,end) 1 forwards; }
+.impact.grapeshot-impact{ width: 56px; height: 36px; background: url(../assets/runtime/sprites/buildings/grapeshot_impact.png) 0 0 / 224px 36px no-repeat; animation: impact-4f-56 .30s steps(4,end) 1 forwards; }
+.impact.palisade-impact { width: 44px; height: 36px; background: url(../assets/runtime/sprites/buildings/palisade_impact.png) 0 0 / 176px 36px no-repeat; animation: impact-4f-44 .30s steps(4,end) 1 forwards; }
+.impact.obelisk-impact  { background: url(../assets/runtime/sprites/buildings/obelisk_impact.png)  0 0 / 192px 48px no-repeat; animation: impact-4f .30s steps(4,end) 1 forwards; }
+.impact.beacon-impact   { background: url(../assets/runtime/sprites/buildings/beacon_impact.png)   0 0 / 192px 48px no-repeat; animation: impact-4f .30s steps(4,end) 1 forwards; }
+
+/* layer for dying tower ghost animations */
+.dying-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 8;
+}
+
+/* ── Hide SVG placeholder structures ────────────────────────────── */
+.map-structures { display: none; }
+
+/* ── Castle sprite (replaces SVG baseFort) ───────────────────────── */
+/* static: 139×120px | destroy sheet: 139×120px × 9 frames = 1251×120 */
+@keyframes castle-destroy {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-1251px); }
+}
+@keyframes castle-fadeout {
+  0%   { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.castle {
+  position: absolute;
+  left: 50%;
+  top: 75.7%;                    /* SVG baseFort bottom y=462/610 */
+  transform: translate(-50%, -100%);
+  width: 139px;
+  height: 120px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+.castle::before {
+  display: block; content: "";
+  position: absolute; left: 0; top: 0;
+  width: 139px; height: 120px;
+  background: url(../assets/runtime/sprites/buildings/castle_static.png) 0 0 / 139px 120px no-repeat;
+  will-change: transform;
+}
+.castle.is-destroyed::before {
+  width: 1251px;
+  background: url(../assets/runtime/sprites/buildings/castle_anim_destroy.png) 0 0 / 1251px 120px no-repeat;
+  animation: castle-destroy 2s steps(9, end) 1 forwards;
+}
+.castle.is-destroyed {
+  animation: castle-fadeout 2.5s ease-in 1 forwards;
+  animation-delay: 1.5s;
+}
+
+/* SVG crystal floating above castle */
+.castle-crystal {
+  position: absolute;
+  left: 50%;
+  top: 78%;
+  /* base transform lives in crystal-float keyframes */
+  width: 30px;
+  height: 35px;
+  pointer-events: none;
+  z-index: 8;
+  overflow: visible;
+}
+
+/* ── Spawn cave sprites (replace SVG spawnGates) ─────────────────── */
+/* idle frame: 53×72px sheet=318×72 | spawn frame: 52×72px sheet=312×72 */
+@keyframes cave-idle {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-318px); }
+}
+@keyframes cave-spawn {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-312px); }
+}
+
+.spawn-cave {
+  position: absolute;
+  top: 10%;                      /* SVG spawnGate center y=64/610 */
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+.spawn-cave--left  { left: calc(79 / 390 * 100%); }   /* SVG x=79  */
+.spawn-cave--right { left: calc(311 / 390 * 100%); }  /* SVG x=311 */
+
+.spawn-cave::before {
+  display: block; content: "";
+  position: absolute; left: 0; top: 0;
+  width: 72px; height: 72px;
+  background: url(../assets/runtime/sprites/buildings/spawn_cave_idle.png) 0 0 / 318px 72px no-repeat;
+  transform: translateX(0);
+  will-change: transform;
+  animation: cave-idle 3.6s steps(6, end) infinite;
+}
+.spawn-cave.is-spawning::before {
+  width: 72px;
+  background: url(../assets/runtime/sprites/buildings/spawn_cave_spawn.png) 0 0 / 312px 72px no-repeat;
+  animation: cave-spawn 0.9s steps(6, end) 1 forwards;
+}
+
+/* tint body per type */
+.tower.fire .tower-body::before  { background: linear-gradient(170deg, #b07840 0%, #6b4020 50%, #3a2010 100%); }
+.tower.ice .tower-body::before   { background: linear-gradient(170deg, #607848 0%, #3a5228 50%, #1e3018 100%); }
+.tower.storm .tower-body::before { background: linear-gradient(170deg, #8090a0 0%, #4a5560 50%, #262e36 100%); }
+.tower.void .tower-body::before  { background: linear-gradient(170deg, #604878 0%, #3a2848 50%, #1e1428 100%); }
+.tower.sun .tower-body::before   { background: linear-gradient(170deg, #907840 0%, #604820 50%, #382010 100%); }
+
+/* level 2 — more ornate */
+.tower.level-2 .tower-body::before {
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, .22),
+    inset -2px 0 0 rgba(0, 0, 0, .25),
+    inset 0 0 0 1px rgba(255, 216, 110, .14);
+}
+.tower.level-2::after { box-shadow: 0 0 20px currentColor, 0 0 40px currentColor, inset 0 0 0 3px rgba(255, 255, 255, .28); }
+
+.tower.damaged {
+  filter: drop-shadow(0 16px 14px rgba(0, 0, 0, .5)) saturate(.65) brightness(.75);
+}
+.tower.damaged .tower-body::before {
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, .08),
+    inset 8px -8px 0 rgba(53, 28, 20, .4);
+}
+.tower-ether {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  z-index: 5;
+  width: 16px;
+  height: 20px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.tower-crystal-svg {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 16px;
+  height: 20px;
+  transform: translateX(-50%);
+  overflow: visible;
+  transition: opacity 0.3s;
+}
+
+/* damaged (hp < 55%) — amber */
+.tower.damaged .tower-crystal-svg path:nth-of-type(1) { fill: #7a2a00; }
+.tower.damaged .tower-crystal-svg path:nth-of-type(2) { fill: #e06030; }
+
+/* being destroyed — red + fade */
+.tower.is-destroying .tower-crystal-svg path:nth-of-type(1) { fill: #6a0000; }
+.tower.is-destroying .tower-crystal-svg path:nth-of-type(2) { fill: #cc2010; }
+.tower.is-destroying .tower-ether { opacity: 0; transition: opacity 1s ease; }
+
+/* Per-tower horizontal alignment: sprite top-center measured from frame center */
+.tower.fire:not([data-spec]) .tower-ether                               { left: calc(50% - 3px); }
+.tower.fire[data-spec="infantry"]:not([data-subtype]) .tower-ether      { left: calc(50% + 5px); }
+.tower.fire[data-spec="infantry"][data-subtype="tracker"] .tower-ether  { left: calc(50% - 6px); }
+.tower.fire[data-spec="infantry"][data-subtype="assassin"] .tower-ether { left: calc(50% - 3px); }
+.tower.fire[data-spec="air"]:not([data-subtype]) .tower-ether           { left: calc(50% - 3px); }
+.tower.fire[data-spec="air"][data-subtype="scorpion"] .tower-ether      { left: calc(50% - 7px); }
+.tower.fire[data-spec="air"][data-subtype="hailstorm"] .tower-ether     { left: calc(50% + 4px); }
+.tower.fire[data-spec="siege"][data-subtype="mortar"] .tower-ether      { left: calc(50% + 4px); }
+.tower.sun .tower-ether                                                  { left: calc(50% - 4px); }
+.tower.ice .tower-ether                                                  { top: -24px; }
+.tower.storm .tower-ether                                                { left: calc(50% + 3px);  top: -24px; }
+
+.tower-ether-core {
+  display: none;
+}
+.tower.level-2::before { background: linear-gradient(180deg, #a8895a, #43312b); }
+.tower.level-2::after { box-shadow: 0 0 24px currentColor, inset 0 0 0 4px rgba(255, 255, 255, .28); }
+
+/* ── Enemy base — sprite-driven, size set by JS ──────────────────────── */
+.enemy {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+  border-radius: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  image-rendering: pixelated;
+  box-shadow: none;
+}
+
+/* Boss aura glow — keep visual indicator */
+.enemy.bossGround,
+.enemy.bossAir,
+.enemy.bossMachine,
+.enemy.miniBossGround {
+  filter: drop-shadow(0 0 6px rgba(255, 200, 80, .7));
+}
+
+/* Wraith semi-transparent */
+.enemy.wraith { opacity: .88; }
+
+/* Air enemies float slightly higher */
+.enemy.air,
+.enemy.bossAir { z-index: 9; }
+
+/* Hit flash */
+.enemy.hit {
+  filter: brightness(2.2) saturate(1.3);
+}
+.enemy.bossGround.hit,
+.enemy.bossAir.hit,
+.enemy.bossMachine.hit,
+.enemy.miniBossGround.hit {
+  filter: brightness(2.2) saturate(1.3) drop-shadow(0 0 8px rgba(255, 200, 80, .9));
+}
+
+.projectile {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 5px 1px currentColor;
+  z-index: 9;
+}
+
+.hero {
+  position: absolute;
+  left: var(--hero-x, 50%);
+  top: var(--hero-y, 58%);
+  width: 42px;
+  height: 48px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+.battlefield.hero-active .hero {
+  display: block;
+}
+
+.battlefield.hero-returning .hero-aura {
+  animation-duration: 2.4s;
+  opacity: .72;
+}
+
+.battlefield.hero-paladin .hero-body {
+  background: linear-gradient(180deg, #fff3a6, #d7a24a 58%, #5b4934);
+}
+
+.battlefield.hero-mage .hero-body {
+  background: linear-gradient(180deg, #d9f1ff, #64a8ff 58%, #37395d);
+}
+
+.battlefield.hero-hunter .hero-body {
+  background: linear-gradient(180deg, #d4ff9a, #5a9b4b 58%, #34492d);
+}
+
+.svg-label rect {
+  fill: rgba(10, 17, 16, .72);
+  stroke: rgba(255, 238, 196, .22);
+}
+
+.svg-label text {
+  fill: var(--ink);
+  font-size: 10px;
+  font-weight: 800;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.hero-aura {
+  position: absolute;
+  inset: 5px 1px 1px;
+  border-radius: 50%;
+  background: rgba(241, 189, 87, .16);
+  box-shadow: 0 0 22px rgba(241, 189, 87, .35);
+  animation: pulse 1.8s infinite;
+}
+
+.hero-body {
+  position: absolute;
+  left: 10px;
+  top: 4px;
+  width: 24px;
+  height: 38px;
+  border-radius: 12px 12px 8px 8px;
+  background: linear-gradient(180deg, #f8d276, #945d32 62%, #403040);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .18), 0 10px 12px rgba(0, 0, 0, .3);
+}
+
+.build-info {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: calc(76px + 10px + 10px + 6px);
+  z-index: 22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  pointer-events: none;
+  background: none;
+  border: none;
+  z-index: 55;
+}
+.build-info.hidden { display: none; }
+.build-info-name {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-right: 6px;
+  white-space: nowrap;
+}
+.build-info-icon { width: 18px; height: 18px; display: inline-block; image-rendering: pixelated; }
+.build-info-cost { font-size: 14px; font-weight: 800; color: var(--gold); font-variant-numeric: tabular-nums; }
+.build-info-detail { font-size: 11px; color: rgba(255,238,196,.65); margin-left: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.bottom-bar {
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: -18px;
+  z-index: 22;
+  padding: 8px 12px 22px;
+  border-radius: 18px 18px 28px 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.panel {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  padding: 0 7px 0 0;
+  margin-right: 7px;
+  border-right: 1px solid rgba(255, 238, 196, .12);
+}
+
+/* mode label hidden — context is clear from the buttons */
+.panel-copy {
+  display: none;
+}
+
+/* fixed width on both states so nothing shifts when switching */
+.tower-choices,
+.tower-actions {
+  width: 152px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: stretch;
+  align-self: stretch;
+}
+
+.tower-spec-row {
+  display: flex;
+  gap: 4px;
+}
+.tower-spec-row .tower-action-spec {
+  flex: 1;
+}
+.tower-action-spec {
+  height: 36px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 9px;
+  background: rgba(22,20,34,.92);
+  color: var(--ink);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background .12s, border-color .12s;
+}
+.tower-action-spec:hover {
+  background: rgba(36,33,52,.96);
+  border-color: rgba(255,238,196,.3);
+}
+.tower-action-spec.pending {
+  background: rgba(255,200,50,.15);
+  border-color: rgba(255,200,50,.5);
+  color: var(--gold);
+}
+.tower-action-sell-wide {
+  flex: 1;
+  border: 1px solid rgba(200,60,60,.18);
+  border-radius: 7px;
+  background: rgba(200,60,60,.1);
+  color: #ff8080;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  font: inherit;
+}
+.upgrade-dyn {
+  flex: 1; height: 36px; padding: 0 6px; border-radius: 9px; font-size: 10px;
+  background: rgba(255,200,50,.12); border: 1px solid rgba(255,200,50,.22); color: #ffd86e; cursor: pointer; font: inherit;
+}
+.sell-dyn {
+  flex: 1; padding: 0 6px; border-radius: 7px; font-size: 10px;
+  background: rgba(200,60,60,.1); border: 1px solid rgba(200,60,60,.18); color: #ff8080; cursor: pointer; font: inherit;
+}
+.tower-action-sell {
+  grid-column: 1 / -1;
+  height: 36px;
+  border: 1px solid rgba(200,60,60,.18);
+  border-radius: 9px;
+  background: rgba(200,60,60,.1);
+  color: #ff8080;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.tower-action-upgrade {
+  grid-column: 1 / -1;
+  height: 36px;
+  border: 1px solid rgba(255,200,50,.22);
+  border-radius: 9px;
+  background: rgba(255,200,50,.12);
+  color: #ffd86e;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tower-row {
+  display: flex;
+  gap: 4px;
+}
+
+.tower-choices button,
+.tower-actions button,
+.actionbar button {
+  border: 1px solid rgba(255, 255, 255, .1);
+  color: var(--ink);
+  background: rgba(22, 20, 34, .22);
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background .1s, border-color .1s;
+}
+
+.tower-slot-empty {
+  flex: 1;
+  height: 36px;
+  border: 1px dashed rgba(255, 238, 196, .12);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, .02);
+}
+
+.tower-slot-locked {
+  flex: 1;
+  height: 36px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(255, 238, 196, .2);
+  border-radius: 9px;
+  background: rgba(22, 20, 34, .7);
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color .12s, background .12s;
+}
+.tower-slot-locked.can-afford {
+  border-color: rgba(243, 188, 79, .45);
+  background: rgba(243, 188, 79, .06);
+}
+.tower-slot-locked:hover {
+  background: rgba(243, 188, 79, .1);
+  border-color: rgba(243, 188, 79, .6);
+}
+.tower-slot-locked .building-icon {
+  opacity: 0.28;
+}
+/* Lock icon — small padlock via unicode */
+.slot-lock-badge {
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  font-size: 8px;
+  line-height: 1;
+  pointer-events: none;
+  color: var(--muted);
+}
+.slot-lock-badge::before {
+  content: "🔒";
+}
+/* Cost label */
+.slot-lock-cost {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 7px;
+  font-weight: 800;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.tower-choices button {
+  flex: 1;
+  height: 36px;
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border-radius: 9px;
+}
+
+.tower-choices button:hover:not(.active) {
+  background: rgba(36, 33, 52, .96);
+  border-color: rgba(255, 255, 255, .18);
+}
+
+.tower-choices button.active {
+  color: #160c00;
+  background: linear-gradient(180deg, #ffe07a 0%, #dc9820 100%);
+  border-color: rgba(255, 210, 90, .7);
+  box-shadow: 0 0 14px rgba(240, 180, 40, .3), inset 0 1px 0 rgba(255, 255, 255, .3);
+}
+
+.tower-choices button.active .building-icon {
+  filter: drop-shadow(0 0 5px rgba(255,255,255,.7));
+}
+
+.tower-actions button {
+  flex: 1;
+  height: 36px;
+  padding: 0 6px;
+  border-radius: 9px;
+  font-size: 10px;
+}
+
+.tower-actions > button:first-child {
+  background: rgba(255, 200, 50, .12);
+  border-color: rgba(255, 200, 50, .22);
+  color: #ffd86e;
+}
+
+.tower-actions > button:last-child {
+  background: rgba(200, 60, 60, .1);
+  border-color: rgba(200, 60, 60, .18);
+  color: #ff8080;
+}
+
+.rune {
+  width: 11px;
+  height: 11px;
+  border-radius: 4px;
+  transform: rotate(45deg);
+  box-shadow: 0 0 11px currentColor;
+}
+
+.rune.fire   { color: #ffb23f; background: #ffb23f; }
+.rune.ice    { color: #7bc46c; background: #7bc46c; }
+.rune.storm  { color: #aab2bd; background: #aab2bd; }
+.rune.thorn  { color: #79d26b; background: #79d26b; }
+.rune.void   { color: #d58bff; background: #d58bff; }
+.rune.sun    { color: #ffe06b; background: #ffe06b; }
+
+.building-icon {
+  display: block;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  flex-shrink: 0;
+  image-rendering: pixelated;
+}
+.building-icon.thorn {
+  width: 24px; height: 27px;
+  background-image: url(../assets/runtime/sprites/buildings/palisade_idle.png);
+  background-size: 96px 27px;
+}
+.building-icon.void {
+  width: 24px; height: 27px;
+  background-image: url(../assets/runtime/sprites/buildings/obelisk_idle.png);
+  background-size: 96px 27px;
+}
+.building-icon.sun {
+  width: 24px; height: 27px;
+  background-image: url(../assets/runtime/sprites/buildings/beacon_idle.png);
+  background-size: 96px 27px;
+}
+.building-icon.fire {
+  /* content sits at y=22..63 of 64px frame — crop empty top, zoom to fill */
+  width: 25px; height: 29px;
+  background-image: url(../assets/runtime/sprites/buildings/watchtower_idle.png);
+  background-size: 165px 44px;
+  background-position: -4px -15px;
+}
+.building-icon.ice {
+  width: 22px; height: 29px;
+  background-image: url(../assets/runtime/sprites/buildings/sawmill_idle.png);
+  background-size: 133px 29px;
+}
+.building-icon.storm {
+  width: 26px; height: 29px;
+  background-image: url(../assets/runtime/sprites/buildings/quarry_idle.png);
+  background-size: 131px 29px;
+}
+
+.card-detail {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.4;
+  padding: 4px 0 2px;
+  border-top: 1px solid rgba(255,238,196,.1);
+  margin-top: 4px;
+}
+.card-detail.hidden { display: none; }
+.skill-list.hidden  { display: none; }
+
+.info-btn {
+  width: 22px; height: 22px;
+  border: 1px solid rgba(255,238,196,.2);
+  border-radius: 8px;
+  background: rgba(255,255,255,.06);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.info-btn.open {
+  background: rgba(255,238,196,.14);
+  color: var(--ink);
+}
+
+.price-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--gold);
+  background: rgba(255,200,50,.1);
+  border: 1px solid rgba(255,200,50,.2);
+  border-radius: 6px;
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ── Hero drawer ─────────────────────────────────────────────────── */
+.hero-drawer {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.hero-drawer.open {
+  display: flex;
+}
+
+/* Floating hero info popup — above bottom bar, like buildInfo */
+.hero-float {
+  position: absolute;
+  left: 8px;
+  bottom: calc(76px + 10px + 10px + 6px);
+  z-index: 56;
+  background: rgba(13,18,20,.97);
+  border: 1px solid rgba(255,238,196,.2);
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.6);
+  pointer-events: none;
+  min-width: 160px;
+  max-width: 220px;
+}
+.hero-float.hidden { display: none; }
+.hero-float strong { font-family: 'Marcellus SC', serif; font-size: 11px; font-weight: 400; color: var(--ink); letter-spacing: 0.3px; }
+.hero-float .hero-tip-race { font-family: Inter, sans-serif; font-size: 9px; color: var(--gold); text-shadow: var(--text-shadow-gold); }
+.hero-float li { font-family: Inter, sans-serif; }
+.hero-float ul { margin: 2px 0 0; padding: 0 0 0 12px; display: flex; flex-direction: column; gap: 3px; }
+.hero-float li { font-size: 9px; color: var(--muted); line-height: 1.35; }
+.hero-drawer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 62px;
+  flex-shrink: 0;
+  height: 58px;
+  border-radius: 9px;
+  border: 1px solid rgba(255,238,196,.14);
+  background: rgba(22,20,34,.22);
+  cursor: pointer;
+  padding: 4px 2px;
+  font: inherit;
+  transition: background .12s, border-color .12s;
+}
+.hero-drawer-card:hover { background: rgba(36,33,52,.38); border-color: rgba(255,238,196,.26); }
+.hero-drawer-card.selected { background: rgba(92,68,32,.56); border-color: rgba(255,216,110,.72); }
+.hero-drawer-card.locked { opacity: 0.5; cursor: default; }
+.hero-drawer-mark { font-size: 18px; color: var(--gold); line-height: 1; text-shadow: var(--text-shadow-gold); }
+.hero-drawer-name { font-family: 'Marcellus SC', serif; font-size: 8px; font-weight: 400; color: var(--ink); white-space: nowrap; letter-spacing: 0.3px; }
+.hero-drawer-cost { font-size: 8px; font-weight: 700; color: var(--muted); white-space: nowrap; }
+
+.hero-drawer-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.hero-drawer-tab {
+  width: 22px;
+  height: 14px;
+  border: 0;
+  background: rgba(255,238,196,.12);
+  border-radius: 5px 5px 0 0;
+  color: var(--muted);
+  font-size: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .12s, color .12s;
+  flex-shrink: 0;
+}
+.hero-drawer-tab.active,
+.hero-drawer-tab:hover { background: var(--gold); color: #160c00; }
+
+.hero-drawer-tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  background: rgba(13,18,20,.97);
+  border: 1px solid rgba(255,238,196,.2);
+  border-radius: 10px;
+  padding: 8px 10px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.6);
+}
+.hero-drawer-tooltip strong { font-size: 12px; color: var(--ink); }
+.hero-tip-race { font-size: 9px; color: var(--gold); }
+.hero-drawer-tooltip ul {
+  margin: 2px 0 0;
+  padding: 0 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.hero-drawer-tooltip li { font-size: 9px; color: var(--muted); line-height: 1.35; }
+
+.actionbar {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  bottom: 22px;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+}
+
+#startWave {
+  flex: 1;
+  height: auto;
+}
+
+#runeShopButton {
+  height: 36px;
+}
+
+.actionbar button {
+  height: 36px;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.actionbar .primary {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #160c00;
+  background: linear-gradient(180deg, #ffe07a 0%, #dc9820 100%);
+  border-color: rgba(255, 210, 90, .65);
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-shadow: none;
+  box-shadow: 0 4px 18px rgba(220, 152, 20, .45), inset 0 1px 0 rgba(255, 255, 255, .3);
+}
+
+.skill-icon {
+  display: block;
+  color: var(--gold);
+  font-size: 18px;
+  line-height: 1;
+  text-shadow: var(--text-shadow-gold);
+}
+
+/* hero button inside panel — small square */
+#heroSkill {
+  width: 44px;
+  height: 76px;          /* matches 2-row panel height */
+  flex-shrink: 0;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+}
+
+#heroSkill .skill-icon {
+  font-size: 13px;
+}
+
+.hud-hero-charge {
+  font-size: 24px !important;
+  font-weight: 800;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.hero-charge {
+  display: block;
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.2px;
+}
+
+#heroSkill.ready {
+  color: #0e1c08;
+  background: linear-gradient(180deg, #b8ff8d 0%, #52cc40 100%);
+  border-color: rgba(140, 240, 100, .65);
+  box-shadow: 0 4px 14px rgba(80, 200, 60, .4), inset 0 1px 0 rgba(255, 255, 255, .28);
+}
+
+#heroSkill.active {
+  color: #08101e;
+  background: linear-gradient(180deg, #9de1ff 0%, #2060e8 100%);
+  border-color: rgba(100, 190, 255, .65);
+  box-shadow: 0 4px 14px rgba(40, 120, 240, .4), inset 0 1px 0 rgba(255, 255, 255, .28);
+}
+
+#heroSkill.ready .skill-icon,
+#heroSkill.ready .hero-charge,
+#heroSkill.active .skill-icon,
+#heroSkill.active .hero-charge {
+  color: #0e1c08;
+}
+
+.sheet {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  align-items: end;
+  padding: 8px;
+  background: linear-gradient(180deg, transparent 24%, rgba(5, 8, 10, .62));
+}
+
+.sheet.hidden {
+  display: none;
+}
+
+.sheet-card {
+  max-height: 58%;
+  overflow: auto;
+  border: 1px solid rgba(255, 238, 196, .18);
+  border-radius: 18px;
+  background: rgba(13, 18, 20, .93);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 -18px 42px rgba(0, 0, 0, .4);
+}
+
+.sheet-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  background: rgba(13, 18, 20, .96);
+  border-bottom: 1px solid rgba(255, 238, 196, .12);
+}
+
+.sheet-head strong,
+.hero-card strong,
+.rune-card strong,
+.upgrade-card strong {
+  display: block;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+.sheet-head span,
+.hero-card span,
+.rune-card span,
+.upgrade-card span,
+.skill-list li {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+.sheet-head button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  background: rgba(35, 33, 47, .86);
+  font-size: 18px;
+}
+
+.sheet-body {
+  display: grid;
+  gap: 6px;
+  padding: 8px 10px 10px;
+}
+
+.hero-grid,
+.upgrade-grid {
+  display: grid;
+  gap: 6px;
+}
+
+.hero-card,
+.rune-card,
+.upgrade-card {
+  display: grid;
+  grid-template-columns: 34px 1fr auto auto;
+  gap: 7px;
+  align-items: center;
+  padding: 7px;
+  border: 1px solid rgba(255, 238, 196, .14);
+  border-radius: 12px;
+  background: rgba(35, 33, 47, .54);
+  text-align: left;
+}
+
+.hero-card.selected {
+  border-color: rgba(255, 216, 110, .72);
+  background: rgba(92, 68, 32, .56);
+}
+
+.hero-mark,
+.rune-mark,
+.upgrade-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .08);
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.hero-card button,
+.rune-card button,
+.upgrade-card button {
+  min-width: 46px;
+  height: 28px;
+  border: 1px solid rgba(255, 216, 110, .55);
+  border-radius: 10px;
+  color: #21170b;
+  background: linear-gradient(180deg, #ffdc7a, #df9b35);
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.hero-card button:disabled,
+.rune-card button:disabled,
+.upgrade-card button:disabled {
+  color: rgba(255, 240, 207, .48);
+  background: rgba(30, 30, 40, .72);
+  border-color: rgba(255, 238, 196, .12);
+}
+
+.skill-list {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rune-shop {
+  display: grid;
+  gap: 8px;
+}
+
+.game-over-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 0 4px;
+}
+
+.game-over-result {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 240, 207, .72);
+}
+
+.game-over-restart {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(255, 216, 110, .6);
+  border-radius: 12px;
+  color: #21170b;
+  background: linear-gradient(180deg, #ffdc7a, #df9b35);
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.flash {
+  position: absolute;
+  z-index: 11;
+  width: 118px;
+  height: 118px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 245, 187, .85), rgba(241, 189, 87, .25) 38%, transparent 72%);
+  animation: flash .45s ease-out forwards;
+  pointer-events: none;
+}
+
+.slow-field,
+.shield-field,
+.thorn-field {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 58%;
+  width: 210px;
+  height: 210px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(127, 201, 255, .22), transparent 68%);
+  animation: flash 1.2s ease-out forwards;
+  pointer-events: none;
+}
+
+.shield-field {
+  background: radial-gradient(circle, rgba(179, 255, 156, .34), rgba(88, 214, 112, .2) 42%, transparent 70%);
+}
+
+.thorn-field {
+  background: radial-gradient(circle, rgba(121, 210, 107, .28), rgba(255, 216, 110, .18) 42%, transparent 70%);
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.12); opacity: .65; }
+}
+
+@keyframes flash {
+  from { opacity: 1; transform: translate(-50%, -50%) scale(.55); }
+  to { opacity: 0; transform: translate(-50%, -50%) scale(1.35); }
+}
+
+@media (max-width: 380px), (max-height: 760px) {
+  .phone {
+    height: calc(100vh - 12px);
+    min-height: 0;
+    padding: 6px;
+    border-radius: 26px;
+  }
+
+  .battlefield {
+    border-radius: 22px;
+  }
+
+  .hud-left, .hud-right {
+    padding: 6px 9px;
+  }
+
+  .wave-chip {
+    display: none;
+  }
+
+  h1 {
+    font-size: 12px;
+  }
+
+  .tower-choices button {
+    width: 46px;
+    height: 32px;
+  }
+
+  .actionbar {
+    grid-template-columns: 38px 38px minmax(82px, 1fr);
+  }
+
+  .actionbar button {
+    height: 36px;
+  }
+}

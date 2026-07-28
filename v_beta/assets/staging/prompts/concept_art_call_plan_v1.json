@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "project": "Ether Frontier: Seven Circles of Iriy",
+  "model": "built-in ImageGen 2",
+  "source": "docs/03_art/world-concept-art-prompt-bible-v1.md",
+  "calls": [
+    {
+      "id": "C04_material_living_tabletop",
+      "gate": 1,
+      "aspect": "4:3",
+      "purpose": "Lock cardboard material, print and separate-layer language before world scenes."
+    },
+    {
+      "id": "C01_gameplay_seventh_circle",
+      "gate": 2,
+      "aspect": "16:9",
+      "purpose": "Lock overhead gameplay-board camera, path readability and object scale."
+    },
+    {
+      "id": "C02_key_art_road_to_iriy",
+      "gate": 3,
+      "aspect": "16:9",
+      "purpose": "Lock emotional world identity and narrative composition."
+    },
+    {
+      "id": "C03_faction_material_confrontation",
+      "gate": 4,
+      "aspect": "16:9",
+      "purpose": "Lock visual separation of Guardians, Lower Serpent cultures and Greys."
+    }
+  ],
+  "rule": "Do not begin atlas production until the user approves the concept direction and C04 material baseline."
+}

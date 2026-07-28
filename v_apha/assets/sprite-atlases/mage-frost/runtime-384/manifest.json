@@ -1,0 +1,85 @@
+{
+  "object": "mage-frost",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "normalization": "locked 255px intact building extent; centered 384px safety cell",
+  "actions": {
+    "idle": {
+      "file": "mage-frost-idle-384-alpha.png",
+      "frames": 5,
+      "durationMs": 180,
+      "loop": true
+    },
+    "destroy": {
+      "file": "mage-frost-destroy-384-alpha.png",
+      "frames": 5,
+      "durationMs": 130,
+      "loop": false,
+      "holdLast": true
+    },
+    "attack": {
+      "file": "mage-frost-attack-384-alpha.png",
+      "frames": 4,
+      "durationMs": 90,
+      "loop": false
+    },
+    "projectile": {
+      "file": "mage-frost-projectile-384-alpha.png",
+      "extent": 104
+    },
+    "impact": {
+      "file": "mage-frost-impact-384-alpha.png",
+      "extent": 148
+    }
+  },
+  "qa": {
+    "idle": {
+      "extents": [
+        255,
+        256,
+        256,
+        256,
+        256
+      ],
+      "clippedFrames": []
+    },
+    "destroy": {
+      "extents": [
+        255,
+        254,
+        251,
+        243,
+        222
+      ],
+      "clippedFrames": []
+    },
+    "attack": {
+      "extents": [
+        257,
+        257,
+        257,
+        257
+      ],
+      "clippedFrames": []
+    },
+    "projectile": {
+      "extents": [
+        104
+      ],
+      "clippedFrames": []
+    },
+    "impact": {
+      "extents": [
+        148
+      ],
+      "clippedFrames": []
+    }
+  }
+}

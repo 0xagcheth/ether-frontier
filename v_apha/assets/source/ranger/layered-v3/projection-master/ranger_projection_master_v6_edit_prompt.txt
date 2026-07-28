@@ -1,0 +1,58 @@
+Input Image 1 is the EDIT TARGET: Garrison Ranger v5.
+Input Image 2 is the STYLE/SCALE REFERENCE ONLY: approved Watchtower v5.
+
+Edit only Image 1 into a mechanically coherent compact Ranger tower.
+
+Preserve:
+- exact true top-down orientation;
+- central rapid crossbow with its rotation pivot at the exact geometric center;
+- compact octagonal tower identity;
+- hunter-green Ranger accents;
+- physical bolt ammunition logic;
+- flat #ff00ff chroma-key background.
+
+Correct the ammunition system:
+
+1. Completely remove the huge upper-left fan of long arrows and its curved rack.
+2. Remove the current mismatched right-side magazine.
+3. Add two compact matching bolt cassettes, one at upper-left and one at
+   upper-right, placed symmetrically around the central weapon.
+4. Each cassette contains the same type of SHORT physical crossbow bolts:
+   identical length, identical green fletching and identical orientation.
+5. Show only four or five bolts per cassette. No long arrows.
+6. Add two simple narrow cardboard feed rails running from the inner edge of
+   each cassette toward the central crossbow loading channel.
+7. The feed rails stop before the weapon pivot and must not prevent rotation.
+
+Correct the weapon:
+
+- keep the weapon exactly centered;
+- make its bolt guide and loading channel clearly readable;
+- mount a small green-amber hunting optic directly on the weapon guide rail;
+- the optic must rotate with the weapon and must not look like a standalone
+  central crystal;
+- keep the crossbow compact and subordinate to the tower body.
+
+Correct the tower body:
+
+- visually reduce the large empty wooden deck by enlarging the compact central
+  reinforced core and moving the two cassettes inward;
+- keep a dense defensive-tower silhouette rather than an open platform;
+- retain a compact octagonal footprint, but make it comparable in visual scale
+  and density to Watchtower v5;
+- no humans, firing seats, character pods or humanoid visual language.
+
+Match Image 2's brighter handmade style:
+- lighter warm cardboard;
+- chunkier child-cut shapes;
+- restrained crayon texture;
+- thick uneven ink outlines;
+- visible corrugated tan edges;
+- small local shadows only between glued layers;
+- slightly cartoon-like, not dark photorealistic.
+
+Do not copy Watchtower's circular body, red flag, lantern or simple weapon.
+
+No gun, cannon, shells, muzzle flame, smoke, energy beam, terrain, labels, text,
+facade, side view, isometric perspective, glossy 3D or plastic. Keep a perfectly
+flat uniform #ff00ff background with no gradient, shadow or texture.

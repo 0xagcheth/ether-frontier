@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ether Frontier - Demo</title>
+    <link rel="stylesheet" href="./styles.css?v=35" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="phone" aria-label="Ether Frontier Demo">
+        <section class="battlefield" aria-label="Battlefield">
+          <div class="map-scene">
+          <svg class="map" viewBox="0 0 390 610" preserveAspectRatio="none" role="img" aria-label="Level map">
+            <defs>
+              <linearGradient id="grass" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#0f3a25" />
+                <stop offset="56%" stop-color="#1d572d" />
+                <stop offset="100%" stop-color="#536026" />
+              </linearGradient>
+              <filter id="mapShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#06120d" flood-opacity=".55" />
+              </filter>
+              <filter id="roadTexture" x="0" y="0" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.65 0.45" numOctaves="3" seed="8" result="noise"/>
+                <feColorMatrix type="saturate" values="0" in="noise" result="grey"/>
+                <feBlend in="SourceGraphic" in2="grey" mode="multiply" result="blend"/>
+                <feComponentTransfer in="blend">
+                  <feFuncA type="linear" slope="1"/>
+                </feComponentTransfer>
+              </filter>
+              <g id="arrowDown">
+                <path d="M0 -13 L0 9 M-8 2 L0 10 L8 2" fill="none" stroke="#c8a460" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".55" />
+              </g>
+              <g id="arrowRight">
+                <path d="M-13 0 L9 0 M2 -8 L10 0 L2 8" fill="none" stroke="#c8a460" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".55" />
+              </g>
+              <g id="arrowLeft">
+                <path d="M13 0 L-9 0 M-2 -8 L-10 0 L-2 8" fill="none" stroke="#c8a460" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".55" />
+              </g>
+              <g id="arrowUp">
+                <path d="M0 13 L0 -9 M-8 -2 L0 -10 L8 -2" fill="none" stroke="#c8a460" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".55" />
+              </g>
+              <g id="spawnGate">
+                <rect x="-34" y="-18" width="68" height="38" rx="5" fill="#56604e" />
+                <rect x="-26" y="-12" width="52" height="28" rx="3" fill="#8a6434" />
+                <circle cx="-22" cy="-3" r="4" fill="#66b8ff" />
+                <circle cx="22" cy="-3" r="4" fill="#66b8ff" />
+                <path d="M-20 8 L20 8" stroke="#3c2815" stroke-width="4" stroke-linecap="round" />
+              </g>
+              <g id="baseFort">
+                <rect x="-40" y="-32" width="80" height="64" rx="8" fill="#5b6868" />
+                <rect x="-28" y="-18" width="56" height="18" rx="3" fill="#748282" />
+                <path d="M-13 32 L-13 8 Q0 -8 13 8 L13 32 Z" fill="#11191d" />
+                <path class="base-ether-shell" d="M0 -48 L19 -28 L0 -8 L-19 -28 Z" />
+                <path class="base-ether-core" d="M0 -42 L10 -28 L0 -14 L-10 -28 Z" opacity=".75" />
+              </g>
+            </defs>
+            <rect width="390" height="610" rx="26" fill="url(#grass)" class="map-bg-rect" />
+            <g class="road-main" filter="url(#mapShadow)">
+              <g class="road-shadow">
+                <rect x="59" y="64" width="40" height="194" />
+                <rect x="291" y="64" width="40" height="194" />
+                <rect x="60" y="215" width="270" height="40" />
+                <rect x="175" y="222" width="40" height="126" />
+                <rect x="32" y="317" width="326" height="40" />
+                <rect x="31" y="318" width="40" height="228" />
+                <rect x="319" y="318" width="40" height="228" />
+                <rect x="32" y="503" width="326" height="40" />
+                <rect x="175" y="458" width="40" height="88" />
+              </g>
+              <g class="road-fill">
+                <rect x="68" y="64" width="22" height="185" />
+                <rect x="300" y="64" width="22" height="185" />
+                <rect x="68" y="224" width="254" height="22" />
+                <rect x="184" y="231" width="22" height="108" />
+                <rect x="40" y="326" width="310" height="22" />
+                <rect x="40" y="326" width="22" height="208" />
+                <rect x="328" y="326" width="22" height="208" />
+                <rect x="40" y="512" width="310" height="22" />
+                <rect x="184" y="467" width="22" height="70" />
+              </g>
+            </g>
+
+            <g class="map-structures" filter="url(#mapShadow)">
+              <use href="#spawnGate" x="79" y="84" />
+              <use href="#spawnGate" x="311" y="84" />
+              <use href="#baseFort" x="195" y="430" />
+            </g>
+          </svg>
+
+          <div id="castleSprite" class="castle" aria-hidden="true"></div>
+          <svg id="castleCrystal" class="castle-crystal" viewBox="-22 -54 44 52" aria-hidden="true">
+            <defs>
+              <!-- Shadow face — deep navy -->
+              <linearGradient id="cryDark" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%"   stop-color="#1535b8"/>
+                <stop offset="100%" stop-color="#04081e"/>
+              </linearGradient>
+              <!-- Light face — cool reflection -->
+              <linearGradient id="cryBright" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%"   stop-color="#c8e8ff"/>
+                <stop offset="100%" stop-color="#2858c8"/>
+              </linearGradient>
+              <!-- Warm arcane inner glow -->
+              <radialGradient id="cryWarm" cx="45%" cy="40%" r="52%">
+                <stop offset="0%"   stop-color="#f3bc4f"/>
+                <stop offset="42%"  stop-color="#c05818" stop-opacity=".5"/>
+                <stop offset="100%" stop-color="#04081e"  stop-opacity="0"/>
+              </radialGradient>
+              <!-- Outer diffuse glow -->
+              <filter id="cryGlow" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <!-- Inner bloom for warm core -->
+              <filter id="cryBloom" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- Main two-face gem shape with outer glow -->
+            <g class="crystal-facets">
+              <path d="M0,-51 L-18,-27 L0,-4 Z" fill="url(#cryDark)"/>
+              <path d="M0,-51 L18,-27  L0,-4 Z" fill="url(#cryBright)"/>
+            </g>
+            <!-- Upper sub-facets — adds depth/dimension -->
+            <path d="M0,-51 L-9,-35 L0,-39 Z" fill="#1d3898" opacity=".55"/>
+            <path d="M0,-51 L9,-35  L0,-39 Z" fill="white"   opacity=".14"/>
+            <!-- Outer gem edge -->
+            <path d="M0,-51 L18,-27 L0,-4 L-18,-27 Z" fill="none" stroke="rgba(170,215,255,.42)" stroke-width="0.9" stroke-linejoin="round"/>
+            <!-- Equator facet seam -->
+            <line x1="-18" y1="-27" x2="18" y2="-27" stroke="rgba(200,230,255,.2)" stroke-width="0.7"/>
+            <!-- Gold tip — medieval jewel accent -->
+            <path d="M0,-51 L2.5,-43 L0,-47 L-2.5,-43 Z" fill="#f3bc4f" opacity=".9" class="crystal-sparkle"/>
+            <!-- Side reflection shimmer -->
+            <path d="M4,-46 L10,-30 L7,-40 Z" fill="white" opacity=".11"/>
+          </svg>
+          <div id="spawnCave0" class="spawn-cave spawn-cave--left" aria-hidden="true"></div>
+          <div id="spawnCave1" class="spawn-cave spawn-cave--right" aria-hidden="true"></div>
+
+          <div id="waveAnnounce" class="wave-announce" aria-live="assertive"></div>
+          <div id="gridLayer" class="grid-layer" aria-label="Build grid"></div>
+          <div id="towerLayer" class="tower-layer" aria-hidden="true"></div>
+          <div id="dyingLayer" class="dying-layer" aria-hidden="true"></div>
+          <div id="enemyLayer" class="enemy-layer" aria-hidden="true"></div>
+          <button id="baseHotspot" class="base-hotspot" type="button" aria-label="Base and heroes"></button>
+
+          <div class="hero">
+            <span class="hero-aura"></span>
+            <span class="hero-body"></span>
+          </div>
+          </div><!-- /.map-scene -->
+
+          <div class="hud-left map-ui">
+            <div class="hud-chip economy-chip">
+              <div class="res-item">
+                <span class="res-icon atlas-res-gold" role="img" aria-label="Gold"></span>
+                <b id="gold">180</b>
+              </div>
+              <div class="res-item">
+                <span class="res-icon atlas-res-wood" role="img" aria-label="Wood"></span>
+                <b id="wood">120</b>
+              </div>
+              <div class="res-item">
+                <span class="res-icon atlas-res-stone" role="img" aria-label="Stone"></span>
+                <b id="stone">120</b>
+              </div>
+            </div>
+          </div>
+          <div class="hud-right map-ui">
+            <div class="hud-right-top">
+              <div class="hud-chip hero-chip">
+                <span class="hero-chip-icon">⬢</span>
+                <span id="heroCharge" class="hero-charge hud-hero-charge">0/24</span>
+              </div>
+              <b id="wave" style="display:none">1</b>
+            </div>
+            <div class="speed-controls" aria-label="Game speed">
+              <button id="speedButton" class="round-button" type="button" aria-label="Increase speed">x1</button>
+              <button id="speedResetButton" class="round-button reset-speed" type="button" aria-label="Reset speed to x1">x1</button>
+            </div>
+          </div>
+
+          <div id="buildInfo" class="build-info hidden"></div>
+          <div id="heroFloat" class="hero-float hidden"></div>
+          <div class="bottom-bar map-ui">
+            <section id="panel" class="panel">
+              <button id="heroSkill" type="button" aria-label="Seal">
+                <span class="skill-icon">⬢</span>
+              </button>
+              <div id="heroDrawer" class="hero-drawer"></div>
+              <div class="panel-copy">
+                <strong id="panelTitle">Build Mode</strong>
+                <span id="panelText">Choose a building and a cell.</span>
+              </div>
+              <div id="towerChoices" class="tower-choices">
+                <button type="button" data-type="fire" aria-label="Watchtower"><i class="building-icon fire"></i></button>
+                <button type="button" data-type="ice" aria-label="Sawmill"><i class="building-icon ice"></i></button>
+                <button type="button" data-type="storm" aria-label="Quarry"><i class="building-icon storm"></i></button>
+              </div>
+              <div id="towerActions" class="tower-actions hidden">
+                <button id="upgradeButton" type="button">Upgrade</button>
+                <button id="sellButton" type="button">Sell</button>
+              </div>
+            </section>
+
+            <nav class="actionbar" aria-label="Actions">
+              <button id="startWave" class="primary" type="button">Start</button>
+            </nav>
+          </div>
+
+          <section id="sheet" class="sheet hidden" aria-live="polite">
+            <div class="sheet-card">
+              <div class="sheet-head">
+                <div>
+                  <strong id="sheetTitle">Base</strong>
+                  <span id="sheetSubtitle">Heroes and buildings</span>
+                </div>
+                <button id="closeSheet" type="button" aria-label="Close">×</button>
+              </div>
+              <div id="sheetBody" class="sheet-body"></div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+    <script src="../assets/runtime/atlases/game_atlas.js?v=1"></script>
+    <script src="../assets/runtime/atlases/buildings/building_atlases.js?v=1"></script>
+    <script src="./game.js?v=29"></script>
+  </body>
+</html>

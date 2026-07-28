@@ -1,0 +1,46 @@
+{
+  "assetId": "ranger_rg00_projection_master_v1",
+  "stage": "RG-00 projection master",
+  "generator": {
+    "mode": "OpenAI Image API CLI",
+    "model": "gpt-image-2",
+    "size": "1024x1024",
+    "quality": "medium",
+    "generationType": "from-scratch"
+  },
+  "files": {
+    "contract": "../../../docs/05_assets/contracts/ranger-object-contract-v1.md",
+    "prompt": "../../source/ranger/rg-00-projection-master/ranger_rg00_prompt_v1.txt",
+    "chromaSource": "../../source/ranger/rg-00-projection-master/ranger_rg00_projection_master_v1_chroma.png",
+    "alphaPreview": "../../source/ranger/rg-00-projection-master/ranger_rg00_projection_master_v1_alpha.png"
+  },
+  "technicalValidation": {
+    "dimensions": [1024, 1024],
+    "alphaMode": "RGBA",
+    "transparentCorners": true,
+    "alphaBounds": [26, 22, 1003, 993],
+    "alphaFileBytes": 1766287,
+    "underFiveMegabytes": true,
+    "clipping": false,
+    "minimumCanvasMarginPx": 21
+  },
+  "visualValidation": {
+    "trueTopDownPlanRead": true,
+    "objectOwnedBodyDistinctFromWatchtower": true,
+    "rapidTwinRailCrossbowReadable": true,
+    "fletchedBoltRackReadable": true,
+    "boltMagazineReadable": true,
+    "huntingOpticsReadable": true,
+    "staffedPositionMarkersReadable": true,
+    "hunterGreenIdentity": true,
+    "noRedWatchtowerPennant": true,
+    "noWatchtowerLamp": true,
+    "noLabelsOrGrid": true,
+    "notes": [
+      "Small exposed cardboard thickness is visible at the rim, but the dominant read is direct overhead.",
+      "Master is intentionally detailed; production modules will be regenerated separately with chunky isolated silhouettes.",
+      "Awaiting human approval before RG-01 module generation."
+    ]
+  },
+  "status": "awaiting_user_approval"
+}

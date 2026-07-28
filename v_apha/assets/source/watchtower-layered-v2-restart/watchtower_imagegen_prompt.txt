@@ -1,0 +1,29 @@
+Use case: stylized-concept
+Asset type: production layered sprite source sheet for Ether Frontier, a 2D top-down tower-defense game
+
+Scene/backdrop:
+Perfectly flat solid #ff00ff chroma-key background. The background is one uniform color with no shadows, gradients, texture, reflections, floor plane, or lighting variation. No labels, text, numbers, UI, or watermark.
+
+Primary request:
+Create one high-quality source sheet for a Watchtower object, decomposed into separate modular components for runtime composition. Arrange all parts with generous empty magenta spacing, fully visible, isolated, not touching, and not cropped.
+
+Required separated components:
+- One base_stone_token: static circular low stone-and-cardboard platform only, locked footprint, no weapon, flag, or lantern.
+- One central_socket: separate round wood-and-dark-metal rotation hub.
+- One crossbow_rotatable: complete standalone lightweight top-down crossbow, horizontally oriented, visually centered at its axle rotation pivot.
+- One flag_pole: separate short pole and round mount.
+- Four separate flag_cloth_wind frames: dark red torn cloth, coherent four-frame wind motion, same scale, no symbols or text.
+- One lantern_body: separate compact top-down casing.
+- Four separate lantern_flame frames: small amber paper-cut flame/glow shapes, coherent loop, isolated from casing.
+- Four separate muzzle_flash frames: compact golden paper-cut attack flashes, coherent one-shot sequence.
+- One projectile_bolt: simple standalone wooden crossbow bolt, top-down, horizontal.
+- At least eight separate destroy_debris pieces: individual grey stone chunks, warm wood splinters, tan cardboard fragments, plus two small dark-metal crossbow fragments; every piece independent and separated.
+
+Style/medium:
+True 90-degree top-down orthographic cardboard tabletop board-game art. Flat layered paper/cardboard tokens, matte paper grain, visible tan exposed cardboard cut edges, muted grey stone, warm brown wood, dark red fabric, amber glow, thick hand-painted dark ink outlines. Readable compact silhouettes suitable for a 2D game sprite atlas.
+
+Constraints:
+Every component fully visible and separated. Crisp cutout edges against #ff00ff. Do not use #ff00ff anywhere in components. No baked terrain, cast shadow, contact shadow, reflection, or assembled whole-tower preview. Keep the base footprint stable and the weapon mechanically distinct.
+
+Avoid:
+No facade, side view, rear view, tall tower, height perspective, isometric camera, cinematic angle, glossy 3D render, plastic, metal-heavy realism, merged animation strip, labels, grid, text, watermark.

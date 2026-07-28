@@ -1,0 +1,85 @@
+{
+  "object": "pal-reliquary",
+  "format": "RGBA PNG",
+  "frameSize": [
+    384,
+    384
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "normalization": "locked 255px intact building extent; centered 384px safety cell",
+  "actions": {
+    "idle": {
+      "file": "pal-reliquary-idle-384-alpha.png",
+      "frames": 5,
+      "durationMs": 180,
+      "loop": true
+    },
+    "destroy": {
+      "file": "pal-reliquary-destroy-384-alpha.png",
+      "frames": 5,
+      "durationMs": 130,
+      "loop": false,
+      "holdLast": true
+    },
+    "attack": {
+      "file": "pal-reliquary-attack-384-alpha.png",
+      "frames": 4,
+      "durationMs": 90,
+      "loop": false
+    },
+    "projectile": {
+      "file": "pal-reliquary-projectile-384-alpha.png",
+      "extent": 112
+    },
+    "impact": {
+      "file": "pal-reliquary-impact-384-alpha.png",
+      "extent": 152
+    }
+  },
+  "qa": {
+    "idle": {
+      "extents": [
+        255,
+        254,
+        254,
+        254,
+        254
+      ],
+      "clippedFrames": []
+    },
+    "destroy": {
+      "extents": [
+        255,
+        255,
+        227,
+        227,
+        227
+      ],
+      "clippedFrames": []
+    },
+    "attack": {
+      "extents": [
+        255,
+        256,
+        295,
+        255
+      ],
+      "clippedFrames": []
+    },
+    "projectile": {
+      "extents": [
+        112
+      ],
+      "clippedFrames": []
+    },
+    "impact": {
+      "extents": [
+        152
+      ],
+      "clippedFrames": []
+    }
+  }
+}

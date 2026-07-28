@@ -1,0 +1,37 @@
+{
+  "job": "WT-00",
+  "object": "watchtower",
+  "candidate": "v1",
+  "status": "awaiting_user_visual_approval",
+  "generationMode": "built-in-imagegen",
+  "sourceChroma": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v1_chroma.png",
+  "sourceAlpha": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v1_alpha.png",
+  "prompt": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_prompt_v1.txt",
+  "canvasPx": [1254, 1254],
+  "contentBboxPx": [32, 75, 1169, 1108],
+  "contentSizePx": [1137, 1033],
+  "alphaQa": {
+    "transparentCorners": true,
+    "opaquePixels": 882275,
+    "partiallyTransparentPixels": 4663,
+    "transparentPixels": 685578,
+    "alphaFileBytes": 2081654
+  },
+  "automatedChecks": {
+    "oneAssembledObjectOnly": true,
+    "noLabelsOrGrid": true,
+    "noAnimationFrames": true,
+    "noProjectileImpactOrDebris": true,
+    "noClipping": true,
+    "chromaRemoved": true
+  },
+  "visualChecks": {
+    "trueTopDownCircularBase": "pass",
+    "topViewCrossbow": "pass",
+    "radialFlatPennant": "pass",
+    "topViewLantern": "pass",
+    "separateCardboardConstruction": "pass",
+    "watchtowerIdentity": "needs_user_confirmation"
+  },
+  "nextAuthorizedJobAfterApproval": "WT-01"
+}

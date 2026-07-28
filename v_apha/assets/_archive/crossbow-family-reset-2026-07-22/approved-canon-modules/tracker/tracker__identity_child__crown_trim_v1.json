@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "module": "tracker__identity_child__crown_trim",
+  "object": "tracker",
+  "family": "fortress_ranged",
+  "slot": "identity_child",
+  "image": "tracker__identity_child__crown_trim_v1_alpha.png",
+  "sourceImage": "tracker__identity_child__crown_trim_v1_chroma.png",
+  "sizePx": [
+    792,
+    698
+  ],
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 792,
+    "h": 698
+  },
+  "pivotPx": [
+    396,
+    349
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "projection": "true_top_down_orthographic_90deg",
+  "runtimeScale": {
+    "scaleToBaseFootprint": 0.105
+  },
+  "attachments": {
+    "parent": {
+      "module": "fortress_ranged__base_token__round_light",
+      "anchor": "object_center",
+      "positionNormalized": [
+        0.79,
+        0.79
+      ],
+      "inheritRotation": false
+    }
+  },
+  "drawOrder": 16,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "magentaSpillPixels": 0,
+    "alphaBytes": 885252,
+    "under5MB": true,
+    "status": "canon",
+    "weaponOverlapPixelsByAngle": {
+      "0": 0,
+      "90": 0,
+      "180": 0,
+      "270": 0
+    },
+    "clearancePass": true
+  }
+}

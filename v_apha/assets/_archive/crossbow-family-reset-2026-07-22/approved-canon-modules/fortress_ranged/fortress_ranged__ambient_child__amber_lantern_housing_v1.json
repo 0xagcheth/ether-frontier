@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "module": "fortress_ranged__ambient_child__amber_lantern_housing",
+  "family": "fortress_ranged",
+  "slot": "ambient_child",
+  "image": "fortress_ranged__ambient_child__amber_lantern_housing_v1_alpha.png",
+  "sourceImage": "fortress_ranged__ambient_child__amber_lantern_housing_v1_chroma.png",
+  "sizePx": [
+    1070,
+    1067
+  ],
+  "pivotPx": [
+    535,
+    533
+  ],
+  "pivot": [
+    0.5,
+    0.499531
+  ],
+  "projection": "true_top_down_orthographic_90deg",
+  "sharedBy": [
+    "watchtower",
+    "ranger",
+    "tracker"
+  ],
+  "attachments": {
+    "parent": {
+      "slot": "base_token",
+      "positionNormalized": [
+        0.29,
+        0.72
+      ],
+      "scaleToParentFootprint": 0.18,
+      "rotationDeg": 0
+    },
+    "glow_anchor": {
+      "positionNormalized": [
+        0.5,
+        0.5
+      ],
+      "inheritRotation": true
+    }
+  },
+  "drawOrder": 20,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "centralApertureTransparent": true,
+    "status": "canon"
+  }
+}

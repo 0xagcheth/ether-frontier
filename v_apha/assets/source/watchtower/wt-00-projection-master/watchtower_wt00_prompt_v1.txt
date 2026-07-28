@@ -1,0 +1,28 @@
+Use case: stylized-concept
+Asset type: WT-00 assembled projection master for Ether Frontier layered game object
+
+Scene/backdrop:
+One single object centered on a perfectly flat uniform solid #ff00ff chroma-key background. No floor, cast shadow, contact shadow, gradient, texture, reflection, labels, grid, text, numbers, UI, or watermark. Generous clean padding around the object.
+
+Primary request:
+Create exactly one assembled Watchtower / Warden's Post cardboard tabletop token. It is a compact low circular lookout emplacement seen from directly overhead, designed as the approved visual master from which separate runtime cardboard modules will later be generated.
+
+Exact camera and geometry:
+Strict mathematical 90-degree top-down orthographic plan view. The circular base must be a true circle, never an ellipse. Every component lies parallel to the tabletop in the same XY plane. Show top surfaces only with a very thin exposed cardboard cut edge. Absolutely no visible facade, front wall, side face, elevation, rear, horizon, upright miniature prop, height perspective, or isometric angle.
+
+Assembled design:
+- Compact circular broken-ring parapet made from large muted cold-grey printed stone-cardboard segments, with a warm brown timber-cardboard center deck.
+- Small round wood-and-dark-bronze cardboard bearing exactly at the center.
+- One lightweight simple crossbow as a complete flat plan-view cardboard cutout centered on that bearing, pointing toward the right. Its bow limbs, stock, string and axle are all viewed exactly from above. It is modest and improvised, not a heavy ballista.
+- At the lower-left edge, one small circular range-pennant mounting puck with a short radial arm. A small dark-red triangular/torn cloth cardboard marker lies FLAT on the tabletop plane and extends radially outward from the puck. There is NO upright pole and NO side-view hanging flag.
+- At the lower-right edge, one shallow octagonal lantern housing seen exactly from above, with a small concentric amber printed-paper core inside. There is NO side-view lantern and NO teardrop flame.
+- The three identity shapes must remain readable: circular stone post, thin simple crossbow, two small asymmetric red/amber edge stations.
+
+Physical construction and style:
+Every visible component must clearly read as a separate physical die-cut cardboard piece: matte printed paper faces, visible tan cardboard cut edges, shallow stacked-card separation, broad simplified printed material shapes, dark local-color hand-inked edges. Flat handcrafted fantasy board-game token, clean iconic readable silhouette. Muted cold-grey stone, warm brown wood, restrained dark bronze, dark Warden red, small warm amber accent.
+
+Composition:
+Exactly one assembled Watchtower, large and centered, occupying about 70% of a square image. No separated parts, no variants, no animation frames, no projectile, no impact, no debris, no assembled comparison, no labels or grid.
+
+Avoid:
+No upright flagpole. No side-view flag. No side-view lantern. No flame icon. No tall tower. No roofed hut. No door or stairs. No facade. No isometric ellipse. No 3/4 view. No cinematic angle. No glossy 3D, plastic, realistic stone, realistic metal, photorealism, dramatic lighting, deep shadows, terrain, generic interchangeable turret base, staff, arrow rack, optics ring, crown, shroud, heavy ballista, cannon, ritual runes, magic crystal.

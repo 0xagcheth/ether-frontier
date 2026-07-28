@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "module": "tracker__aim_child__scan_optics_ring",
+  "object": "tracker",
+  "family": "fortress_ranged",
+  "slot": "aim_child",
+  "image": "tracker__aim_child__scan_optics_ring_v1_alpha.png",
+  "sourceImage": "tracker__aim_child__scan_optics_ring_v1_chroma.png",
+  "sizePx": [
+    702,
+    701
+  ],
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 702,
+    "h": 701
+  },
+  "pivotPx": [
+    351,
+    350
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "projection": "true_top_down_orthographic_90deg",
+  "runtimeScale": {
+    "widthToParentWeapon": 0.25
+  },
+  "attachments": {
+    "parent": {
+      "module": "tracker__active_primary__long_range_crossbow",
+      "anchor": "scan_ring_socket",
+      "inheritRotation": true,
+      "rotation": "aimAngle + scanAngle"
+    }
+  },
+  "animation": {
+    "id": "scan",
+    "type": "continuous_rotation",
+    "degreesPerSecond": 42,
+    "loop": true
+  },
+  "drawOrder": 32,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "openCenter": true,
+    "centerAlpha": 0,
+    "magentaSpillPixels": 0,
+    "alphaBytes": 655472,
+    "under5MB": true,
+    "status": "canon"
+  }
+}

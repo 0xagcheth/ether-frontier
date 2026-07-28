@@ -1,0 +1,27 @@
+{
+  "object": "ranger",
+  "version": 4,
+  "status": "visual_candidate",
+  "editTarget": "../../source/ranger/layered-v3/projection-master/ranger_projection_master_v3_chroma.png",
+  "styleReference": "../../source/watchtower/wt-00-projection-master/watchtower_wt00_projection_master_v5_chroma.png",
+  "sourceChroma": "../../source/ranger/layered-v3/projection-master/ranger_projection_master_v4_chroma.png",
+  "sourceAlpha": "../../source/ranger/layered-v3/projection-master/ranger_projection_master_v4_alpha.png",
+  "changes": [
+    "removed_both_human_figures",
+    "preserved_empty_octagonal_firing_stations",
+    "added_low_weapon_rest_brackets",
+    "matched_watchtower_v5_cardboard_language"
+  ],
+  "qa": {
+    "humanoidFiguresPresent": false,
+    "towerFootprintReadable": true,
+    "rangerIdentityReadable": true,
+    "watchtowerV5UsedAsImageReference": true,
+    "watchtowerObjectModulesCopied": false,
+    "physicalBoltLogic": true,
+    "noClipping": true,
+    "chromaRemoved": true,
+    "readyForUserApproval": true,
+    "readyForDecomposition": false
+  }
+}

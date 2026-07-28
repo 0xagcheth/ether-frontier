@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "module": "watchtower__ambient_child__range_pennant_wind",
+  "object": "watchtower",
+  "slot": "ambient_child",
+  "sourceImage": "watchtower__ambient_child__range_pennant_wind_loop_v1_chroma.png",
+  "projection": "true_top_down_orthographic_90deg",
+  "forwardAxis": "+X",
+  "attachment": {
+    "parentAnchor": "watchtower__flag_mount__range_pennant_socket.cloth_anchor",
+    "pivotPx": [
+      8,
+      127
+    ],
+    "scaleToBaseFootprint": 0.22,
+    "inheritRotation": true
+  },
+  "drawOrder": 16,
+  "frames": [
+    {
+      "id": "frame_01",
+      "image": "watchtower__ambient_child__range_pennant_wind__frame_01_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 594,
+        "h": 255
+      },
+      "contentRect": {
+        "x": 8,
+        "y": 14,
+        "w": 574,
+        "h": 227
+      },
+      "pivotPx": [
+        8,
+        127
+      ],
+      "pivot": [
+        0.013468,
+        0.498039
+      ],
+      "durationMs": 180
+    },
+    {
+      "id": "frame_02",
+      "image": "watchtower__ambient_child__range_pennant_wind__frame_02_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 594,
+        "h": 255
+      },
+      "contentRect": {
+        "x": 8,
+        "y": 20,
+        "w": 578,
+        "h": 214
+      },
+      "pivotPx": [
+        8,
+        127
+      ],
+      "pivot": [
+        0.013468,
+        0.498039
+      ],
+      "durationMs": 180
+    },
+    {
+      "id": "frame_03",
+      "image": "watchtower__ambient_child__range_pennant_wind__frame_03_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 594,
+        "h": 255
+      },
+      "contentRect": {
+        "x": 8,
+        "y": 8,
+        "w": 574,
+        "h": 239
+      },
+      "pivotPx": [
+        8,
+        127
+      ],
+      "pivot": [
+        0.013468,
+        0.498039
+      ],
+      "durationMs": 180
+    },
+    {
+      "id": "frame_04",
+      "image": "watchtower__ambient_child__range_pennant_wind__frame_04_v1_alpha.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 594,
+        "h": 255
+      },
+      "contentRect": {
+        "x": 8,
+        "y": 21,
+        "w": 576,
+        "h": 213
+      },
+      "pivotPx": [
+        8,
+        127
+      ],
+      "pivot": [
+        0.013468,
+        0.498039
+      ],
+      "durationMs": 180
+    }
+  ],
+  "animations": {
+    "idle_wind": {
+      "frames": [
+        "frame_01",
+        "frame_02",
+        "frame_03",
+        "frame_04"
+      ],
+      "loop": true,
+      "totalDurationMs": 720
+    }
+  },
+  "qa": {
+    "segmentation": "connected_components",
+    "sharedCanvas": [
+      594,
+      255
+    ],
+    "sharedPivot": [
+      8,
+      127
+    ],
+    "runtimeLabels": false,
+    "status": "canon"
+  }
+}

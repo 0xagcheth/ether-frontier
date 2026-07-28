@@ -1,0 +1,76 @@
+{
+  "schema": "ether-frontier.layer-fragment.v1",
+  "object": "watchtower",
+  "group": "crossbow_group",
+  "projectionMaster": "watchtower_projection_master_v4",
+  "geometrySource": "watchtower_crossbow_unstrung_master_v1",
+  "activePrimaryPivot": {
+    "x": 627,
+    "y": 627
+  },
+  "normalization": {
+    "target": {
+      "w": 540,
+      "h": 529
+    }
+  },
+  "layers": [
+    {
+      "id": "crossbow_left_arm_stack",
+      "file": "crossbow_left_arm_stack.png",
+      "sourceRect": {
+        "x": 358,
+        "y": 387,
+        "w": 444,
+        "h": 442
+      },
+      "pivot": {
+        "x": 269,
+        "y": 240
+      },
+      "attachment": "active_primary_pivot",
+      "parent": "crossbow_group",
+      "drawOrder": 120
+    },
+    {
+      "id": "crossbow_right_arm_stack",
+      "file": "crossbow_right_arm_stack.png",
+      "sourceRect": {
+        "x": 429,
+        "y": 434,
+        "w": 458,
+        "h": 458
+      },
+      "pivot": {
+        "x": 198,
+        "y": 193
+      },
+      "attachment": "active_primary_pivot",
+      "parent": "crossbow_group",
+      "drawOrder": 121
+    },
+    {
+      "id": "crossbow_body_stack",
+      "file": "crossbow_body_stack.png",
+      "sourceRect": {
+        "x": 358,
+        "y": 363,
+        "w": 539,
+        "h": 529
+      },
+      "pivot": {
+        "x": 269,
+        "y": 264
+      },
+      "attachment": "active_primary_pivot",
+      "parent": "crossbow_group",
+      "drawOrder": 130
+    }
+  ],
+  "pending": [
+    "loaded_bolt",
+    "crossbow_string_tense",
+    "crossbow_string_release_01..02",
+    "crossbow_recoil_overlay_01..03"
+  ]
+}

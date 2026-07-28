@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "module": "ranger__aim_child__hunting_optics",
+  "object": "ranger",
+  "family": "fortress_ranged",
+  "slot": "aim_child",
+  "image": "ranger__aim_child__hunting_optics_v1_alpha.png",
+  "sourceImage": "ranger__aim_child__hunting_optics_v1_chroma.png",
+  "sizePx": [
+    918,
+    393
+  ],
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 918,
+    "h": 393
+  },
+  "pivotPx": [
+    459,
+    196
+  ],
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "projection": "true_top_down_orthographic_90deg",
+  "forwardAxis": "+X",
+  "runtimeScale": {
+    "widthToParentWeapon": 0.27
+  },
+  "attachments": {
+    "parent": {
+      "module": "ranger__active_primary__rapid_crossbow",
+      "anchor": "optics_socket",
+      "inheritRotation": true,
+      "localRotationDeg": 0
+    }
+  },
+  "drawOrder": 32,
+  "qa": {
+    "transparent": true,
+    "tightRect": true,
+    "magentaSpillPixels": 0,
+    "alphaBytes": 610945,
+    "under5MB": true,
+    "status": "canon"
+  }
+}
