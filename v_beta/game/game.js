@@ -1253,7 +1253,9 @@ function updateHeroReturn(dt) {
   const rect = cachedRect;
   const hx = rect.width * state.heroX / 100;
   const hy = rect.height * state.heroY / 100;
-  const target = state.enemies.find((enemy) => Math.hypot(enemy.x - hx, enemy.y - hy) <= HERO_ATTACK_RANGE);
+  const target = state.enemies.find((enemy) =>
+    isEnemyActive(enemy) && Math.hypot(enemy.x - hx, enemy.y - hy) <= HERO_ATTACK_RANGE
+  );
   if (target) return;
 
   const dx = HERO_BASE_POSITION.x - state.heroX;
@@ -1277,28 +1279,26 @@ function updateHeroCombat(dt) {
   let target = null;
   let targetDistSq = Infinity;
   for (const enemy of state.enemies) {
+    if (!isEnemyActive(enemy)) continue;
     const dx = enemy.x - hx, dy = enemy.y - hy;
     const dSq = dx * dx + dy * dy;
     if (dSq <= heroRangeSq && dSq < targetDistSq) { target = enemy; targetDistSq = dSq; }
   }
   if (!target) return;
-  target.hp -= HERO_ATTACK_DAMAGE;
   target.hit = 0.12;
+  damageEnemy(target, HERO_ATTACK_DAMAGE, false);
   state.heroAttackCooldown = HERO_ATTACK_RATE;
   state.projectiles.push(makeProjectile(hx, hy, target.x, target.y, 0.16, "#b8ff8d"));
-  if (target.hp <= 0) {
-    killEnemy(target, false);
-  }
 }
 
 function strikeEnemiesNearBase(damage) {
   const rect = cachedRect;
   const cx = rect.width * 0.5;
   const cy = rect.height * 0.58;
-  state.enemies.forEach((enemy) => {
-    if (Math.hypot(enemy.x - cx, enemy.y - cy) < 105) {
-      enemy.hp -= damage;
+  [...state.enemies].forEach((enemy) => {
+    if (isEnemyActive(enemy) && Math.hypot(enemy.x - cx, enemy.y - cy) < 105) {
       enemy.hit = 0.12;
+      damageEnemy(enemy, damage, false);
     }
   });
 }
@@ -1473,6 +1473,7 @@ function makeEnemyOnPath(kind, pathIndex) {
     animFrame: 0,
     animTimer: 0,
     dying: false,
+    deathProcessed: false,
     deathTimer: 0,
     breaching: false,
     breachTimer: 0,
@@ -1495,7 +1496,9 @@ function getEnemyTier() {
 }
 
 function killEnemy(enemy, awardKill = true) {
-  if (enemy.dying) return;
+  if (!enemy || enemy.deathProcessed) return false;
+  enemy.deathProcessed = true;
+  enemy.hp = 0;
   state.gold += getEnemyReward(enemy);
   if (awardKill) addHeroChargeKill();
   const meta = ENEMY_SPRITES[enemy.kind];
@@ -1505,7 +1508,6 @@ function killEnemy(enemy, awardKill = true) {
     : (deathEntry ?? 0);
   if (deathFrames > 1) {
     enemy.dying = true;
-    enemy.hp = 0;
     enemy.hit = 0;
     enemy.deathTimer = 0;
     enemy.animState = 'death';
@@ -1514,6 +1516,17 @@ function killEnemy(enemy, awardKill = true) {
   } else {
     state.enemies.splice(state.enemies.indexOf(enemy), 1);
   }
+  return true;
+}
+
+function isEnemyActive(enemy) {
+  return Boolean(enemy && enemy.hp > 0 && !enemy.dying && !enemy.deathProcessed);
+}
+
+function damageEnemy(enemy, damage, awardKill = true) {
+  if (!isEnemyActive(enemy)) return false;
+  enemy.hp -= damage;
+  return enemy.hp <= 0 ? killEnemy(enemy, awardKill) : false;
 }
 
 function getEnemyHpMultiplier(base) {
@@ -1851,19 +1864,19 @@ function updateTowers(dt) {
 
     tower.shots = (tower.shots || 0) + 1;
     const damage = getTowerDamageAgainst(tower, combat, target);
-    target.hp -= damage;
     target.hit = 0.08;
+    const targetKilled = damageEnemy(target, damage);
     if (combat.slowOnHit) {
       target.slowUntil = performance.now() + combat.slowOnHit * 1000;
     }
     if (combat.splash) {
       const splashSq = combat.splash * combat.splash;
-      for (const enemy of state.enemies) {
-        if (enemy === target) continue;
+      for (const enemy of [...state.enemies]) {
+        if (enemy === target || !isEnemyActive(enemy)) continue;
         const sdx = enemy.x - target.x, sdy = enemy.y - target.y;
         if (sdx * sdx + sdy * sdy < splashSq) {
-          enemy.hp -= damage * 0.45;
           enemy.hit = 0.08;
+          damageEnemy(enemy, damage * 0.45);
           if (combat.concussion && (enemy.category === "ground" || enemy.category === "machine")) {
             enemy.slowUntil = performance.now() + 900;
           }
@@ -1872,13 +1885,13 @@ function updateTowers(dt) {
     }
     if (combat.pierce) {
       let pierceCount = 0;
-      for (const enemy of state.enemies) {
+      for (const enemy of [...state.enemies]) {
         if (pierceCount >= combat.pierce) break;
         if (enemy === target || !canTargetEnemy(combat, enemy)) continue;
         const pdx = enemy.x - tx, pdy = enemy.y - ty;
         if (pdx * pdx + pdy * pdy < rangeSq) {
-          enemy.hp -= damage * 0.62;
           enemy.hit = 0.08;
+          damageEnemy(enemy, damage * 0.62);
           pierceCount++;
         }
       }
@@ -1887,8 +1900,7 @@ function updateTowers(dt) {
     state.projectiles.push(makeProjectile(tx, ty, target.x, target.y, 0.28, def.color, projSprite));
     tower.cooldown = combat.rate / tower.level;
 
-    if (target.hp <= 0) {
-      killEnemy(target);
+    if (targetKilled) {
       if (combat.chainOnKill) {
         let next = null;
         for (const enemy of state.enemies) {
@@ -1897,8 +1909,8 @@ function updateTowers(dt) {
           if (cdx * cdx + cdy * cdy < rangeSq) { next = enemy; break; }
         }
         if (next) {
-          next.hp -= damage * 0.8;
           next.hit = 0.08;
+          damageEnemy(next, damage * 0.8);
           state.projectiles.push(makeProjectile(tx, ty, next.x, next.y, 0.18, def.color, projSprite));
         }
       }
@@ -2662,6 +2674,7 @@ function applyMasteryStats(tower, stats) {
 }
 
 function canTargetEnemy(combat, enemy) {
+  if (!isEnemyActive(enemy)) return false;
   if (!combat.target || combat.target === "any") return true;
   return enemy.category === combat.target;
 }
